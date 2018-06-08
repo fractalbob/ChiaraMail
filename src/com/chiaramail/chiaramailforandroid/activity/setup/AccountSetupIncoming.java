@@ -1,5 +1,5 @@
 
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,23 +8,28 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.DigitsKeyListener;
+import android.text.method.LinkMovementMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.*;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
-import com.fsck.k9.*;
-import com.fsck.k9.activity.K9Activity;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.ConnectionSecurity;
-import com.fsck.k9.mail.ServerSettings;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.store.ImapStore;
-import com.fsck.k9.mail.store.Pop3Store;
-import com.fsck.k9.mail.store.WebDavStore;
-import com.fsck.k9.mail.store.ImapStore.ImapStoreSettings;
-import com.fsck.k9.mail.store.WebDavStore.WebDavStoreSettings;
+import com.chiaramail.chiaramailforandroid.*;
+import com.chiaramail.chiaramailforandroid.activity.K9Activity;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.ConnectionSecurity;
+import com.chiaramail.chiaramailforandroid.mail.ServerSettings;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapStore;
+import com.chiaramail.chiaramailforandroid.mail.store.Pop3Store;
+import com.chiaramail.chiaramailforandroid.mail.store.WebDavStore;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapStore.ImapStoreSettings;
+import com.chiaramail.chiaramailforandroid.mail.store.WebDavStore.WebDavStoreSettings;
+import com.chiaramail.chiaramailforandroid.R;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
@@ -33,7 +38,7 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccountSetupIncoming extends K9Activity implements OnClickListener {
+public class AccountSetupIncoming extends K9Activity implements OnClickListener, OnCheckedChangeListener {
     private static final String EXTRA_ACCOUNT = "account";
     private static final String EXTRA_MAKE_DEFAULT = "makeDefault";
 
@@ -64,6 +69,7 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
 
     private int[] mAccountPorts;
     private String mStoreType;
+    private String accountUuid;
     private EditText mUsernameView;
     private EditText mPasswordView;
     private EditText mServerView;
@@ -76,8 +82,10 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
     private EditText mWebdavAuthPathView;
     private EditText mWebdavMailboxPathView;
     private Button mNextButton;
-    private Account mAccount;
+    private Account mAccount = null;
     private boolean mMakeDefault;
+    private CheckBox mShowPassword;
+    public  static TextView mBugList;
     private CheckBox mCompressionMobile;
     private CheckBox mCompressionWifi;
     private CheckBox mCompressionOther;
@@ -100,6 +108,14 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
         i.putExtra(EXTRA_ACCOUNT, account.getUuid());
         return i;
     }
+    
+    @Override
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+        
+ //       accountUuid = getIntent().getStringExtra(EXTRA_ACCOUNT);
+        mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -108,6 +124,13 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
 
         mUsernameView = (EditText)findViewById(R.id.account_username);
         mPasswordView = (EditText)findViewById(R.id.account_password);
+        mShowPassword = (CheckBox)findViewById(R.id.show_password);
+        mShowPassword.setOnCheckedChangeListener(this);
+        mBugList = (TextView)findViewById(R.id.mail_auth_error);
+        accountUuid = getIntent().getStringExtra(EXTRA_ACCOUNT);
+        if (mAccount == null) mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
+        if (mAccount.showBugListLink()) mBugList.setVisibility(TextView.VISIBLE);
+        mBugList.setMovementMethod(LinkMovementMethod.getInstance());
         TextView serverLabelView = (TextView) findViewById(R.id.account_server_label);
         mServerView = (EditText)findViewById(R.id.account_server);
         mPortView = (EditText)findViewById(R.id.account_port);
@@ -192,8 +215,8 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
          */
         mPortView.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
 
-        String accountUuid = getIntent().getStringExtra(EXTRA_ACCOUNT);
-        mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
+//        accountUuid = getIntent().getStringExtra(EXTRA_ACCOUNT);
+//        if (mAccount == null) mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
         mMakeDefault = getIntent().getBooleanExtra(EXTRA_MAKE_DEFAULT, false);
 
         /*
@@ -289,7 +312,7 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
 
             // Select currently configured security type
             for (int i = 0; i < CONNECTION_SECURITY_TYPES.length; i++) {
-                if (CONNECTION_SECURITY_TYPES[i] == settings.connectionSecurity) {
+                    if (CONNECTION_SECURITY_TYPES[i] == settings.connectionSecurity) {
                     SpinnerOption.setSpinnerOptionValue(mSecurityTypeView, i);
                 }
             }
@@ -336,10 +359,19 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
         }
     }
 
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+    	if (mShowPassword.isChecked()) {
+    		mPasswordView.setTransformationMethod(null);
+    	} else {
+    		mPasswordView.setTransformationMethod(PasswordTransformationMethod.getInstance());
+    	}
+    	mPasswordView.setSelection(mPasswordView.length());
+    }
+    
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString(EXTRA_ACCOUNT, mAccount.getUuid());
+        if (mAccount != null && outState != null) outState.putString(EXTRA_ACCOUNT, mAccount.getUuid()); //Fix crash reported by users
     }
 
     private void validateFields() {
@@ -357,7 +389,7 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
             mPortView.setText(Integer.toString(mAccountPorts[securityType]));
         }
     }
-
+    
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
@@ -401,6 +433,9 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
 
     protected void onNext() {
         try {
+//            accountUuid = getIntent().getStringExtra(EXTRA_ACCOUNT);
+//            mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
+
             ConnectionSecurity connectionSecurity = CONNECTION_SECURITY_TYPES[
                     (Integer)((SpinnerOption)mSecurityTypeView.getSelectedItem()).value];
 
@@ -429,7 +464,7 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
 
             ServerSettings settings = new ServerSettings(mStoreType, host, port,
                     connectionSecurity, authType, username, password, extra);
-
+            
             mAccount.setStoreUri(Store.createStoreUri(settings));
 
             mAccount.setCompression(Account.TYPE_MOBILE, mCompressionMobile.isChecked());
@@ -437,13 +472,41 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
             mAccount.setCompression(Account.TYPE_OTHER, mCompressionOther.isChecked());
             mAccount.setSubscribedFoldersOnly(mSubscribedFoldersOnly.isChecked());
 
-            AccountSetupCheckSettings.actionCheckSettings(this, mAccount, true, false);
+            //If the content server password hasn't been set, possibly because authentication failed during account setup, try again
+//            if (mAccount.getContentServerPassword().length() == 0) mAccount.setContentServerPassword(onRegisterMe());
+//           // This is where the account number gets assigned, which is needed if there's a connection problem.
+//            mAccount.save(Preferences.getPreferences(this));
+//            mAccount.setDescription("");
+            AccountSetupCheckSettings.actionCheckSettings(this, mAccount, true, false, false);
         } catch (Exception e) {
             failure(e);
         }
 
     }
-
+/**
+    private String onRegisterMe() {
+    	String toastText;
+    	
+//        mAccount = Preferences.getPreferences(this).newAccount();
+        mAccount.setContentServerName("www.chiaramail.com");
+        mAccount.setContentServerPort("443");
+//        mAccount.setEmail(mEmailView.getText().toString());
+    	try {
+    		ServerSettings settings = Store.decodeStoreUri(mAccount.getStoreUri());
+        	return ECSInterfaces.doRegisterUser("www.chiaramail.com", mAccount.getEmail(), Utility.base64Encode(settings.password), 
+        			mAccount.getName(), getResources().getConfiguration().locale.getCountry(), 
+        			settings.host, String.valueOf(settings.port), settings.username, settings.type.toLowerCase());
+    	}
+    	catch (Exception e){
+ //           toastText = getString(R.string.account_setup_content_server_registration_error, e.getMessage());
+            toastText = getString(R.string.account_setup_content_server_registration_error) + e.getMessage();
+            Toast toast = Toast.makeText(getApplication(), toastText, Toast.LENGTH_LONG);
+            toast.show();
+    	}
+    	return "";
+//    	Preferences.getPreferences(this).deleteAccount(mAccount);
+    }
+**/
     public void onClick(View v) {
         try {
             switch (v.getId()) {
@@ -462,5 +525,24 @@ public class AccountSetupIncoming extends K9Activity implements OnClickListener 
 
         Toast toast = Toast.makeText(getApplication(), toastText, Toast.LENGTH_LONG);
         toast.show();
+    }
+    
+    @Override
+    public void onBackPressed() {
+      if (mAccount != null && (getIntent().getAction() == null || !Intent.ACTION_EDIT.equals(getIntent().getAction()))) {	  
+//     if (mAccount != null && !Intent.ACTION_EDIT.equals(getIntent().getAction())) {	  
+          try {
+        	  mAccount.getLocalStore().delete();
+          } catch (Exception e) {
+              // Ignore, this may lead to localStores on sd-cards that
+              // are currently not inserted to be left
+              super.onBackPressed();
+        	  return;
+          }
+          MessagingController.getInstance(getApplication()).notifyAccountCancel(this, mAccount);
+          Preferences.getPreferences(this).deleteAccount(mAccount);
+//          K9.setServicesEnabled(this);
+      }
+      super.onBackPressed();
     }
 }

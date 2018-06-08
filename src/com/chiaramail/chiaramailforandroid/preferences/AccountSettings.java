@@ -1,4 +1,4 @@
-package com.fsck.k9.preferences;
+package com.chiaramail.chiaramailforandroid.preferences;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -8,14 +8,15 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import android.content.SharedPreferences;
-import com.fsck.k9.Account;
-import com.fsck.k9.Account.SortType;
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
-import com.fsck.k9.Account.FolderMode;
-import com.fsck.k9.crypto.Apg;
-import com.fsck.k9.mail.store.StorageManager;
-import com.fsck.k9.preferences.Settings.*;
+
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Account.FolderMode;
+import com.chiaramail.chiaramailforandroid.Account.SortType;
+import com.chiaramail.chiaramailforandroid.crypto.Apg;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager;
+import com.chiaramail.chiaramailforandroid.preferences.Settings.*;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class AccountSettings {
     public static final Map<String, TreeMap<Integer, SettingsDescription>> SETTINGS;

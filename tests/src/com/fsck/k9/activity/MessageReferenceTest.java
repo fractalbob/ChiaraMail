@@ -1,7 +1,7 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
 import junit.framework.TestCase;
 
 public class MessageReferenceTest extends TestCase

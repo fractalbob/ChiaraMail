@@ -1,10 +1,10 @@
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import com.fsck.k9.mail.filter.PeekableInputStream;
-import com.fsck.k9.mail.store.ImapResponseParser.ImapList;
-import com.fsck.k9.mail.store.ImapResponseParser.ImapResponse;
+import com.chiaramail.chiaramailforandroid.mail.filter.PeekableInputStream;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapResponseParser.ImapList;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapResponseParser.ImapResponse;
 import junit.framework.TestCase;
 
 public class ImapResponseParserTest extends TestCase {

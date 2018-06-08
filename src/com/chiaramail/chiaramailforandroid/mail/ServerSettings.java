@@ -1,9 +1,10 @@
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import com.fsck.k9.Account;
+
+import com.chiaramail.chiaramailforandroid.Account;
 
 /**
  * This is an abstraction to get rid of the store- and transport-specific URIs.
@@ -95,8 +96,16 @@ public class ServerSettings {
             String password) {
         this.type = type;
         this.host = host;
+/**        if (type.equals("POP3")) {
+        	this.port = 995;
+        } else if (type.equals("IMAP")) {
+        	this.port = 993;
+        } else {
+        	this.port = port;
+        }**/
         this.port = port;
         this.connectionSecurity = connectionSecurity;
+//        this.connectionSecurity = ConnectionSecurity.SSL_TLS_REQUIRED;
         this.authenticationType = authenticationType;
         this.username = username;
         this.password = password;
@@ -128,8 +137,16 @@ public class ServerSettings {
             String password, Map<String, String> extra) {
         this.type = type;
         this.host = host;
+/**        if (type.equals("POP3")) {
+        	this.port = 995;
+        } else if (type.equals("IMAP")) {
+        	this.port = 993;
+        } else {
+        	this.port = port;
+        }**/
         this.port = port;
         this.connectionSecurity = connectionSecurity;
+//        this.connectionSecurity = ConnectionSecurity.SSL_TLS_REQUIRED;
         this.authenticationType = authenticationType;
         this.username = username;
         this.password = password;

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\k-9\\plugins\\Android-PullToRefresh\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "C:\\k-9\\plugins\\Android-PullToRefresh\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "C:\\k-9\\plugins\\Android-PullToRefresh\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "C:\\k-9\\plugins\\Android-PullToRefresh\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    }
+]

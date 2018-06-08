@@ -1,8 +1,8 @@
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 import java.util.List;
 
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
 
 import android.content.Context;
 

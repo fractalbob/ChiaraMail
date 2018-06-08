@@ -1,4 +1,4 @@
-package com.fsck.k9.search;
+package com.chiaramail.chiaramailforandroid.search;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,9 +9,9 @@ import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.fsck.k9.search.SearchSpecification.Attribute;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
-import com.fsck.k9.search.SearchSpecification.SearchCondition;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Attribute;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.SearchCondition;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
 
 /**
  * This class stores search conditions. It's basically a boolean expression binary tree.

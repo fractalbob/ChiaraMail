@@ -1,11 +1,12 @@
 
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 import java.util.ArrayList;
 
-import com.fsck.k9.mail.internet.MimeHeader;
-import com.fsck.k9.mail.internet.MimeUtility;
-import com.fsck.k9.mail.internet.TextBody;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeHeader;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.mail.internet.TextBody;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalAttachmentBodyPart;
 
 public abstract class Multipart implements Body {
     protected Part mParent;
@@ -34,6 +35,16 @@ public abstract class Multipart implements Body {
 
     public int getCount() {
         return mParts.size();
+    }
+
+    public int getAttachmentIndex(long id) throws MessagingException {
+    	for (int i = 0; i < getCount(); i++) {
+    		if (mParts.get(i) instanceof LocalAttachmentBodyPart) {
+	    		LocalAttachmentBodyPart bp = (LocalAttachmentBodyPart)mParts.get(i);
+	    		if (bp.getAttachmentId() == id) return i;
+    		}
+    	}
+        return 0;
     }
 
     public boolean removeBodyPart(BodyPart part) {

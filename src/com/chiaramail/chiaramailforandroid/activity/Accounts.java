@@ -1,5 +1,5 @@
 
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,6 +17,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnMultiChoiceClickListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -32,6 +33,39 @@ import android.view.ContextMenu;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.AccountStats;
+import com.chiaramail.chiaramailforandroid.BaseAccount;
+import com.chiaramail.chiaramailforandroid.FontSizes;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.activity.misc.ExtendedAsyncTask;
+import com.chiaramail.chiaramailforandroid.activity.misc.NonConfigurationInstance;
+import com.chiaramail.chiaramailforandroid.activity.setup.AccountSettings;
+import com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupBasics;
+import com.chiaramail.chiaramailforandroid.activity.setup.Prefs;
+import com.chiaramail.chiaramailforandroid.activity.setup.WelcomeMessage;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.helper.SizeFormatter;
+import com.chiaramail.chiaramailforandroid.mail.ServerSettings;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.Transport;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager;
+import com.chiaramail.chiaramailforandroid.mail.store.WebDavStore;
+import com.chiaramail.chiaramailforandroid.preferences.SettingsExporter;
+import com.chiaramail.chiaramailforandroid.preferences.SettingsImportExportException;
+import com.chiaramail.chiaramailforandroid.preferences.SettingsImporter;
+import com.chiaramail.chiaramailforandroid.preferences.SettingsImporter.AccountDescription;
+import com.chiaramail.chiaramailforandroid.preferences.SettingsImporter.AccountDescriptionPair;
+import com.chiaramail.chiaramailforandroid.preferences.SettingsImporter.ImportContents;
+import com.chiaramail.chiaramailforandroid.preferences.SettingsImporter.ImportResults;
+import com.chiaramail.chiaramailforandroid.search.LocalSearch;
+import com.chiaramail.chiaramailforandroid.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Attribute;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.view.ColorChip;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -54,42 +88,11 @@ import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.AccountStats;
-import com.fsck.k9.BaseAccount;
-import com.fsck.k9.FontSizes;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.misc.ExtendedAsyncTask;
-import com.fsck.k9.activity.misc.NonConfigurationInstance;
-import com.fsck.k9.activity.setup.AccountSettings;
-import com.fsck.k9.activity.setup.AccountSetupBasics;
-import com.fsck.k9.activity.setup.Prefs;
-import com.fsck.k9.activity.setup.WelcomeMessage;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.helper.SizeFormatter;
-import com.fsck.k9.mail.ServerSettings;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.Transport;
-import com.fsck.k9.mail.internet.MimeUtility;
-import com.fsck.k9.mail.store.StorageManager;
-import com.fsck.k9.mail.store.WebDavStore;
-import com.fsck.k9.search.LocalSearch;
-import com.fsck.k9.search.SearchAccount;
-import com.fsck.k9.search.SearchSpecification.Attribute;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
-import com.fsck.k9.view.ColorChip;
-import com.fsck.k9.preferences.SettingsExporter;
-import com.fsck.k9.preferences.SettingsImportExportException;
-import com.fsck.k9.preferences.SettingsImporter;
-import com.fsck.k9.preferences.SettingsImporter.AccountDescription;
-import com.fsck.k9.preferences.SettingsImporter.AccountDescriptionPair;
-import com.fsck.k9.preferences.SettingsImporter.ImportContents;
-import com.fsck.k9.preferences.SettingsImporter.ImportResults;
+import com.chiaramail.chiaramailforandroid.R;
 
 import de.cketti.library.changelog.ChangeLog;
 
+import com.bugsense.trace.BugSenseHandler;
 
 public class Accounts extends K9ListActivity implements OnItemClickListener {
 
@@ -101,7 +104,7 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
     /**
      * URL used to open Android Market application
      */
-    private static final String ANDROID_MARKET_URL = "https://market.android.com/search?q=oi+file+manager&c=apps";
+    private static final String ANDROID_MARKET_URL = "https://play.google.com/store/apps/details?id=org.openintents.filemanager";
 
     /**
      * Number of special accounts ('Unified Inbox' and 'All Messages')
@@ -142,7 +145,19 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
 
 
     private static final int ACTIVITY_REQUEST_PICK_SETTINGS_FILE = 1;
-
+    
+    private SharedPreferences appPreferences;
+ /**   
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+    
+    @Override
+    public void onDestroy() {
+    	android.os.Process.killProcess(android.os.Process.myPid());
+    }
+**/
     class AccountsHandler extends Handler {
         private void setViewTitle() {
             mActionBarTitle.setText(getString(R.string.accounts_title));
@@ -327,6 +342,7 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
 
     public static final String EXTRA_STARTUP = "startup";
 
+    public static final String ACTION_IMPORT_SETTINGS = "importSettings";
 
     public static void listAccounts(Context context) {
         Intent intent = new Intent(context, Accounts.class);
@@ -334,6 +350,34 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
                 Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.putExtra(EXTRA_STARTUP, false);
         context.startActivity(intent);
+    }
+
+    public static void importSettings(Context context) {
+        Intent intent = new Intent(context, Accounts.class);
+        intent.setAction(ACTION_IMPORT_SETTINGS);
+        context.startActivity(intent);
+    }
+
+    public static LocalSearch createUnreadSearch(Context context, BaseAccount account) {
+        String searchTitle = context.getString(R.string.search_title, account.getDescription(),
+                context.getString(R.string.unread_modifier));
+
+        LocalSearch search;
+        if (account instanceof SearchAccount) {
+            search = ((SearchAccount) account).getRelatedSearch().clone();
+            search.setName(searchTitle);
+        } else {
+            search = new LocalSearch(searchTitle);
+            search.addAccountUuid(account.getUuid());
+
+            Account realAccount = (Account) account;
+            realAccount.excludeSpecialFolders(search);
+            realAccount.limitToDisplayableFolders(search);
+        }
+
+        search.and(Searchfield.READ, "1", Attribute.NOT_EQUALS);
+
+        return search;
     }
 
     @Override
@@ -354,8 +398,13 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
 
     @Override
     public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+//        boolean isAppInstalled = false;
 
+        super.onCreate(icicle);
+        
+ //       BugSenseHandler.initAndStartSession(this, "ec54b2c8");
+        BugSenseHandler.initAndStartSession(this, "ca95dfb3");
+        
         if (!K9.isHideSpecialAccounts()) {
             createSpecialAccounts();
         }
@@ -368,6 +417,11 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
         if (accounts.length < 1) {
             WelcomeMessage.showWelcomeMessage(this);
             finish();
+//          appPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+//          isAppInstalled = appPreferences.getBoolean("isAppInstalled",false);
+
+//          if (!isAppInstalled) addShortcut();
+//          createShortCut();
             return;
         }
 
@@ -416,7 +470,38 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
             cl.getLogDialog().show();
         }
     }
-
+/**    
+    private void addShortcut() {
+    	//Adding shortcut for MainActivity 
+    	//on Home screen
+    	Intent shortcutIntent = new Intent(getApplicationContext(), Accounts.class);
+    	
+    	shortcutIntent.setAction(Intent.ACTION_MAIN);
+    
+    	Intent addIntent = new Intent();
+    	addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
+    	addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, getString(R.string.app_name));
+    	addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
+    	Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.drawable.chiaramail_icon));
+    	
+    	addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
+    	getApplicationContext().sendBroadcast(addIntent);
+    	SharedPreferences.Editor editor = appPreferences.edit();
+    	editor.putBoolean("isAppInstalled", true);
+    	editor.commit();    
+    }
+    
+    private void createShortCut () {
+        Intent shortcutintent = new Intent("com.android.launcher.action.INSTALL_SHORTCUT");
+        
+        shortcutintent.putExtra("duplicate", false);
+        shortcutintent.putExtra(Intent.EXTRA_SHORTCUT_NAME, getString(R.string.app_name));
+        Parcelable icon = Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.drawable.chiaramail_icon);
+        shortcutintent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, icon);
+        shortcutintent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, new Intent(getApplicationContext(), Accounts.class));
+        sendBroadcast(shortcutintent);
+    }
+**/
     private void initializeActionBar() {
         mActionBar.setDisplayShowCustomEnabled(true);
         mActionBar.setCustomView(R.layout.actionbar_custom);
@@ -570,6 +655,7 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
     }
 
     private void onAddNewAccount() {
+//        AccountSetupECS.actionNewAccount(this);
         AccountSetupBasics.actionNewAccount(this);
     }
 
@@ -595,6 +681,10 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
 
     private void onClearCommands(Account account) {
         MessagingController.getInstance(getApplication()).clearAllPending(account);
+    }
+
+    private void onEmptyTrash(Account account) {
+        MessagingController.getInstance(getApplication()).emptyTrash(account, null);
     }
 
     private void onCompose() {
@@ -1116,6 +1206,9 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
         case R.id.clear_pending:
             onClearCommands(realAccount);
             break;
+        case R.id.empty_trash:
+            onEmptyTrash(realAccount);
+            break;
         case R.id.clear:
             onClear(realAccount);
             break;
@@ -1164,6 +1257,12 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
         case R.id.edit_prefs:
             onEditPrefs();
             break;
+        case R.id.ecs_help:
+            onHelp();
+            break;
+        case R.id.ecs_feedback:
+            onSendFeedback();
+            break;
         case R.id.check_mail:
             onCheckMail(null);
             break;
@@ -1206,26 +1305,32 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
         WebView wv = new WebView(this);
         StringBuilder html = new StringBuilder()
         .append("<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />")
-        .append("<img src=\"file:///android_asset/icon.png\" alt=\"").append(appName).append("\"/>")
-        .append("<h1>")
-        .append(String.format(getString(R.string.about_title_fmt),
-                              "<a href=\"" + getString(R.string.app_webpage_url)) + "\">")
-        .append(appName)
+        .append("<center>")
+        .append("<p><a href=\"" + getString(R.string.app_webpage_url) + "\">")
+        .append("<img src=\"file:///android_asset/chiaramail_icon.png\" alt=\"").append(appName).append("\"/>")
         .append("</a>")
-        .append("</h1><p>")
-        .append(appName)
-        .append(" ")
-        .append(String.format(getString(R.string.debug_version_fmt), getVersionNumber()))
-        .append("</p><p>")
-        .append(String.format(getString(R.string.app_authors_fmt),
-                              getString(R.string.app_authors)))
-        .append("</p><p>")
-        .append(String.format(getString(R.string.app_revision_fmt),
-                              "<a href=\"" + getString(R.string.app_revision_url) + "\">" +
-                              getString(R.string.app_revision_url) +
-                              "</a>"))
-        .append("</p><hr/><p>")
-        .append(String.format(getString(R.string.app_copyright_fmt), year, year))
+        .append("<p>")
+        .append("<p style=font-size:20px>")
+        .append(String.format(getString(R.string.debug_version_fmt), getVersionNumber() + " (" + getVersionCode() + ")"))
+        .append("<p>")
+        .append("</p><hr/>")
+//        .append("<p style=font-size:20px>")
+//        .append("<h2>")
+//        .append(appName + ": " + getString(R.string.tag_line))
+        .append(getString(R.string.tag_line))
+        .append("</p>")
+//        .append("</h2>")
+        .append("<p><a href=\"" + getString(R.string.open_source_licenses_url) + "\">")
+        .append(getString(R.string.open_source_licenses))
+        .append("</a>")
+         .append("<p><a href=\"" + getString(R.string.eula_url) + "\">")
+        .append(getString(R.string.tos_title))
+        .append("</a>")
+        .append("<p><a href=\"" + getString(R.string.privacy_policy_url) + "\">")
+        .append(getString(R.string.privacy_policy))
+        .append("</a>")
+        .append("</center>");
+/**        .append(String.format(getString(R.string.app_copyright_fmt), year, year))
         .append("</p><hr/><p>")
         .append(getString(R.string.app_license))
         .append("</p><hr/><p>");
@@ -1244,8 +1349,9 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
                               "<a href=\"http://creativecommons.org/licenses/by/2.1/jp/\">CC BY 2.1</a></div>"))
         .append("</p><hr/><p>")
         .append(getString(R.string.app_htmlcleaner_license));
+//        .append(getString(R.string.app_htmlcleaner_license));
 
-
+**/
         wv.loadDataWithBaseURL("file:///android_res/drawable/", html.toString(), "text/html", "utf-8", null);
         new AlertDialog.Builder(this)
         .setView(wv)
@@ -1255,14 +1361,24 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
                 d.dismiss();
             }
         })
+ /**       .show(); **/
         .setNeutralButton(R.string.changelog_full_title, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface d, int c) {
                 new ChangeLog(Accounts.this).getFullLogDialog().show();
             }
         })
-        .show();
+        .show(); 
     }
 
+    private void onHelp() {
+        Intent browse = new Intent(Intent.ACTION_VIEW , Uri.parse("http://www.chiaramailcorp.com/help"));
+        startActivity(browse);
+    }
+    
+    private void onSendFeedback() {
+        Intent browse = new Intent(Intent.ACTION_VIEW , Uri.parse(getString(R.string.feedback_url)));
+        startActivity(browse);
+    }
     /**
      * Get current version number.
      *
@@ -1273,6 +1389,22 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
         try {
             PackageInfo pi = getPackageManager().getPackageInfo(getPackageName(), 0);
             version = pi.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            //Log.e(TAG, "Package name not found", e);
+        }
+        return version;
+    }
+
+    /**
+     * Get current version code.
+     *
+     * @return String version
+     */
+    private int getVersionCode() {
+        int version = 0;
+        try {
+            PackageInfo pi = getPackageManager().getPackageInfo(getPackageName(), 0);
+            version = pi.versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             //Log.e(TAG, "Package name not found", e);
         }
@@ -1477,7 +1609,7 @@ public class Accounts extends K9ListActivity implements OnItemClickListener {
 
             int imported = mImportResults.importedAccounts.size();
             String accounts = activity.getResources().getQuantityString(
-                                  R.plurals.settings_import_success, imported, imported);
+                                  R.plurals.settings_import_accounts, imported, imported);
             return activity.getString(R.string.settings_import_success, accounts, mFilename);
         }
 

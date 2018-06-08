@@ -1,5 +1,5 @@
 
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import java.util.Collection;
 import java.util.Date;
@@ -12,23 +12,23 @@ import android.net.ConnectivityManager;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.Account.FolderMode;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.Pusher;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.Account.FolderMode;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.Pusher;
 
 public class MailService extends CoreService {
-    private static final String ACTION_CHECK_MAIL = "com.fsck.k9.intent.action.MAIL_SERVICE_WAKEUP";
-    private static final String ACTION_RESET = "com.fsck.k9.intent.action.MAIL_SERVICE_RESET";
-    private static final String ACTION_RESCHEDULE_POLL = "com.fsck.k9.intent.action.MAIL_SERVICE_RESCHEDULE_POLL";
-    private static final String ACTION_CANCEL = "com.fsck.k9.intent.action.MAIL_SERVICE_CANCEL";
-    private static final String ACTION_REFRESH_PUSHERS = "com.fsck.k9.intent.action.MAIL_SERVICE_REFRESH_PUSHERS";
-    private static final String ACTION_RESTART_PUSHERS = "com.fsck.k9.intent.action.MAIL_SERVICE_RESTART_PUSHERS";
-    private static final String CONNECTIVITY_CHANGE = "com.fsck.k9.intent.action.MAIL_SERVICE_CONNECTIVITY_CHANGE";
-    private static final String CANCEL_CONNECTIVITY_NOTICE = "com.fsck.k9.intent.action.MAIL_SERVICE_CANCEL_CONNECTIVITY_NOTICE";
+    private static final String ACTION_CHECK_MAIL = "com.chiaramail.chiaramailforandroid.intent.action.MAIL_SERVICE_WAKEUP";
+    private static final String ACTION_RESET = "com.chiaramail.chiaramailforandroid.intent.action.MAIL_SERVICE_RESET";
+    private static final String ACTION_RESCHEDULE_POLL = "com.chiaramail.chiaramailforandroid.intent.action.MAIL_SERVICE_RESCHEDULE_POLL";
+    private static final String ACTION_CANCEL = "com.chiaramail.chiaramailforandroid.intent.action.MAIL_SERVICE_CANCEL";
+    private static final String ACTION_REFRESH_PUSHERS = "com.chiaramail.chiaramailforandroid.intent.action.MAIL_SERVICE_REFRESH_PUSHERS";
+    private static final String ACTION_RESTART_PUSHERS = "com.chiaramail.chiaramailforandroid.intent.action.MAIL_SERVICE_RESTART_PUSHERS";
+    private static final String CONNECTIVITY_CHANGE = "com.chiaramail.chiaramailforandroid.intent.action.MAIL_SERVICE_CONNECTIVITY_CHANGE";
+    private static final String CANCEL_CONNECTIVITY_NOTICE = "com.chiaramail.chiaramailforandroid.intent.action.MAIL_SERVICE_CANCEL_CONNECTIVITY_NOTICE";
 
     private static long nextCheck = -1;
     private static boolean pushingRequested = false;
@@ -173,7 +173,7 @@ public class MailService extends CoreService {
 
     private void cancel() {
         Intent i = new Intent();
-        i.setClassName(getApplication().getPackageName(), "com.fsck.k9.service.MailService");
+        i.setClassName(getApplication().getPackageName(), "com.chiaramail.chiaramailforandroid.service.MailService");
         i.setAction(ACTION_CHECK_MAIL);
         BootReceiver.cancelIntent(this, i);
     }
@@ -314,7 +314,7 @@ public class MailService extends CoreService {
             }
 
             Intent i = new Intent();
-            i.setClassName(getApplication().getPackageName(), "com.fsck.k9.service.MailService");
+            i.setClassName(getApplication().getPackageName(), "com.chiaramail.chiaramailforandroid.service.MailService");
             i.setAction(ACTION_CHECK_MAIL);
             BootReceiver.scheduleIntent(MailService.this, nextTime, i);
         }
@@ -420,7 +420,7 @@ public class MailService extends CoreService {
             if (K9.DEBUG)
                 Log.d(K9.LOG_TAG, "Next pusher refresh scheduled for " + new Date(nextTime));
             Intent i = new Intent();
-            i.setClassName(getApplication().getPackageName(), "com.fsck.k9.service.MailService");
+            i.setClassName(getApplication().getPackageName(), "com.chiaramail.chiaramailforandroid.service.MailService");
             i.setAction(ACTION_REFRESH_PUSHERS);
             BootReceiver.scheduleIntent(MailService.this, nextTime, i);
         }

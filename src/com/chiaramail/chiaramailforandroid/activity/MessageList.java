@@ -1,6 +1,7 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 import android.app.SearchManager;
@@ -8,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,36 +29,38 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.fsck.k9.Account;
-import com.fsck.k9.Account.SortType;
-import com.fsck.k9.K9;
-import com.fsck.k9.K9.SplitViewMode;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.misc.SwipeGestureDetector.OnSwipeGestureListener;
-import com.fsck.k9.activity.setup.AccountSettings;
-import com.fsck.k9.activity.setup.FolderSettings;
-import com.fsck.k9.activity.setup.Prefs;
-import com.fsck.k9.crypto.PgpData;
-import com.fsck.k9.fragment.MessageListFragment;
-import com.fsck.k9.fragment.MessageViewFragment;
-import com.fsck.k9.fragment.MessageListFragment.MessageListFragmentListener;
-import com.fsck.k9.fragment.MessageViewFragment.MessageViewFragmentListener;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.store.StorageManager;
-import com.fsck.k9.search.LocalSearch;
-import com.fsck.k9.search.SearchAccount;
-import com.fsck.k9.search.SearchSpecification;
-import com.fsck.k9.search.SearchSpecification.Attribute;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
-import com.fsck.k9.search.SearchSpecification.SearchCondition;
-import com.fsck.k9.view.MessageHeader;
-import com.fsck.k9.view.MessageTitleView;
-import com.fsck.k9.view.ViewSwitcher;
-import com.fsck.k9.view.ViewSwitcher.OnSwitchCompleteListener;
-
-import de.cketti.library.changelog.ChangeLog;
-
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.Account.SortType;
+import com.chiaramail.chiaramailforandroid.K9.SplitViewMode;
+import com.chiaramail.chiaramailforandroid.activity.misc.ContactPictureLoader;
+import com.chiaramail.chiaramailforandroid.activity.misc.SwipeGestureDetector.OnSwipeGestureListener;
+import com.chiaramail.chiaramailforandroid.activity.setup.AccountSettings;
+import com.chiaramail.chiaramailforandroid.activity.setup.FolderSettings;
+import com.chiaramail.chiaramailforandroid.activity.setup.Prefs;
+import com.chiaramail.chiaramailforandroid.crypto.PgpData;
+import com.chiaramail.chiaramailforandroid.fragment.MessageListFragment;
+import com.chiaramail.chiaramailforandroid.fragment.MessageViewFragment;
+import com.chiaramail.chiaramailforandroid.fragment.MessageListFragment.MessageListFragmentListener;
+import com.chiaramail.chiaramailforandroid.fragment.MessageViewFragment.MessageViewFragmentListener;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager;
+import com.chiaramail.chiaramailforandroid.mail.store.UnavailableStorageException;
+import com.chiaramail.chiaramailforandroid.search.LocalSearch;
+import com.chiaramail.chiaramailforandroid.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Attribute;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.SearchCondition;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.view.MessageHeader;
+import com.chiaramail.chiaramailforandroid.view.MessageTitleView;
+import com.chiaramail.chiaramailforandroid.view.SingleMessageView;
+import com.chiaramail.chiaramailforandroid.view.ViewSwitcher;
+import com.chiaramail.chiaramailforandroid.view.ViewSwitcher.OnSwitchCompleteListener;
+import com.chiaramail.chiaramailforandroid.R;
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
 
 /**
  * MessageList is the primary user interface for the program. This Activity
@@ -77,8 +81,8 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
     private static final String EXTRA_MESSAGE_REFERENCE = "message_reference";
 
     // used for remote search
-    public static final String EXTRA_SEARCH_ACCOUNT = "com.fsck.k9.search_account";
-    private static final String EXTRA_SEARCH_FOLDER = "com.fsck.k9.search_folder";
+    public static final String EXTRA_SEARCH_ACCOUNT = "com.chiaramail.chiaramailforandroid.search_account";
+    private static final String EXTRA_SEARCH_FOLDER = "com.chiaramail.chiaramailforandroid.search_folder";
 
     private static final String STATE_DISPLAY_MODE = "displayMode";
     private static final String STATE_MESSAGE_LIST_WAS_DISPLAYED = "messageListWasDisplayed";
@@ -131,7 +135,7 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
         intent.putExtra(EXTRA_MESSAGE_REFERENCE, messageReference);
         return intent;
     }
-
+/**
     public static Intent actionHandleNotificationIntent(Context context,
             MessageReference messageReference) {
         Intent intent = actionDisplayMessageIntent(context, messageReference);
@@ -139,7 +143,7 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
         return intent;
     }
 
-
+**/
     private enum DisplayMode {
         MESSAGE_LIST,
         MESSAGE_VIEW,
@@ -163,6 +167,7 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
 
     private MessageListFragment mMessageListFragment;
     private MessageViewFragment mMessageViewFragment;
+    private int mFirstBackStackId = -1;
 
     private Account mAccount;
     private String mFolderName;
@@ -191,8 +196,7 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
      */
     private boolean mMessageListWasDisplayed = false;
     private ViewSwitcher mViewSwitcher;
-
-
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -219,17 +223,20 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
         // Enable gesture detection for MessageLists
         setupGestureDetector(this);
 
-        decodeExtras(getIntent());
+        if (!decodeExtras(getIntent())) {
+            return;
+        }
+
         findFragments();
         initializeDisplayMode(savedInstanceState);
         initializeLayout();
         initializeFragments();
-        displayViews();
+        displayViews();      
 
-        ChangeLog cl = new ChangeLog(this);
+/**        ChangeLog cl = new ChangeLog(this);
         if (cl.isFirstRun()) {
             cl.getLogDialog().show();
-        }
+        }**/ //Don't show K-9 Mail change log
     }
 
     @Override
@@ -238,6 +245,11 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
 
         setIntent(intent);
 
+        if (mFirstBackStackId >= 0) {
+            getSupportFragmentManager().popBackStackImmediate(mFirstBackStackId,
+                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            mFirstBackStackId = -1;
+        }
         removeMessageListFragment();
         removeMessageViewFragment();
 
@@ -245,7 +257,10 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
         mSearch = null;
         mFolderName = null;
 
-        decodeExtras(intent);
+        if (!decodeExtras(intent)) {
+            return;
+        }
+
         initializeDisplayMode(null);
         initializeFragments();
         displayViews();
@@ -362,9 +377,9 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
         }
     }
 
-    private void decodeExtras(Intent intent) {
+    private boolean decodeExtras(Intent intent) {
         String action = intent.getAction();
-        if (Intent.ACTION_VIEW.equals(action)) {
+        if (Intent.ACTION_VIEW.equals(action) && intent.getData() != null) {
             Uri uri = intent.getData();
             List<String> segmentList = uri.getPathSegments();
 
@@ -428,19 +443,39 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
             mSearch.addAllowedFolder(mMessageReference.folderName);
         }
 
+        if (mSearch == null) {
+            // We've most likely been started by an old unread widget
+            String accountUuid = intent.getStringExtra("account");
+            String folderName = intent.getStringExtra("folder");
+
+            mSearch = new LocalSearch(folderName);
+            mSearch.addAccountUuid((accountUuid == null) ? "invalid" : accountUuid);
+            if (folderName != null) {
+                mSearch.addAllowedFolder(folderName);
+            }
+        }
+
+        Preferences prefs = Preferences.getPreferences(getApplicationContext());
+
         String[] accountUuids = mSearch.getAccountUuids();
-        mSingleAccountMode = (accountUuids.length == 1 && !mSearch.searchAllAccounts());
+        if (mSearch.searchAllAccounts()) {
+            Account[] accounts = prefs.getAccounts();
+            mSingleAccountMode = (accounts.length == 1);
+            if (mSingleAccountMode) {
+                mAccount = accounts[0];
+            }
+        } else {
+            mSingleAccountMode = (accountUuids.length == 1);
+            if (mSingleAccountMode) {
+                mAccount = prefs.getAccount(accountUuids[0]);
+            }
+        }
         mSingleFolderMode = mSingleAccountMode && (mSearch.getFolderNames().size() == 1);
 
-        if (mSingleAccountMode) {
-            Preferences prefs = Preferences.getPreferences(getApplicationContext());
-            mAccount = prefs.getAccount(accountUuids[0]);
-
-            if (mAccount != null && !mAccount.isAvailable(this)) {
-                Log.i(K9.LOG_TAG, "not opening MessageList of unavailable account");
-                onAccountUnavailable();
-                return;
-            }
+        if (mSingleAccountMode && (mAccount == null || !mAccount.isAvailable(this))) {
+            Log.i(K9.LOG_TAG, "not opening MessageList of unavailable account");
+            onAccountUnavailable();
+            return false;
         }
 
         if (mSingleFolderMode) {
@@ -449,6 +484,8 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
 
         // now we know if we are in single account mode and need a subtitle
         mActionBarSubTitle.setVisibility((!mSingleFolderMode) ? View.GONE : View.VISIBLE);
+
+        return true;
     }
 
     @Override
@@ -523,6 +560,9 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
     @Override
     public void onBackPressed() {
         if (mDisplayMode == DisplayMode.MESSAGE_VIEW && mMessageListWasDisplayed) {
+        	if (mMessageViewFragment == null) return;
+        	SingleMessageView mv = mMessageViewFragment.getMessageView();
+        	if (mv != null) mv.pause_videos();
             showMessageList();
         } else {
             super.onBackPressed();
@@ -577,7 +617,9 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
                 return true;
             }
             case KeyEvent.KEYCODE_Q: {
-                onShowFolderList();
+                if (mMessageListFragment != null && mMessageListFragment.isSingleAccountMode()) {
+                    onShowFolderList();
+                }
                 return true;
             }
             case KeyEvent.KEYCODE_O: {
@@ -758,10 +800,10 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
                 mMessageListFragment.changeSort(SortType.SORT_SUBJECT);
                 return true;
             }
-//            case R.id.set_sort_sender: {
-//                mMessageListFragment.changeSort(SortType.SORT_SENDER);
-//                return true;
-//            }
+            case R.id.set_sort_sender: {
+                mMessageListFragment.changeSort(SortType.SORT_SENDER);
+                return true;
+            }
             case R.id.set_sort_flag: {
                 mMessageListFragment.changeSort(SortType.SORT_FLAGGED);
                 return true;
@@ -772,6 +814,22 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
             }
             case R.id.set_sort_attach: {
                 mMessageListFragment.changeSort(SortType.SORT_ATTACHMENT);
+                return true;
+            }
+            case R.id.invite: {
+                mMessageListFragment.invite();
+                return true;
+            }
+            case R.id.manage_content_servers: {
+                mMessageListFragment.manage_content_servers();
+                return true;
+            }
+            case R.id.reset_password: {
+                mMessageListFragment.reset_password();
+                return true;
+            }
+            case R.id.change_password: {
+                mMessageListFragment.change_password();
                 return true;
             }
             case R.id.select_all: {
@@ -792,6 +850,14 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
             }
             case R.id.search_remote: {
                 mMessageListFragment.onRemoteSearch();
+                return true;
+            }
+            case R.id.mark_all_as_read: {
+                mMessageListFragment.markAllAsRead();
+                return true;
+            }
+            case R.id.show_folder_list: {
+                onShowFolderList();
                 return true;
             }
             // MessageView
@@ -912,7 +978,11 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
         if (menu == null) {
             return;
         }
-
+        try {
+        	if (mMessageViewFragment != null && mMessageViewFragment.getMessage() != null && mMessageViewFragment.getMessage().getHeader(ECSInterfaces.CONTENT_DURATION) != null && mAccount != null && !mMessageViewFragment.getMessage().getFrom()[0].getAddress().equals(mAccount.getEmail())) menu.findItem(R.id.single_message_options).setEnabled(false);
+        } catch (UnavailableStorageException e) {
+        	
+        }
         // Set visibility of account/folder settings menu items
         if (mMessageListFragment == null) {
             menu.findItem(R.id.account_settings).setVisible(false);
@@ -1021,26 +1091,28 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
             menu.findItem(R.id.select_all).setVisible(false);
             menu.findItem(R.id.send_messages).setVisible(false);
             menu.findItem(R.id.expunge).setVisible(false);
+            menu.findItem(R.id.mark_all_as_read).setVisible(false);
+            menu.findItem(R.id.show_folder_list).setVisible(false);
         } else {
             menu.findItem(R.id.set_sort).setVisible(true);
             menu.findItem(R.id.select_all).setVisible(true);
+            menu.findItem(R.id.mark_all_as_read).setVisible(mMessageListFragment.isMarkAllAsReadSupported());
 
             if (!mMessageListFragment.isSingleAccountMode()) {
                 menu.findItem(R.id.expunge).setVisible(false);
                 menu.findItem(R.id.check_mail).setVisible(false);
                 menu.findItem(R.id.send_messages).setVisible(false);
+                menu.findItem(R.id.show_folder_list).setVisible(false);
+                menu.findItem(R.id.invite).setVisible(false);
+                menu.findItem(R.id.manage_content_servers).setVisible(false);
             } else {
                 menu.findItem(R.id.send_messages).setVisible(mMessageListFragment.isOutbox());
-
-                if (mMessageListFragment.isRemoteFolder()) {
-                    menu.findItem(R.id.check_mail).setVisible(true);
-                    menu.findItem(R.id.expunge).setVisible(
-                            mMessageListFragment.isAccountExpungeCapable());
-                } else {
-                    menu.findItem(R.id.check_mail).setVisible(false);
-                    menu.findItem(R.id.expunge).setVisible(false);
-                }
+                menu.findItem(R.id.expunge).setVisible(mMessageListFragment.isRemoteFolder() &&
+                        mMessageListFragment.isAccountExpungeCapable());
+                menu.findItem(R.id.show_folder_list).setVisible(true);
             }
+
+            menu.findItem(R.id.check_mail).setVisible(mMessageListFragment.isCheckMailSupported());
 
             // If this is an explicit local search, show the option to search on the server
             if (!mMessageListFragment.isRemoteSearch() &&
@@ -1106,19 +1178,21 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
         } else {
             mMessageViewContainer.removeView(mMessageViewPlaceHolder);
 
+            if (mMessageListFragment != null) {
+                mMessageListFragment.setActiveMessage(messageReference);
+            }
+
             MessageViewFragment fragment = MessageViewFragment.newInstance(messageReference);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.message_view_container, fragment);
             mMessageViewFragment = fragment;
-            ft.commit();
+            ft.commitAllowingStateLoss();
+//            ft.commit();
 
-            if (mDisplayMode == DisplayMode.SPLIT_VIEW) {
-                mMessageListFragment.setActiveMessage(messageReference);
-            } else {
+            if (mDisplayMode != DisplayMode.SPLIT_VIEW) {
                 showMessageView();
             }
         }
-        invalidateOptionsMenu();
     }
 
     @Override
@@ -1128,17 +1202,53 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
 
     @Override
     public void onForward(Message message) {
-        MessageCompose.actionForward(this, message.getFolder().getAccount(), message, null);
+    	String[] forward_allowed = new String[2];
+    	String forward_flag = "false";
+    	try {
+        	forward_allowed = message.getHeader(ECSInterfaces.ALLOW_FORWARDING);
+        	if (forward_allowed == null) {
+        		forward_flag = "false";
+        	} else {
+        		forward_flag = forward_allowed[0];
+        	}
+    	} catch (MessagingException e)
+    	{
+    	}
+        MessageCompose.actionForward(this, message.getFolder().getAccount(), message, forward_flag, null);
     }
 
     @Override
     public void onReply(Message message) {
-        MessageCompose.actionReply(this, message.getFolder().getAccount(), message, false, null);
+    	String[] forward_allowed = new String[2];
+    	String forward_flag = "false";
+    	try {
+        	forward_allowed = message.getHeader(ECSInterfaces.ALLOW_FORWARDING);
+        	if (forward_allowed == null) {
+        		forward_flag = "false";
+        	} else {
+        		forward_flag = forward_allowed[0];
+        	}
+    	} catch (MessagingException e)
+    	{
+    	}
+        MessageCompose.actionReply(this, message.getFolder().getAccount(), message, false, forward_flag, null);
     }
 
     @Override
     public void onReplyAll(Message message) {
-        MessageCompose.actionReply(this, message.getFolder().getAccount(), message, true, null);
+    	String[] forward_allowed = new String[2];
+    	String forward_flag = "false";
+    	try {
+        	forward_allowed = message.getHeader(ECSInterfaces.ALLOW_FORWARDING);
+        	if (forward_allowed == null) {
+        		forward_flag = "false";
+        	} else {
+        		forward_flag = forward_allowed[0];
+        	}
+    	} catch (MessagingException e)
+    	{
+    	}
+        MessageCompose.actionReply(this, message.getFolder().getAccount(), message, true, forward_flag, null);
     }
 
     @Override
@@ -1159,11 +1269,7 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
 
     @Override
     public void onBackStackChanged() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        mMessageListFragment = (MessageListFragment) fragmentManager.findFragmentById(
-                R.id.message_list_container);
-        mMessageViewFragment = (MessageViewFragment) fragmentManager.findFragmentById(
-                R.id.message_view_container);
+        findFragments();
 
         if (mDisplayMode == DisplayMode.SPLIT_VIEW) {
             showMessageViewPlaceHolder();
@@ -1213,7 +1319,11 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
             ft.addToBackStack(null);
 
         mMessageListFragment = fragment;
-        ft.commit();
+
+        int transactionId = ft.commit();
+        if (transactionId >= 0 && mFirstBackStackId < 0) {
+            mFirstBackStackId = transactionId;
+        }
     }
 
     @Override
@@ -1322,7 +1432,7 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
 
     private void restartActivity() {
         // restart the current activity, so that the theme change can be applied
-        if (Build.VERSION.SDK_INT < 11) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
             Intent intent = getIntent();
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             finish();
@@ -1338,22 +1448,78 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
     public void displayMessageSubject(String subject) {
         if (mDisplayMode == DisplayMode.MESSAGE_VIEW) {
             mActionBarSubject.setText(subject);
+            if (subject == null) return;
+            try {
+                if (mMessageViewFragment.getMessage().getHeader("Message-ID") != null && ECSInterfaces.ValidECSMessages.contains(mMessageViewFragment.getMessage().getHeader("Message-ID")[0])) {	
+                	// The user had selected this message at least once this session, so we know this is a legitimate ECS message. Color the subject green.
+            		mActionBarSubject.setTextColor(Color.parseColor(ECSInterfaces.GREEN));
+                } else {
+                	if (mMessageViewFragment.getMessage().getHeader("Message-ID") != null && ECSInterfaces.BogusECSMessages.contains(mMessageViewFragment.getMessage().getHeader("Message-ID")[0])) {	// Otherwise, color it red as a warning to users of a spoofing attempt
+                		mActionBarSubject.setTextColor(Color.parseColor(ECSInterfaces.RED));
+                	} else {	// If the user had never selected the message, but the headers contain ECS fields, color the subject green; otherwise, it's not an ECS message, so color it black
+                        if (ECSInterfaces.validateHeaders(mMessageViewFragment.getMessage().getHeader(ECSInterfaces.CONTENT_SERVER_NAME), mMessageViewFragment.getMessage().getHeader(ECSInterfaces.CONTENT_SERVER_PORT), mMessageViewFragment.getMessage().getHeader(ECSInterfaces.CONTENT_POINTER))) {
+//                            if (ECSInterfaces.validateHeaders(mMessageViewFragment.getMessage())) {
+                    		mActionBarSubject.setTextColor(Color.parseColor(ECSInterfaces.GREEN));
+                        } else {
+                    		mActionBarSubject.setTextColor(Color.parseColor(ECSInterfaces.BLACK));
+                    	}
+                	}
+                }
+            } catch (UnavailableStorageException e) {
+            	
+            }
         }
     }
 
     @Override
     public void onReply(Message message, PgpData pgpData) {
-        MessageCompose.actionReply(this, mAccount, message, false, pgpData.getDecryptedData());
+    	String[] forward_allowed = new String[2];
+    	String forward_flag = "false";
+    	try {
+        	forward_allowed = message.getHeader(ECSInterfaces.ALLOW_FORWARDING);
+        	if (forward_allowed == null) {
+        		forward_flag = "false";
+        	} else {
+        		forward_flag = forward_allowed[0];
+        	}
+    	} catch (MessagingException e)
+    	{
+    	}
+        MessageCompose.actionReply(this, mAccount, message, false, forward_flag, pgpData.getDecryptedData());
     }
 
     @Override
     public void onReplyAll(Message message, PgpData pgpData) {
-        MessageCompose.actionReply(this, mAccount, message, true, pgpData.getDecryptedData());
+    	String[] forward_allowed = new String[2];
+    	String forward_flag = "false";
+    	try {
+        	forward_allowed = message.getHeader(ECSInterfaces.ALLOW_FORWARDING);
+        	if (forward_allowed == null) {
+        		forward_flag = "false";
+        	} else {
+        		forward_flag = forward_allowed[0];
+        	}
+    	} catch (MessagingException e)
+    	{
+    	}
+        MessageCompose.actionReply(this, mAccount, message, true, forward_flag, pgpData.getDecryptedData());
     }
 
     @Override
     public void onForward(Message mMessage, PgpData mPgpData) {
-        MessageCompose.actionForward(this, mAccount, mMessage, mPgpData.getDecryptedData());
+    	String[] forward_allowed = new String[2];
+    	String forward_flag = "false";
+    	try {
+        	forward_allowed = mMessage.getHeader(ECSInterfaces.ALLOW_FORWARDING);
+        	if (forward_allowed == null) {
+        		forward_flag = "false";
+        	} else {
+        		forward_flag = forward_allowed[0];
+        	}
+    	} catch (MessagingException e)
+    	{
+    	}
+        MessageCompose.actionForward(this, mAccount, mMessage, forward_flag, mPgpData.getDecryptedData());
     }
 
     @Override
@@ -1423,6 +1589,9 @@ public class MessageList extends K9FragmentActivity implements MessageListFragme
         mMessageListWasDisplayed = true;
         mDisplayMode = DisplayMode.MESSAGE_LIST;
         mViewSwitcher.showFirstView();
+        // Initialize the color index counter and empty the HashMap every time a new message list is displayed
+        ContactPictureLoader.i = 0;
+        ContactPictureLoader.senderColors = new HashMap<String, Integer>();
 
         mMessageListFragment.setActiveMessage(null);
 

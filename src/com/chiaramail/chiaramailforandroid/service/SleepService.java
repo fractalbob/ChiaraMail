@@ -1,10 +1,11 @@
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import com.fsck.k9.K9;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
+
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
@@ -13,8 +14,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class SleepService extends CoreService {
 
-    private static String ALARM_FIRED = "com.fsck.k9.service.SleepService.ALARM_FIRED";
-    private static String LATCH_ID = "com.fsck.k9.service.SleepService.LATCH_ID_EXTRA";
+    private static String ALARM_FIRED = "com.chiaramail.chiaramailforandroid.service.SleepService.ALARM_FIRED";
+    private static String LATCH_ID = "com.chiaramail.chiaramailforandroid.service.SleepService.LATCH_ID_EXTRA";
 
 
     private static ConcurrentHashMap<Integer, SleepDatum> sleepData = new ConcurrentHashMap<Integer, SleepDatum>();
@@ -32,7 +33,7 @@ public class SleepService extends CoreService {
         sleepData.put(id, sleepDatum);
 
         Intent i = new Intent();
-        i.setClassName(context.getPackageName(), "com.fsck.k9.service.SleepService");
+        i.setClassName(context.getPackageName(), "com.chiaramail.chiaramailforandroid.service.SleepService");
         i.putExtra(LATCH_ID, id);
         i.setAction(ALARM_FIRED + "." + id);
         long startTime = System.currentTimeMillis();

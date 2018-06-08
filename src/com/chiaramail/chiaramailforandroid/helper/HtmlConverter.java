@@ -1,9 +1,11 @@
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import android.text.*;
 import android.text.Html.TagHandler;
 import android.util.Log;
-import com.fsck.k9.K9;
+
+import com.chiaramail.chiaramailforandroid.K9;
+
 import org.xml.sax.XMLReader;
 
 import java.io.IOException;
@@ -127,7 +129,8 @@ public class HtmlConverter {
     private static final int MAX_SMART_HTMLIFY_MESSAGE_LENGTH = 1024 * 256 ;
 
     public static final String getHtmlHeader() {
-        return "<html><head/><body>";
+        return "<html><head></head><body>";
+//        return "<html><head/><body>";
     }
 
     public static final String getHtmlFooter() {
@@ -1296,7 +1299,7 @@ public class HtmlConverter {
     /**
      * {@link TagHandler} that supports unordered lists.
      *
-     * @see HtmlConverter#htmlToSpanned(String)
+     * @see HtmlConverter_BAK#htmlToSpanned(String)
      */
     public static class ListTagHandler implements TagHandler {
         @Override

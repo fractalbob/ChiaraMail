@@ -1,213 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="17029"
-    android:versionName="4.328" package="com.fsck.k9"
-    >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chiaramail.chiaramailforandroid"
+    android:versionCode="4112"
+    android:versionName="4.56" >
+
     <uses-sdk
-       android:minSdkVersion="7"
-       android:targetSdkVersion="15"
-       />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+//        android:targetSdkVersion="23" />
+    
     <supports-screens
+        android:anyDensity="true"
         android:largeScreens="true"
         android:normalScreens="true"
-        android:smallScreens="true"
-        android:anyDensity="true"
-    />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+        android:smallScreens="true" />
 
-    <!-- Needed to mark a contact as contacted -->
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    // Dangerous permissions--Need to request at runtime for Android 6.0+ devices.
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    
+    // Normal permissions
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.chiaramail.chiaramailforandroid.permission.READ_ATTACHMENT" />
     <uses-permission android:name="org.thialfihar.android.apg.permission.READ_KEY_DETAILS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.chiaramail.chiaramailforandroid.permission.REMOTE_CONTROL" />
+    <uses-permission android:name="com.chiaramail.chiaramailforandroid.permission.READ_MESSAGES" />
+    <uses-permission android:name="com.chiaramail.chiaramailforandroid.permission.DELETE_MESSAGES" />
+    
+    <permission
+        android:name="com.chiaramail.chiaramailforandroid.permission.READ_ATTACHMENT"
+        android:description="@string/read_attachment_desc"
+        android:label="@string/read_attachment_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
 
-    <permission android:name="com.fsck.k9.permission.READ_ATTACHMENT"
-                android:permissionGroup="android.permission-group.MESSAGES"
-                android:protectionLevel="dangerous"
-                android:label="@string/read_attachment_label"
-                android:description="@string/read_attachment_desc"/>
-    <uses-permission android:name="com.fsck.k9.permission.READ_ATTACHMENT"/>
-    <permission android:name="com.fsck.k9.permission.REMOTE_CONTROL"
-                 android:permissionGroup="android.permission-group.MESSAGES"
-                 android:protectionLevel="dangerous"
-                 android:label="@string/remote_control_label"
-                 android:description="@string/remote_control_desc"/>
-    <uses-permission android:name="com.fsck.k9.permission.REMOTE_CONTROL"/>
-    <permission android:name="com.fsck.k9.permission.READ_MESSAGES"
-                android:permissionGroup="android.permission-group.MESSAGES"
-                android:protectionLevel="dangerous"
-                android:label="@string/read_messages_label"
-                android:description="@string/read_messages_desc"/>
-    <uses-permission android:name="com.fsck.k9.permission.READ_MESSAGES"/>
-    <permission android:name="com.fsck.k9.permission.DELETE_MESSAGES"
-                android:permissionGroup="android.permission-group.MESSAGES"
-                android:protectionLevel="dangerous"
-                android:label="@string/delete_messages_label"
-                android:description="@string/delete_messages_desc"/>
-    <uses-permission android:name="com.fsck.k9.permission.DELETE_MESSAGES"/>
-    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <permission
+        android:name="com.chiaramail.chiaramailforandroid.permission.REMOTE_CONTROL"
+        android:description="@string/remote_control_desc"
+        android:label="@string/remote_control_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
+
+    <permission
+        android:name="com.chiaramail.chiaramailforandroid.permission.READ_MESSAGES"
+        android:description="@string/read_messages_desc"
+        android:label="@string/read_messages_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
+
+    <permission
+        android:name="com.chiaramail.chiaramailforandroid.permission.DELETE_MESSAGES"
+        android:description="@string/delete_messages_desc"
+        android:label="@string/delete_messages_label"
+        android:permissionGroup="android.permission-group.MESSAGES"
+        android:protectionLevel="dangerous" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <!-- android:hardwareAccelerated attribute workaround for Android bug in WebView -->
     <application
-        android:icon="@drawable/icon"
-        android:label="@string/app_name"
-        android:name="K9"
+        android:name=".K9"
         android:allowTaskReparenting="false"
-        android:theme="@style/Theme.K9.Light"
-        >
-        <meta-data android:name="android.app.default_searchable"
-                   android:value=".activity.Search" />
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/chiaramail_icon_red"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.K9.Light" >
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="com.chiaramail.chiaramailforandroid.activity.Search" />
+ <!--         
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+-->        
+        <!--
+             <activity android:name="com.chiaramail.chiaramailforandroid.TutorialActivity" android:theme="@style/Theme.Transparent">
+        </activity>
 
+        -->
         <activity
             android:name=".activity.Accounts"
             android:configChanges="locale"
+            android:exported="true"
+            android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:uiOptions="splitActionBarWhenNarrow"
-            android:label="@string/app_name">
+            android:uiOptions="splitActionBarWhenNarrow" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <data android:mimeType="application/x-k9settings" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.setup.Prefs"
-            android:label="@string/prefs_title"
             android:configChanges="locale"
-            android:taskAffinity="com.fsck.k9.activity.setup.Prefs"
             android:excludeFromRecents="true"
-            >
+            android:label="@string/prefs_title"
+            android:taskAffinity="com.chiaramail.chiaramailforandroid.activity.activity.setup.Prefs" >
         </activity>
         <activity
             android:name=".activity.setup.WelcomeMessage"
-            android:label="@string/welcome_message_title"
             android:configChanges="locale"
-            >
+            android:label="@string/welcome_message_title" >
         </activity>
         <activity
             android:name=".activity.setup.FontSizeSettings"
-            android:label="@string/font_size_settings_title"
             android:configChanges="locale"
-            >
+            android:label="@string/font_size_settings_title" >
         </activity>
+        <!--
+            <activity
+            android:name="com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupECS"
+            android:configChanges="locale"
+            android:label="@string/account_setup_ecs_login_title" >
+        </activity>
+        -->
         <activity
             android:name=".activity.setup.AccountSetupBasics"
-            android:label="@string/account_setup_basics_title"
             android:configChanges="locale"
-            >
+            android:label="@string/account_setup_basics_title" >
         </activity>
         <activity
             android:name=".activity.setup.AccountSetupAccountType"
-            android:label="@string/account_setup_account_type_title"
             android:configChanges="locale"
-            >
+            android:label="@string/account_setup_account_type_title" >
         </activity>
         <activity
             android:name=".activity.setup.AccountSetupIncoming"
-            android:label="@string/account_setup_incoming_title"
             android:configChanges="locale"
-            >
+            android:label="@string/account_setup_incoming_title" >
         </activity>
         <activity
             android:name=".activity.setup.AccountSetupComposition"
-            android:label="@string/account_settings_composition_title"
             android:configChanges="locale"
-        >
+            android:label="@string/account_settings_composition_title" >
         </activity>
         <activity
             android:name=".activity.setup.AccountSetupOutgoing"
-            android:label="@string/account_setup_outgoing_title"
             android:configChanges="locale"
-            >
+            android:label="@string/account_setup_outgoing_title" >
         </activity>
         <activity
-            android:name=".activity.setup.AccountSetupOptions"
-            android:label="@string/account_setup_options_title"
+            android:name=".activity.setup.AccountSetupInvite"
             android:configChanges="locale"
-            >
+            android:label="@string/invite_contacts_title" >
+        </activity>
+        <activity
+            android:name=".view.ECSVideoViewer"
+            android:configChanges="locale"
+            android:label="@string/ecs_video_viewer" >
+        </activity>
+        <activity
+            android:name=".activity.setup.AccountSetupDynamicContent"
+            android:configChanges="locale"
+            android:label="@string/account_setup_dynamic_content_settings_title" >
+        </activity>
+        <!--
+              <activity
+            android:name="com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupECSGraphical"
+            android:configChanges="locale"
+            android:label="@string/account_setup_dynamic_content_settings_title" >
+        </activity>
+        -->
+        <activity
+            android:name=".activity.setup.AccountSetupOptions"
+            android:configChanges="locale"
+            android:label="@string/account_setup_options_title" >
         </activity>
         <activity
             android:name=".activity.setup.AccountSetupNames"
-            android:label="@string/account_setup_names_title"
             android:configChanges="locale"
-            >
+            android:label="@string/account_setup_names_title" >
         </activity>
         <activity
             android:name=".activity.ChooseFolder"
-            android:theme="@style/Theme.K9Dialog"
-            android:label="@string/choose_folder_title"
             android:configChanges="locale"
+            android:label="@string/choose_folder_title"
             android:noHistory="true"
-            >
+            android:theme="@style/Theme.K9Dialog" >
         </activity>
         <activity
             android:name=".activity.ChooseIdentity"
-            android:theme="@style/Theme.K9Dialog"
-            android:label="@string/choose_identity_title"
             android:configChanges="locale"
-            >
+            android:label="@string/choose_identity_title"
+            android:theme="@style/Theme.K9Dialog" >
         </activity>
         <activity
             android:name=".activity.ManageIdentities"
-            android:label="@string/manage_identities_title"
             android:configChanges="locale"
-            >
+            android:label="@string/manage_identities_title" >
         </activity>
         <activity
             android:name=".activity.EditIdentity"
-            android:label="@string/edit_identity_title"
             android:configChanges="locale"
-            >
+            android:label="@string/edit_identity_title" >
         </activity>
         <activity
             android:name=".activity.NotificationDeleteConfirmation"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:excludeFromRecents="true"
             android:launchMode="singleTop"
             android:taskAffinity=""
-            android:excludeFromRecents="true"
-            >
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
-        <!-- XXX Note: this activity is hacked to ignore config changes,
-             since it doesn't currently handle them correctly in code. -->
+        <!--
+             XXX Note this activity is hacked to ignore config changes,
+             since it doesn't currently handle them correctly in code.
+
+        -->
         <activity
             android:name=".activity.setup.AccountSetupCheckSettings"
-            android:label="@string/account_setup_check_settings_title"
             android:configChanges="keyboardHidden|orientation|locale"
-            >
+            android:label="@string/account_setup_check_settings_title" >
         </activity>
         <activity
             android:name=".activity.setup.AccountSettings"
-            android:label="@string/account_settings_title_fmt"
             android:configChanges="locale"
-            >
+            android:label="@string/account_settings_title_fmt" >
         </activity>
-
         <activity
             android:name=".activity.setup.FolderSettings"
-            android:theme="@android:style/Theme.Dialog"
-            android:label="@string/folder_settings_title"
             android:configChanges="locale"
-            >
+            android:label="@string/folder_settings_title"
+            android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
             android:name=".activity.FolderList"
             android:configChanges="locale"
-            android:uiOptions="splitActionBarWhenNarrow"
-            >
+            android:uiOptions="splitActionBarWhenNarrow" >
             <intent-filter>
+
                 <!-- This action is only to allow an entry point for launcher shortcuts -->
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -216,83 +258,114 @@
             android:name=".activity.MessageList"
             android:configChanges="locale"
             android:launchMode="singleTop"
-            android:uiOptions="splitActionBarWhenNarrow"
-            >
+            android:uiOptions="splitActionBarWhenNarrow" >
             <intent-filter>
+
                 <!-- This action is only to allow an entry point for launcher shortcuts -->
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <data
-                    android:scheme="email"
                     android:host="messages"
-                />
+                    android:scheme="email" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.MessageCompose"
-            android:label="@string/app_name"
-            android:enabled="false"
             android:configChanges="locale"
-            >
+            android:enabled="false"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.SENDTO" />
+
                 <data android:scheme="mailto" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <data android:mimeType="*/*" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
+
                 <data android:mimeType="*/*" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <data android:scheme="mailto" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
         <!-- Search Activity - searchable -->
-        <activity android:name=".activity.Search"
-                  android:label="@string/search_action"
-                  android:configChanges="locale"
-                  android:uiOptions="splitActionBarWhenNarrow"
-                  >
+        <activity
+            android:name=".activity.Search"
+            android:configChanges="locale"
+            android:label="@string/search_action"
+            android:uiOptions="splitActionBarWhenNarrow" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="android.app.searchable"
-                       android:resource="@xml/searchable" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
         </activity>
         <activity
             android:name=".activity.LauncherShortcuts"
-            android:label="@string/shortcuts_title"
             android:configChanges="locale"
-            >
+            android:label="@string/shortcuts_title" >
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.AccessibleEmailContentActivity" >
+        </activity>
         <activity
-            android:name=".activity.AccessibleEmailContentActivity"
-            >
-        </activity>
-        <activity android:name=".activity.EmailAddressList"
+            android:name=".helper.ContactPicker"
             android:configChanges="locale"
-            >
+            android:label="" >
         </activity>
-        <receiver android:name=".service.BootReceiver"
-              android:enabled="true"
-              >
+        <activity
+            android:name=".activity.EmailAddressList"
+            android:configChanges="locale" >
+        </activity>
+        <activity
+            android:name=".activity.ManageContentServers"
+            android:configChanges="locale"
+            android:label="@string/manage_content_servers_title" >
+        </activity>
+        <!--
+            <activity
+            android:name="com.chiaramail.chiaramailforandroid.activity.ResetPassword"
+            android:configChanges="locale"
+            android:label="@string/reset_password_title" >
+        </activity>      
+        <activity
+            android:name="com.chiaramail.chiaramailforandroid.activity.ChangePassword"
+            android:configChanges="locale"
+            android:label="@string/change_password_title" >
+        </activity>
+        -->
+        <receiver
+            android:name=".service.BootReceiver"
+            android:enabled="true" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -311,131 +384,131 @@
             <intent-filter>
                 <action android:name="com.android.sync.SYNC_CONN_STATUS_CHANGED" />
             </intent-filter>
-              <intent-filter>
-                <action android:name="com.fsck.k9.service.BroadcastReceiver.scheduleIntent"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name=".service.RemoteControlReceiver"
-               android:enabled="true"
-               android:permission="com.fsck.k9.permission.REMOTE_CONTROL"
-               >
-               <intent-filter>
-                 <action android:name="com.fsck.k9.K9RemoteControl.set"/>
-
-             </intent-filter>
-             <intent-filter>
-                <action android:name="com.fsck.k9.K9RemoteControl.requestAccounts"/>
-
-             </intent-filter>
-         </receiver>
-        <receiver android:name=".service.CoreReceiver"
-              android:enabled="true"
-              >
-              <intent-filter>
-                <action android:name="com.fsck.k9.service.CoreReceiver.wakeLockRelease"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name=".service.StorageReceiver"
-              android:enabled="true"
-              >
             <intent-filter>
-<!--
+                <action android:name="com.chiaramail.chiaramailforandroid.service.BroadcastReceiver.scheduleIntent" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.RemoteControlReceiver"
+            android:enabled="true"
+            android:permission="com.chiaramail.chiaramailforandroid.permission.REMOTE_CONTROL" >
+            <intent-filter>
+                <action android:name="com.chiaramail.chiaramailforandroid.K9RemoteControl.set" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.chiaramail.chiaramailforandroid.K9RemoteControl.requestAccounts" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.CoreReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.chiaramail.chiaramailforandroid.service.CoreReceiver.wakeLockRelease" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.StorageReceiver"
+            android:enabled="true" >
+            <intent-filter>
+
+                <!--
 android.intent.action.MEDIA_MOUNTED
 
-     * Broadcast Action:  External media is present and mounted at its mount point.
+     * Broadcast Action:  External media is present and mountcom.chiaramail.chiaramailforandroid.service.PushServicet.
      * The path to the mount point for the removed media is contained in the Intent.mData field.
-     * The Intent contains an extra with name "read-only" and Boolean value to indicate if the
+     * The Intent com.chiaramail.chiaramailforandroid.service.PollServiceth name "read-only" and Boolean value to indicate if the
      * media was mounted read only.
 
- -->
-                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
-<!--
-
+                -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <!--
 MEDIA_EJECT and MEDIA_UNMOUNTED are not defined here: they have to be dynamically registered
 otherwise it would make K-9 start at the wrong time
 
- -->
-                <data android:scheme="file"/>
+                -->
+                <data android:scheme="file" />
             </intent-filter>
         </receiver>
+
         <service
             android:name=".service.MailService"
-            android:enabled="true"
-            >
+            android:enabled="true" >
         </service>
         <service
             android:name=".service.NotificationActionService"
-            android:enabled="true"
-            >
+            android:enabled="true" >
         </service>
         <service
-             android:name=".service.PushService"
-             android:enabled="true"
-             >
-         </service>
-         <service
-             android:name=".service.PollService"
-             android:enabled="true"
-            >
-         </service>
-         <service
-              android:name=".service.RemoteControlService"
-              android:enabled="true"
-              android:permission="com.fsck.k9.permission.REMOTE_CONTROL"
-             >
-          </service>
-         <service
-             android:name=".service.SleepService"
-             android:enabled="true"
-             >
-         </service>
+            android:name=".service.PushService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name=".service.PollService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name=".service.RemoteControlService"
+            android:enabled="true"
+            android:permission="com.chiaramail.chiaramailforandroid.permission.REMOTE_CONTROL" >
+        </service>
+        <service
+            android:name=".service.SleepService"
+            android:enabled="true" >
+        </service>
+
         <provider
             android:name=".provider.AttachmentProvider"
-            android:authorities="com.fsck.k9.attachmentprovider"
-            android:multiprocess="true"
+            android:authorities="com.chiaramail.chiaramailforandroid.attachmentprovider"
             android:grantUriPermissions="true"
-            android:readPermission="com.fsck.k9.permission.READ_ATTACHMENT"
-            />
+            android:multiprocess="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS"
+            android:readPermission="com.chiaramail.chiaramailforandroid.permission.READ_ATTACHMENT" />
         <provider
             android:name=".provider.MessageProvider"
-            android:authorities="com.fsck.k9.messageprovider"
-            android:multiprocess="true"
+            android:authorities="com.chiaramail.chiaramailforandroid.messageprovider"
             android:grantUriPermissions="true"
-            android:readPermission="com.fsck.k9.permission.READ_MESSAGES"
-            android:writePermission="com.fsck.k9.permission.DELETE_MESSAGES"
-            />
+            android:multiprocess="true"
+            android:readPermission="com.chiaramail.chiaramailforandroid.permission.READ_MESSAGES"
+            android:writePermission="com.chiaramail.chiaramailforandroid.permission.DELETE_MESSAGES" />
         <provider
             android:name=".provider.EmailProvider"
-            android:authorities="com.fsck.k9.provider.email"
-            android:exported="false"
-            />
+            android:authorities="com.chiaramail.chiaramailforandroid.provider.email"
+            android:exported="false" />
 
         <receiver
             android:name=".provider.UnreadWidgetProvider"
-            android:label="@string/unread_widget_label"
-            android:icon="@drawable/icon">
+            android:icon="@drawable/chiaramail_icon_red"
+            android:label="@string/unread_widget_label" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/unread_widget_info" />
         </receiver>
-        <activity android:name=".activity.UnreadWidgetConfiguration">
+
+        <activity android:name=".activity.UnreadWidgetConfiguration" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.AccountList">
+        <activity android:name=".activity.AccountList" >
         </activity>
         <activity
             android:name=".activity.UpgradeDatabases"
-            android:label="@string/upgrade_databases_title">
+            android:label="@string/upgrade_databases_title" >
         </activity>
+
         <service
             android:name=".service.DatabaseUpgradeService"
-            android:exported="false">
+            android:exported="false" >
         </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
     </application>
+
 </manifest>

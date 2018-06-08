@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\account_settings_preferences.xml",
+        "source": "C:\\k-9\\res\\xml\\account_settings_preferences.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\providers.xml",
+        "source": "C:\\k-9\\res\\xml\\providers.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\changelog.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ckChangeLog\\library\\unspecified\\res\\xml\\changelog.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\ecschangelog.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ckChangeLog\\library\\unspecified\\res\\xml\\ecschangelog.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\global_preferences.xml",
+        "source": "C:\\k-9\\res\\xml\\global_preferences.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\font_preferences.xml",
+        "source": "C:\\k-9\\res\\xml\\font_preferences.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\searchable.xml",
+        "source": "C:\\k-9\\res\\xml\\searchable.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\unread_widget_info.xml",
+        "source": "C:\\k-9\\res\\xml\\unread_widget_info.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\xml\\folder_settings_preferences.xml",
+        "source": "C:\\k-9\\res\\xml\\folder_settings_preferences.xml"
+    }
+]

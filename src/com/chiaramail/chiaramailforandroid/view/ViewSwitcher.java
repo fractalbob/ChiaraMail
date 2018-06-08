@@ -1,6 +1,6 @@
-package com.fsck.k9.view;
+package com.chiaramail.chiaramailforandroid.view;
 
-import com.fsck.k9.K9;
+import com.chiaramail.chiaramailforandroid.K9;
 
 import android.content.Context;
 import android.util.AttributeSet;

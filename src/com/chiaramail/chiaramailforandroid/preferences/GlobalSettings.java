@@ -1,4 +1,4 @@
-package com.fsck.k9.preferences;
+package com.chiaramail.chiaramailforandroid.preferences;
 
 import java.io.File;
 import java.util.Arrays;
@@ -13,15 +13,15 @@ import java.util.TreeMap;
 import android.content.SharedPreferences;
 import android.os.Environment;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.FontSizes;
-import com.fsck.k9.K9;
-import com.fsck.k9.K9.NotificationHideSubject;
-import com.fsck.k9.K9.SplitViewMode;
-import com.fsck.k9.K9.Theme;
-import com.fsck.k9.R;
-import com.fsck.k9.Account.SortType;
-import com.fsck.k9.preferences.Settings.*;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.FontSizes;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Account.SortType;
+import com.chiaramail.chiaramailforandroid.K9.NotificationHideSubject;
+import com.chiaramail.chiaramailforandroid.K9.SplitViewMode;
+import com.chiaramail.chiaramailforandroid.K9.Theme;
+import com.chiaramail.chiaramailforandroid.preferences.Settings.*;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class GlobalSettings {
     public static final Map<String, TreeMap<Integer, SettingsDescription>> SETTINGS;

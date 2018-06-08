@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:orientation="vertical" >
+
+     <TextView
+         android:id="@+id/grpHeader"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:background="#80ffffff"
+         android:gravity="left"
+         android:padding="0dip"
+         android:text="foo"
+         android:textColor="#ffb0b0b0"
+         android:textSize="16dip" />
+
+     <!-- <include android:id="@+id/itemList" layout="@android:layout/list" /> -->
+
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" >
+
+         <!--
+            <CheckBox
+            android:id="@+id/sendInvite"
+	        android:layout_alignParentRight="true"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+            />
+         -->
+
+
+ <!--         
+        <TextView
+            android:id="@+id/contactName"
+            android:text="Bar"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="#eeffffff"
+            android:padding="0dip"
+            android:textColor="#ffb0b0b0"
+            android:textSize="20dip" />-->
+
+         
+         <CheckBox
+             android:id="@+id/sendInvite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true" />
+
+         <TextView
+             android:id="@+id/contactName"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_toLeftOf="@+id/sendInvite"
+             android:height="50dip"
+             android:background="#eeffffff"
+             android:padding="0dip"
+             android:text="Medium Text"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textColor="#ffb0b0b0" />
+         
+     </RelativeLayout>
+
+ </LinearLayout>

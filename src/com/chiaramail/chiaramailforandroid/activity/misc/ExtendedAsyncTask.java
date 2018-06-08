@@ -1,4 +1,4 @@
-package com.fsck.k9.activity.misc;
+package com.chiaramail.chiaramailforandroid.activity.misc;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

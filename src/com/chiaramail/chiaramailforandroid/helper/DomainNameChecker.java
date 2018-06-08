@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import android.net.http.SslCertificate;
 import android.util.Log;
-import com.fsck.k9.K9;
+
+import com.chiaramail.chiaramailforandroid.K9;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.cert.X509Certificate;

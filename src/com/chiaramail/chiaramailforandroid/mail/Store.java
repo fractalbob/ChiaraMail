@@ -1,5 +1,5 @@
 
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,13 +8,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import android.app.Application;
 import android.content.Context;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.mail.store.ImapStore;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.Pop3Store;
-import com.fsck.k9.mail.store.StorageManager.StorageProvider;
-import com.fsck.k9.mail.store.UnavailableStorageException;
-import com.fsck.k9.mail.store.WebDavStore;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapStore;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.Pop3Store;
+import com.chiaramail.chiaramailforandroid.mail.store.UnavailableStorageException;
+import com.chiaramail.chiaramailforandroid.mail.store.WebDavStore;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager.StorageProvider;
 
 /**
  * Store is the access point for an email message store. It's location can be

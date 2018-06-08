@@ -1,16 +1,16 @@
 
-package com.fsck.k9.controller;
+package com.chiaramail.chiaramailforandroid.controller;
 
 import java.util.List;
 
 import android.content.Context;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.AccountStats;
-import com.fsck.k9.BaseAccount;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.Part;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.AccountStats;
+import com.chiaramail.chiaramailforandroid.BaseAccount;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.Part;
 
 /**
  * Defines the interface that {@link MessagingController} will use to callback to requesters.

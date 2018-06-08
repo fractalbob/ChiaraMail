@@ -1,4 +1,4 @@
-package com.fsck.k9.view;
+package com.chiaramail.chiaramailforandroid.view;
 
 import android.graphics.Paint;
 import android.graphics.Path;

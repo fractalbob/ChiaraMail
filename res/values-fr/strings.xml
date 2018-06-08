@@ -38,73 +38,237 @@ Android Localizer (aiLocalizer)
     <!-- This should make it easier for forks to change the branding -->
 
     <!-- Used in AndroidManifest.xml -->
-    <string name="app_name">K-9 Mail</string>
-    <string name="beta_app_name">K-9 Mail BETA</string>
+    
+    <string name="app_name">ChiaraMail</string>
 
-    <string name="shortcuts_title">Comptes K-9</string>
-    <string name="unread_widget_label">K-9 non lus</string>
-
-    <string name="remote_control_label">Contrôle à distance de K-9 Mail</string>
-    <string name="remote_control_desc">Permettre à cette application de contrôler les paramètres et activités de K-9 Mail</string>
-
-
-    <!-- Used in the about dialog -->
-    <string name="app_authors">Google, Les K-9 Dog Walkers.</string>
-    <string name="app_copyright_fmt">Copyright 2008-<xliff:g>%s</xliff:g> The K-9 Dog Walkers. Portions Copyright 2006-<xliff:g>%s</xliff:g> the Android Open Source Project.</string>
-    <string name="app_license">Licensed under the Apache License, Version 2.0.</string>
-
-
-    <!-- Welcome message -->
-    <string name="welcome_message_title">Bienvenue sur K-9 Mail</string>
-    <string name="accounts_welcome"><![CDATA[
-<p>
-K-9 Mail est un client de messagerie open source pour Android basé sur le client standard Android Mail.
-</p><p>
-Voici ce que K-9 Mail apporte de plus\u00A0:
-</p>
-<ul>
-  <li>La technologie PUSH en passant par le protocole IMAP</li>
-  <li>De meilleures performances</li>
-  <li>Signer ses messages</li>
-  <li>Cci à soi</li>
-  <li>S\'envoyer une copie des messages automatiquement</li>
-  <li>Choisir les dossiers à synchroniser</li>
-  <li>Choisir l\'adresse e-mail de réponse</li>
-  <li>Des raccourcis clavier</li>
-  <li>Un meilleur support de l\'IMAP</li>
-  <li>Sauver les pièces jointes sur la carte SD</li>
-  <li>Vider la corbeille</li>
-  <li>Trier les messages</li>
-  <li>…et bien plus encore</li>
-</ul>
-<p>
-Veuillez noter que K-9 Mail ne prend pas en charge les comptes Hotmail et, comme d\'autres clients, a quelques ennuis avec les serveurs Microsoft Exchange.
-</p><p>
-Si vous avez des suggestions, découvert des bugs ou simplement une idée de fonctionnalité, n\'hésitez pas à vous rendre ici\u00A0:
-<a href="http://k9mail.googlecode.com/">http://k9mail.googlecode.com/</a> (en anglais).
-</p>
-    ]]></string>
-
-
-    <!-- Default signature -->
-    <string name="default_signature">-- \nEnvoyé de mon téléphone Android avec K-9 Mail. Excusez la brièveté.</string>
-
-
-    <!-- General strings that include the app name -->
-    <string name="account_delete_dlg_instructions_fmt">Le compte «\u00A0<xliff:g id="account">%s</xliff:g>\u00A0» sera supprimé de K-9 Mail.</string>
-    <string name="account_recreate_dlg_instructions_fmt">Toutes les données du compte «\u00A0<xliff:g id="account">%s</xliff:g>\u00A0» vont être effacées de K-9 Mail, mais les paramètres seront conservés.</string>
-    <string name="account_clear_dlg_instructions_fmt">Tous les messages du compte «\u00A0<xliff:g id="account">%s</xliff:g>\u00A0» vont être effacés de K-9 Mail, mais les paramètres seront conservés.</string>
-    <string name="insufficient_apg_permissions">K-9 Mail n\'a pas la permission d\'accéder à AGP, veuillez réinstaller K-9 Mail pour corriger cela.</string>
-
-
-
-    <!-- === App Store-specific strings ======================================================= -->
-
-    <string name="import_dialog_error_message">Aucune application trouvée pour réaliser l\'importation. Veuillez installer un gestionnaire de fichiers depuis le Google Play Store.</string>
-    <string name="open_market">Ouvrir le Google Play Store</string>
-
-
-
+	<string name="beta_app_name">ChiaraMail Beta</string>
+	<string name="shortcuts_title">Comptes ChiaraMail</string>
+	<string name="unread_widget_label">ChiaraMail non lus</string>
+	<string name="remote_control_label">ChiaraMail Accès à distance</string>
+	<string name="remote_control_desc">Permet à cette application de contrôler les activités et paramètres de ChiaraMail.</string>
+	<!-- Used in the about dialog -->
+	<string name="app_authors">Google, le K-9 Dog Walkers et ChiaraMail Corp.</string>
+	<string name="app_copyright_fmt">
+	Portions Copyright 2012-2014 ChiaraMail Corp Portions Copyright 2008 - 
+	<xliff:g>%s</xliff:g>
+	Le K-9 Dog Walkers. Portions Copyright 2006 - 
+	<xliff:g>%s</xliff:g>
+	le projet Open Source d\'Android.
+	</string>
+	<string name="app_license">Sous licence Apache License, Version 2.0.</string>
+	<!-- Welcome message -->
+	<string name="welcome_message_title">Bienvenue à ChiaraMail pour Android</string>
+	<string name="accounts_welcome"><![CDATA[<p> Bienvenue à l\'installation de ChiaraMail pour Android. ChiaraMail pour Android (ou, tout simplement, ChiaraMail) est un programme de messagerie basé sur K-9 Mail, un client de messagerie open source pour Android basé à l\'origine sur le client de messagerie standard d\'Android. L\'utilisation de ChiaraMail est simple et intuitive, surtout si vous êtes habitué à K-9 Mail. </ p><p> Les caractéristiques de ChiaraMail comprennent : </ p> Protection facile du contenu des messages contre la lecture non autorisée d\'une tierce partie sans l\'utilisation de cryptage<br> * Messagerie éphémère avec impossibilité de prendre des captures d\'écran<br> * 100% protection contre l\'usurpation d\'adresse e-mail<br> * Livraison plus efficace d\'e-mails pour les grandes listes de distribution<br> * Vous permet de modifier vos e-mails, y compris les pièces jointes, après qu\'ils aient été envoyés<br> * Réduction importante dans l\'espace de stockage d\'e-mails<br> * Envoyez des pièces jointes de taille pratiquement illimitée<br> * ... et plus encore ! <br> <p> Le programme de messagerie ChiaraMail est un sur-ensemble fonctionnel de K-9 Mail. Cela signifie qu\'il fait tout ce que K-9 Mail fait et bien plus encore. La principale différence est l\'utilisation de la technologie du Fractionnement du Contenu-Enveloppe (ECS) (voir ci-dessus pour une liste de quelques-uns des avantages de l\'ECS sur la technologie d\'e-mail traditionnelle). ChiaraMail offre également des implémentations ECS qui permettent à vos clients de messagerie préférés, y compris Mozilla Thunderbird et Microsoft Outlook **, d\'utiliser la technologie. Pour plus d\'informations sur ECS, comment il fonctionne et bien plus sur ses avantages, voir <a href=http://www.chiaramailcorp.com/about/works/> http://www.chiaramailcorp.com/about/works/ </ a>. </ p><p> Veuillez soumettre les rapports de bugs, vos suggestions pour de nouvelles fonctionnalités et vos questions à <a href=mailto:extension_support\@chiaramail.com> extension_support\@chiaramail.com </ a>. </ p><p> Améliorations et corrections de bugs dans la version 4.33 : </ p><p> 1. Correction d\'un bug : l\'appli affiche NullPointerException lorsque le bouton Retour est appuyée dans certains cas. 2. Correction d\'un bug : MessageViewFragment affiche IllegalStateException lors de l\'échec du chargement de la visualisation d\'un message. 3. Correction d\'un bug : l\'appli se bloque lorsqu\'un article de Flipboard est partagée par elle. 4. Correction d\'un bug : MessageList affiche IllegalStateException après onSaveInstanceState. ** Suppose que tous les destinataires d\'e-mail sont en mode ECS (télécharger des implémentations supplémentaires depuis <a href=http://www.chiaramailcorp.com/downloads/> http://www.chiaramailcorp.com/downloads </ a>) </ p>]]></string>
+	<!-- Default signature -->
+	<string name="default_signature">-\nEnvoyé de mon appareil Android avec ChiaraMail.</string>
+	<!-- General strings that include the app name -->
+	<string name="account_delete_dlg_instructions_fmt">
+	Le compte « 
+	<xliff:g id="account">%s</xliff:g>
+	» sera supprimé de ChiaraMail.
+	</string>
+	<string name="account_recreate_dlg_instructions_fmt">
+	Toutes les données locales pour « 
+	<xliff:g id="account">%s</xliff:g>
+	» seront supprimées. Les paramètres du compte seront conservés.
+	</string>
+	<string name="account_clear_dlg_instructions_fmt">
+	Les copies locales des messages dans « 
+	<xliff:g id="account">%s</xliff:g>
+	» seront supprimées. Les paramètres du compte seront conservés.
+	</string>
+	<string name="insufficient_apg_permissions">ChiaraMail n\'a pas la permission d\'accéder pleinement à l\'APG, veuillez réinstaller ChiaraMail pour résoudre ce problème.</string>
+	<string name="tag_line">La technologie e-mail pour le 21ème siècle</string>
+	<string name="import_dialog_error_message">Veuillez installer un gestionnaire de fichier pour continuer avec cette importation.</string>
+	<string name="open_market">Ouvrir Play Store</string>
+	<string name="chiaramail_user">Utilisateur ChiaraMail pour Android</string>
+    <!-- === ECS-related strings ================================================================== -->
+	<string name="choose_contacts_to_invite">Choisissez les contacts à inviter</string>
+	<string name="invite_contacts_title">Invitez les contacts</string>
+	<string name="invite_contacts">Invitez les contacts</string>
+	<string name="invite_contacts_preamble">Voulez-vous inviter certains de vos contacts à télécharger ChiaraMail pour Android ou d\'autres produits ECS de ChiaraMail ? Rappelez-vous, pour que vos destinataires puissent lire les messages que vous leur envoyez en utilisant ECS, leurs programmes de messagerie doivent être configurés pour ECS.\n\nPour envoyer une invitation à vos contacts, appuyez sur le bouton de menu, puis sur « Invitez des contacts », pour faire apparaître la liste de vos contacts. Sélectionnez les personnes sur la liste à qui vous souhaitez envoyer une invitation par e-mail, puis appuyez sur le bouton « Aperçu de l\'invitation » pour visualiser le message avant de l\'envoyer.</string>
+	<!-- <string name="invite_contacts_preamble">Would you like to invite some of your contacts to download ChiaraMail or another of ChiaraMail\'s Envelope-Content Splitting (ECS)-enabling products? Remember, in order for your recipients to be able to read messages you send using ECS, their mail programs must be enabled for ECS.\n\nYou may also send your contacts an invitation later from within a mail folder by pressing the menu button, followed by \"Invite contacts\"</string> -->
+	<string name="doInvite">Oui !</string>
+	<string name="skipInvite">Non, merci!</string>
+	<string name="preview_invite">Aperçu de l\'invitation</string>
+	<string name="ecs_video_viewer">Lecteur vidéo ECS</string>
+	<string name="message_compose_error_missing_content_server_name">Nom du serveur de contenu manquant dans les paramètres.</string>
+	<string name="message_compose_error_missing_content_server_port">Port du serveur de contenu manquant dans les paramètres.</string>
+	<string name="message_error_unknown_content_server">Nom / port du serveur de contenu inconnu.</string>
+	<string name="message_compose_error_bogus_content_server_port">Mauvaise valeur du port du serveur de contenu :</string>
+	<string name="message_compose_error_rangerr_content_server_port">Port du serveur de contenu hors de portée :</string>
+	<string name="message_compose_error_missing_content_pointers">Pointeur (s) de contenu manquant dans les paramètres.</string>
+	<string name="message_compose_error_bogus_content_pointer">Mauvaise valeur du pointeur de contenu :</string>
+	<string name="message_compose_error_missing_content_server_password">Mot de passe du serveur de contenu manquant dans les paramètres.</string>
+	<string name="message_compose_dynamic_content_send_body_error">Erreur d\'envoi du corps du message, au serveur de contenu :</string>
+	<string name="message_compose_dynamic_content_send_attachment_error">Erreur d\'envoi de pièce jointe au message, au serveur de contenu :</string>
+	<string name="message_compose_dynamic_content_delete_error">Erreur dans la suppression du contenu ECS :</string>
+	<string name="message_compose_attachment_too_big_1">Pièce jointe</string>
+	<string name="message_compose_attachment_too_big_2"> non comprise ; doit être inférieure à 4 Mo.</string>
+	<string name="message_compose_add_header_error">Erreur dans l\'ajout du champ d\'en-tête :</string>
+	<string name="message_compose_encryption_error">Erreur dans le cryptage du contenu :</string>
+	<string name="message_compose_canned_message">
+	Pour votre protection et votre confidentialité, ce message a été envoyé via la technologie ECS 
+	<sup>®</sup>
+	, mais votre programme d\'email n\'est pas encore paramétrée pour ECS. Pour lire ce message sécurisé, veuillez télécharger l\'extension ECS appropriée pour votre client de messagerie ou l\'un de nos clients de messagerie portables compatibles à ECS (http://www.chiaramailcorp.com/downloads/).
+	</string>
+	<!-- <string name="message_compose_canned_message">For your protection and privacy, this message was sent using ECS<sup>&#174;</sup> technology, but your mail client is not yet enabled for ECS. To read this secure message, please download the appropriate ECS extension for your mail client or one of our ECS-enabled mobile mail clients (http://web.chiaramail.com/downloads/).</string> -->
+	<string name="message_compose_default_error">Serveur de contenu par défaut non spécifié</string>
+	<string name="message_compose_sender_name_address_mismatch">L\'adresse dans le nom de l\'expéditeur ne correspond pas à l\'adresse e-mail de l\'expéditeur.</string>
+	<string name="user_registered_error">Impossible de déterminer si l\'utilisateur est inscrit sur le serveur de contenu. Continuer quand même.</string>
+	<string name="users_already_registered">Les contacts sélectionnés sont déjà enregistrés sur le serveur de contenu.</string>
+	<string name="contacts_missing_addresses">Les contacts sélectionnés n\'ont pas d\'adresse e-mail.</string>
+	<!--<string name="message_invite_canned_subject">Enhanced ephemeral messaging and more with ChiaraMail for Android</string> <string name="message_invite_canned_message">Hi,\n\nI\'m kind of interested in ephemeral messaging, but I don\'t like the fact that the stuff I send is open to a screen capture; that kind of defeats the purpose, don\'t you think?\n\ChiaraMail for Android not only protects my messages from screen capture, it also does more than any other ephemeral messaging app. With ChiaraMail for Android, I can not only send photos I take on the fly, I can also send pics stored on my phone\'s disk, send multiple images in one message and enhance my photos with awesome special effects using the photo app of my choice.\n\nAnd that\'s not all. Because ChiaraMail is a full-featured e-mail app enhanced with Envelope-Content Splitting (ECS) technology, I get all the benefits of ECS, including preventing my e-mail from being read by my mail service providers (Google, Microsoft, Yahoo!, etc.), protection from spoofing for myself and my friends, the ability to change my e-mail after I\'ve sent it and more.\n\nI think ECS is a big deal and wanted to share the news about it with you. If you have an Android phone or tablet, download ChiaraMail for Android from Google Play today and take control of your e-mail like I did!\n\nRegards,\n\n</string>-->
+	<string name="message_invite_canned_subject">Ecrivez-moi en utilisant ChiaraMail, la technologie e-mail de la prochaine génération !</string>
+	<string name="message_invite_canned_message">Salut, \n\nJe ne veux plus que mon fournisseur de messagerie (Google, Microsoft, Yahoo, ...) lise mon e-mail, j\'ai donc installé l\'extension ChiaraMail dans mes programmes de messagerie et je vous invite à en faire de même. \n\nOutre la protection de notre vie privée, les produits ChiaraMail de ChiaraMail Corp nous protègent contre l\'usurpation d\'email dans lequel d\'autres personnes tentent de nous inciter à révéler nos références bancaires et autres. ChiaraMail nous permet aussi de garder le contrôle de tout e-mail que nous envoyons, y compris de nous laisser changer ou supprimer un e-mail après que nous l\'ayons envoyé (Eh oui ! Vraiment !) et même de le faire disparaître quelques secondes après qu\'il ait été lu. \n\nComme si cela ne suffisait pas, ChiaraMail nous permet d\'envoyer des pièces jointes de taille pratiquement illimitée (imaginez envoyer une vidéo à des amis qui ne prend que 291 octets d\'espace dans leur boîte de réception) et accélère aussi la livraison d\'e-mail. \n\nJe pense que c\'est un grand progrès et voulais partager cette nouvelle avec vous. Téléchargez ChiaraMail aujourd\'hui depuis http://www.chiaramailcorp.com/downloads et prenez le contrôle de votre e-mail comme moi ! \n\nCordialement,</string>
+	<string name="message_view_status_DC_attachment_saved">Pièce jointe enregistrée sur la carte mémoire SD sous le nom de</string>
+	<string name="message_view_status_DC_attachment_save_canceled">Annulation de la sauvegarde de la pièce jointe</string>
+	<string name="message_view_status_DC_attachment_open_canceled">Annulation de l\'ouverture de la pièce jointe</string>
+	<string name="message_view_status_DC_attachment_send_canceled">Annulation de l\'envoi de la pièce jointe</string>
+	<string name="message_view_dynamic_content_fetch_error">Erreur lors de l\'ouverture du contenu / pièce jointe du message :</string>
+	<string name="message_view_reserved_name_error">Possibilité de tentative d\'usurpation ; message bloqué.</string>
+	<string name="message_view_dynamic_content_save_error">Erreur lors de la sauvegarde de la pièce jointe :</string>
+	<string name="message_view_dynamic_content_send_body_error">Erreur lors de l\'envoi du corps du message:</string>
+	<string name="message_view_dynamic_content_send_attachment_error">Erreur lors de l\'envoi de la pièce jointe du message :</string>
+	<string name="message_view_dynamic_content_fetching_attachment">Ouverture de la pièce jointe du message</string>
+	<string name="message_view_dynamic_content_saving_attachment">Sauvegarde de la pièce jointe du message</string>
+	<string name="message_view_dynamic_content_sending_body">Envoi du corps du message ...</string>
+	<string name="message_view_dynamic_content_sending_attachment">Envoi de la pièce jointe du message</string>
+	<string name="message_view_dynamic_content_retrieving_inline_image">Récupération de l\'image insérée</string>
+	<string name="message_view_dynamic_content_retrieving_inline_video">Récupération la vidéo insérée</string>
+	<string name="message_view_dynamic_content_delete_error">Erreur lors de la suppression du fichier temporaire des pièce jointes</string>
+	<string name="message_view_update_content_action">Modifier le contenu du message / pièce jointe</string>
+	<string name="message_view_delete_content_action">Supprimer tout le contenu de ce message</string>
+	<string name="message_view_update_content_dialog_title">Mettre à jour le contenu du message</string>
+	<string name="message_view_edit_msg_content">Modifier le corps du message:</string>
+	<string name="message_view_update_content">Mettre à jour le contenu</string>
+	<string name="message_view_update_msg_body">Mettre à jour le corps du message</string>
+	<string name="message_view_update_all">Mettre à jour le corps du message et la (les) pièce (s) jointe (s)</string>
+	<string name="message_view_update_cancel">Annuler la mise à jour</string>
+	<string name="msg_body_update">pour le corps du message</string>
+	<string name="msg_attachment_update">pour la pièce jointe du message</string>
+	<string name="account_setup_ecs_login_title">Connectez-vous à votre compte ChiaraMail</string>
+	<string name="account_setup_bypass_ecs">Contourner ECS</string>
+	<string name="account_setup_ecs_not_registered">Utilisateur non enregistré ou Identifiant / mot de passe du compte non valide</string>
+	<string name="account_setup_ecs_password_hint">Mot de passe du serveur de contenu</string>
+	<string name="account_setup_register_me">Créer mon compte !</string>
+	<string name="account_setup_no_account_text"><![CDATA[<a href=https://www.chiaramail.com/index.jsp>Pas de compte ChiaraMail pour cette adresse? </ a>]]></string>
+	<string name="account_setup_check_settings_check_content_server_msg">Vérification des paramètres du serveur de contenu ...</string>
+	<string name="account_setup_dynamic_content_settings_title">Paramètres du serveur de contenu ECS</string>
+	<string name="account_setup_content_server_password_label">Mot de passe du serveur de contenu</string>
+	<string name="account_setup_dynamic_content_show_password">Afficher le mot de passe</string>
+	<string name="account_setup_dynamic_content_show_password_summary">Afficher le mot de passe du serveur de contenu</string>
+	<string name="account_setup_content_server_password_summary">Vérifiez votre e-mail si vous avez reçu le message de confirmation de votre enregistrement de ChiaraMail. Sélectionnez le lien pour activer votre enregistrement et afficher votre mot de passe du serveur de contenu. Ensuite, entrez le mot de passe dans le champ ci-dessus.</string>
+	<string name="account_setup_private_content_server_password_summary">Vérifiez votre e-mail si vous avez reçu le message de confirmation de l\'enregistrement de votre fournisseur de contenu ECS. Sélectionnez le lien pour activer votre enregistrement et afficher votre mot de passe du serveur de contenu. Ensuite, entrez le mot de passe dans le champ ci-dessus.</string>
+	<string name="account_setup_content_server_registration_error">Une erreur s\'est produite lors de l\'auto-enregistrement du serveur de contenu :</string>
+	<string name="account_setup_dynamic_content_default_label">Envoyer en ECS</string>
+	<string name="account_setup_dynamic_content_menu_label">Mode d\'envoi par défaut</string>
+	<string name="account_setup_dynamic_content_default_summary">Lorsque cette case est cochée, l\'e-mail sera envoyé en utilisant la technologie ECS.</string>
+	<string name="account_setup_dynamic_content_encryption_default_label">Crypter le contenu</string>
+	<string name="account_setup_dynamic_content_encryption_default_summary">Lorsque cette case est cochée, le contenu du message sera crypté avant d\'être envoyé au serveur de contenu.</string>
+	<string name="account_setup_dynamic_content_include_content_default_label">Inclure le contenu</string>
+	<string name="account_setup_dynamic_content_include_content_default_summary">Lorsque cette case et la case « Envoyer en ECS » sont cochées, les messages incluront le contenu réel, au lieu de paramètres fictifs.</string>
+	<string name="account_setup_dynamic_content_ephemeral_mode_default_label">Mode auto-destruction</string>
+	<string name="account_setup_dynamic_content_ephemeral_mode_default_summary">Lorsque cette case et la case « Envoyer en ECS » sont cochées, les messages s\'auto-détruiront automatiquement passé un temps prédéterminé après leur lecture.</string>
+	<string name="account_setup_dynamic_content_ephemeral_mode_display_duration_label">Durée d\'affichage</string>
+	<string name="account_setup_dynamic_content_ephemeral_mode_display_duration_summary">Indique la période de temps pendant lequel le message sera affiché avant de s\'autodétruire.</string>
+	<string name="account_setup_dynamic_content_filter_nonecs_default_label">Filtrer les non-ECS</string>
+	<string name="account_setup_dynamic_content_filter_nonecs_default_summary">Lorsque cette case est cochée, les messages non-ECS reçus d\'expéditeurs enregistrés n\'apparaîtront pas dans la boîte de réception.</string>
+	<string name="account_setup_dynamic_content_override_label">Ces paramètres peuvent être écrasés avant d\'envoyer l\'e-mail.</string>
+	<string name="account_setup_dynamic_content_warning_label">Important : Les messages envoyés en utilisant la technologie ECS ne peuvent être lus que par des clients de messagerie en mode ECS.</string>
+	<string name="account_setup_content_server_title">Paramètres du serveur de contenu ECS</string>
+	<string name="account_setup_content_server_name_label">Nom du serveur de contenu</string>
+	<string name="content_server_name_default">www.chiaramail.com</string>
+	<string name="content_does_not_exist">Ce contenu n\'existe pas (il a peut-être été supprimé par l\'expéditeur)</string>
+	<integer name="content_server_port_default">443</integer>
+	<string name="config_private_servers_summary">La messagerie ECS peut être hébergée par le serveur de contenu public (géré par ChiaraMail et dont le nom du serveur est www.chiaramail.com) ou par un serveur privé, par exemple, par votre banque. Vous pouvez configurer ici des serveurs privés, en spécifiant le nom du serveur de contenu, le port, le mot de passe du compte et d\'autres paramètres. Le propriétaire du serveur de contenu fournira ces données lorsque vous vous enregistrez.\n\nLorsque vous recevez un message ECS, l\'adresse du serveur de contenu (public ou privé) sera précisée dans l\'en-tête du message, et la configuration que vous avez créée pour ce serveur sera utilisée pour récupérer le contenu du message.\n\nLa configuration du serveur de contenu par défaut est utilisée lorsque vous envoyez un message ECS, ou lorsque vous répondez à ou faîtes suivre un message dont le contenu est hébergé sur un autre serveur.</string>
+	<string name="manage_content_servers_title">Gérer les serveurs de contenu</string>
+	<string name="reset_password_title">Réinitialiser le mot de passe</string>
+	<string name="change_password_title">Changer le mot de passe</string>
+	<string name="manage_content_servers_help">Aide</string>
+	<string name="manage_content_servers_create">Ajouter ...</string>
+	<string name="manage_content_servers_edit">Modifier ...</string>
+	<string name="manage_content_servers_delete">Supprimer ...</string>
+	<string name="manage_content_servers_default">Par défaut</string>
+	<string name="manage_content_servers_done">Terminé</string>
+	<string name="manage_content_servers_configs">Configurations du serveur de contenu</string>
+	<string name="config_name_text">Nom de la configuration</string>
+	<string name="config_name_summary">Entrez le nom de la configuration</string>
+	<string name="help_content_server_config_title">Aide</string>
+	<string name="create_content_server_config_title">Ajouter la configuration</string>
+	<string name="delete_content_server_config_title">Supprimer la configuration</string>
+	<string name="edit_content_server_config_title">Modifier la configuration</string>
+	<string name="delete_content_delete_content_title">Supprimez le contenu</string>
+	<string name="delete_content_delete_content">Etes-vous sûr de vouloir effacer le contenu de ce message ?</string>
+	<string name="delete_content_msg_delete">Voulez-vous aussi supprimer le contenu de ce message ?</string>
+	<string name="delete_content_server_config_msg">Etes-vous sûr de vouloir supprimer cette configuration ?</string>
+	<string name="invalid_config_input_title">Paramètre non valide ou manquant</string>
+	<string name="invalid_config_input_msg">Ce paramètre est manquant ou non valide</string>
+	<string name="delete_content_message_content_deleted">Le contenu du message est supprimé</string>
+	<string name="duplicate_config_name">Dupliquer le nom de la configuration</string>
+	<string name="dialog_confirm_create_config_button">Créer</string>
+	<string name="dialog_confirm_delete_config_button">Oui</string>
+	<string name="dialog_config_no_button">Non</string>
+	<string name="dialog_confirm_edit_config_button">Sauvegarder</string>
+	<string name="dialog_config_cancel_button">Annuler</string>
+	<string name="config_ok">Ok</string>
+	<string name="account_setup_dynamic_content_display_duration_1_sec">1 seconde</string>
+	<string name="account_setup_dynamic_content_display_duration_2_sec">2 secondes</string>
+	<string name="account_setup_dynamic_content_display_duration_3_sec">3 secondes</string>
+	<string name="account_setup_dynamic_content_display_duration_4_sec">4 secondes</string>
+	<string name="account_setup_dynamic_content_display_duration_5_sec">5 secondes</string>
+	<string name="account_setup_dynamic_content_display_duration_6_sec">6 secondes</string>
+	<string name="account_setup_dynamic_content_display_duration_7_sec">7 secondes</string>
+	<string name="account_setup_dynamic_content_display_duration_8_sec">8 secondes</string>
+	<string name="account_setup_dynamic_content_display_duration_9_sec">9 secondes</string>
+	<string name="account_setup_dynamic_content_display_duration_10_sec">10 secondes</string>
+	<string name="account_setup_content_server_name_summary">Indiquez le nom complet ou l\'adresse IP du serveur de contenu.</string>
+	<string name="account_setup_content_server_port_label">Port du serveur de contenu</string>
+	<string name="account_setup_content_server_port_summary">Spécifiez le numéro de port du serveur de contenu (par défaut = 443).</string>
+	
+	<string-array name="send_mode_choices">
+		<item>Envoyer en ECS</item>
+		<item>Envoyer en e-mail ordinaire</item>
+		<item>Mode mixte</item>
+	</string-array>
+	<string name="account_settings_dynamic_content">Fractionnement du Contenu-Enveloppe (ECS)</string>
+	<string name="reserved_config">Serveur de contenu ChiaraMail</string>
+	<string name="config_default"> (Par défaut)</string>
+	<string name="take_photo">Prendre une photo</string>
+	<string name="take_video">Prendre une vidéo</string>
+	<string name="image_capture_canceled">Annulation de la capture d\'image</string>
+	<string name="image_capture_failed">Échec de la capture d\'image</string>
+	<string name="add_inline_image_canceled">Annulation de l\'ajout d\'image insérée</string>
+	<string name="add_inline_video_canceled">Annulation de l\'ajout de vidéo insérée</string>
+	<string name="add_inline_image_failed">Échec de l\'ajout d\'image insérée</string>
+	<string name="add_inline_video_failed">Échec de l\'ajout de vidéo insérée</string>
+	<string name="image_file_deletion_failed">Échec de la suppression du fichier image</string>
+	<string name="image_scaling_failed">Échec de redimensionnement de l\'image, image non ajoutée</string>
+	<string name="video_capture_canceled">Enregistrement vidéo annulé</string>
+	<string name="video_capture_failed">Échec de l\'enregistrement vidéo</string>
+	<string name="image_missing">Impossible de localiser l\'image, image non ajoutée</string>
+	<string name="video_missing">Impossible de localiser la vidéo,vidéo non ajoutée</string>
+	<string name="out_of_memory_error">Mémoire insuffisante : image ou vidéo trop grande</string>
+	<string name="tutorial_link">Pour obtenir une aide sur la configuration et l\'utilisation de ChiaraMail, consultez le site de ChiaraMail pour Android sur http://www.chiaramailcorp.com/help/.</string>
+	<string name="loading_video">Chargement de la vidéo</string>
+	<string name="reset_password_affirmative">Réinitialiser votre mot de passe du serveur de contenu ?</string>
+	<string name="reset_password_yes_button">Oui</string>
+	<string name="reset_password_no_button">Non</string>
+	<string name="change_password_yes_button">Oui</string>
+	<string name="change_password_no_button">Non</string>
+	<string name="manage_content_servers_null_account">Erreur du système, compte nul pour le compte uuid</string>
+	<string name="tos_msg">En cliquant sur Continuer, vous acceptez le Contrat de Licence de l\'Utilisateur Final</string>
+	<string name="tos_title">Contrat de Licence de l\'Utilisateur Final de ChiaraMail</string>
+	<string name="feedback_url">http://www.chiaramailcorp.com/help/contact/</string>
+	<string name="feedback">Envoyez vos remarques</string>
+	<string name="open_source_licenses">Licences open source</string>
+	<string name="open_source_licenses_url">http://www.chiaramailcorp.com/open-source-licenses</string>
+	<string name="privacy_policy">Politique de confidentialité</string>
+	<string name="privacy_policy_url">http://www.chiaramailcorp.com/chiaramail-privacy-policy/</string>
+	<string name="message_compose_inline_error">Images et vidéos insérées prises en charge uniquement avec les messages ECS</string>
+	<string name="changelog_full_title">Journal des modifications</string>
+	<string name="pdf_reader_missing">Lecteur PDF manquant. Veuillez en installer un afin de configurer un compte dans ChiaraMail.</string>
+	<string name="chiaramail_logo">Logo ChiaraMail.</string>
     <!-- === General strings ================================================================== -->
 
     <string name="app_authors_fmt">Auteurs\u00A0: <xliff:g id="app_authors">%s</xliff:g></string>

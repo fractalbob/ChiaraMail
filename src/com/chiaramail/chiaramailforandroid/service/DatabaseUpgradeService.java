@@ -1,4 +1,4 @@
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -10,13 +10,13 @@ import android.os.PowerManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.activity.UpgradeDatabases;
-import com.fsck.k9.helper.power.TracingPowerManager;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
-import com.fsck.k9.mail.store.UnavailableStorageException;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.activity.UpgradeDatabases;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
+import com.chiaramail.chiaramailforandroid.mail.store.UnavailableStorageException;
 
 /**
  * Service used to upgrade the accounts' databases and/or track the progress of the upgrade.
@@ -68,7 +68,7 @@ public class DatabaseUpgradeService extends Service {
      * Action used to start this service.
      */
     private static final String ACTION_START_SERVICE =
-            "com.fsck.k9.service.DatabaseUpgradeService.startService";
+            "com.chiaramail.chiaramailforandroid.service.DatabaseUpgradeService.startService";
 
     private static final String WAKELOCK_TAG = "DatabaseUpgradeService";
     private static final long WAKELOCK_TIMEOUT = 10 * 60 * 1000;    // 10 minutes

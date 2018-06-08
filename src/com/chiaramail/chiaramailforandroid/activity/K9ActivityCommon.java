@@ -1,11 +1,11 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.Locale;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.activity.misc.SwipeGestureDetector;
-import com.fsck.k9.activity.misc.SwipeGestureDetector.OnSwipeGestureListener;
-import com.fsck.k9.helper.StringUtils;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.activity.misc.SwipeGestureDetector;
+import com.chiaramail.chiaramailforandroid.activity.misc.SwipeGestureDetector.OnSwipeGestureListener;
+import com.chiaramail.chiaramailforandroid.helper.StringUtils;
 
 import android.app.Activity;
 import android.content.Context;

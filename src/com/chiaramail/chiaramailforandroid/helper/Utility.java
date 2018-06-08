@@ -1,5 +1,5 @@
 
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
@@ -13,8 +13,9 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.mail.filter.Base64;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.filter.Base64;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,8 +23,8 @@ import java.io.FileOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
+import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -65,7 +66,6 @@ public class Utility {
      */
     private static final Pattern TAG_PATTERN = Pattern.compile("\\[[-_a-z0-9]+\\] ",
             Pattern.CASE_INSENSITIVE);
-
     public static boolean arrayContains(Object[] a, Object o) {
         for (Object element : a) {
             if (element.equals(o)) {
@@ -117,6 +117,14 @@ public class Utility {
         byte[] decoded = new Base64().decode(encoded.getBytes());
         return new String(decoded);
     }
+    
+    public static byte[] base64DecodeToBytes(String encoded) {
+        if (encoded == null) {
+            return null;
+        }
+        byte[] decoded = new Base64().decode(encoded.getBytes());
+        return decoded;
+    }
 
     public static String base64Encode(String s) {
         if (s == null) {
@@ -145,6 +153,14 @@ public class Utility {
             if (s.matches("^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")) {
                 return true;
             }
+        }
+        return false;
+    }
+    
+    public static boolean nameFieldValid(EditText view) {
+        if (view.getText() != null) {
+            String s = view.getText().toString();
+            if (!s.contains("%")) return true;
         }
         return false;
     }
@@ -715,4 +731,77 @@ public class Utility {
 
         return newArray;
     }
+    
+    public static String extractAddresses(Address[] toAddrs, Address[] ccAddrs, Address[] bccAddrs) {
+	String tmp = "", tmp1 = "", tmp2 = "", tmp3 = "";
+	
+	StringTokenizer st;
+	
+		for (int i = 0; i < toAddrs.length; i++)
+		{
+			st = new StringTokenizer(toAddrs[i].getAddress(), " ,");
+			for (int j = 0; st.hasMoreTokens(); j++)
+			{
+			tmp1 += st.nextToken() + ",";
+			}
+		}
+			
+		for (int i = 0; i < ccAddrs.length; i++)
+		{
+			st = new StringTokenizer(ccAddrs[i].getAddress(), " ,");
+			
+			for (int j = 0; st.hasMoreTokens(); j++)
+			{
+			tmp2 += st.nextToken() + ",";
+			}			
+		}
+	
+		for (int i = 0; i < bccAddrs.length; i++)
+		{
+			st = new StringTokenizer(bccAddrs[i].getAddress(), " ,");
+			
+			while (st.hasMoreTokens())
+				{
+				tmp3 += st.nextToken() + ",";
+				}			
+		}
+		if (tmp1.length() > 0) {
+			tmp += tmp1;
+			if (tmp2.length() > 0) {
+				tmp += "," + tmp2;
+				if (tmp3.length() > 0) {
+					tmp += "," + tmp3;
+					return tmp;
+				}
+				return tmp;
+			}
+			else
+			{
+				if (tmp3.length() > 0) {
+					tmp += "," + tmp3;
+					return tmp;
+				}
+				return tmp;
+			}
+		}
+		else
+		{
+			if (tmp2.length() > 0) {
+				tmp += tmp2;
+				if (tmp3.length() > 0) {
+					tmp += "," + tmp3;
+					return tmp;
+				}
+				return tmp;
+			}
+			else
+			{
+				if (tmp3.length() > 0) {
+					return tmp3;
+				}
+			}
+		}
+		return tmp;
+    }
+    
 }

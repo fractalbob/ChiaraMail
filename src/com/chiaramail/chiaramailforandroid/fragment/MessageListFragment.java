@@ -1,5 +1,9 @@
-package com.fsck.k9.fragment;
+package com.chiaramail.chiaramailforandroid.fragment;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,13 +12,17 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.StringTokenizer;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.Future;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences.Editor;
@@ -27,6 +35,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
 import android.support.v4.app.DialogFragment;
@@ -45,6 +54,7 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.View.OnClickListener;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -52,9 +62,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 import android.widget.QuickContactBadge;
 import android.widget.TextView;
@@ -66,47 +75,48 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.Window;
-import com.fsck.k9.Account;
-import com.fsck.k9.Account.SortType;
-import com.fsck.k9.AccountStats;
-import com.fsck.k9.FontSizes;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.ActivityListener;
-import com.fsck.k9.activity.ChooseFolder;
-import com.fsck.k9.activity.FolderInfoHolder;
-import com.fsck.k9.activity.MessageReference;
-import com.fsck.k9.activity.misc.ContactPictureLoader;
-import com.fsck.k9.cache.EmailProviderCache;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.fragment.ConfirmationDialogFragment.ConfirmationDialogFragmentListener;
-import com.fsck.k9.helper.MergeCursorWithUniqueId;
-import com.fsck.k9.helper.MessageHelper;
-import com.fsck.k9.helper.StringUtils;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Folder.OpenMode;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.LocalStore.LocalFolder;
-import com.fsck.k9.provider.EmailProvider;
-import com.fsck.k9.provider.EmailProvider.MessageColumns;
-import com.fsck.k9.provider.EmailProvider.SpecialColumns;
-import com.fsck.k9.provider.EmailProvider.ThreadColumns;
-import com.fsck.k9.search.ConditionsTreeNode;
-import com.fsck.k9.search.LocalSearch;
-import com.fsck.k9.search.SearchSpecification;
-import com.fsck.k9.search.SearchSpecification.SearchCondition;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
-import com.fsck.k9.search.SqlQueryBuilder;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.FontSizes;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.Account.SortType;
+import com.chiaramail.chiaramailforandroid.activity.ActivityListener;
+import com.chiaramail.chiaramailforandroid.activity.ChooseFolder;
+import com.chiaramail.chiaramailforandroid.activity.FolderInfoHolder;
+import com.chiaramail.chiaramailforandroid.activity.MessageReference;
+import com.chiaramail.chiaramailforandroid.activity.ManageContentServers;
+import com.chiaramail.chiaramailforandroid.activity.misc.ContactPictureLoader;
+import com.chiaramail.chiaramailforandroid.cache.EmailProviderCache;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.fragment.ConfirmationDialogFragment.ConfirmationDialogFragmentListener;
+import com.chiaramail.chiaramailforandroid.helper.ContactPicker;
+import com.chiaramail.chiaramailforandroid.helper.MergeCursorWithUniqueId;
+import com.chiaramail.chiaramailforandroid.helper.MessageHelper;
+import com.chiaramail.chiaramailforandroid.helper.StringUtils;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Folder.OpenMode;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider.MessageColumns;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider.SpecialColumns;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider.ThreadColumns;
+import com.chiaramail.chiaramailforandroid.search.ConditionsTreeNode;
+import com.chiaramail.chiaramailforandroid.search.LocalSearch;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification;
+import com.chiaramail.chiaramailforandroid.search.SqlQueryBuilder;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.SearchCondition;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.R;
 import com.handmark.pulltorefresh.library.ILoadingLayout;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
-
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
 
 public class MessageListFragment extends SherlockFragment implements OnItemClickListener,
         ConfirmationDialogFragmentListener, LoaderCallbacks<Cursor> {
@@ -153,10 +163,15 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
     private static final int ACCOUNT_UUID_COLUMN = 16;
     private static final int FOLDER_NAME_COLUMN = 17;
     private static final int THREAD_COUNT_COLUMN = 18;
+    
+    private AlertDialog.Builder	delete_builder;
+    
+    private AlertDialog	deleteContentDialog;
+    	
+	private String contentPointer;
 
     private static final String[] PROJECTION = Utility.copyOf(THREADED_PROJECTION,
             THREAD_COUNT_COLUMN);
-
 
     public static MessageListFragment newInstance(LocalSearch search, boolean isThreadDisplay, boolean threadedList) {
         MessageListFragment fragment = new MessageListFragment();
@@ -211,6 +226,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         public int compare(T object1, T object2) {
             int result = 0;
             for (final Comparator<T> comparator : mChain) {
+            	if (object1 == null || object2 == null) break;
                 result = comparator.compare(object1, object2);
                 if (result != 0) {
                     break;
@@ -303,7 +319,32 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
             String subject1 = cursor1.getString(SUBJECT_COLUMN);
             String subject2 = cursor2.getString(SUBJECT_COLUMN);
 
+            if (subject1 == null) {
+                return (subject2 == null) ? 0 : -1;
+            } else if (subject2 == null) {
+                return 1;
+            }
+
             return subject1.compareToIgnoreCase(subject2);
+        }
+    }
+
+    public static class SenderComparator implements Comparator<Cursor> {
+
+        @Override
+        public int compare(Cursor cursor1, Cursor cursor2) {
+            String sender1 = getSenderAddressFromCursor(cursor1);
+            String sender2 = getSenderAddressFromCursor(cursor2);
+
+            if (sender1 == null && sender2 == null) {
+                return 0;
+            } else if (sender1 == null) {
+                return 1;
+            } else if (sender2 == null) {
+                return -1;
+            } else {
+                return sender1.compareToIgnoreCase(sender2);
+            }
         }
     }
 
@@ -356,7 +397,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
     private LayoutInflater mInflater;
 
     private MessagingController mController;
-
+    
     private Account mAccount;
     private String[] mAccountUuids;
     private int mUnreadMessageCount = 0;
@@ -364,6 +405,8 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
     private Cursor[] mCursors;
     private boolean[] mCursorValid;
     private int mUniqueIdColumn;
+    
+    private DialogFragment  resetPasswordDialog;
 
     /**
      * Stores the name of the folder that we want to open as soon as possible after load.
@@ -378,6 +421,9 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
     private LocalSearch mSearch = null;
     private boolean mSingleAccountMode;
     private boolean mSingleFolderMode;
+    private boolean mAllAccounts;
+    
+    private Message selectedMessage;
 
     private MessageListHandler mHandler = new MessageListHandler();
 
@@ -435,6 +481,17 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
     private BroadcastReceiver mCacheBroadcastReceiver;
     private IntentFilter mCacheIntentFilter;
 
+    /**
+     * Stores the unique ID of the message the context menu was opened for.
+     *
+     * We have to save this because the message list might change between the time the menu was
+     * opened and when the user clicks on a menu item. When this happens the 'adapter position' that
+     * is accessible via the {@code ContextMenu} object might correspond to another list item and we
+     * would end up using/modifying the wrong message.
+     *
+     * The value of this field is {@code 0} when no context menu is currently open.
+     */
+    private long mContextMenuUniqueId = 0;
 
     /**
      * This class is used to run operations that modify UI elements in the UI thread.
@@ -626,15 +683,18 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
             Activity activity = getActivity();
             String displayName = FolderInfoHolder.getDisplayName(activity, mAccount,
                 mFolderName);
-
+//Include the account name at the top of the header
+//            mFragmentListener.setMessageListTitle(mAccount.getDescription() + ": " + displayName);
+//            mFragmentListener.setMessageListTitle((mAccount.getDescription() == null || mAccount.getDescription().equals("") ? mAccount.getEmail() : mAccount.getDescription()) + ": " + displayName);
             mFragmentListener.setMessageListTitle(displayName);
 
             String operation = mListener.getOperation(activity);
-            if (operation.length() < 1) {
+            mFragmentListener.setMessageListSubTitle(mAccount.getEmail());
+/**            if (operation.length() < 1) {
                 mFragmentListener.setMessageListSubTitle(mAccount.getEmail());
             } else {
                 mFragmentListener.setMessageListSubTitle(operation);
-            }
+            }**/
         } else {
             // query result display.  This may be for a search folder as opposed to a user-initiated search.
             if (mTitle != null) {
@@ -700,6 +760,10 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         }
 
         Cursor cursor = (Cursor) parent.getItemAtPosition(position);
+        if (cursor == null) {
+            return;
+        }
+
         if (mSelectedCount > 0) {
             toggleMessageSelect(position);
         } else {
@@ -753,6 +817,34 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         decodeArguments();
 
         createCacheBroadcastReceiver(appContext);
+        
+    	delete_builder = new AlertDialog.Builder(getActivity());
+    	delete_builder.setTitle(R.string.delete_content_delete_content_title);
+    	delete_builder.setMessage(R.string.delete_content_msg_delete);
+    	delete_builder.setPositiveButton(R.string.dialog_confirm_delete_config_button, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            	try {
+    	        	contentPointer = selectedMessage.getHeader(ECSInterfaces.CONTENT_POINTER)[0];
+            	} catch (MessagingException e) {
+            		return;
+            	}
+	        	StringTokenizer st = new StringTokenizer(contentPointer);
+	        	String[] contentPointers = new String[st.countTokens()];
+	        	int i = 0;
+	        	while (st.hasMoreTokens()) {
+	        		contentPointers[i++] = st.nextToken();
+	        	}
+            	ECSInterfaces.deleteData(contentPointers, mAccount.getContentServerName(), mAccount.getContentServerPort(), mAccount.getContentServerPassword(), mAccount.getEmail(), getActivity());
+	        	deleteContentDialog.show();
+            }
+        });
+    	delete_builder.setNegativeButton(R.string.dialog_confirm_delete_cancel_button, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            	deleteContentDialog.dismiss();
+            }
+        });
+    	deleteContentDialog = delete_builder.create();
 
         mInitialized = true;
     }
@@ -895,17 +987,24 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
             mCurrentFolder = getFolder(mFolderName, mAccount);
         }
 
+        mAllAccounts = false;
         if (mSingleAccountMode) {
             mAccountUuids = new String[] { mAccount.getUuid() };
         } else {
             if (accountUuids.length == 1 &&
                     accountUuids[0].equals(SearchSpecification.ALL_ACCOUNTS)) {
+                mAllAccounts = true;
 
                 Account[] accounts = mPreferences.getAccounts();
 
                 mAccountUuids = new String[accounts.length];
                 for (int i = 0, len = accounts.length; i < len; i++) {
                     mAccountUuids[i] = accounts[i].getUuid();
+                }
+
+                if (mAccountUuids.length == 1) {
+                    mSingleAccountMode = true;
+                    mAccount = accounts[0];
                 }
             } else {
                 mAccountUuids = accountUuids;
@@ -1005,12 +1104,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         mSenderAboveSubject = K9.messageListSenderAboveSubject();
 
         if (!mLoaderJustInitialized) {
-            // Refresh the message list
-            LoaderManager loaderManager = getLoaderManager();
-            for (int i = 0; i < mAccountUuids.length; i++) {
-                loaderManager.restartLoader(i, null, this);
-                mCursorValid[i] = false;
-            }
+            restartLoader();
         } else {
             mLoaderJustInitialized = false;
         }
@@ -1053,6 +1147,19 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         updateTitle();
     }
 
+    private void restartLoader() {
+        if (mCursorValid == null) {
+            return;
+        }
+
+        // Refresh the message list
+        LoaderManager loaderManager = getLoaderManager();
+        for (int i = 0; i < mAccountUuids.length; i++) {
+            loaderManager.restartLoader(i, null, this);
+            mCursorValid[i] = false;
+        }
+    }
+
     private void initializePullToRefresh(LayoutInflater inflater, View layout) {
         mPullToRefreshView = (PullToRefreshListView) layout.findViewById(R.id.message_list);
 
@@ -1060,8 +1167,8 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         View loadingView = inflater.inflate(R.layout.message_list_loading, null);
         mPullToRefreshView.setEmptyView(loadingView);
 
-        if (isPullToRefreshAllowed()) {
-            if (mSearch.isManualSearch() && mAccount.allowRemoteSearch()) {
+        if (isCheckMailSupported()) {
+            if (mSearch.isManualSearch() && mSingleAccountMode && mAccount.allowRemoteSearch()) {
                 // "Pull to search server"
                 mPullToRefreshView.setOnRefreshListener(
                         new PullToRefreshBase.OnRefreshListener<ListView>() {
@@ -1090,13 +1197,6 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
         // Disable pull-to-refresh until the message list has been loaded
         setPullToRefreshEnabled(false);
-    }
-
-    /**
-     * Returns whether or not pull-to-refresh is allowed in this message list.
-     */
-    private boolean isPullToRefreshAllowed() {
-        return mSingleFolderMode;
     }
 
     /**
@@ -1162,6 +1262,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         String searchFolder;
 
         searchAccount = mAccount.getUuid();
+        if (mCurrentFolder == null) return;
         searchFolder = mCurrentFolder.name;
 
         String queryString = mSearch.getRemoteSearchArguments();
@@ -1255,7 +1356,94 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         onDelete(Collections.singletonList(message));
     }
 
-    private void onDelete(List<Message> messages) {
+    private void deleteInlineMediaFiles(String tag, String buf, String tmpText) {
+    	int imgPtr = -1;
+    	
+    	while ((imgPtr = tmpText.indexOf(tag)) != -1) {
+    		buf += tmpText.substring(0, imgPtr);
+    		tmpText = tmpText.substring(imgPtr);
+    		if ((imgPtr = tmpText.indexOf("src=file://")) == -1) break;	// If one inline video/image is formatted the old way (pre-v. 4.29), assume they all are and leave the loop
+    		imgPtr += "src=file://".length();
+    		buf += tmpText.substring(0, imgPtr);
+    		tmpText = tmpText.substring(imgPtr);
+    		String imgName = tmpText;
+    		if ((imgPtr = imgName.indexOf(ECSInterfaces.BLANK)) == -1) break;	// If incorrectly formatted image/video, exit the loop
+    		imgName = imgName.substring(0, imgPtr);
+    		imgName = imgName.substring(imgName.lastIndexOf("/"));
+   		
+            File imgFile = new File(K9.getAttachmentDefaultPath() + "/" + imgName);
+//        	File imgFile = new File(Environment.getExternalStorageDirectory() + imgName);
+        	if (imgFile.exists() && !imgFile.delete()) {
+                Toast.makeText(getActivity(),
+                		getString(R.string.message_view_dynamic_content_delete_error),
+                        android.widget.Toast.LENGTH_LONG).show();
+        	}                       		
+    		buf += K9.getAttachmentDefaultPath() + "/" + imgName;
+//    		buf += Environment.getExternalStorageDirectory() + "/" + imgName;
+    		tmpText = tmpText.substring(tmpText.indexOf(ECSInterfaces.BLANK));
+    	}
+    }
+    
+    private void onDelete(final List<Message> messages) {
+    	byte[] buffer;
+    	int	count;
+    	    	
+        for (final Message message : messages) {
+        	try {
+    	        if (message.getHeader(ECSInterfaces.CONTENT_SERVER_NAME) != null && message.getHeader(ECSInterfaces.CONTENT_SERVER_PORT) != null && message.getHeader(ECSInterfaces.CONTENT_POINTER) != null) {
+    	        	contentPointer = message.getHeader(ECSInterfaces.CONTENT_POINTER)[0];
+    	        	if (contentPointer.indexOf(ECSInterfaces.BLANK) != -1) contentPointer = contentPointer.substring(0, contentPointer.indexOf(ECSInterfaces.BLANK));
+                	if ((fetchBodyContent(message, messages.get(0).getFolder().getAccount().getEmail(), messages.get(0).getFolder().getAccount().getContentServerPassword(), contentPointer, message.getHeader(ECSInterfaces.CONTENT_SERVER_NAME)[0], message.getHeader(ECSInterfaces.CONTENT_SERVER_PORT)[0], messages.get(0).getFolder().getAccount().getContentServerPassword())) == null) continue; 
+
+                    File file = new File(K9.getAttachmentDefaultPath() + "/tmpFile");
+//    	        	File file = new File(Environment.getExternalStorageDirectory() + "/tmpFile");
+    	            try {
+    	                FileInputStream in = new FileInputStream(file);
+    	                buffer = new byte[in.available()];
+    	                count = in.read(buffer);
+    	                in.close();
+    	                ECSInterfaces.fileNames.put("tmpFile", file.lastModified());
+    	            } catch (Exception e) {
+    	                Toast.makeText(getActivity(),
+    	                		getString(R.string.message_view_dynamic_content_fetch_error) + e,
+    	                        android.widget.Toast.LENGTH_LONG).show();
+    	            	return;
+    	            }
+    	            
+                    // Delete the tmp file, since it's no longer needed.
+                    file.delete();
+    	
+    	            String text = new String(buffer, 0, count);
+    	            String buf = "";
+    	            
+    	            deleteInlineMediaFiles("<img ", buf, text);
+    	            deleteInlineMediaFiles("<video ", buf, text);
+    	            // If the user is the sender of the message, prompt him to delete the content as well as the message
+    	            if (message.getFrom()[0].getAddress().equals(messages.get(0).getFolder().getAccount().getEmail())) {
+	                	try {
+    	    	        	contentPointer = message.getHeader(ECSInterfaces.CONTENT_POINTER)[0];
+	                	} catch (MessagingException e) {
+	                		return;
+	                	}
+	    	      //  	contentPointer = contentPointer.substring(0, contentPointer.indexOf(ECSInterfaces.BLANK));
+	    	        	StringTokenizer st = new StringTokenizer(contentPointer);
+	    	        	String[] contentPointers = new String[st.countTokens()];
+	    	        	int i = 0;
+	    	        	while (st.hasMoreTokens()) {
+	    	        		contentPointers[i++] = st.nextToken();
+	    	        	}
+//	    	        	selectedAccount = messages.get(0).getFolder().getAccount();
+	    	        	selectedMessage = message;
+//	                	ECSInterfaces.deleteData(contentPointers, messages.get(0).getFolder().getAccount().getContentServerName(), messages.get(0).getFolder().getAccount().getContentServerPort(), messages.get(0).getFolder().getAccount().getContentServerPassword(), mAccount.getEmail(), getActivity());
+        	        	deleteContentDialog.show();
+        	        }
+    	        }
+    	    } catch (MessagingException e) {
+                Toast.makeText(getActivity(),
+                		getString(R.string.message_view_dynamic_content_delete_error),
+                        android.widget.Toast.LENGTH_LONG).show();
+        	}
+        }
         if (mThreadedList) {
             mController.deleteThreads(messages);
         } else {
@@ -1263,6 +1451,87 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         }
     }
 
+    /**
+     * The fetchBodyContent() method sends a request to the content server to fetch content.	      	    
+     *
+     * @param message
+     * @param email_addr
+     * @param accountContentServerPassword
+     * @param contentPointers
+     * @param contentServerName
+     * @param contentServerPort
+     * @param contentServerPassword
+     * @return  FileOutputStream
+     */
+    private FileOutputStream fetchBodyContent(Message message, String email_addr, String accountContentServerPassword, String contentPointers, String contentServerName, String contentServerPort, String contentServerPassword) {    	
+    	String[] reply;
+
+    	try {
+			String[] encryptionHeader = message.getHeader(ECSInterfaces.ENCRYPTION_KEY);
+			FileOutputStream out;
+			
+			// Create a new file to send the content to as it's being retrieved.
+            File file = new File(K9.getAttachmentDefaultPath() + "/tmpFile");
+//        	File file = new File(Environment.getExternalStorageDirectory() + "/tmpFile");
+            if (file.exists() && !file.delete()) {
+                Toast.makeText(getActivity(), getString(R.string.message_view_dynamic_content_delete_error),
+                        Toast.LENGTH_LONG).show();
+        		return null;
+            }
+            out = new FileOutputStream(file);
+
+			// Get the first segment of the content. Include the encryption key to decrypt the content, if necessary.
+			reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + "0", "https://" + contentServerName + ":" + contentServerPort, email_addr, contentServerPassword, accountContentServerPassword, out, message.getFrom()[0].getPersonal());
+/**    		if (encryptionHeader == null) {
+    			reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + "0", "https://" + contentServerName + ":" + contentServerPort, email_addr, contentServerPassword, accountContentServerPassword, false, out, null, message.getFrom()[0].getPersonal());
+    		} else {
+    			reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + "0", "https://" + contentServerName + ":" + contentServerPort, email_addr, contentServerPassword, accountContentServerPassword, false, out, encryptionHeader[0], message.getFrom()[0].getPersonal());
+    		}**/
+			if (reply[0].equals("14") && reply[1].endsWith("true")) {	// The display name of this message uses reserved words of some private server, so this is a possible spoof attempt
+                Toast.makeText(getActivity(), getString(R.string.message_view_reserved_name_error),
+                        Toast.LENGTH_LONG).show();
+        		return null;
+			}
+			// Fetch remaining segments, if any, adjusting the file pointer after each segment has been received.
+			if (reply[0].equals("13")) {
+	        	String fPtr = reply[1].substring(reply[1].indexOf("pointer=") + "pointer=".length(), reply[1].indexOf(", t"));
+	        	String contentLen = reply[1].substring(reply[1].indexOf("size=") + "size=".length(), reply[1].lastIndexOf(","));
+	        	while (Integer.parseInt(fPtr) < Integer.parseInt(contentLen) && reply[0].equals("13")) {
+	        		reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + fPtr, "https://" + contentServerName + ":" + contentServerPort, mAccount.getEmail(), contentServerPassword, accountContentServerPassword, out, message.getFrom()[0].getPersonal());
+/**	    			if (encryptionHeader == null) {
+		        		reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + fPtr, "https://" + contentServerName + ":" + contentServerPort, mAccount.getEmail(), contentServerPassword, accountContentServerPassword, true, out, null, message.getFrom()[0].getPersonal());
+		        	} else {
+		        		reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + fPtr, "https://" + contentServerName + ":" + contentServerPort, mAccount.getEmail(), contentServerPassword, accountContentServerPassword, true, out, encryptionHeader[0], message.getFrom()[0].getPersonal());
+	    			}**/
+	    			if (reply[0].equals("13")) {
+		            	fPtr = reply[1].substring(reply[1].indexOf("pointer=") + "pointer=".length(), reply[1].indexOf(", t"));
+	    			}
+	        	} 
+	        	// After the entire content has been received and written to the tmp file, mark this as a valid, non-spoofed message.
+	        	if (reply[0].equals("13")) {
+	        		if (ECSInterfaces.BogusECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.BogusECSMessages.remove(message.getHeader("Message-ID")[0]);
+	        		if (!ECSInterfaces.ValidECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.ValidECSMessages.addElement(message.getHeader("Message-ID")[0]);
+	        	} else {
+	        		if (ECSInterfaces.ValidECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.ValidECSMessages.remove(message.getHeader("Message-ID")[0]);
+	    			if (!ECSInterfaces.BogusECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.BogusECSMessages.addElement(message.getHeader("Message-ID")[0]);
+	        	}
+			} else {        		
+    			// Indicate to MessageList to set message Subject field color to red in the message list; the fetch had problems, so this message may be bogus. Better safe than sorry.
+        		if (ECSInterfaces.ValidECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.ValidECSMessages.remove(message.getHeader("Message-ID")[0]);
+    			if (!ECSInterfaces.BogusECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.BogusECSMessages.addElement(message.getHeader("Message-ID")[0]);
+                Toast.makeText(getActivity(), getString(R.string.message_read_error_fetching_content) + reply[1],
+                        Toast.LENGTH_LONG).show();
+    			return null;
+	    	}
+            out.close();            
+            return out;
+        } catch (Exception e) {        	        	 
+            Toast.makeText(getActivity(), getString(R.string.message_view_dynamic_content_fetch_error) + e,
+                    Toast.LENGTH_LONG).show();
+			return null;
+        }
+    }
+    
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != Activity.RESULT_OK) {
@@ -1283,9 +1552,10 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
                 mActiveMessages = null; // don't need it any more
 
-                // We currently only support copy/move in 'single account mode', so it's okay to
-                // use mAccount.
-                mAccount.setLastSelectedFolderName(destFolderName);
+                if (messages.size() > 0) {
+                    Account account = messages.get(0).getFolder().getAccount();
+                    account.setLastSelectedFolderName(destFolderName);
+                }
 
                 switch (requestCode) {
                 case ACTIVITY_CHOOSE_FOLDER_MOVE:
@@ -1359,10 +1629,10 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
             changeSort(SortType.SORT_SUBJECT);
             return true;
         }
-//        case R.id.set_sort_sender: {
-//            changeSort(SortType.SORT_SENDER);
-//            return true;
-//        }
+        case R.id.set_sort_sender: {
+            changeSort(SortType.SORT_SENDER);
+            return true;
+        }
         case R.id.set_sort_flag: {
             changeSort(SortType.SORT_FLAGGED);
             return true;
@@ -1410,8 +1680,15 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
     @Override
     public boolean onContextItemSelected(android.view.MenuItem item) {
-        AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
-        int adapterPosition = listViewToAdapterPosition(info.position);
+        if (mContextMenuUniqueId == 0) {
+            return false;
+        }
+
+        int adapterPosition = getPositionForUniqueId(mContextMenuUniqueId);
+        if (adapterPosition == AdapterView.INVALID_POSITION) {
+            return false;
+        }
+
 
         switch (item.getItemId()) {
             case R.id.reply: {
@@ -1487,12 +1764,12 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
                 break;
             }
         }
-
+        mContextMenuUniqueId = 0;
         return true;
     }
 
 
-    private String getSenderAddressFromCursor(Cursor cursor) {
+    private static String getSenderAddressFromCursor(Cursor cursor) {
         String fromList = cursor.getString(SENDER_LIST_COLUMN);
         Address[] fromAddrs = Address.unpack(fromList);
         return (fromAddrs.length > 0) ? fromAddrs[0].getAddress() : null;
@@ -1511,6 +1788,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
         getActivity().getMenuInflater().inflate(R.menu.message_list_item_context, menu);
 
+        mContextMenuUniqueId = cursor.getLong(mUniqueIdColumn);
         Account account = getAccountFromCursor(cursor);
 
         String subject = cursor.getString(SUBJECT_COLUMN);
@@ -1693,22 +1971,25 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         }
 
         @Override
-        public void searchStats(AccountStats stats) {
-            mUnreadMessageCount = stats.unreadMessageCount;
-            super.searchStats(stats);
-        }
-
-        @Override
         public void folderStatusChanged(Account account, String folder, int unreadMessageCount) {
-            if (updateForMe(account, folder)) {
+            if (isSingleAccountMode() && isSingleFolderMode() && mAccount.equals(account) &&
+                    mFolderName.equals(folder)) {
                 mUnreadMessageCount = unreadMessageCount;
             }
             super.folderStatusChanged(account, folder, unreadMessageCount);
         }
 
         private boolean updateForMe(Account account, String folder) {
-            //FIXME
-            return ((account.equals(mAccount) && folder.equals(mFolderName)));
+            if (account == null || folder == null) {
+                return false;
+            }
+
+            if (!Utility.arrayContains(mAccountUuids, account.getUuid())) {
+                return false;
+            }
+
+            List<String> folderNames = mSearch.getFolderNames();
+            return (folderNames.size() == 0 || folderNames.contains(folder));
         }
     }
 
@@ -1763,61 +2044,79 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
             } else {
                 holder.subject = (TextView) view.findViewById(R.id.subject);
                 mFontSizes.setViewTextSize(holder.subject, mFontSizes.getMessageListSubject());
-
             }
 
             mFontSizes.setViewTextSize(holder.date, mFontSizes.getMessageListDate());
-
-
             // 1 preview line is needed even if it is set to 0, because subject is part of the same text view
             holder.preview.setLines(Math.max(mPreviewLines,1));
             mFontSizes.setViewTextSize(holder.preview, mFontSizes.getMessageListPreview());
             holder.threadCount = (TextView) view.findViewById(R.id.thread_count);
 
             holder.selected = (CheckBox) view.findViewById(R.id.selected_checkbox);
-            if (mCheckboxes) {
-                holder.selected.setOnCheckedChangeListener(holder);
-                holder.selected.setVisibility(View.VISIBLE);
-            } else {
-                holder.selected.setVisibility(View.GONE);
-            }
+            holder.selected.setVisibility((mCheckboxes) ? View.VISIBLE : View.GONE);
+
+            view.findViewById(R.id.chip_wrapper).setOnClickListener(holder);
 
             view.setTag(holder);
 
+            view.refreshDrawableState();	//Refresh the view so that the contact color squares display the correct letter
             return view;
         }
 
         @Override
         public void bindView(View view, Context context, Cursor cursor) {
             Account account = getAccountFromCursor(cursor);
-
             String fromList = cursor.getString(SENDER_LIST_COLUMN);
             String toList = cursor.getString(TO_LIST_COLUMN);
             String ccList = cursor.getString(CC_LIST_COLUMN);
+            String folder = cursor.getString(FOLDER_NAME_COLUMN);
             Address[] fromAddrs = Address.unpack(fromList);
             Address[] toAddrs = Address.unpack(toList);
             Address[] ccAddrs = Address.unpack(ccList);
-
+            
+            if (fromAddrs.length == 0 && toAddrs.length == 0 && ccAddrs.length == 0) return;
+            
             boolean fromMe = mMessageHelper.toMe(account, fromAddrs);
             boolean toMe = mMessageHelper.toMe(account, toAddrs);
             boolean ccMe = mMessageHelper.toMe(account, ccAddrs);
 
             CharSequence displayName = mMessageHelper.getDisplayName(account, fromAddrs, toAddrs);
             CharSequence displayDate = DateUtils.getRelativeTimeSpanString(context, cursor.getLong(DATE_COLUMN));
-
+            
             String counterpartyAddress = null;
-            if (fromMe) {
-                if (toAddrs.length > 0) {
-                    counterpartyAddress = toAddrs[0].getAddress();
-                } else if (ccAddrs.length > 0) {
-                    counterpartyAddress = ccAddrs[0].getAddress();
-                }
-            } else if (fromAddrs.length > 0) {
-                counterpartyAddress = fromAddrs[0].getAddress();
+            String nickName = null;
+            if (folder.indexOf(getString(R.string.special_mailbox_name_drafts)) != -1) {
+            	counterpartyAddress = account.getEmail();
+            	nickName = account.getName();
+            } else {           	
+	            if (fromMe) {
+	                if (toAddrs.length > 0) {
+	                    counterpartyAddress = toAddrs[0].getAddress();
+	                    nickName = toAddrs[0].getPersonal();
+	                } else if (ccAddrs.length > 0) {
+	                    counterpartyAddress = ccAddrs[0].getAddress();
+	                    nickName = ccAddrs[0].getPersonal();
+	                }
+	            } else if (fromAddrs.length > 0) {
+	                counterpartyAddress = fromAddrs[0].getAddress();
+	                nickName = fromAddrs[0].getPersonal();
+	            } 
             }
+/**            
+            if (fromAddrs.length != 0) {
+                counterpartyAddress = fromAddrs[0].getAddress();
+                nickName = fromAddrs[0].getPersonal();
+            } else if (toAddrs.length > 0) {
+                counterpartyAddress = toAddrs[0].getAddress();
+                nickName = toAddrs[0].getPersonal();
+            } else if (ccAddrs.length > 0) {
+                counterpartyAddress = ccAddrs[0].getAddress();
+                nickName = ccAddrs[0].getPersonal();
+            } **/
+            if (nickName == null) nickName = counterpartyAddress;
+//            MessageViewHolder holder = (MessageViewHolder) view.getTag();
 
             int threadCount = (mThreadedList) ? cursor.getInt(THREAD_COUNT_COLUMN) : 0;
-
             String subject = cursor.getString(SUBJECT_COLUMN);
             if (StringUtils.isNullOrEmpty(subject)) {
                 subject = getString(R.string.general_no_subject);
@@ -1848,17 +2147,9 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
             }
 
             if (mCheckboxes) {
-                // Set holder.position to -1 to avoid MessageViewHolder.onCheckedChanged() toggling
-                // the selection state when setChecked() is called below.
-                holder.position = -1;
-
-                // Only set the UI state, don't actually toggle the message selection.
                 holder.selected.setChecked(selected);
-
-                // Now save the position so MessageViewHolder.onCheckedChanged() will know what
-                // message to (de)select.
-                holder.position = cursor.getPosition();
             }
+            holder.position = cursor.getPosition();
 
             if (holder.contactBadge != null) {
                 holder.contactBadge.assignContactFromEmail(counterpartyAddress, true);
@@ -1869,13 +2160,14 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
                      * doesn't reset the padding, so we do it ourselves.
                      */
                     holder.contactBadge.setPadding(0, 0, 0, 0);
-                    mContactsPictureLoader.loadContactPicture(counterpartyAddress, holder.contactBadge);
+                    mContactsPictureLoader.loadContactPicture(counterpartyAddress, nickName, holder.contactBadge);
                 } else {
+//                		holder.contactBadge.setImageDrawable(mContactsPictureLoader.new CharacterDrawable(nickName.substring(0, 1).toUpperCase().charAt(0), ContactPictureLoader.getColor(counterpartyAddress)));
                     holder.contactBadge.setImageResource(R.drawable.ic_contact_picture);
                 }
             }
 
-            // Background indicator
+            // Background color
             if (selected || K9.useBackgroundAsUnreadIndicator()) {
                 int res;
                 if (selected) {
@@ -1889,6 +2181,8 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
                 TypedValue outValue = new TypedValue();
                 getActivity().getTheme().resolveAttribute(res, outValue, true);
                 view.setBackgroundColor(outValue.data);
+            } else {
+                view.setBackgroundColor(Color.TRANSPARENT);
             }
 
             if (mActiveMessage != null) {
@@ -1974,6 +2268,24 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
                 }
             }
 
+            Message message = getMessageAtPosition(cursor.getPosition());
+            try {
+//            	if (message.getFrom().length > 0) ECSInterfaces.isUserRegistered(mAccount, message.getFrom()[0].getAddress());
+//                if (ECSInterfaces.senderRegistered.contains(message.getFrom()[0].getAddress())) {
+                if (message.getFrom().length > 0 && ECSInterfaces.isUserRegistered(account.getContentServerName(), account.getContentServerPort(), account.getEmail(), account.getContentServerPassword(), message.getFrom()[0].getAddress()).endsWith("true")) {
+//                  if (message.getFrom().length > 0 && ECSInterfaces.isUserRegistered(mAccount.getContentServerName(), mAccount.getContentServerPort(), mAccount.getEmail(), mAccount.getContentServerPassword(), message.getFrom()[0].getAddress()).endsWith("true")) {
+//                if (message.getFrom().length > 0 && ECSInterfaces.isUserRegistered(mAccount, message.getFrom()[0].getAddress()).endsWith("true")) {
+ //                   if ((message.getHeader(Utility.CONTENT_SERVER_NAME) != null && message.getHeader(Utility.CONTENT_SERVER_PORT) != null && message.getHeader(Utility.CONTENT_POINTER) != null) || (message.getFrom().length > 0 && Utility.isUserRegistered(mAccount, message.getFrom()[0].getAddress()).endsWith("true"))) {
+                	// Set text color to magenta, to indicate that sender can read ECS messages
+                	holder.preview.setTextColor(Color.MAGENTA);
+                } else {
+//                	holder.preview.setTextColor(0xff000000 | holder.preview.getCurrentTextColor());
+                	holder.preview.setTextColor(0xff000000);
+                }
+            } catch (Exception e) {
+                Log.e(K9.LOG_TAG, "Exception fetching ECS headers: ", e);
+            }
+
             if (holder.subject != null ) {
                 if (!mSenderAboveSubject) {
                     holder.subject.setCompoundDrawablesWithIntrinsicBounds(
@@ -1985,13 +2297,37 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
                 holder.subject.setTypeface(null, maybeBoldTypeface);
                 holder.subject.setText(subject);
-            }
 
+                try {
+                	if (message != null && message.getHeader("Message-ID") != null) {
+    	                if (ECSInterfaces.ValidECSMessages.contains(message.getHeader("Message-ID")[0])) {	
+    	                	// The user had selected this message at least once this session, so we know this is a legitimate ECS message. Color the subject green.
+    	                	holder.subject.setTextColor(Color.parseColor(ECSInterfaces.GREEN));
+ //   	                	holder.preview.setTextColor(Color.MAGENTA);	//Cheat, to avoid having to go out to the network
+
+    	                } else {
+    	                	if (ECSInterfaces.BogusECSMessages.contains(message.getHeader("Message-ID")[0])) {	// Otherwise, color it red as a warning to users of a spoofing attempt
+    	                		holder.subject.setTextColor(Color.parseColor(ECSInterfaces.RED));
+    	                	} else {	// If the user had never selected the message, but the headers contain ECS fields, color the subject green; otherwise, it's not an ECS message, so color it black
+    	                        if (ECSInterfaces.validateHeaders(message.getHeader(ECSInterfaces.CONTENT_SERVER_NAME), message.getHeader(ECSInterfaces.CONTENT_SERVER_PORT), message.getHeader(ECSInterfaces.CONTENT_POINTER))) {
+//    	                        if (ECSInterfaces.validateHeaders(message)) {
+    	                        	holder.subject.setTextColor(Color.parseColor(ECSInterfaces.GREEN));
+ //   	    	                	holder.preview.setTextColor(Color.MAGENTA);	//Cheat, to avoid having to go out to the network
+    	                        } else {
+    	                        	holder.subject.setTextColor(Color.parseColor(ECSInterfaces.BLACK));
+    	                        	holder.preview.setTextColor(0xff000000 | holder.preview.getCurrentTextColor());
+    	                    	}
+    	                	}
+    	                }
+                	}
+                } catch (MessagingException e) {
+                }
+            }
             holder.date.setText(displayDate);
         }
     }
 
-    class MessageViewHolder implements OnCheckedChangeListener {
+    class MessageViewHolder implements View.OnClickListener {
         public TextView subject;
         public TextView preview;
         public TextView from;
@@ -2004,7 +2340,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         public QuickContactBadge contactBadge;
 
         @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        public void onClick(View view) {
             if (position != -1) {
                 toggleMessageSelectWithAdapterPosition(position);
             }
@@ -2304,7 +2640,9 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
             folder = null;
         }
 
-        displayFolderChoice(ACTIVITY_CHOOSE_FOLDER_MOVE, mAccount, folder, messages);
+        Account account = messages.get(0).getFolder().getAccount();
+
+        displayFolderChoice(ACTIVITY_CHOOSE_FOLDER_MOVE, account, folder, messages);
     }
 
     private void onCopy(Message message) {
@@ -2508,18 +2846,13 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
      * @param messages
      *         The list of messages to copy or move. Never {@code null}.
      * @param destination
-     *         The name of the destination folder. Never {@code null}.
+     *         The name of the destination folder. Never {@code null} or {@link K9#FOLDER_NONE}.
      * @param operation
      *         Specifies what operation to perform. Never {@code null}.
      */
     private void copyOrMove(List<Message> messages, final String destination,
             final FolderOperation operation) {
 
-        if (K9.FOLDER_NONE.equalsIgnoreCase(destination) || !mSingleAccountMode) {
-            return;
-        }
-
-        Account account = mAccount;
         Map<String, List<Message>> folderMap = new HashMap<String, List<Message>>();
 
         for (Message message : messages) {
@@ -2552,6 +2885,8 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
         for (String folderName : folderMap.keySet()) {
             List<Message> outMessages = folderMap.get(folderName);
+
+            Account account = outMessages.get(0).getFolder().getAccount();
 
             if (operation == FolderOperation.MOVE) {
                 if (mThreadedList) {
@@ -2695,21 +3030,21 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
         public void showSelectAll(boolean show) {
             if (mActionMode != null) {
-                mSelectAll.setVisible(show);
+            	if (mSelectAll != null) mSelectAll.setVisible(show);
             }
         }
 
         public void showMarkAsRead(boolean show) {
             if (mActionMode != null) {
-                mMarkAsRead.setVisible(show);
-                mMarkAsUnread.setVisible(!show);
+                if (mMarkAsRead != null) mMarkAsRead.setVisible(show);
+                if (mMarkAsUnread != null) mMarkAsUnread.setVisible(!show);
             }
         }
 
         public void showFlag(boolean show) {
             if (mActionMode != null) {
-                mFlag.setVisible(show);
-                mUnflag.setVisible(!show);
+            	if (mFlag != null) mFlag.setVisible(show);
+            	if (mUnflag != null) mUnflag.setVisible(!show);
             }
         }
 
@@ -2813,8 +3148,17 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
     }
 
     public void checkMail() {
-        mController.synchronizeMailbox(mAccount, mFolderName, mListener, null);
-        mController.sendPendingMessages(mAccount, mListener);
+        if (isSingleAccountMode() && isSingleFolderMode()) {
+            mController.synchronizeMailbox(mAccount, mFolderName, mListener, null);
+            mController.sendPendingMessages(mAccount, mListener);
+        } else if (mAllAccounts) {
+            mController.checkMail(mContext, null, true, true, mListener);
+        } else {
+            for (String accountUuid : mAccountUuids) {
+                Account account = mPreferences.getAccount(accountUuid);
+                mController.checkMail(mContext, account, true, true, mListener);
+            }
+        }
     }
 
     /**
@@ -2865,6 +3209,74 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
     public void selectAll() {
         setSelectionState(true);
+    }
+    
+    public void invite() {
+        Intent intent = new Intent(getActivity().getApplicationContext(), ContactPicker.class);     
+        intent.putExtra("accountUuid", mAccount.getUuid());
+        startActivity(intent);
+    	}
+
+    public void manage_content_servers() {
+        Intent intent = new Intent(getActivity().getApplicationContext(), ManageContentServers.class);     
+        intent.putExtra("accountUuid", mAccount.getUuid());
+        startActivity(intent);
+    }
+
+    public void reset_password() {
+    	Dialog reset = new AlertDialog.Builder(getActivity())
+        .setTitle(getActivity().getApplicationContext().getString(R.string.reset_password_title))
+        .setMessage(getActivity().getApplicationContext().getString(R.string.reset_password_affirmative))
+        .setPositiveButton(R.string.reset_password_yes_button,
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                }
+            }
+        )
+        .setNegativeButton(R.string.reset_password_no_button,
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                }
+            }
+        )
+        .create();
+    	reset.show();
+/**        resetPasswordDialog = new Dialog(getActivity().getApplicationContext());
+        resetPasswordDialog.setContentView(R.layout.reset_password);
+        resetPasswordDialog.setTitle(getActivity().getApplicationContext().getString(R.string.reset_password_title));
+        Button resetButton = (Button) resetPasswordDialog.findViewById(R.id.yes_button);
+        resetButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+           }
+        });
+        Button cancelButton = (Button) resetPasswordDialog.findViewById(R.id.no_button);
+        cancelButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+            	resetPasswordDialog.dismiss();
+           }
+        });
+        resetPasswordDialog.show();**/
+    }
+
+    public void change_password() {
+        final Dialog changePasswordDialog;
+        
+        changePasswordDialog = new Dialog(getActivity().getApplicationContext());
+/**        changePasswordDialog.setContentView(R.layout.change_password);
+        changePasswordDialog.setTitle(getActivity().getApplicationContext().getString(R.string.change_password_title));
+        Button changeButton = (Button) changePasswordDialog.findViewById(R.id.yes_button);
+        changeButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+           }
+        });
+        Button cancelButton = (Button) changePasswordDialog.findViewById(R.id.yes_button);
+        cancelButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+            	changePasswordDialog.dismiss();
+           }
+        });
+        changePasswordDialog.show();
+        **/
     }
 
     public void onMoveUp() {
@@ -2997,6 +3409,16 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         return listViewToAdapterPosition(listViewPosition);
     }
 
+    private int getPositionForUniqueId(long uniqueId) {
+        for (int position = 0, end = mAdapter.getCount(); position < end; position++) {
+            Cursor cursor = (Cursor) mAdapter.getItem(position);
+            if (cursor.getLong(mUniqueIdColumn) == uniqueId) {
+                return position;
+            }
+        }
+        return AdapterView.INVALID_POSITION;
+    }
+
     private Message getMessageAtPosition(int adapterPosition) {
         if (adapterPosition == AdapterView.INVALID_POSITION) {
             return null;
@@ -3025,7 +3447,10 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
             long uniqueId = cursor.getLong(mUniqueIdColumn);
 
             if (mSelected.contains(uniqueId)) {
-                messages.add(getMessageAtPosition(position));
+                Message message = getMessageAtPosition(position);
+                if (message != null) {
+                    messages.add(message);
+                }
             }
         }
 
@@ -3098,7 +3523,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
         if (!mController.isMoveCapable(mAccount)) {
             // For POP3 accounts only the Inbox is a remote folder.
-            return (mFolderName != null && !mFolderName.equals(mAccount.getInboxFolderName()));
+            return (mFolderName != null && mFolderName.equals(mAccount.getInboxFolderName()));
         }
 
         return true;
@@ -3176,7 +3601,19 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         StringBuilder query = new StringBuilder();
         List<String> queryArgs = new ArrayList<String>();
         if (needConditions) {
+            boolean selectActive = mActiveMessage != null && mActiveMessage.accountUuid.equals(accountUuid);
+
+            if (selectActive) {
+                query.append("(" + MessageColumns.UID + " = ? AND " + SpecialColumns.FOLDER_NAME + " = ?) OR (");
+                queryArgs.add(mActiveMessage.uid);
+                queryArgs.add(mActiveMessage.folderName);
+            }
+
             SqlQueryBuilder.buildWhereClause(account, mSearch.getConditions(), query, queryArgs);
+
+            if (selectActive) {
+                query.append(')');
+            }
         }
 
         String selection = query.toString();
@@ -3214,11 +3651,11 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
                 sortColumn = "(" + MessageColumns.FLAGGED + " != 1)";
                 break;
             }
-//            case SORT_SENDER: {
-//                //FIXME
-//                sortColumn = MessageColumns.SENDER_LIST;
-//                break;
-//            }
+            case SORT_SENDER: {
+                //FIXME
+                sortColumn = MessageColumns.SENDER_LIST;
+                break;
+            }
             case SORT_SUBJECT: {
                 sortColumn = MessageColumns.SUBJECT + " COLLATE NOCASE";
                 break;
@@ -3257,7 +3694,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         mPullToRefreshView.setEmptyView(null);
 
         // Enable pull-to-refresh if allowed
-        if (isPullToRefreshAllowed()) {
+        if (isCheckMailSupported()) {
             setPullToRefreshEnabled(true);
         }
 
@@ -3277,7 +3714,9 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         if (mIsThreadDisplay) {
             if (cursor.moveToFirst()) {
                 mTitle = cursor.getString(SUBJECT_COLUMN);
-                mTitle = Utility.stripSubject(mTitle);
+                if (!StringUtils.isNullOrEmpty(mTitle)) {
+                    mTitle = Utility.stripSubject(mTitle);
+                }
                 if (StringUtils.isNullOrEmpty(mTitle)) {
                    mTitle = getString(R.string.general_no_subject);
                 }
@@ -3288,6 +3727,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
         }
 
         cleanupSelected(cursor);
+        updateContextMenu(cursor);
 
         mAdapter.swapCursor(cursor);
 
@@ -3304,12 +3744,38 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
     }
 
     public boolean isLoadFinished() {
+        if (mCursorValid == null) {
+            return false;
+        }
+
         boolean loadFinished = true;
         for (int i = 0; i < mCursorValid.length; i++) {
             loadFinished &= mCursorValid[i];
         }
 
         return loadFinished;
+    }
+
+    /**
+     * Close the context menu when the message it was opened for is no longer in the message list.
+     */
+    private void updateContextMenu(Cursor cursor) {
+        if (mContextMenuUniqueId == 0) {
+            return;
+        }
+
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+            long uniqueId = cursor.getLong(mUniqueIdColumn);
+            if (uniqueId == mContextMenuUniqueId) {
+                return;
+            }
+        }
+
+        mContextMenuUniqueId = 0;
+        Activity activity = getActivity();
+        if (activity != null) {
+            activity.closeContextMenu();
+        }
     }
 
     private void cleanupSelected(Cursor cursor) {
@@ -3375,7 +3841,7 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-        mSelected = null;
+        mSelected.clear();
         mAdapter.swapCursor(null);
     }
 
@@ -3401,6 +3867,13 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
      */
     public void setActiveMessage(MessageReference messageReference) {
         mActiveMessage = messageReference;
+
+        // Reload message list with modified query that always includes the active message
+        if (isAdded()) {
+            restartLoader();
+        }
+
+        // Redraw list immediately
         if (mAdapter != null) {
             mAdapter.notifyDataSetChanged();
         }
@@ -3416,5 +3889,20 @@ public class MessageListFragment extends SherlockFragment implements OnItemClick
 
     public boolean isInitialized() {
         return mInitialized;
+    }
+
+    public boolean isMarkAllAsReadSupported() {
+        return (isSingleAccountMode() && isSingleFolderMode());
+    }
+
+    public void markAllAsRead() {
+        if (isMarkAllAsReadSupported()) {
+            mController.markAllMessagesRead(mAccount, mFolderName);
+        }
+    }
+
+    public boolean isCheckMailSupported() {
+        return (mAllAccounts || !isSingleAccountMode() || !isSingleFolderMode() ||
+                isRemoteFolder());
     }
 }

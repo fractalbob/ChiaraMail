@@ -1,4 +1,4 @@
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import android.content.Context;
 import android.os.Build;

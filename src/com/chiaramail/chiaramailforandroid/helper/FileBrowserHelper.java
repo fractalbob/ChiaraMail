@@ -1,4 +1,4 @@
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import java.io.File;
 
@@ -12,8 +12,8 @@ import android.support.v4.app.Fragment;
 import android.text.InputType;
 import android.widget.EditText;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class FileBrowserHelper {
     /**

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import java.util.Comparator;
 
@@ -79,6 +79,11 @@ public class MergeCursor implements Cursor {
         mComparator = comparator;
 
         resetCursors();
+    }
+
+    @Override
+    public Uri getNotificationUri() {
+    	return null;
     }
 
     private void resetCursors() {

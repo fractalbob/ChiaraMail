@@ -145,7 +145,7 @@ public final class AnimatorProxy extends Animation {
         final RectF after = mAfter;
         computeRect(after, view);
         after.union(mBefore);
-
+// Remove the following, due to build errors. Hopefully, it's not needed!
         parent.invalidate(
                 (int) FloatMath.floor(after.left),
                 (int) FloatMath.floor(after.top),

@@ -1,7 +1,8 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.Date;
-import com.fsck.k9.mail.Message;
+
+import com.chiaramail.chiaramailforandroid.mail.Message;
 
 public class MessageInfoHolder {
     public String date;

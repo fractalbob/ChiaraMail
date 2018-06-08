@@ -1,4 +1,4 @@
-package com.fsck.k9.crypto;
+package com.chiaramail.chiaramailforandroid.crypto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +16,12 @@ import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-import com.fsck.k9.R;
-import com.fsck.k9.activity.MessageCompose;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Part;
-import com.fsck.k9.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.activity.MessageCompose;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Part;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.R;
 
 /**
  * APG integration.
@@ -523,9 +523,9 @@ public class Apg extends CryptoProvider {
     public boolean isSigned(Message message) {
         String data = null;
         try {
-            Part part = MimeUtility.findFirstPartByMimeType(message, "text/plain");
+          Part part = MimeUtility.findFirstPartByMimeType(message, "text/plain");
             if (part == null) {
-                part = MimeUtility.findFirstPartByMimeType(message, "text/html");
+              part = MimeUtility.findFirstPartByMimeType(message, "text/html");
             }
             if (part != null) {
                 data = MimeUtility.getTextFromPart(part);

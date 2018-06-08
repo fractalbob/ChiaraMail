@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-import com.fsck.k9.R;
-import com.fsck.k9.helper.ContactItem;
+import com.chiaramail.chiaramailforandroid.helper.ContactItem;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class EmailAddressList extends K9ListActivity implements OnItemClickListener {
     public static final String EXTRA_CONTACT_ITEM = "contact";

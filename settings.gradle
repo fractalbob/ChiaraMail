@@ -1,0 +1,5 @@
+include ':ActionBarSherlock:library', ':HoloColorPicker', ':Android-PullToRefresh:library', ':ckChangeLog:library'
+project(':ActionBarSherlock:library').projectDir = new File('plugins/ActionBarSherlock/library')
+project(':HoloColorPicker').projectDir = new File('plugins/HoloColorPicker')
+project(':Android-PullToRefresh:library').projectDir = new File('plugins/Android-PullToRefresh/library')
+project(':ckChangeLog:library').projectDir = new File('plugins/ckChangeLog/library')

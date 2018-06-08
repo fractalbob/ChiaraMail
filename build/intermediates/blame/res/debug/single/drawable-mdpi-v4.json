@@ -1,0 +1,970 @@
+[
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__progress_primary_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__progress_primary_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_dialog_selected.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_dialog_selected.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\envelope_icon_config.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\envelope_icon_config.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__menu_dropdown_panel_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__menu_dropdown_panel_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_delete_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_delete_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_edit_disable.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_edit_disable.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\folder_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\folder_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_ab_disabled_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_ab_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\chiaramail_icon_red.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\chiaramail_icon_red.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\button_indicator_next.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\button_indicator_next.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__tab_selected_focused_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__tab_selected_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_ab_focused_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_ab_focused_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__cab_background_top_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__cab_background_top_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__progress_bg_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__progress_bg_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__textfield_search_right_selected_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__textfield_search_right_selected_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_pressed_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_button_add_contact_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_button_add_contact_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_cancel_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_cancel_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_request_read_receipt_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_request_read_receipt_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_single_message_options_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_single_message_options_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_upload_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_upload_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_photo_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_photo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__tab_selected_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__tab_selected_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_add_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_add_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_archive_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_archive_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_cab_done_holo_dark.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_cab_done_holo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\standard_email.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\standard_email.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_ab_focused_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_ab_focused_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\overlay_error.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\overlay_error.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_settings_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_settings_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_next_message_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_next_message_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__progress_primary_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__progress_primary_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__btn_cab_done_default_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__btn_cab_done_default_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_longpressed_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_flag_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_flag_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_archive_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_archive_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_transparent_dark_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_transparent_dark_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\show_less.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\show_less.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_request_read_receipt_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_request_read_receipt_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__progress_secondary_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__progress_secondary_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_bottom_transparent_dark_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_bottom_transparent_dark_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_menu_moreoverflow_normal_holo_dark.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_menu_moreoverflow_normal_holo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\standard_email_config.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\standard_email_config.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_spam_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_spam_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_next_message_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_next_message_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\attached_image_placeholder.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\attached_image_placeholder.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_mark_as_read_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_mark_as_read_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_pressed.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_email_answered_small.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_email_answered_small.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_stacked_solid_dark_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_stacked_solid_dark_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_save_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_save_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_remote_search_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_remote_search_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_ab_default_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_ab_default_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_pressed.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_check_on_normal_holo_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_check_on_normal_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_button_add_contact_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_button_add_contact_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__menu_dropdown_panel_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__menu_dropdown_panel_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_share_pack_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_share_pack_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_edit_normal.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_edit_normal.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__cab_background_bottom_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__cab_background_bottom_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__btn_cab_done_default_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__btn_cab_done_default_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\envelope_icon.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\envelope_icon.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_bottom_solid_inverse_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_bottom_solid_inverse_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__dialog_full_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__dialog_full_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\overlay_ok.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\overlay_ok.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__textfield_search_selected_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__textfield_search_selected_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_send_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_send_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_clear_normal.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_clear_normal.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__textfield_search_right_selected_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__textfield_search_right_selected_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_mark_as_unread_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_mark_as_unread_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_menu_moreoverflow_holo_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_menu_moreoverflow_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_add_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_add_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_about_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_about_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__dialog_full_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__dialog_full_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__cab_background_bottom_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__cab_background_bottom_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_selector_disabled_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_menu_moreoverflow_normal_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_menu_moreoverflow_normal_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_add_attachment_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_add_attachment_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_delete.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_delete.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_cancel_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_cancel_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_email_forwarded_small.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_email_forwarded_small.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_full_open_on_phone.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_disabled.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_text_dark_normal.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\self_destruct_email_config.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\self_destruct_email_config.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__btn_cab_done_focused_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__btn_cab_done_focused_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_menu_share_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_focused.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\action_search_folder_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\action_search_folder_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_share_pack_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_share_pack_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_edit_selected.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_edit_selected.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_unflag_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_unflag_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_ab_pressed_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_ab_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_cab_done_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_cab_done_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_focused_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\access_time_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\access_time_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_focused.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\panel_separator.9.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\panel_separator.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_solid_light_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_solid_light_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_move_or_copy_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_move_or_copy_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_menu_moreoverflow_holo_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_menu_moreoverflow_holo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_add_attachment_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_add_attachment_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_pressed_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_check_on_normal_holo_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_check_on_normal_holo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_single_message_options_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_single_message_options_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\access_time_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\access_time_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\chiaramail_icon_black_bg.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\chiaramail_icon_black_bg.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\attachment_text_box_dark.9.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\attachment_text_box_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_photo_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_photo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ecs_email_config.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ecs_email_config.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_activated_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_activated_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_solid_dark_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_solid_dark_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_stacked_transparent_dark_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_stacked_transparent_dark_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_unflag_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_unflag_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_voice_search_api_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_voice_search_api_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_icon_light_pressed.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_text_light_focused.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_mark_as_unread_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_mark_as_unread_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_go.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_go.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\popup_background.9.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\popup_background.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__progress_bg_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__progress_bg_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_divider_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_divider_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__btn_cab_done_pressed_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__btn_cab_done_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_import_export_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_import_export_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_sort_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_sort_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_spam_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_spam_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__textfield_search_right_default_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__textfield_search_right_default_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_icon_dark_normal.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_previous_message_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_previous_message_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_previous_message_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_previous_message_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ecs_email.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ecs_email.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_dialog_pressed.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_dialog_pressed.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__textfield_search_default_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__textfield_search_default_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_menu_share_holo_dark.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_menu_share_holo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_import_export_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_import_export_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_transparent_light_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_transparent_light_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_contact_picture.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_contact_picture.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\show_more.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\show_more.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_button_contacts.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_button_contacts.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_email_attachment_small.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_email_attachment_small.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__btn_cab_done_focused_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__btn_cab_done_focused_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_settings_config.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\custom_settings_config.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_check_off_normal_holo_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_check_off_normal_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_search_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_search_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_dialog_disable.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_dialog_disable.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_save_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_save_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_bottom_transparent_light_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_bottom_transparent_light_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_stacked_transparent_light_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_stacked_transparent_light_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_mark_as_read_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_mark_as_read_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\self_destruct_email.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\self_destruct_email.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_ab_disabled_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_ab_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\signed_large.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\signed_large.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_send_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_send_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_ab_pressed_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_ab_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__btn_cab_done_pressed_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__btn_cab_done_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\custom_settings.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\custom_settings.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_divider_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_divider_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_48_outer_holo.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_48_outer_holo.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__list_selector_disabled_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_compose_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_compose_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_icon_light_normal.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_bottom_solid_light_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_bottom_solid_light_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_bottom_solid_dark_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_bottom_solid_dark_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__textfield_search_default_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__textfield_search_default_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__textfield_search_right_default_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__textfield_search_right_default_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_solid_shadow_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_solid_shadow_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_clear_search_api_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_clear_search_api_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_search.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_search.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_voice_search.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_voice_search.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_search_api_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_search_api_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_inline_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_inline_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_button_add_contact.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_button_add_contact.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_inline_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_inline_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__tab_selected_pressed_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\button_indicator_prev.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\button_indicator_prev.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_48_inner_holo.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_48_inner_holo.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_ab_back_holo_dark.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_ab_back_holo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_settings_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_settings_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\stat_notify_email_generic.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\stat_notify_email_generic.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_add_cc_bbc_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_add_cc_bbc_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_move_or_copy_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_move_or_copy_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__cab_background_top_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__cab_background_top_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\chiaramail_icon_blue.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\chiaramail_icon_blue.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_check_off_normal_holo_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_check_off_normal_holo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\action_search_folder_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\action_search_folder_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_clear_disabled.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_clear_disabled.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_email_forwarded_answered_small.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_email_forwarded_answered_small.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\chiaramail_icon_green.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\chiaramail_icon_green.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_select_all_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_select_all_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_about_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_about_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_email_attachment.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_email_attachment.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_icon_light_focused.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\dropdown_ic_arrow_normal_holo_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\dropdown_ic_arrow_normal_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_sort_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_sort_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_text_light_normal.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_focused.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_compose_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_compose_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_remote_search_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_remote_search_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__textfield_search_selected_holo_light.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__textfield_search_selected_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_dialog_normal.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_dialog_normal.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_search_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_search_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ab_stacked_solid_light_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ab_stacked_solid_light_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__tab_unselected_pressed_holo.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__tab_unselected_pressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_ab_back_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_ab_back_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\divider_horizontal_email.9.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\divider_horizontal_email.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.Android-PullToRefresh\\library\\unspecified\\res\\drawable-mdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\dropdown_ic_arrow_normal_holo_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\dropdown_ic_arrow_normal_holo_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\indicator_arrow.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.Android-PullToRefresh\\library\\unspecified\\res\\drawable-mdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.Android-PullToRefresh\\library\\unspecified\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_refresh_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_refresh_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_add_cc_bcc_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_add_cc_bcc_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_go_search_api_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_go_search_api_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__ic_clear_search_api_disabled_holo_light.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__ic_clear_search_api_disabled_holo_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\btn_edit_pressed.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\btn_edit_pressed.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_flag_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_flag_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_select_all_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_select_all_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\folder_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\folder_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_refresh_light.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_refresh_light.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__progress_secondary_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__progress_secondary_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\attachment_text_box_light.9.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\attachment_text_box_light.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_delete_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_delete_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_focused.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_google_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_upload_dark.png",
+        "source": "C:\\k-9\\res\\drawable-mdpi\\ic_action_upload_dark.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abs__spinner_ab_default_holo_dark.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable-mdpi-v4\\abs__spinner_ab_default_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-mdpi\\common_plus_signin_btn_icon_dark_disabled.9.png"
+    }
+]

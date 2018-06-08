@@ -1,4 +1,4 @@
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,8 +18,8 @@ import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.R;
 
 /**
  * Manager for different {@link StorageProvider} -classes that abstract access

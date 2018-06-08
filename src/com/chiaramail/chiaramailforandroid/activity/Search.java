@@ -1,5 +1,4 @@
-package com.fsck.k9.activity;
-
+package com.chiaramail.chiaramailforandroid.activity;
 
 public class Search extends MessageList {
     protected static boolean isActive = false;
@@ -23,7 +22,4 @@ public class Search extends MessageList {
         setActive(false);
         super.onStop();
     }
-
-
-
 }

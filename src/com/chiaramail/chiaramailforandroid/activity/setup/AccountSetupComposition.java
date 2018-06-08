@@ -1,4 +1,4 @@
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,10 +9,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import com.fsck.k9.Account;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.K9Activity;
+
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.activity.K9Activity;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class AccountSetupComposition extends K9Activity {
 

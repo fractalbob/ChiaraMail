@@ -1,6 +1,6 @@
-package com.fsck.k9.controller;
+package com.chiaramail.chiaramailforandroid.controller;
 
-import com.fsck.k9.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.Message;
 
 public interface MessageRemovalListener {
     public void messageRemoved(Message message);

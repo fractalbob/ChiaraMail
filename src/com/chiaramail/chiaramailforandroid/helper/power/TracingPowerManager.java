@@ -1,10 +1,11 @@
-package com.fsck.k9.helper.power;
+package com.chiaramail.chiaramailforandroid.helper.power;
 
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.fsck.k9.K9;
+import com.chiaramail.chiaramailforandroid.K9;
+
 import android.content.Context;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
@@ -56,7 +57,7 @@ public class TracingPowerManager {
         }
         public void acquire(long timeout) {
             synchronized (wakeLock) {
-                wakeLock.acquire(timeout);
+                if (wakeLock != null) wakeLock.acquire(timeout);
             }
             if (K9.DEBUG) {
                 Log.v(K9.LOG_TAG, "TracingWakeLock for tag " + tag + " / id " + id + " for " + timeout + " ms: acquired");
@@ -69,11 +70,11 @@ public class TracingPowerManager {
         }
         public void acquire() {
             synchronized (wakeLock) {
-                wakeLock.acquire();
+            	if (wakeLock != null) wakeLock.acquire();
             }
             raiseNotification();
             if (K9.DEBUG) {
-                Log.w(K9.LOG_TAG, "TracingWakeLock for tag " + tag + " / id " + id + ": acquired with no timeout.  K-9 Mail should not do this");
+                Log.w(K9.LOG_TAG, "TracingWakeLock for tag " + tag + " / id " + id + ": acquired with no timeout.  ChiaraMail should not do this");
             }
             if (startTime == null) {
                 startTime = System.currentTimeMillis();
@@ -82,7 +83,7 @@ public class TracingPowerManager {
         }
         public void setReferenceCounted(boolean counted) {
             synchronized (wakeLock) {
-                wakeLock.setReferenceCounted(counted);
+            	if (wakeLock != null) wakeLock.setReferenceCounted(counted);
             }
         }
         public void release() {
@@ -98,7 +99,7 @@ public class TracingPowerManager {
             }
             cancelNotification();
             synchronized (wakeLock) {
-                wakeLock.release();
+            	if (wakeLock != null) wakeLock.release();
             }
             startTime = null;
         }

@@ -1,4 +1,4 @@
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import java.io.File;
 import java.util.concurrent.locks.Lock;
@@ -11,9 +11,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.util.Log;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
 
 public class LockableDatabase {
 

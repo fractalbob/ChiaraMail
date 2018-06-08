@@ -1,5 +1,5 @@
 
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -10,14 +10,26 @@ import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.LinkMovementMethod;
+import android.text.method.PasswordTransformationMethod;
+import android.text.method.TextKeyListener;
+import android.text.method.TextKeyListener.Capitalize;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
-import com.fsck.k9.*;
-import com.fsck.k9.activity.K9Activity;
-import com.fsck.k9.helper.Utility;
+import android.widget.TextView;
+
+import com.chiaramail.chiaramailforandroid.*;
+import com.chiaramail.chiaramailforandroid.activity.K9Activity;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.R;
+
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
@@ -31,24 +43,36 @@ import java.net.URLEncoder;
  * activity. If no settings are found the settings are handed off to the
  * AccountSetupAccountType activity.
  */
-public class AccountSetupBasics extends K9Activity
-    implements OnClickListener, TextWatcher {
-    private final static String EXTRA_ACCOUNT = "com.fsck.k9.AccountSetupBasics.account";
+public class AccountSetupBasics extends K9Activity implements OnClickListener, TextWatcher, OnCheckedChangeListener {
+    private final static String EXTRA_ACCOUNT = "com.chiaramail.chiaramailforandroid.AccountSetupBasics.account";
     private final static int DIALOG_NOTE = 1;
+    private static final String EMAIL = "email";
+    private static final String PASSWORD = "password";
     private final static String STATE_KEY_PROVIDER =
-        "com.fsck.k9.AccountSetupBasics.provider";
+        "com.chiaramail.chiaramailforandroid.AccountSetupBasics.provider";
 
+    private Preferences mPrefs;
+//    private EditText mECSEmailView;
+    private EditText mName;
     private EditText mEmailView;
+//    private EditText mECSPasswordView;
     private EditText mPasswordView;
+    private CheckBox mDefaultView;
+    private CheckBox mShowPassword;
     private Button mNextButton;
     private Button mManualSetupButton;
     private Account mAccount;
     private Provider mProvider;
+    
+    public static TextView mBugList;
 
     private EmailAddressValidator mEmailValidator = new EmailAddressValidator();
 
     public static void actionNewAccount(Context context) {
+ //       public static void actionNewAccount(Context context, String email, String password) {
         Intent i = new Intent(context, AccountSetupBasics.class);
+ //       i.putExtra(EMAIL, email);
+//        i.putExtra(PASSWORD, password);
         context.startActivity(i);
     }
 
@@ -56,16 +80,46 @@ public class AccountSetupBasics extends K9Activity
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.account_setup_basics);
+ /**       
+     // Configure sign-in to request the user's ID, email address, and basic
+     // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+     GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+             .requestEmail()
+             .build();
+**/
+        
+        mPrefs = Preferences.getPreferences(this);
+        mName = (EditText)findViewById(R.id.account_name);
         mEmailView = (EditText)findViewById(R.id.account_email);
+        mEmailView = (EditText)findViewById(R.id.account_email);
+        mEmailView.setEnabled(true); //Disabled when ChiaraMail login comes before this page.
         mPasswordView = (EditText)findViewById(R.id.account_password);
+        String contentServerEmail = getIntent().getStringExtra(EMAIL);
+        if (contentServerEmail != null && !contentServerEmail.equals("")) {
+        	mEmailView.setText(contentServerEmail);
+        	mPasswordView.requestFocus();
+        } else {
+        	mEmailView.setEnabled(true);
+        }
+        mShowPassword = (CheckBox)findViewById(R.id.show_mail_password);
+        mShowPassword.setOnCheckedChangeListener(this);
+
+        mDefaultView = (CheckBox)findViewById(R.id.account_default);
         mNextButton = (Button)findViewById(R.id.next);
         mManualSetupButton = (Button)findViewById(R.id.manual_setup);
+        
+        mBugList = (TextView)findViewById(R.id.mail_auth_error);
+        mBugList.setMovementMethod(LinkMovementMethod.getInstance());
 
         mNextButton.setOnClickListener(this);
         mManualSetupButton.setOnClickListener(this);
 
         mEmailView.addTextChangedListener(this);
         mPasswordView.addTextChangedListener(this);
+        
+        if (mPrefs.getAccounts().length > 0) {
+            mDefaultView.setVisibility(View.VISIBLE);
+        }
 
         if (savedInstanceState != null && savedInstanceState.containsKey(EXTRA_ACCOUNT)) {
             String accountUuid = savedInstanceState.getString(EXTRA_ACCOUNT);
@@ -75,6 +129,20 @@ public class AccountSetupBasics extends K9Activity
         if (savedInstanceState != null && savedInstanceState.containsKey(STATE_KEY_PROVIDER)) {
             mProvider = (Provider)savedInstanceState.getSerializable(STATE_KEY_PROVIDER);
         }
+        TextWatcher validationTextWatcher = new TextWatcher() {
+            public void afterTextChanged(Editable s) {
+                validateFields();
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+        };
+        mName.addTextChangedListener(validationTextWatcher);
+
+        mName.setKeyListener(TextKeyListener.getInstance(false, Capitalize.WORDS));
     }
 
     @Override
@@ -104,9 +172,19 @@ public class AccountSetupBasics extends K9Activity
     public void onTextChanged(CharSequence s, int start, int before, int count) {
     }
 
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+    	if (mShowPassword.isChecked()) {
+    		mPasswordView.setTransformationMethod(null);
+    	} else {
+    		mPasswordView.setTransformationMethod(PasswordTransformationMethod.getInstance());
+    	}
+    	mPasswordView.setSelection(mPasswordView.length());
+    }
+    	
     private void validateFields() {
         String email = mEmailView.getText().toString();
-        boolean valid = Utility.requiredFieldValid(mEmailView)
+        boolean valid = Utility.requiredFieldValid(mName)
+                		&& Utility.requiredFieldValid(mEmailView)
                         && Utility.requiredFieldValid(mPasswordView)
                         && mEmailValidator.isValidAddressOnly(email);
 
@@ -208,8 +286,13 @@ public class AccountSetupBasics extends K9Activity
 
             }
             mAccount = Preferences.getPreferences(this).newAccount();
-            mAccount.setName(getOwnerName());
+            mAccount.setName(mName.getText().toString());
+//            mAccount.setName(getOwnerName());
             mAccount.setEmail(email);
+            String contentServerPassword = getIntent().getStringExtra(PASSWORD);
+            if (contentServerPassword != null) mAccount.setContentServerPassword(contentServerPassword);
+            mAccount.setContentServerSendMode(true);
+            mAccount.setContentServerEncryption(true);
             mAccount.setStoreUri(incomingUri.toString());
             mAccount.setTransportUri(outgoingUri.toString());
             mAccount.setDraftsFolderName(getString(R.string.special_mailbox_name_drafts));
@@ -227,15 +310,16 @@ public class AccountSetupBasics extends K9Activity
             } else if (incomingUri.toString().startsWith("pop3")) {
                 mAccount.setDeletePolicy(Account.DELETE_POLICY_NEVER);
             }
-            AccountSetupCheckSettings.actionCheckSettings(this, mAccount, true, true);
+            AccountSetupCheckSettings.actionCheckSettings(this, mAccount, true, true, false);
         } catch (UnsupportedEncodingException enc) {
             // This really shouldn't happen since the encoding is hardcoded to UTF-8
             Log.e(K9.LOG_TAG, "Couldn't urlencode username or password.", enc);
         } catch (URISyntaxException use) {
             /*
              * If there is some problem with the URI we give up and go on to
-             * manual setup.
+             * manual setup. Delete the account first, so we don't end up with multiple accounts.
              */
+        	Preferences.getPreferences(this).deleteAccount(mAccount);
             onManualSetup();
         }
     }
@@ -266,8 +350,14 @@ public class AccountSetupBasics extends K9Activity
         if (resultCode == RESULT_OK) {
             mAccount.setDescription(mAccount.getEmail());
             mAccount.save(Preferences.getPreferences(this));
+            if (mDefaultView.isChecked()) {
+                Preferences.getPreferences(this).setDefaultAccount(mAccount);
+            }
             K9.setServicesEnabled(this);
-            AccountSetupNames.actionSetNames(this, mAccount);
+//        	AccountSetupECS.actionNewAccount(this, mAccount.getEmail(), mAccount);
+//        	AccountSetupDynamicContent.actionDynamicContentSettings(this, mAccount);
+        	AccountSetupNames.actionSetNames(this, mAccount);
+//        	AccountSetupECSGraphical.actionDynamicContentSettings(this, mAccount);
             finish();
         }
     }
@@ -280,39 +370,124 @@ public class AccountSetupBasics extends K9Activity
         String domain = emailParts[1];
 
         mAccount = Preferences.getPreferences(this).newAccount();
-        mAccount.setName(getOwnerName());
+        mAccount.setName(mName.getText().toString());
+//        mAccount.setName(getOwnerName());
         mAccount.setEmail(email);
-        try {
-            String userEnc = URLEncoder.encode(user, "UTF-8");
-            String passwordEnc = URLEncoder.encode(password, "UTF-8");
-
-            URI uri = new URI("placeholder", userEnc + ":" + passwordEnc, "mail." + domain, -1, null,
-                              null, null);
-            mAccount.setStoreUri(uri.toString());
-            mAccount.setTransportUri(uri.toString());
-        } catch (UnsupportedEncodingException enc) {
-            // This really shouldn't happen since the encoding is hardcoded to UTF-8
-            Log.e(K9.LOG_TAG, "Couldn't urlencode username or password.", enc);
-        } catch (URISyntaxException use) {
+        String contentServerPassword = getIntent().getStringExtra(PASSWORD);
+        if (contentServerPassword != null) mAccount.setContentServerPassword(contentServerPassword);
+        
+        if (mAccount.getName() != null) {
+            mName.setText(mAccount.getName());
+        }
+        mProvider = findProviderForDomain(domain);
+        if (mProvider == null) {
             /*
-             * If we can't set up the URL we just continue. It's only for
-             * convenience.
+             * We don't have default settings for this account, start the manual
+             * setup process.
              */
+            try {
+                String userEnc = URLEncoder.encode(user, "UTF-8");
+                String passwordEnc = URLEncoder.encode(password, "UTF-8");
+
+                URI uri = new URI("placeholder", userEnc + ":" + passwordEnc, "mail." + domain, -1, null,
+                                  null, null);
+                mAccount.setStoreUri(uri.toString());
+                mAccount.setTransportUri(uri.toString());
+            } catch (UnsupportedEncodingException enc) {
+                // This really shouldn't happen since the encoding is hardcoded to UTF-8
+                Log.e(K9.LOG_TAG, "Couldn't urlencode username or password.", enc);
+            } catch (URISyntaxException use) {
+                /*
+                 * If we can't set up the URL we just continue. It's only for
+                 * convenience.
+                 */
+            }
+            mAccount.setDraftsFolderName(getString(R.string.special_mailbox_name_drafts));
+            mAccount.setTrashFolderName(getString(R.string.special_mailbox_name_trash));
+            mAccount.setSentFolderName(getString(R.string.special_mailbox_name_sent));
+            mAccount.setArchiveFolderName(getString(R.string.special_mailbox_name_archive));
+            // Yahoo! has a special folder for Spam, called "Bulk Mail".
+            if (domain.endsWith(".yahoo.com")) {
+                mAccount.setSpamFolderName("Bulk Mail");
+            } else {
+                mAccount.setSpamFolderName(getString(R.string.special_mailbox_name_spam));
+            }
+            AccountSetupAccountType.actionSelectAccountType(this, mAccount, mDefaultView.isChecked());
+            finish();
+            return;
         }
-        mAccount.setDraftsFolderName(getString(R.string.special_mailbox_name_drafts));
-        mAccount.setTrashFolderName(getString(R.string.special_mailbox_name_trash));
-        mAccount.setSentFolderName(getString(R.string.special_mailbox_name_sent));
-        mAccount.setArchiveFolderName(getString(R.string.special_mailbox_name_archive));
-        // Yahoo! has a special folder for Spam, called "Bulk Mail".
-        if (domain.endsWith(".yahoo.com")) {
-            mAccount.setSpamFolderName("Bulk Mail");
+
+        if (mProvider.note != null) {
+            showDialog(DIALOG_NOTE);
         } else {
-            mAccount.setSpamFolderName(getString(R.string.special_mailbox_name_spam));
+            URI incomingUri = null;
+            URI outgoingUri = null;
+            try {
+                String userEnc = URLEncoder.encode(user, "UTF-8");
+                String passwordEnc = URLEncoder.encode(password, "UTF-8");
+
+                String incomingUsername = mProvider.incomingUsernameTemplate;
+                incomingUsername = incomingUsername.replaceAll("\\$email", email);
+                incomingUsername = incomingUsername.replaceAll("\\$user", userEnc);
+                incomingUsername = incomingUsername.replaceAll("\\$domain", domain);
+
+                URI incomingUriTemplate = mProvider.incomingUriTemplate;
+                incomingUri = new URI(incomingUriTemplate.getScheme(), incomingUsername + ":"
+                                      + passwordEnc, incomingUriTemplate.getHost(), incomingUriTemplate.getPort(), null,
+                                      null, null);
+
+                String outgoingUsername = mProvider.outgoingUsernameTemplate;
+
+                URI outgoingUriTemplate = mProvider.outgoingUriTemplate;
+
+
+                if (outgoingUsername != null) {
+                    outgoingUsername = outgoingUsername.replaceAll("\\$email", email);
+                    outgoingUsername = outgoingUsername.replaceAll("\\$user", userEnc);
+                    outgoingUsername = outgoingUsername.replaceAll("\\$domain", domain);
+                    outgoingUri = new URI(outgoingUriTemplate.getScheme(), outgoingUsername + ":"
+                                          + passwordEnc, outgoingUriTemplate.getHost(), outgoingUriTemplate.getPort(), null,
+                                          null, null);
+
+                } else {
+                    outgoingUri = new URI(outgoingUriTemplate.getScheme(),
+                                          null, outgoingUriTemplate.getHost(), outgoingUriTemplate.getPort(), null,
+                                          null, null);
+
+
+                }
+                mAccount.setStoreUri(incomingUri.toString());
+                mAccount.setTransportUri(outgoingUri.toString());
+                mAccount.setDraftsFolderName(getString(R.string.special_mailbox_name_drafts));
+                mAccount.setTrashFolderName(getString(R.string.special_mailbox_name_trash));
+                mAccount.setArchiveFolderName(getString(R.string.special_mailbox_name_archive));
+                // Yahoo! has a special folder for Spam, called "Bulk Mail".
+                if (incomingUriTemplate.getHost().toLowerCase().endsWith(".yahoo.com")) {
+                    mAccount.setSpamFolderName("Bulk Mail");
+                } else {
+                    mAccount.setSpamFolderName(getString(R.string.special_mailbox_name_spam));
+                }
+                mAccount.setSentFolderName(getString(R.string.special_mailbox_name_sent));
+                if (incomingUri.toString().startsWith("imap")) {
+                    mAccount.setDeletePolicy(Account.DELETE_POLICY_ON_DELETE);
+                } else if (incomingUri.toString().startsWith("pop3")) {
+                    mAccount.setDeletePolicy(Account.DELETE_POLICY_NEVER);
+                }
+                AccountSetupAccountType.actionSelectAccountType(this, mAccount, mDefaultView.isChecked());
+ //               finish();
+//                AccountSetupCheckSettings.actionCheckSettings(this, mAccount, true, true, false);
+            } catch (UnsupportedEncodingException enc) {
+                // This really shouldn't happen since the encoding is hardcoded to UTF-8
+                Log.e(K9.LOG_TAG, "Couldn't urlencode username or password.", enc);
+            } catch (URISyntaxException use) {
+                /*
+                 * If there is some problem with the URI we give up and go on to
+                 * manual setup. Delete the account first, so we don't end up with multiple accounts.
+                 */
+            	Preferences.getPreferences(this).deleteAccount(mAccount);
+                onManualSetup();
+            }
         }
-
-        AccountSetupAccountType.actionSelectAccountType(this, mAccount, false);
-
-        finish();
     }
 
     public void onClick(View v) {
@@ -384,6 +559,25 @@ public class AccountSetupBasics extends K9Activity
         retParts[0] = (emailParts.length > 0) ? emailParts[0] : "";
         retParts[1] = (emailParts.length > 1) ? emailParts[1] : "";
         return retParts;
+    }
+    
+    @Override
+    public void onBackPressed() {
+      if (mAccount != null) {	  
+          try {
+        	  mAccount.getLocalStore().delete();
+          } catch (Exception e) {
+              // Ignore, this may lead to localStores on sd-cards that
+              // are currently not inserted to be left
+              super.onBackPressed();
+        	  return;
+          }
+          MessagingController.getInstance(getApplication()).notifyAccountCancel(this, mAccount);
+          Preferences.getPreferences(this).deleteAccount(mAccount);
+//          K9.setServicesEnabled(this);
+//          refresh();
+      }
+      super.onBackPressed();
     }
 
     static class Provider implements Serializable {

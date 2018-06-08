@@ -1,4 +1,4 @@
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
 import android.test.AndroidTestCase;
 

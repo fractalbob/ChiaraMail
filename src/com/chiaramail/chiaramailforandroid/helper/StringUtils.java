@@ -1,4 +1,4 @@
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 public final class StringUtils {
 

@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,30 +37,30 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
-import com.fsck.k9.Account;
-import com.fsck.k9.Account.FolderMode;
-import com.fsck.k9.AccountStats;
-import com.fsck.k9.BaseAccount;
-import com.fsck.k9.FontSizes;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.setup.AccountSettings;
-import com.fsck.k9.activity.setup.FolderSettings;
-import com.fsck.k9.activity.setup.Prefs;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.controller.MessagingListener;
-import com.fsck.k9.helper.SizeFormatter;
-import com.fsck.k9.helper.power.TracingPowerManager;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.store.LocalStore.LocalFolder;
-import com.fsck.k9.search.LocalSearch;
-import com.fsck.k9.search.SearchSpecification.Attribute;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
-import com.fsck.k9.service.MailService;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.AccountStats;
+import com.chiaramail.chiaramailforandroid.BaseAccount;
+import com.chiaramail.chiaramailforandroid.FontSizes;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.Account.FolderMode;
+import com.chiaramail.chiaramailforandroid.activity.setup.AccountSettings;
+import com.chiaramail.chiaramailforandroid.activity.setup.FolderSettings;
+import com.chiaramail.chiaramailforandroid.activity.setup.Prefs;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.controller.MessagingListener;
+import com.chiaramail.chiaramailforandroid.helper.SizeFormatter;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.search.LocalSearch;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Attribute;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.service.MailService;
+import com.chiaramail.chiaramailforandroid.R;
 
 import de.cketti.library.changelog.ChangeLog;
 
@@ -72,8 +72,6 @@ import de.cketti.library.changelog.ChangeLog;
 public class FolderList extends K9ListActivity {
     private static final String EXTRA_ACCOUNT = "account";
 
-    private static final String EXTRA_INITIAL_FOLDER = "initialFolder";
-    private static final String EXTRA_FROM_NOTIFICATION = "fromNotification";
     private static final String EXTRA_FROM_SHORTCUT = "fromShortcut";
 
     private static final boolean REFRESH_REMOTE = true;
@@ -116,11 +114,12 @@ public class FolderList extends K9ListActivity {
                     }
 
                     String operation = mAdapter.mListener.getOperation(FolderList.this);
-                    if (operation.length() < 1) {
+                    mActionBarSubTitle.setText(mAccount.getEmail());
+/**                    if (operation.length() < 1) {
                         mActionBarSubTitle.setText(mAccount.getEmail());
                     } else {
                         mActionBarSubTitle.setText(operation);
-                    }
+                    }**/
                 }
             });
         }
@@ -233,14 +232,10 @@ public class FolderList extends K9ListActivity {
         sendMail(mAccount);
     }
 
-    public static Intent actionHandleAccountIntent(Context context, Account account, String initialFolder, boolean fromShortcut) {
+    public static Intent actionHandleAccountIntent(Context context, Account account, boolean fromShortcut) {
         Intent intent = new Intent(context, FolderList.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra(EXTRA_ACCOUNT, account.getUuid());
-
-        if (initialFolder != null) {
-            intent.putExtra(EXTRA_INITIAL_FOLDER, initialFolder);
-        }
+        if (account != null && account.getUuid() != null) intent.putExtra(EXTRA_ACCOUNT, account.getUuid());
 
         if (fromShortcut) {
             intent.putExtra(EXTRA_FROM_SHORTCUT, true);
@@ -250,24 +245,8 @@ public class FolderList extends K9ListActivity {
     }
 
     public static void actionHandleAccount(Context context, Account account) {
-        Intent intent = actionHandleAccountIntent(context, account, null, false);
+        Intent intent = actionHandleAccountIntent(context, account, false);
         context.startActivity(intent);
-    }
-
-    public static Intent actionHandleNotification(Context context, Account account, String initialFolder) {
-        Intent intent = new Intent(
-            Intent.ACTION_VIEW,
-            Uri.parse("email://accounts/" + account.getAccountNumber()),
-            context,
-            FolderList.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra(EXTRA_ACCOUNT, account.getUuid());
-        intent.putExtra(EXTRA_FROM_NOTIFICATION, true);
-
-        if (initialFolder != null) {
-            intent.putExtra(EXTRA_INITIAL_FOLDER, initialFolder);
-        }
-        return intent;
     }
 
     @Override
@@ -325,8 +304,6 @@ public class FolderList extends K9ListActivity {
     public void onNewIntent(Intent intent) {
         setIntent(intent); // onNewIntent doesn't autoset our "internal" intent
 
-        String initialFolder;
-
         mUnreadMessageCount = 0;
         String accountUuid = intent.getStringExtra(EXTRA_ACCOUNT);
         mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
@@ -337,16 +314,7 @@ public class FolderList extends K9ListActivity {
             return;
         }
 
-        initialFolder = intent.getStringExtra(EXTRA_INITIAL_FOLDER);
-        boolean fromNotification = intent.getBooleanExtra(EXTRA_FROM_NOTIFICATION, false);
-        if (fromNotification && mAccount.goToUnreadMessageSearch()) {
-            MessagingController.getInstance(getApplication()).notifyAccountCancel(this, mAccount);
-            openUnreadSearch(this, mAccount);
-            finish();
-        } else if (initialFolder != null && !K9.FOLDER_NONE.equals(initialFolder)) {
-            onOpenFolder(initialFolder);
-            finish();
-        } else if (intent.getBooleanExtra(EXTRA_FROM_SHORTCUT, false) &&
+        if (intent.getBooleanExtra(EXTRA_FROM_SHORTCUT, false) &&
                    !K9.FOLDER_NONE.equals(mAccount.getAutoExpandFolderName())) {
             onOpenFolder(mAccount.getAutoExpandFolderName());
             finish();
@@ -624,6 +592,7 @@ public class FolderList extends K9ListActivity {
     private void configureFolderSearchView(Menu menu) {
         final MenuItem folderMenuItem = menu.findItem(R.id.filter_folders);
         final SearchView folderSearchView = (SearchView) folderMenuItem.getActionView();
+        if (folderSearchView == null) return;
         folderSearchView.setQueryHint(getString(R.string.folder_list_filter_hint));
         folderSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
@@ -1030,12 +999,12 @@ public class FolderList extends K9ListActivity {
                 return view;
             }
 
-            holder.folderName.setText(folder.displayName);
+            final String folderStatus;
 
             if (folder.loading) {
-                holder.folderStatus.setText(R.string.status_loading);
+                folderStatus = getString(R.string.status_loading);
             } else if (folder.status != null) {
-                holder.folderStatus.setText(folder.status);
+                folderStatus = folder.status;
             } else if (folder.lastChecked != 0) {
                 long now = System.currentTimeMillis();
                 int flags = DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR;
@@ -1049,12 +1018,20 @@ public class FolderList extends K9ListActivity {
                             now, DateUtils.MINUTE_IN_MILLIS, flags);
                 }
 
-                holder.folderStatus.setText(getString(folder.pushActive
+                folderStatus = getString(folder.pushActive
                         ? R.string.last_refresh_time_format_with_push
                         : R.string.last_refresh_time_format,
-                        formattedDate));
+                        formattedDate);
             } else {
-                holder.folderStatus.setText(null);
+                folderStatus = null;
+            }
+
+            holder.folderName.setText(folder.displayName);
+            if (folderStatus != null) {
+                holder.folderStatus.setText(folderStatus);
+                holder.folderStatus.setVisibility(View.VISIBLE);
+            } else {
+                holder.folderStatus.setVisibility(View.GONE);
             }
 
             if (folder.unreadMessageCount != 0) {
@@ -1253,14 +1230,5 @@ public class FolderList extends K9ListActivity {
             MessageList.actionDisplaySearch(FolderList.this, search, true, false);
         }
     }
-
-    private void openUnreadSearch(Context context, final Account account) {
-        String description = getString(R.string.search_title, mAccount.getDescription(), getString(R.string.unread_modifier));
-        LocalSearch search = new LocalSearch(description);
-        search.addAccountUuid(account.getUuid());
-        search.and(Searchfield.READ, "1", Attribute.NOT_EQUALS);
-
-        MessageList.actionDisplaySearch(context, search, true, false);
-    }
-
 }
+

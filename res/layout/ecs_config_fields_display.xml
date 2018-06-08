@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+ 
+<!--     <ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:padding="6dip"
+	    android:layout_marginBottom="54dip" 
+	    android:fadingEdge="none"
+	    android:scrollbarStyle="outsideInset"> -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">       
+	    <LinearLayout
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical">
+	        <TextView
+	            android:text="@string/config_name_text"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="?android:attr/textColorPrimary" />        
+	        <TextView
+	            android:text="@string/account_setup_content_server_name_label"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="?android:attr/textColorPrimary" />
+	        <TextView
+	            android:text="@string/account_setup_content_server_password_label"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="?android:attr/textColorPrimary" /> 
+	        <TextView
+	            android:text="@string/account_setup_content_server_port_label"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="?android:attr/textColorPrimary" />
+	        <TextView
+	            android:text="@string/account_setup_dynamic_content_default_label"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="?android:attr/textColorPrimary" />
+	        <TextView
+	            android:id="@+id/encrypt_content_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:text="@string/account_setup_dynamic_content_encryption_default_label" />
+	        <TextView
+	            android:id="@+id/include_content_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:text="@string/account_setup_dynamic_content_include_content_default_label" />      
+	        <TextView
+	            android:id="@+id/forwarding_allowed_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:text="@string/account_setup_dynamic_content_allow_forwarding_default_label" />      	        
+	        <TextView
+	            android:id="@+id/ephemeral_mode_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:text="@string/account_setup_dynamic_content_ephemeral_mode_default_label" />      
+	        <TextView
+	            android:id="@+id/display_duration_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:text="@string/account_setup_dynamic_content_ephemeral_mode_display_duration_label" />      
+	       	<View
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dip"
+	            android:layout_weight="1" />
+	    </LinearLayout>
+    
+	    <LinearLayout
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="16sp"
+	        android:orientation="vertical">
+	        
+	        <TextView
+	            android:id="@+id/config_name_disp"
+	            android:text="Foo"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:textColor="?android:attr/textColorPrimary" />
+	        <TextView
+	            android:id="@+id/content_server_name_disp"
+	            android:text="Foo"
+	            android:singleLine="true"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:contentDescription="@string/account_setup_content_server_name_summary" />
+	        <TextView
+	            android:id="@+id/content_server_password_disp"
+	            android:text="Foo"
+	            android:password="true"
+	            android:singleLine="true"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:contentDescription="@string/account_setup_content_server_password_summary" />
+	        <TextView
+	            android:id="@+id/content_server_port_disp"
+	            android:text="Foo"
+	            android:singleLine="true"
+	            android:enabled="true"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:contentDescription="@string/account_setup_content_server_port_summary" />
+	        <TextView
+	            android:id="@+id/send_dynamic_content_disp"
+	            android:text="Foo"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+	        <TextView
+	            android:id="@+id/encrypt_content_disp"
+	            android:text="Foo"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+	        <TextView
+	            android:id="@+id/include_content_disp"
+	            android:text="Foo"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />  
+	        <TextView
+	            android:id="@+id/forwarding_allowed_disp"
+	            android:text="Foo"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />      
+	        <TextView
+	            android:id="@+id/ephemeral_mode_disp"
+	            android:text="Foo"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />      
+	        <TextView
+	            android:id="@+id/display_duration_disp"
+	            android:text="Foo"
+	            android:textAppearance="?android:attr/textAppearanceSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />      
+	        <View
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dip"
+	            android:layout_weight="1" />
+	        </LinearLayout>
+    </LinearLayout>
+  <!--  </ScrollView> -->
+</LinearLayout>

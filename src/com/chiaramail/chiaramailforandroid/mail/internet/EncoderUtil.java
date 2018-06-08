@@ -1,5 +1,5 @@
 
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;

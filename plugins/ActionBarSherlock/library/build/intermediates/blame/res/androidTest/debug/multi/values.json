@@ -1,0 +1,2997 @@
+[
+    {
+        "outputFile": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 54,
+                    "endOffset": 155
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 105,
+                        "endColumn": 54,
+                        "endOffset": 155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 160,
+                    "endColumn": 59,
+                    "endOffset": 215
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 160,
+                        "endColumn": 59,
+                        "endOffset": 215
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 220,
+                    "endColumn": 45,
+                    "endOffset": 261
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 220,
+                        "endColumn": 45,
+                        "endOffset": 261
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 266,
+                    "endColumn": 44,
+                    "endOffset": 306
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 266,
+                        "endColumn": 44,
+                        "endOffset": 306
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 311,
+                    "endColumn": 55,
+                    "endOffset": 362
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 311,
+                        "endColumn": 55,
+                        "endOffset": 362
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 367,
+                    "endColumn": 52,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 367,
+                        "endColumn": 52,
+                        "endOffset": 415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 420,
+                    "endColumn": 56,
+                    "endOffset": 472
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 420,
+                        "endColumn": 56,
+                        "endOffset": 472
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 477,
+                    "endColumn": 76,
+                    "endOffset": 549
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 477,
+                        "endColumn": 76,
+                        "endOffset": 549
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 554,
+                    "endColumn": 62,
+                    "endOffset": 612
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 554,
+                        "endColumn": 62,
+                        "endOffset": 612
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 617,
+                    "endColumn": 73,
+                    "endOffset": 686
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 617,
+                        "endColumn": 73,
+                        "endOffset": 686
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 691,
+                    "endColumn": 78,
+                    "endOffset": 765
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 691,
+                        "endColumn": 78,
+                        "endOffset": 765
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 770,
+                    "endColumn": 60,
+                    "endOffset": 826
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 770,
+                        "endColumn": 60,
+                        "endOffset": 826
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 831,
+                    "endColumn": 61,
+                    "endOffset": 888
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 831,
+                        "endColumn": 61,
+                        "endOffset": 888
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 893,
+                    "endColumn": 62,
+                    "endOffset": 951
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 893,
+                        "endColumn": 62,
+                        "endOffset": 951
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 956,
+                    "endColumn": 77,
+                    "endOffset": 1029
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 956,
+                        "endColumn": 77,
+                        "endOffset": 1029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1034,
+                    "endColumn": 78,
+                    "endOffset": 1108
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1034,
+                        "endColumn": 78,
+                        "endOffset": 1108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1113,
+                    "endColumn": 92,
+                    "endOffset": 1201
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1113,
+                        "endColumn": 92,
+                        "endOffset": 1201
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1206,
+                    "endColumn": 92,
+                    "endOffset": 1294
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1206,
+                        "endColumn": 92,
+                        "endOffset": 1294
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1299,
+                    "endColumn": 107,
+                    "endOffset": 1402
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1299,
+                        "endColumn": 107,
+                        "endOffset": 1402
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1407,
+                    "endColumn": 107,
+                    "endOffset": 1510
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1407,
+                        "endColumn": 107,
+                        "endOffset": 1510
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1515,
+                    "endColumn": 56,
+                    "endOffset": 1567
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1515,
+                        "endColumn": 56,
+                        "endOffset": 1567
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 9166,
+                    "endColumn": 62,
+                    "endOffset": 9224
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 9166,
+                        "endColumn": 62,
+                        "endOffset": 9224
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 9229,
+                    "endColumn": 68,
+                    "endOffset": 9293
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 9229,
+                        "endColumn": 68,
+                        "endOffset": 9293
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 9298,
+                    "endColumn": 69,
+                    "endOffset": 9363
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 9298,
+                        "endColumn": 69,
+                        "endOffset": 9363
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 9368,
+                    "endColumn": 65,
+                    "endOffset": 9429
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 9368,
+                        "endColumn": 65,
+                        "endOffset": 9429
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 9434,
+                    "endColumn": 66,
+                    "endOffset": 9496
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 9434,
+                        "endColumn": 66,
+                        "endOffset": 9496
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 9501,
+                    "endColumn": 62,
+                    "endOffset": 9559
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 9501,
+                        "endColumn": 62,
+                        "endOffset": 9559
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 9564,
+                    "endColumn": 60,
+                    "endOffset": 9620
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 9564,
+                        "endColumn": 60,
+                        "endOffset": 9620
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 9625,
+                    "endColumn": 62,
+                    "endOffset": 9683
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 9625,
+                        "endColumn": 62,
+                        "endOffset": 9683
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 9688,
+                    "endColumn": 59,
+                    "endOffset": 9743
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 9688,
+                        "endColumn": 59,
+                        "endOffset": 9743
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 9748,
+                    "endColumn": 68,
+                    "endOffset": 9812
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 9748,
+                        "endColumn": 68,
+                        "endOffset": 9812
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 9817,
+                    "endColumn": 68,
+                    "endOffset": 9881
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 9817,
+                        "endColumn": 68,
+                        "endOffset": 9881
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 9886,
+                    "endColumn": 60,
+                    "endOffset": 9942
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 4,
+                        "startOffset": 9886,
+                        "endColumn": 60,
+                        "endOffset": 9942
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 9947,
+                    "endColumn": 66,
+                    "endOffset": 10009
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 9947,
+                        "endColumn": 66,
+                        "endOffset": 10009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 10014,
+                    "endColumn": 67,
+                    "endOffset": 10077
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 4,
+                        "startOffset": 10014,
+                        "endColumn": 67,
+                        "endOffset": 10077
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 10082,
+                    "endColumn": 65,
+                    "endOffset": 10143
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 4,
+                        "startOffset": 10082,
+                        "endColumn": 65,
+                        "endOffset": 10143
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 10148,
+                    "endColumn": 64,
+                    "endOffset": 10208
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 10148,
+                        "endColumn": 64,
+                        "endOffset": 10208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 10213,
+                    "endColumn": 53,
+                    "endOffset": 10262
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 10213,
+                        "endColumn": 53,
+                        "endOffset": 10262
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 10267,
+                    "endColumn": 55,
+                    "endOffset": 10318
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 4,
+                        "startOffset": 10267,
+                        "endColumn": 55,
+                        "endOffset": 10318
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 10323,
+                    "endColumn": 38,
+                    "endOffset": 10357
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 10323,
+                        "endColumn": 38,
+                        "endOffset": 10357
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 10362,
+                    "endColumn": 51,
+                    "endOffset": 10409
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 4,
+                        "startOffset": 10362,
+                        "endColumn": 51,
+                        "endOffset": 10409
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 10414,
+                    "endColumn": 53,
+                    "endOffset": 10463
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 10414,
+                        "endColumn": 53,
+                        "endOffset": 10463
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 10468,
+                    "endColumn": 36,
+                    "endOffset": 10500
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 10468,
+                        "endColumn": 36,
+                        "endOffset": 10500
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 10505,
+                    "endColumn": 55,
+                    "endOffset": 10556
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 10505,
+                        "endColumn": 55,
+                        "endOffset": 10556
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 10561,
+                    "endColumn": 74,
+                    "endOffset": 10631
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 4,
+                        "startOffset": 10561,
+                        "endColumn": 74,
+                        "endOffset": 10631
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 10636,
+                    "endColumn": 70,
+                    "endOffset": 10702
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 10636,
+                        "endColumn": 70,
+                        "endOffset": 10702
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 10707,
+                    "endColumn": 78,
+                    "endOffset": 10781
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 4,
+                        "startOffset": 10707,
+                        "endColumn": 78,
+                        "endOffset": 10781
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 10786,
+                    "endColumn": 54,
+                    "endOffset": 10836
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 10786,
+                        "endColumn": 54,
+                        "endOffset": 10836
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 10841,
+                    "endColumn": 91,
+                    "endOffset": 10928
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 4,
+                        "startOffset": 10841,
+                        "endColumn": 91,
+                        "endOffset": 10928
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 10933,
+                    "endColumn": 73,
+                    "endOffset": 11002
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 10933,
+                        "endColumn": 73,
+                        "endOffset": 11002
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 11007,
+                    "endColumn": 93,
+                    "endOffset": 11096
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 11007,
+                        "endColumn": 93,
+                        "endOffset": 11096
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 11101,
+                    "endColumn": 73,
+                    "endOffset": 11170
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 11101,
+                        "endColumn": 73,
+                        "endOffset": 11170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 65,
+                    "startColumn": 4,
+                    "startOffset": 11175,
+                    "endColumn": 74,
+                    "endOffset": 11245
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 65,
+                        "startColumn": 4,
+                        "startOffset": 11175,
+                        "endColumn": 74,
+                        "endOffset": 11245
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 11250,
+                    "endColumn": 69,
+                    "endOffset": 11315
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 11250,
+                        "endColumn": 69,
+                        "endOffset": 11315
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 11320,
+                    "endColumn": 75,
+                    "endOffset": 11391
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 11320,
+                        "endColumn": 75,
+                        "endOffset": 11391
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 11396,
+                    "endColumn": 74,
+                    "endOffset": 11466
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 11396,
+                        "endColumn": 74,
+                        "endOffset": 11466
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 11471,
+                    "endColumn": 79,
+                    "endOffset": 11546
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 11471,
+                        "endColumn": 79,
+                        "endOffset": 11546
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 11551,
+                    "endColumn": 74,
+                    "endOffset": 11621
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 4,
+                        "startOffset": 11551,
+                        "endColumn": 74,
+                        "endOffset": 11621
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 11626,
+                    "endColumn": 146,
+                    "endOffset": 11768
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 11626,
+                        "endColumn": 146,
+                        "endOffset": 11768
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 11773,
+                    "endLine": 79,
+                    "endColumn": 12,
+                    "endOffset": 12243
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 72,
+                        "startColumn": 4,
+                        "startOffset": 11773,
+                        "endLine": 79,
+                        "endColumn": 12,
+                        "endOffset": 12243
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 12248,
+                    "endLine": 87,
+                    "endColumn": 12,
+                    "endOffset": 12730
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 12248,
+                        "endLine": 87,
+                        "endColumn": 12,
+                        "endOffset": 12730
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 88,
+                    "startColumn": 4,
+                    "startOffset": 12735,
+                    "endLine": 91,
+                    "endColumn": 12,
+                    "endOffset": 12935
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 88,
+                        "startColumn": 4,
+                        "startOffset": 12735,
+                        "endLine": 91,
+                        "endColumn": 12,
+                        "endOffset": 12935
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 92,
+                    "startColumn": 4,
+                    "startOffset": 12940,
+                    "endLine": 94,
+                    "endColumn": 12,
+                    "endOffset": 13081
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 92,
+                        "startColumn": 4,
+                        "startOffset": 12940,
+                        "endLine": 94,
+                        "endColumn": 12,
+                        "endOffset": 13081
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 13086,
+                    "endLine": 96,
+                    "endColumn": 12,
+                    "endOffset": 13174
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 95,
+                        "startColumn": 4,
+                        "startOffset": 13086,
+                        "endLine": 96,
+                        "endColumn": 12,
+                        "endOffset": 13174
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 97,
+                    "startColumn": 4,
+                    "startOffset": 13179,
+                    "endLine": 98,
+                    "endColumn": 12,
+                    "endOffset": 13260
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 97,
+                        "startColumn": 4,
+                        "startOffset": 13179,
+                        "endLine": 98,
+                        "endColumn": 12,
+                        "endOffset": 13260
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 99,
+                    "startColumn": 4,
+                    "startOffset": 13265,
+                    "endLine": 101,
+                    "endColumn": 12,
+                    "endOffset": 13418
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 99,
+                        "startColumn": 4,
+                        "startOffset": 13265,
+                        "endLine": 101,
+                        "endColumn": 12,
+                        "endOffset": 13418
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 102,
+                    "startColumn": 4,
+                    "startOffset": 13423,
+                    "endLine": 110,
+                    "endColumn": 12,
+                    "endOffset": 13901
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 102,
+                        "startColumn": 4,
+                        "startOffset": 13423,
+                        "endLine": 110,
+                        "endColumn": 12,
+                        "endOffset": 13901
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 111,
+                    "startColumn": 4,
+                    "startOffset": 13906,
+                    "endLine": 115,
+                    "endColumn": 12,
+                    "endOffset": 14175
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 111,
+                        "startColumn": 4,
+                        "startOffset": 13906,
+                        "endLine": 115,
+                        "endColumn": 12,
+                        "endOffset": 14175
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 14180,
+                    "endLine": 123,
+                    "endColumn": 12,
+                    "endOffset": 14642
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 116,
+                        "startColumn": 4,
+                        "startOffset": 14180,
+                        "endLine": 123,
+                        "endColumn": 12,
+                        "endOffset": 14642
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 124,
+                    "startColumn": 4,
+                    "startOffset": 14647,
+                    "endLine": 129,
+                    "endColumn": 12,
+                    "endOffset": 14993
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 124,
+                        "startColumn": 4,
+                        "startOffset": 14647,
+                        "endLine": 129,
+                        "endColumn": 12,
+                        "endOffset": 14993
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 14998,
+                    "endLine": 133,
+                    "endColumn": 12,
+                    "endOffset": 15260
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 130,
+                        "startColumn": 4,
+                        "startOffset": 14998,
+                        "endLine": 133,
+                        "endColumn": 12,
+                        "endOffset": 15260
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 134,
+                    "startColumn": 4,
+                    "startOffset": 15265,
+                    "endLine": 143,
+                    "endColumn": 12,
+                    "endOffset": 15894
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 134,
+                        "startColumn": 4,
+                        "startOffset": 15265,
+                        "endLine": 143,
+                        "endColumn": 12,
+                        "endOffset": 15894
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 144,
+                    "startColumn": 4,
+                    "startOffset": 15899,
+                    "endLine": 154,
+                    "endColumn": 12,
+                    "endOffset": 16583
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 144,
+                        "startColumn": 4,
+                        "startOffset": 15899,
+                        "endLine": 154,
+                        "endColumn": 12,
+                        "endOffset": 16583
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 155,
+                    "startColumn": 4,
+                    "startOffset": 16588,
+                    "endLine": 158,
+                    "endColumn": 12,
+                    "endOffset": 16797
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 155,
+                        "startColumn": 4,
+                        "startOffset": 16588,
+                        "endLine": 158,
+                        "endColumn": 12,
+                        "endOffset": 16797
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 159,
+                    "startColumn": 4,
+                    "startOffset": 16802,
+                    "endLine": 162,
+                    "endColumn": 12,
+                    "endOffset": 17017
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 159,
+                        "startColumn": 4,
+                        "startOffset": 16802,
+                        "endLine": 162,
+                        "endColumn": 12,
+                        "endOffset": 17017
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 163,
+                    "startColumn": 4,
+                    "startOffset": 17022,
+                    "endLine": 164,
+                    "endColumn": 12,
+                    "endOffset": 17124
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 163,
+                        "startColumn": 4,
+                        "startOffset": 17022,
+                        "endLine": 164,
+                        "endColumn": 12,
+                        "endOffset": 17124
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 165,
+                    "startColumn": 4,
+                    "startOffset": 17129,
+                    "endLine": 166,
+                    "endColumn": 12,
+                    "endOffset": 17265
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 165,
+                        "startColumn": 4,
+                        "startOffset": 17129,
+                        "endLine": 166,
+                        "endColumn": 12,
+                        "endOffset": 17265
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 167,
+                    "startColumn": 4,
+                    "startOffset": 17270,
+                    "endLine": 168,
+                    "endColumn": 12,
+                    "endOffset": 17406
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 167,
+                        "startColumn": 4,
+                        "startOffset": 17270,
+                        "endLine": 168,
+                        "endColumn": 12,
+                        "endOffset": 17406
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 169,
+                    "startColumn": 4,
+                    "startOffset": 17411,
+                    "endLine": 170,
+                    "endColumn": 12,
+                    "endOffset": 17509
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 169,
+                        "startColumn": 4,
+                        "startOffset": 17411,
+                        "endLine": 170,
+                        "endColumn": 12,
+                        "endOffset": 17509
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 171,
+                    "startColumn": 4,
+                    "startOffset": 17514,
+                    "endLine": 176,
+                    "endColumn": 12,
+                    "endOffset": 17864
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 171,
+                        "startColumn": 4,
+                        "startOffset": 17514,
+                        "endLine": 176,
+                        "endColumn": 12,
+                        "endOffset": 17864
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 177,
+                    "startColumn": 4,
+                    "startOffset": 17869,
+                    "endLine": 180,
+                    "endColumn": 12,
+                    "endOffset": 18128
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 177,
+                        "startColumn": 4,
+                        "startOffset": 17869,
+                        "endLine": 180,
+                        "endColumn": 12,
+                        "endOffset": 18128
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 181,
+                    "startColumn": 4,
+                    "startOffset": 18133,
+                    "endLine": 184,
+                    "endColumn": 12,
+                    "endOffset": 18405
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 181,
+                        "startColumn": 4,
+                        "startOffset": 18133,
+                        "endLine": 184,
+                        "endColumn": 12,
+                        "endOffset": 18405
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 185,
+                    "startColumn": 4,
+                    "startOffset": 18410,
+                    "endLine": 188,
+                    "endColumn": 12,
+                    "endOffset": 18661
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 185,
+                        "startColumn": 4,
+                        "startOffset": 18410,
+                        "endLine": 188,
+                        "endColumn": 12,
+                        "endOffset": 18661
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 189,
+                    "startColumn": 4,
+                    "startOffset": 18666,
+                    "endLine": 192,
+                    "endColumn": 12,
+                    "endOffset": 18932
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 189,
+                        "startColumn": 4,
+                        "startOffset": 18666,
+                        "endLine": 192,
+                        "endColumn": 12,
+                        "endOffset": 18932
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 193,
+                    "startColumn": 4,
+                    "startOffset": 18937,
+                    "endLine": 196,
+                    "endColumn": 12,
+                    "endOffset": 19197
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 193,
+                        "startColumn": 4,
+                        "startOffset": 18937,
+                        "endLine": 196,
+                        "endColumn": 12,
+                        "endOffset": 19197
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 197,
+                    "startColumn": 4,
+                    "startOffset": 19202,
+                    "endLine": 200,
+                    "endColumn": 12,
+                    "endOffset": 19475
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 197,
+                        "startColumn": 4,
+                        "startOffset": 19202,
+                        "endLine": 200,
+                        "endColumn": 12,
+                        "endOffset": 19475
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 201,
+                    "startColumn": 4,
+                    "startOffset": 19480,
+                    "endLine": 204,
+                    "endColumn": 12,
+                    "endOffset": 19732
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 201,
+                        "startColumn": 4,
+                        "startOffset": 19480,
+                        "endLine": 204,
+                        "endColumn": 12,
+                        "endOffset": 19732
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 205,
+                    "startColumn": 4,
+                    "startOffset": 19737,
+                    "endLine": 208,
+                    "endColumn": 12,
+                    "endOffset": 20004
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 205,
+                        "startColumn": 4,
+                        "startOffset": 19737,
+                        "endLine": 208,
+                        "endColumn": 12,
+                        "endOffset": 20004
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 209,
+                    "startColumn": 4,
+                    "startOffset": 20009,
+                    "endLine": 212,
+                    "endColumn": 12,
+                    "endOffset": 20210
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 209,
+                        "startColumn": 4,
+                        "startOffset": 20009,
+                        "endLine": 212,
+                        "endColumn": 12,
+                        "endOffset": 20210
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 213,
+                    "startColumn": 4,
+                    "startOffset": 20215,
+                    "endLine": 217,
+                    "endColumn": 12,
+                    "endOffset": 20480
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 213,
+                        "startColumn": 4,
+                        "startOffset": 20215,
+                        "endLine": 217,
+                        "endColumn": 12,
+                        "endOffset": 20480
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 218,
+                    "startColumn": 4,
+                    "startOffset": 20485,
+                    "endLine": 220,
+                    "endColumn": 12,
+                    "endOffset": 20638
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 218,
+                        "startColumn": 4,
+                        "startOffset": 20485,
+                        "endLine": 220,
+                        "endColumn": 12,
+                        "endOffset": 20638
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 221,
+                    "startColumn": 4,
+                    "startOffset": 20643,
+                    "endLine": 223,
+                    "endColumn": 12,
+                    "endOffset": 20767
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 221,
+                        "startColumn": 4,
+                        "startOffset": 20643,
+                        "endLine": 223,
+                        "endColumn": 12,
+                        "endOffset": 20767
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 224,
+                    "startColumn": 4,
+                    "startOffset": 20772,
+                    "endLine": 226,
+                    "endColumn": 12,
+                    "endOffset": 20896
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 224,
+                        "startColumn": 4,
+                        "startOffset": 20772,
+                        "endLine": 226,
+                        "endColumn": 12,
+                        "endOffset": 20896
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 227,
+                    "startColumn": 4,
+                    "startOffset": 20901,
+                    "endLine": 231,
+                    "endColumn": 12,
+                    "endOffset": 21163
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 227,
+                        "startColumn": 4,
+                        "startOffset": 20901,
+                        "endLine": 231,
+                        "endColumn": 12,
+                        "endOffset": 21163
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 232,
+                    "startColumn": 4,
+                    "startOffset": 21168,
+                    "endLine": 299,
+                    "endColumn": 12,
+                    "endOffset": 25797
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 232,
+                        "startColumn": 4,
+                        "startOffset": 21168,
+                        "endLine": 299,
+                        "endColumn": 12,
+                        "endOffset": 25797
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 300,
+                    "startColumn": 4,
+                    "startOffset": 25802,
+                    "endLine": 325,
+                    "endColumn": 12,
+                    "endOffset": 27230
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 300,
+                        "startColumn": 4,
+                        "startOffset": 25802,
+                        "endLine": 325,
+                        "endColumn": 12,
+                        "endOffset": 27230
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 326,
+                    "startColumn": 4,
+                    "startOffset": 27235,
+                    "endLine": 393,
+                    "endColumn": 12,
+                    "endOffset": 32077
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 326,
+                        "startColumn": 4,
+                        "startOffset": 27235,
+                        "endLine": 393,
+                        "endColumn": 12,
+                        "endOffset": 32077
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 394,
+                    "startColumn": 4,
+                    "startOffset": 32082,
+                    "endLine": 417,
+                    "endColumn": 12,
+                    "endOffset": 34030
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 394,
+                        "startColumn": 4,
+                        "startOffset": 32082,
+                        "endLine": 417,
+                        "endColumn": 12,
+                        "endOffset": 34030
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 418,
+                    "startColumn": 4,
+                    "startOffset": 34035,
+                    "endLine": 443,
+                    "endColumn": 12,
+                    "endOffset": 35482
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 418,
+                        "startColumn": 4,
+                        "startOffset": 34035,
+                        "endLine": 443,
+                        "endColumn": 12,
+                        "endOffset": 35482
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 444,
+                    "startColumn": 4,
+                    "startOffset": 35487,
+                    "endLine": 447,
+                    "endColumn": 12,
+                    "endOffset": 35644
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 444,
+                        "startColumn": 4,
+                        "startOffset": 35487,
+                        "endLine": 447,
+                        "endColumn": 12,
+                        "endOffset": 35644
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 448,
+                    "startColumn": 4,
+                    "startOffset": 35649,
+                    "endLine": 451,
+                    "endColumn": 12,
+                    "endOffset": 35800
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 448,
+                        "startColumn": 4,
+                        "startOffset": 35649,
+                        "endLine": 451,
+                        "endColumn": 12,
+                        "endOffset": 35800
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 452,
+                    "startColumn": 4,
+                    "startOffset": 35805,
+                    "endLine": 453,
+                    "endColumn": 12,
+                    "endOffset": 35839
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 452,
+                        "startColumn": 4,
+                        "startOffset": 35805,
+                        "endLine": 453,
+                        "endColumn": 12,
+                        "endOffset": 35839
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 454,
+                    "startColumn": 4,
+                    "startOffset": 35844,
+                    "endLine": 465,
+                    "endColumn": 12,
+                    "endOffset": 36735
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 454,
+                        "startColumn": 4,
+                        "startOffset": 35844,
+                        "endLine": 465,
+                        "endColumn": 12,
+                        "endOffset": 36735
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 466,
+                    "startColumn": 4,
+                    "startOffset": 36740,
+                    "endLine": 477,
+                    "endColumn": 12,
+                    "endOffset": 37619
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 466,
+                        "startColumn": 4,
+                        "startOffset": 36740,
+                        "endLine": 477,
+                        "endColumn": 12,
+                        "endOffset": 37619
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 478,
+                    "startColumn": 4,
+                    "startOffset": 37624,
+                    "endLine": 482,
+                    "endColumn": 12,
+                    "endOffset": 37880
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 478,
+                        "startColumn": 4,
+                        "startOffset": 37624,
+                        "endLine": 482,
+                        "endColumn": 12,
+                        "endOffset": 37880
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 483,
+                    "startColumn": 4,
+                    "startOffset": 37885,
+                    "endLine": 491,
+                    "endColumn": 12,
+                    "endOffset": 38343
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 483,
+                        "startColumn": 4,
+                        "startOffset": 37885,
+                        "endLine": 491,
+                        "endColumn": 12,
+                        "endOffset": 38343
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 492,
+                    "startColumn": 4,
+                    "startOffset": 38348,
+                    "endLine": 497,
+                    "endColumn": 12,
+                    "endOffset": 38680
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 492,
+                        "startColumn": 4,
+                        "startOffset": 38348,
+                        "endLine": 497,
+                        "endColumn": 12,
+                        "endOffset": 38680
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 498,
+                    "startColumn": 4,
+                    "startOffset": 38685,
+                    "endLine": 507,
+                    "endColumn": 12,
+                    "endOffset": 39195
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 498,
+                        "startColumn": 4,
+                        "startOffset": 38685,
+                        "endLine": 507,
+                        "endColumn": 12,
+                        "endOffset": 39195
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 508,
+                    "startColumn": 4,
+                    "startOffset": 39200,
+                    "endLine": 510,
+                    "endColumn": 12,
+                    "endOffset": 39351
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 508,
+                        "startColumn": 4,
+                        "startOffset": 39200,
+                        "endLine": 510,
+                        "endColumn": 12,
+                        "endOffset": 39351
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 511,
+                    "startColumn": 4,
+                    "startOffset": 39356,
+                    "endLine": 515,
+                    "endColumn": 12,
+                    "endOffset": 39685
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 511,
+                        "startColumn": 4,
+                        "startOffset": 39356,
+                        "endLine": 515,
+                        "endColumn": 12,
+                        "endOffset": 39685
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 516,
+                    "startColumn": 4,
+                    "startOffset": 39690,
+                    "endLine": 519,
+                    "endColumn": 12,
+                    "endOffset": 39984
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 516,
+                        "startColumn": 4,
+                        "startOffset": 39690,
+                        "endLine": 519,
+                        "endColumn": 12,
+                        "endOffset": 39984
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 520,
+                    "startColumn": 4,
+                    "startOffset": 39989,
+                    "endLine": 521,
+                    "endColumn": 12,
+                    "endOffset": 40099
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 520,
+                        "startColumn": 4,
+                        "startOffset": 39989,
+                        "endLine": 521,
+                        "endColumn": 12,
+                        "endOffset": 40099
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 522,
+                    "startColumn": 4,
+                    "startOffset": 40104,
+                    "endLine": 527,
+                    "endColumn": 12,
+                    "endOffset": 40429
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 522,
+                        "startColumn": 4,
+                        "startOffset": 40104,
+                        "endLine": 527,
+                        "endColumn": 12,
+                        "endOffset": 40429
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 528,
+                    "startColumn": 4,
+                    "startOffset": 40434,
+                    "endLine": 529,
+                    "endColumn": 12,
+                    "endOffset": 40543
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 528,
+                        "startColumn": 4,
+                        "startOffset": 40434,
+                        "endLine": 529,
+                        "endColumn": 12,
+                        "endOffset": 40543
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 530,
+                    "startColumn": 4,
+                    "startOffset": 40548,
+                    "endLine": 539,
+                    "endColumn": 12,
+                    "endOffset": 41385
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 530,
+                        "startColumn": 4,
+                        "startOffset": 40548,
+                        "endLine": 539,
+                        "endColumn": 12,
+                        "endOffset": 41385
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 540,
+                    "startColumn": 4,
+                    "startOffset": 41390,
+                    "endLine": 551,
+                    "endColumn": 12,
+                    "endOffset": 42253
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 540,
+                        "startColumn": 4,
+                        "startOffset": 41390,
+                        "endLine": 551,
+                        "endColumn": 12,
+                        "endOffset": 42253
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 552,
+                    "startColumn": 4,
+                    "startOffset": 42258,
+                    "endLine": 563,
+                    "endColumn": 12,
+                    "endOffset": 43149
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 552,
+                        "startColumn": 4,
+                        "startOffset": 42258,
+                        "endLine": 563,
+                        "endColumn": 12,
+                        "endOffset": 43149
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 564,
+                    "startColumn": 4,
+                    "startOffset": 43154,
+                    "endLine": 565,
+                    "endColumn": 12,
+                    "endOffset": 43262
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 564,
+                        "startColumn": 4,
+                        "startOffset": 43154,
+                        "endLine": 565,
+                        "endColumn": 12,
+                        "endOffset": 43262
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 566,
+                    "startColumn": 4,
+                    "startOffset": 43267,
+                    "endLine": 567,
+                    "endColumn": 12,
+                    "endOffset": 43341
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 566,
+                        "startColumn": 4,
+                        "startOffset": 43267,
+                        "endLine": 567,
+                        "endColumn": 12,
+                        "endOffset": 43341
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 568,
+                    "startColumn": 4,
+                    "startOffset": 43346,
+                    "endLine": 569,
+                    "endColumn": 12,
+                    "endOffset": 43456
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 568,
+                        "startColumn": 4,
+                        "startOffset": 43346,
+                        "endLine": 569,
+                        "endColumn": 12,
+                        "endOffset": 43456
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 570,
+                    "startColumn": 4,
+                    "startOffset": 43461,
+                    "endLine": 572,
+                    "endColumn": 12,
+                    "endOffset": 43612
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 570,
+                        "startColumn": 4,
+                        "startOffset": 43461,
+                        "endLine": 572,
+                        "endColumn": 12,
+                        "endOffset": 43612
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 573,
+                    "startColumn": 4,
+                    "startOffset": 43617,
+                    "endLine": 574,
+                    "endColumn": 12,
+                    "endOffset": 43727
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 573,
+                        "startColumn": 4,
+                        "startOffset": 43617,
+                        "endLine": 574,
+                        "endColumn": 12,
+                        "endOffset": 43727
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 575,
+                    "startColumn": 4,
+                    "startOffset": 43732,
+                    "endLine": 576,
+                    "endColumn": 12,
+                    "endOffset": 43807
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 575,
+                        "startColumn": 4,
+                        "startOffset": 43732,
+                        "endLine": 576,
+                        "endColumn": 12,
+                        "endOffset": 43807
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 577,
+                    "startColumn": 4,
+                    "startOffset": 43812,
+                    "endLine": 578,
+                    "endColumn": 12,
+                    "endOffset": 43912
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 577,
+                        "startColumn": 4,
+                        "startOffset": 43812,
+                        "endLine": 578,
+                        "endColumn": 12,
+                        "endOffset": 43912
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 579,
+                    "startColumn": 4,
+                    "startOffset": 43917,
+                    "endLine": 581,
+                    "endColumn": 12,
+                    "endOffset": 44075
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 579,
+                        "startColumn": 4,
+                        "startOffset": 43917,
+                        "endLine": 581,
+                        "endColumn": 12,
+                        "endOffset": 44075
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 582,
+                    "startColumn": 4,
+                    "startOffset": 44080,
+                    "endLine": 584,
+                    "endColumn": 12,
+                    "endOffset": 44238
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 582,
+                        "startColumn": 4,
+                        "startOffset": 44080,
+                        "endLine": 584,
+                        "endColumn": 12,
+                        "endOffset": 44238
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 585,
+                    "startColumn": 4,
+                    "startOffset": 44243,
+                    "endLine": 588,
+                    "endColumn": 12,
+                    "endOffset": 44541
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 585,
+                        "startColumn": 4,
+                        "startOffset": 44243,
+                        "endLine": 588,
+                        "endColumn": 12,
+                        "endOffset": 44541
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 589,
+                    "startColumn": 4,
+                    "startOffset": 44546,
+                    "endLine": 592,
+                    "endColumn": 12,
+                    "endOffset": 44870
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 589,
+                        "startColumn": 4,
+                        "startOffset": 44546,
+                        "endLine": 592,
+                        "endColumn": 12,
+                        "endOffset": 44870
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 593,
+                    "startColumn": 4,
+                    "startOffset": 44875,
+                    "endLine": 595,
+                    "endColumn": 12,
+                    "endOffset": 45076
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 593,
+                        "startColumn": 4,
+                        "startOffset": 44875,
+                        "endLine": 595,
+                        "endColumn": 12,
+                        "endOffset": 45076
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 596,
+                    "startColumn": 4,
+                    "startOffset": 45081,
+                    "endLine": 601,
+                    "endColumn": 12,
+                    "endOffset": 45413
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 596,
+                        "startColumn": 4,
+                        "startOffset": 45081,
+                        "endLine": 601,
+                        "endColumn": 12,
+                        "endOffset": 45413
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 602,
+                    "startColumn": 4,
+                    "startOffset": 45418,
+                    "endLine": 603,
+                    "endColumn": 12,
+                    "endOffset": 45533
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 602,
+                        "startColumn": 4,
+                        "startOffset": 45418,
+                        "endLine": 603,
+                        "endColumn": 12,
+                        "endOffset": 45533
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 604,
+                    "startColumn": 4,
+                    "startOffset": 45538,
+                    "endLine": 610,
+                    "endColumn": 12,
+                    "endOffset": 46003
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 604,
+                        "startColumn": 4,
+                        "startOffset": 45538,
+                        "endLine": 610,
+                        "endColumn": 12,
+                        "endOffset": 46003
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 611,
+                    "startColumn": 4,
+                    "startOffset": 46008,
+                    "endLine": 614,
+                    "endColumn": 12,
+                    "endOffset": 46288
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 611,
+                        "startColumn": 4,
+                        "startOffset": 46008,
+                        "endLine": 614,
+                        "endColumn": 12,
+                        "endOffset": 46288
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 615,
+                    "startColumn": 4,
+                    "startOffset": 46293,
+                    "endLine": 616,
+                    "endColumn": 12,
+                    "endOffset": 46399
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 615,
+                        "startColumn": 4,
+                        "startOffset": 46293,
+                        "endLine": 616,
+                        "endColumn": 12,
+                        "endOffset": 46399
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 617,
+                    "startColumn": 4,
+                    "startOffset": 46404,
+                    "endLine": 619,
+                    "endColumn": 12,
+                    "endOffset": 46565
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 617,
+                        "startColumn": 4,
+                        "startOffset": 46404,
+                        "endLine": 619,
+                        "endColumn": 12,
+                        "endOffset": 46565
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 620,
+                    "startColumn": 4,
+                    "startOffset": 46570,
+                    "endLine": 621,
+                    "endColumn": 12,
+                    "endOffset": 46668
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 620,
+                        "startColumn": 4,
+                        "startOffset": 46570,
+                        "endLine": 621,
+                        "endColumn": 12,
+                        "endOffset": 46668
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 622,
+                    "startColumn": 4,
+                    "startOffset": 46673,
+                    "endLine": 624,
+                    "endColumn": 12,
+                    "endOffset": 46892
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 622,
+                        "startColumn": 4,
+                        "startOffset": 46673,
+                        "endLine": 624,
+                        "endColumn": 12,
+                        "endOffset": 46892
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 625,
+                    "startColumn": 4,
+                    "startOffset": 46897,
+                    "endLine": 628,
+                    "endColumn": 12,
+                    "endOffset": 47218
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 625,
+                        "startColumn": 4,
+                        "startOffset": 46897,
+                        "endLine": 628,
+                        "endColumn": 12,
+                        "endOffset": 47218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 629,
+                    "startColumn": 4,
+                    "startOffset": 47223,
+                    "endLine": 633,
+                    "endColumn": 12,
+                    "endOffset": 47614
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 629,
+                        "startColumn": 4,
+                        "startOffset": 47223,
+                        "endLine": 633,
+                        "endColumn": 12,
+                        "endOffset": 47614
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 634,
+                    "startColumn": 4,
+                    "startOffset": 47619,
+                    "endLine": 640,
+                    "endColumn": 12,
+                    "endOffset": 48076
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 634,
+                        "startColumn": 4,
+                        "startOffset": 47619,
+                        "endLine": 640,
+                        "endColumn": 12,
+                        "endOffset": 48076
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 641,
+                    "startColumn": 4,
+                    "startOffset": 48081,
+                    "endLine": 642,
+                    "endColumn": 12,
+                    "endOffset": 48183
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 641,
+                        "startColumn": 4,
+                        "startOffset": 48081,
+                        "endLine": 642,
+                        "endColumn": 12,
+                        "endOffset": 48183
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 643,
+                    "startColumn": 4,
+                    "startOffset": 48188,
+                    "endLine": 644,
+                    "endColumn": 12,
+                    "endOffset": 48282
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 643,
+                        "startColumn": 4,
+                        "startOffset": 48188,
+                        "endLine": 644,
+                        "endColumn": 12,
+                        "endOffset": 48282
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 645,
+                    "startColumn": 4,
+                    "startOffset": 48287,
+                    "endLine": 646,
+                    "endColumn": 12,
+                    "endOffset": 48369
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 645,
+                        "startColumn": 4,
+                        "startOffset": 48287,
+                        "endLine": 646,
+                        "endColumn": 12,
+                        "endOffset": 48369
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 647,
+                    "startColumn": 4,
+                    "startOffset": 48374,
+                    "endLine": 650,
+                    "endColumn": 12,
+                    "endOffset": 48618
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 647,
+                        "startColumn": 4,
+                        "startOffset": 48374,
+                        "endLine": 650,
+                        "endColumn": 12,
+                        "endOffset": 48618
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 651,
+                    "startColumn": 4,
+                    "startOffset": 48623,
+                    "endLine": 656,
+                    "endColumn": 12,
+                    "endOffset": 49055
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 651,
+                        "startColumn": 4,
+                        "startOffset": 48623,
+                        "endLine": 656,
+                        "endColumn": 12,
+                        "endOffset": 49055
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 657,
+                    "startColumn": 4,
+                    "startOffset": 49060,
+                    "endLine": 660,
+                    "endColumn": 12,
+                    "endOffset": 49373
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 657,
+                        "startColumn": 4,
+                        "startOffset": 49060,
+                        "endLine": 660,
+                        "endColumn": 12,
+                        "endOffset": 49373
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 661,
+                    "startColumn": 4,
+                    "startOffset": 49378,
+                    "endLine": 663,
+                    "endColumn": 12,
+                    "endOffset": 49571
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 661,
+                        "startColumn": 4,
+                        "startOffset": 49378,
+                        "endLine": 663,
+                        "endColumn": 12,
+                        "endOffset": 49571
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 664,
+                    "startColumn": 4,
+                    "startOffset": 49576,
+                    "endLine": 668,
+                    "endColumn": 12,
+                    "endOffset": 49871
+                },
+                "from": {
+                    "file": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 664,
+                        "startColumn": 4,
+                        "startOffset": 49576,
+                        "endLine": 668,
+                        "endColumn": 12,
+                        "endOffset": 49871
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,8 +1,8 @@
-package com.fsck.k9.mail.transport.imap;
+package com.chiaramail.chiaramailforandroid.mail.transport.imap;
 
-import com.fsck.k9.mail.store.ImapStore;
-import com.fsck.k9.mail.store.ImapStore.AuthType;
-import com.fsck.k9.mail.store.ImapStore.ImapConnection;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapStore;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapStore.AuthType;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapStore.ImapConnection;
 
 /**
  * Settings source for IMAP. Implemented in order to remove coupling between {@link ImapStore} and {@link ImapConnection}.

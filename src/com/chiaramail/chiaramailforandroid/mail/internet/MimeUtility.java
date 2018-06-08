@@ -1,14 +1,15 @@
 
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
 import android.content.Context;
 import android.util.Log;
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
-import com.fsck.k9.helper.HtmlConverter;
-import com.fsck.k9.mail.*;
-import com.fsck.k9.mail.Message.RecipientType;
-import com.fsck.k9.mail.internet.BinaryTempFileBody.BinaryTempFileBodyInputStream;
+
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.helper.HtmlConverter;
+import com.chiaramail.chiaramailforandroid.mail.*;
+import com.chiaramail.chiaramailforandroid.mail.Message.RecipientType;
+import com.chiaramail.chiaramailforandroid.mail.internet.BinaryTempFileBody.BinaryTempFileBodyInputStream;
+import com.chiaramail.chiaramailforandroid.R;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.james.mime4j.codec.Base64InputStream;
@@ -904,6 +905,19 @@ public class MimeUtility {
         {"image/jpg", "image/jpeg"},
         {"image/pjpeg", "image/jpeg"},   // see issue 1712
         {"application/x-zip-compressed", "application/zip"} // see issue 3791
+    };
+
+    /**
+     * Table for character set fall-back.
+     *
+     * Table format: unsupported charset (regular expression), fall-back charset
+     */
+    private static final String[][] CHARSET_FALLBACK_MAP = new String[][] {
+        // Some Android versions don't support KOI8-U
+        {"koi8-u", "koi8-r"},
+        {"iso-2022-jp-[\\d]+", "iso-2022-jp"},
+        // Default fall-back is US-ASCII
+        {".*", "US-ASCII"}
     };
 
     public static String unfold(String s) {

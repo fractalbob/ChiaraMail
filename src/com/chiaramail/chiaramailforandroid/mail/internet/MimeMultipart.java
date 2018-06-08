@@ -1,9 +1,9 @@
 
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
-import com.fsck.k9.mail.BodyPart;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Multipart;
+import com.chiaramail.chiaramailforandroid.mail.BodyPart;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Multipart;
 
 import java.io.*;
 import java.util.Locale;
@@ -16,7 +16,7 @@ public class MimeMultipart extends Multipart {
 
     protected String mBoundary;
 
-    protected String mSubType;
+//    protected String mSubType;
 
     public MimeMultipart() throws MessagingException {
         mBoundary = generateBoundary();
@@ -26,8 +26,9 @@ public class MimeMultipart extends Multipart {
     public MimeMultipart(String contentType) throws MessagingException {
         this.mContentType = contentType;
         try {
-            mSubType = MimeUtility.getHeaderParameter(contentType, null).split("/")[1];
             mBoundary = MimeUtility.getHeaderParameter(contentType, "boundary");
+//            mSubType = MimeUtility.getHeaderParameter(contentType, null).split("/")[1];
+//            mBoundary = MimeUtility.getHeaderParameter(contentType, "boundary");
             if (mBoundary == null) {
                 throw new MessagingException("MultiPart does not contain boundary: " + contentType);
             }
@@ -62,7 +63,7 @@ public class MimeMultipart extends Multipart {
     }
 
     public void setSubType(String subType) {
-        this.mSubType = subType;
+//        this.mSubType = subType;
         mContentType = String.format("multipart/%s; boundary=\"%s\"", subType, mBoundary);
     }
 

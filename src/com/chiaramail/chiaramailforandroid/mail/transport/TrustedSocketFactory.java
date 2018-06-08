@@ -1,6 +1,7 @@
-package com.fsck.k9.mail.transport;
+package com.chiaramail.chiaramailforandroid.mail.transport;
 
-import com.fsck.k9.mail.store.TrustManagerFactory;
+import com.chiaramail.chiaramailforandroid.mail.store.TrustManagerFactory;
+
 import org.apache.http.conn.ConnectTimeoutException;
 import org.apache.http.conn.scheme.LayeredSocketFactory;
 import org.apache.http.params.HttpParams;

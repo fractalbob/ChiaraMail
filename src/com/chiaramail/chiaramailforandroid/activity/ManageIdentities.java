@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.content.Intent;
 import android.view.ContextMenu;
@@ -11,13 +11,13 @@ import android.widget.Toast;
 
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.fsck.k9.Identity;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
+import com.chiaramail.chiaramailforandroid.Identity;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class ManageIdentities extends ChooseIdentity {
     private boolean mIdentitiesChanged = false;
-    public static final String EXTRA_IDENTITIES = "com.fsck.k9.EditIdentity_identities";
+    public static final String EXTRA_IDENTITIES = "com.chiaramail.chiaramailforandroid.EditIdentity_identities";
 
     private static final int ACTIVITY_EDIT_IDENTITY = 1;
 

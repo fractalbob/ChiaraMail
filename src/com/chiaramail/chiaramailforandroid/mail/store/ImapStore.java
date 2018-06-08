@@ -1,5 +1,5 @@
 
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -61,41 +61,41 @@ import android.os.PowerManager;
 import android.util.Log;
 
 import com.beetstra.jutf7.CharsetProvider;
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
-import com.fsck.k9.controller.MessageRetrievalListener;
-import com.fsck.k9.helper.StringUtils;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.helper.power.TracingPowerManager;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
-import com.fsck.k9.mail.Authentication;
-import com.fsck.k9.mail.AuthenticationFailedException;
-import com.fsck.k9.mail.Body;
-import com.fsck.k9.mail.CertificateValidationException;
-import com.fsck.k9.mail.ConnectionSecurity;
-import com.fsck.k9.mail.FetchProfile;
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Part;
-import com.fsck.k9.mail.PushReceiver;
-import com.fsck.k9.mail.Pusher;
-import com.fsck.k9.mail.ServerSettings;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.filter.EOLConvertingOutputStream;
-import com.fsck.k9.mail.filter.FixedLengthInputStream;
-import com.fsck.k9.mail.filter.PeekableInputStream;
-import com.fsck.k9.mail.internet.MimeBodyPart;
-import com.fsck.k9.mail.internet.MimeHeader;
-import com.fsck.k9.mail.internet.MimeMessage;
-import com.fsck.k9.mail.internet.MimeMultipart;
-import com.fsck.k9.mail.internet.MimeUtility;
-import com.fsck.k9.mail.store.ImapResponseParser.ImapList;
-import com.fsck.k9.mail.store.ImapResponseParser.ImapResponse;
-import com.fsck.k9.mail.store.imap.ImapUtility;
-import com.fsck.k9.mail.transport.imap.ImapSettings;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.controller.MessageRetrievalListener;
+import com.chiaramail.chiaramailforandroid.helper.StringUtils;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
+import com.chiaramail.chiaramailforandroid.mail.Authentication;
+import com.chiaramail.chiaramailforandroid.mail.AuthenticationFailedException;
+import com.chiaramail.chiaramailforandroid.mail.Body;
+import com.chiaramail.chiaramailforandroid.mail.CertificateValidationException;
+import com.chiaramail.chiaramailforandroid.mail.ConnectionSecurity;
+import com.chiaramail.chiaramailforandroid.mail.FetchProfile;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Part;
+import com.chiaramail.chiaramailforandroid.mail.PushReceiver;
+import com.chiaramail.chiaramailforandroid.mail.Pusher;
+import com.chiaramail.chiaramailforandroid.mail.ServerSettings;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.filter.EOLConvertingOutputStream;
+import com.chiaramail.chiaramailforandroid.mail.filter.FixedLengthInputStream;
+import com.chiaramail.chiaramailforandroid.mail.filter.PeekableInputStream;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeBodyPart;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeHeader;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeMessage;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeMultipart;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapResponseParser.ImapList;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapResponseParser.ImapResponse;
+import com.chiaramail.chiaramailforandroid.mail.store.imap.ImapUtility;
+import com.chiaramail.chiaramailforandroid.mail.transport.imap.ImapSettings;
+import com.chiaramail.chiaramailforandroid.R;
 import com.jcraft.jzlib.JZlib;
 import com.jcraft.jzlib.ZOutputStream;
 
@@ -630,7 +630,7 @@ public class ImapStore extends Store {
      * Attempt to auto-configure folders by attributes if the server advertises that capability.
      *
      * The parsing here is essentially the same as
-     * {@link #listFolders(com.fsck.k9.mail.store.ImapStore.ImapConnection, boolean)}; we should try to consolidate
+     * {@link #listFolders(com.chiaramail.chiaramailforandroid.mail.store.ImapStore.ImapConnection, boolean)}; we should try to consolidate
      * this at some point. :(
      * @param connection IMAP Connection
      * @throws IOException uh oh!

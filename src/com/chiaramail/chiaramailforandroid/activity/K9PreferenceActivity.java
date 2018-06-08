@@ -1,7 +1,7 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import com.actionbarsherlock.app.SherlockPreferenceActivity;
-import com.fsck.k9.K9;
+import com.chiaramail.chiaramailforandroid.K9;
 
 import android.os.Build;
 import android.os.Bundle;

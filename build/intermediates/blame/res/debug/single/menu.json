@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\k-9\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\manage_identities_option.xml",
+        "source": "C:\\k-9\\res\\menu\\manage_identities_option.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\folder_context.xml",
+        "source": "C:\\k-9\\res\\menu\\folder_context.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\folder_list_option.xml",
+        "source": "C:\\k-9\\res\\menu\\folder_list_option.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\accounts_option.xml",
+        "source": "C:\\k-9\\res\\menu\\accounts_option.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\message_list_item_context.xml",
+        "source": "C:\\k-9\\res\\menu\\message_list_item_context.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\accounts_context.xml",
+        "source": "C:\\k-9\\res\\menu\\accounts_context.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\message_list_context.xml",
+        "source": "C:\\k-9\\res\\menu\\message_list_context.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\manage_identities_context.xml",
+        "source": "C:\\k-9\\res\\menu\\manage_identities_context.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\disabled_accounts_context.xml",
+        "source": "C:\\k-9\\res\\menu\\disabled_accounts_context.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\folder_select_option.xml",
+        "source": "C:\\k-9\\res\\menu\\folder_select_option.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\message_compose_option.xml",
+        "source": "C:\\k-9\\res\\menu\\message_compose_option.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\menu\\message_list_option.xml",
+        "source": "C:\\k-9\\res\\menu\\message_list_option.xml"
+    }
+]

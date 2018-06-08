@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package com.fsck.k9.mail.store.imap;
+package com.chiaramail.chiaramailforandroid.mail.store.imap;
 
 import android.util.Log;
 
-import com.fsck.k9.K9;
+import com.chiaramail.chiaramailforandroid.K9;
 
 import java.util.ArrayList;
 import java.util.List;

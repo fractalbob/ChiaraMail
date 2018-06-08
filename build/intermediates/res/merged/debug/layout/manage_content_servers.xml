@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<!--         
+     <ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="200dip"
+	    android:padding="6dip"
+	    android:fadingEdge="none"
+	    android:scrollbarStyle="outsideInset">
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:text="@string/config_private_servers_summary"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="?android:attr/textColorPrimary" />
+    
+      </ScrollView>	  
+ -->
+      <Button
+           android:id="@+id/config_help"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:enabled="true"
+           android:text="@string/manage_content_servers_help"
+           android:textSize="16dip" />
+    
+ <!--     		
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >            
+ -->  	
+	    <Spinner
+	        android:id="@+id/configs_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:prompt="@string/manage_content_servers_configs" />
+    
+        <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+           
+	        <Button
+	           android:id="@+id/config_add"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_weight="0.16"
+	           android:padding="5dip"
+	           android:enabled="true"
+	           android:text="@string/manage_content_servers_create"
+	           android:textSize="16dip" />
+	                       
+	        <Button
+	           android:id="@+id/config_edit"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_weight="0.16"
+	           android:padding="5dip"
+	           android:enabled="true"
+	           android:text="@string/manage_content_servers_edit"
+	           android:textSize="16dip" />        
+	
+	        <Button
+	           android:id="@+id/config_delete"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_weight="0.31"
+	           android:padding="5dip"
+	           android:enabled="false"
+	           android:text="@string/manage_content_servers_delete"
+	           android:textSize="16dip" />
+	       
+	        <Button
+	           android:id="@+id/config_set_default"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_weight="0.31"
+	           android:padding="5dip"
+	           android:enabled="true"
+	           android:text="@string/manage_content_servers_default"
+	           android:textSize="16dip" />
+	       
+	        <Button
+	           android:id="@+id/config_done"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_weight="0.31"
+	           android:padding="5dip"
+	           android:enabled="true"
+	           android:text="@string/manage_content_servers_done"
+	           android:textSize="16dip" />
+    	</LinearLayout>
+    	<include android:id="@+id/display_layout"
+    	    layout="@layout/ecs_config_fields_display"/>
+ <!--   </LinearLayout>   --> 
+<!--  
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+            
+        <Button
+           android:id="@+id/config_add"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.16"
+           android:padding="5dip"
+           android:enabled="true"
+           android:text="@string/manage_content_servers_create"
+           android:textSize="16dip" />
+                       
+        <Button
+           android:id="@+id/config_edit"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.16"
+           android:padding="5dip"
+           android:enabled="true"
+           android:text="@string/manage_content_servers_edit"
+           android:textSize="16dip" />        
+
+        <Button
+           android:id="@+id/config_delete"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.31"
+           android:padding="5dip"
+           android:enabled="false"
+           android:text="@string/manage_content_servers_delete"
+           android:textSize="16dip" />
+       
+        <Button
+           android:id="@+id/config_set_default"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.31"
+           android:padding="5dip"
+           android:enabled="true"
+           android:text="@string/manage_content_servers_default"
+           android:textSize="16dip" />
+       
+        <Button
+           android:id="@+id/config_done"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.31"
+           android:padding="5dip"
+           android:enabled="true"
+           android:text="@string/manage_content_servers_done"
+           android:textSize="16dip" />
+    </LinearLayout>
+-->    
+	 <!--  </ScrollView>	    -->
+</LinearLayout>

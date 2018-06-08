@@ -733,4 +733,18 @@
         <item>NEVER</item>
         <item>WHEN_IN_LANDSCAPE</item>
     </string-array>
+    
+        <string-array name="account_setup_dynamic_content_display_duration_entries">
+        <item>@string/account_setup_dynamic_content_display_duration_1_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_2_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_3_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_4_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_5_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_6_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_7_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_8_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_9_sec</item>
+        <item>@string/account_setup_dynamic_content_display_duration_10_sec</item>
+        </string-array>
+    
 </resources>

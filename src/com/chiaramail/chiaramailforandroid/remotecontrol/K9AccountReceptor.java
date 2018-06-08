@@ -1,4 +1,4 @@
-package com.fsck.k9.remotecontrol;
+package com.chiaramail.chiaramailforandroid.remotecontrol;
 /**
  *
  * @author Daniel I. Applebaum

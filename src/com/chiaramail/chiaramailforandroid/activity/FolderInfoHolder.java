@@ -1,13 +1,13 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class FolderInfoHolder implements Comparable<FolderInfoHolder> {
     public String name;

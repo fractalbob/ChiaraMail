@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+
+    <release version="4.328" versioncode="17029" >
+        <change>Fixed the changelog :)</change>
+    </release>
+
+    <release version="4.327" versioncode="17028" >
+        <change>Fix dialog message when deleting multiple messages from a notification</change>
+        <change>Message view / list: fix NPE when list is empty</change>
+        <change>If there is no message when resuming, K-9 should return to a MessageList.</change>
+        <change>Add a caching layer to EmailProvider.  Database updates can be surprisingly slow. This lead to slow updates of the user interface which in turn made working with K-9 Mail not as fun as it should be. This commit hopefully changes that.</change>
+        <change>Updated Japanese translation</change>
+        <change>Updated French translation</change>
+        <change>Updated Czech localization</change>
+    </release>
+    <release version="4.326" versioncode="17027" >
+        <change>Korean translation update</change>
+        <change>Message header area overhauled</change>
+        <change>Holo theme improvements</change>
+        <change>Fix several NPEes</change>
+        <change>Finnish translation update</change>
+        <change>Improve last folder update time formatting.</change>
+        <change>Experimental change to move most of our refile buttons into a refile submenu. Specifically to elicit feedback. I don't expect this change to stick around in its current form. But I do want to get a sense of whether it's something that makes people happy or angry</change>
+        <change>Clean up date handling</change>
+        <change>Update German translation</change>
+        <change>Add animated notification icon for "check mail"</change>
+        <change>There's no good reason to exclude the Subject from the "full headers" view, especicially since we now play games with it sometimes showing up in the header and sometimes in the titlebar</change>
+        <change>Switch our font sizes to have a "default", which is the size described in the XML.</change>
+        <change>Add optional contact pictures to message list</change>
+        <change>Remove text selection menu item for JB and higher.  Those versions have text selection support built-in (via long pressing the WebView).</change>
+        <change>Move message view theme setting from message view menu to global prefs by default.</change>
+        <change>Move "show all headers" into the menu (and out of the UI)</change>
+    </release>
+    <release version="4.325" versioncode="17026" >
+        <change>Bug fixes (threading, checkboxes)</change>
+        <change>German translation update</change>
+
+    </release>
+    <release version="4.324" versioncode="17025" >
+        <change>Bug fixes</change>
+        <change>Improved animations when showing the message list</change>
+
+    </release>
+    <release version="4.323" versioncode="17024" >
+        <change>Bug fixes</change>
+        <change>Updates to Finnish and French translations</change>
+        <change>Put back prev/next buttons in non-split message views</change>
+    </release>
+
+    <release version="4.322" versioncode="17023" >
+        <change>Added a setting to enable split-screen mode (display message list next to message content)</change>
+        <change>Show a thread as unread/starred if at least one message is unread/starred</change>
+        <change>Modified the preview lines setting to allow disabling message preview in message list</change>
+        <change>Remember the scroll position of the message list</change>
+        <change>Changed the color picker</change>
+        <change>Improved certificate failure notifications</change>
+        <change>Fixed a bug that prevented third-party apps from reading the number of unread messages</change>
+        <change>Fixed a bug that caused the app to load too many messages when you clicked "Load more messages"</change>
+        <change>Updated Finnish, French, German, Dutch translations</change>
+    </release>
+
+    <release version="4.321" versioncode="17022" >
+        <change>Fixed some bugs related to message threading</change>
+        <change>Improved search for folders in the folder list</change>
+        <change>Added support for wrapping long folder names in the folder list</change>
+        <change>Added a progress indicator for remote searches</change>
+        <change>Reworked messagelist progress indicators</change>
+        <change>Improved notifications on SSL certificate validation failures</change>
+        <change>Updated Finnish, French, Spanish translations</change>
+        <change>Fixes to the new notificiations</change>
+        <change>Improvements to database upgrade infrastructure</change>
+        <change>Added the ability to search all local messages from the folder list</change>
+        <change>Added button to show this about screen</change>
+        <change>Close thread view when last message has been moved/deleted</change>
+        <change>Performance improvements</change>
+    </release>
+
+    <release version="4.320" versioncode="17021" >
+        <change>Added 'Account settings' back to the account context menu</change>
+        <change>Added 'Refresh' and 'Settings' back to the folder context menu</change>
+        <change>Minor bug fixes</change>
+    </release>
+
+    <release version="4.319" versioncode="17020" >
+        <change>Added Jelly Bean-style notifications</change>
+    </release>
+
+</changelog>

@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,11 +6,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.text.format.DateUtils;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.AccountStats;
-import com.fsck.k9.R;
-import com.fsck.k9.controller.MessagingListener;
-import com.fsck.k9.service.MailService;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.AccountStats;
+import com.chiaramail.chiaramailforandroid.controller.MessagingListener;
+import com.chiaramail.chiaramailforandroid.service.MailService;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class ActivityListener extends MessagingListener {
     private Account mAccount = null;
@@ -41,7 +41,7 @@ public class ActivityListener extends MessagingListener {
                         context.getString(R.string.folder_progress, mFolderCompleted, mFolderTotal) : "");
 
             if (mLoadingFolderName != null || mLoadingHeaderFolderName != null) {
-                String displayName = mLoadingFolderName;
+                String displayName = mLoadingFolderName != null ? mLoadingFolderName : mLoadingHeaderFolderName;
                 if ((mAccount != null) && (mAccount.getInboxFolderName() != null) && mAccount.getInboxFolderName().equalsIgnoreCase(displayName)) {
                     displayName = context.getString(R.string.special_mailbox_name_inbox);
                 } else if ((mAccount != null) && mAccount.getOutboxFolderName().equals(displayName)) {

@@ -1,6 +1,10 @@
-package com.fsck.k9.controller;
+package com.chiaramail.chiaramailforandroid.controller;
 
+import java.io.ByteArrayOutputStream;
 import java.io.CharArrayWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,11 +18,14 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.StringTokenizer;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import org.apache.commons.io.IOUtils;
 
 import android.app.Application;
 import android.app.KeyguardManager;
@@ -30,66 +37,74 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
 import android.os.PowerManager;
 import android.os.Process;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.style.TextAppearanceSpan;
 import android.util.Log;
+import android.view.View;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.AccountStats;
-import com.fsck.k9.K9;
-import com.fsck.k9.K9.NotificationHideSubject;
-import com.fsck.k9.K9.Intents;
-import com.fsck.k9.K9.NotificationQuickDelete;
-import com.fsck.k9.NotificationSetting;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.FolderList;
-import com.fsck.k9.activity.MessageList;
-import com.fsck.k9.activity.MessageReference;
-import com.fsck.k9.activity.NotificationDeleteConfirmation;
-import com.fsck.k9.activity.setup.AccountSetupIncoming;
-import com.fsck.k9.activity.setup.AccountSetupOutgoing;
-import com.fsck.k9.cache.EmailProviderCache;
-import com.fsck.k9.helper.Contacts;
-import com.fsck.k9.helper.NotificationBuilder;
-import com.fsck.k9.helper.power.TracingPowerManager;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.mail.FetchProfile;
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Folder.FolderType;
-import com.fsck.k9.mail.Folder.OpenMode;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.Message.RecipientType;
-import com.fsck.k9.mail.CertificateValidationException;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Part;
-import com.fsck.k9.mail.PushReceiver;
-import com.fsck.k9.mail.Pusher;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.Transport;
-import com.fsck.k9.mail.internet.MimeMessage;
-import com.fsck.k9.mail.internet.MimeUtility;
-import com.fsck.k9.mail.internet.TextBody;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.LocalStore.LocalFolder;
-import com.fsck.k9.mail.store.LocalStore.LocalMessage;
-import com.fsck.k9.mail.store.LocalStore.PendingCommand;
-import com.fsck.k9.mail.store.UnavailableAccountException;
-import com.fsck.k9.mail.store.UnavailableStorageException;
-import com.fsck.k9.provider.EmailProvider;
-import com.fsck.k9.provider.EmailProvider.StatsColumns;
-import com.fsck.k9.search.ConditionsTreeNode;
-import com.fsck.k9.search.LocalSearch;
-import com.fsck.k9.search.SearchAccount;
-import com.fsck.k9.search.SearchSpecification;
-import com.fsck.k9.search.SqlQueryBuilder;
-import com.fsck.k9.service.NotificationActionService;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.AccountStats;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.NotificationSetting;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.K9.Intents;
+import com.chiaramail.chiaramailforandroid.K9.NotificationHideSubject;
+import com.chiaramail.chiaramailforandroid.K9.NotificationQuickDelete;
+import com.chiaramail.chiaramailforandroid.activity.Accounts;
+import com.chiaramail.chiaramailforandroid.activity.FolderList;
+import com.chiaramail.chiaramailforandroid.activity.MessageList;
+import com.chiaramail.chiaramailforandroid.activity.MessageReference;
+import com.chiaramail.chiaramailforandroid.activity.NotificationDeleteConfirmation;
+import com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupIncoming;
+import com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupOutgoing;
+import com.chiaramail.chiaramailforandroid.cache.EmailProviderCache;
+import com.chiaramail.chiaramailforandroid.helper.Contacts;
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
+import com.chiaramail.chiaramailforandroid.helper.NotificationBuilder;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.Body;
+import com.chiaramail.chiaramailforandroid.mail.CertificateValidationException;
+import com.chiaramail.chiaramailforandroid.mail.FetchProfile;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Part;
+import com.chiaramail.chiaramailforandroid.mail.PushReceiver;
+import com.chiaramail.chiaramailforandroid.mail.Pusher;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.Transport;
+import com.chiaramail.chiaramailforandroid.mail.Folder.FolderType;
+import com.chiaramail.chiaramailforandroid.mail.Folder.OpenMode;
+import com.chiaramail.chiaramailforandroid.mail.Message.RecipientType;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeBodyPart;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeMessage;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.mail.internet.TextBody;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.Pop3Store;
+import com.chiaramail.chiaramailforandroid.mail.store.UnavailableAccountException;
+import com.chiaramail.chiaramailforandroid.mail.store.UnavailableStorageException;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalMessage;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.PendingCommand;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider.StatsColumns;
+import com.chiaramail.chiaramailforandroid.search.ConditionsTreeNode;
+import com.chiaramail.chiaramailforandroid.search.LocalSearch;
+import com.chiaramail.chiaramailforandroid.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification;
+import com.chiaramail.chiaramailforandroid.search.SqlQueryBuilder;
+import com.chiaramail.chiaramailforandroid.service.NotificationActionService;
+import com.chiaramail.chiaramailforandroid.R;
 
 
 /**
@@ -636,7 +651,15 @@ public class MessagingController implements Runnable {
                      */
                     for (Folder localFolder : localFolders) {
                         String localFolderName = localFolder.getName();
-                        if (!account.isSpecialFolder(localFolderName) && !remoteFolderNames.contains(localFolderName)) {
+
+                        // FIXME: This is a hack used to clean up when we accidentally created the
+                        //        special placeholder folder "-NONE-".
+                        if (K9.FOLDER_NONE.equals(localFolderName)) {
+                            localFolder.delete(false);
+                        }
+
+                        if (!account.isSpecialFolder(localFolderName) &&
+                                !remoteFolderNames.contains(localFolderName)) {
                             localFolder.delete(false);
                         }
                     }
@@ -2798,10 +2821,10 @@ public class MessagingController implements Runnable {
         try {
             if (threadedList) {
                 localStore.setFlagForThreads(ids, flag, newState);
-                removeFlagFromCache(account, ids, flag);
+                removeFlagForThreadsFromCache(account, ids, flag);
             } else {
                 localStore.setFlag(ids, flag, newState);
-                removeFlagForThreadsFromCache(account, ids, flag);
+                removeFlagFromCache(account, ids, flag);
             }
         } catch (MessagingException e) {
             Log.e(K9.LOG_TAG, "Couldn't set flags in local database", e);
@@ -2886,8 +2909,9 @@ public class MessagingController implements Runnable {
             // Update the messages in the local store
             localFolder.setFlags(messages, new Flag[] {flag}, newState);
 
+            int unreadMessageCount = localFolder.getUnreadMessageCount();
             for (MessagingListener l : getListeners()) {
-                l.folderStatusChanged(account, folderName, localFolder.getUnreadMessageCount());
+                l.folderStatusChanged(account, folderName, unreadMessageCount);
             }
 
 
@@ -3103,8 +3127,6 @@ public class MessagingController implements Runnable {
                         return;
                     }
 
-                    markMessageAsReadOnView(account, message);
-
                     for (MessagingListener l : getListeners(listener)) {
                         l.loadMessageForViewHeadersAvailable(account, folder, uid, message);
                     }
@@ -3124,6 +3146,7 @@ public class MessagingController implements Runnable {
                     for (MessagingListener l : getListeners(listener)) {
                         l.loadMessageForViewFinished(account, folder, uid, message);
                     }
+                    markMessageAsReadOnView(account, message);
 
                 } catch (Exception e) {
                     for (MessagingListener l : getListeners(listener)) {
@@ -3153,9 +3176,11 @@ public class MessagingController implements Runnable {
             throws MessagingException {
 
         if (account.isMarkMessageAsReadOnView() && !message.isSet(Flag.SEEN)) {
-            message.setFlag(Flag.SEEN, true);
-            setFlagSynchronous(account, Collections.singletonList(Long.valueOf(message.getId())),
-                    Flag.SEEN, true, false);
+            List<Long> messageIds = Collections.singletonList(message.getId());
+            setFlagInCache(account, messageIds, Flag.SEEN, true);
+            setFlagSynchronous(account, messageIds, Flag.SEEN, true, false);
+
+            ((LocalMessage) message).setFlagInternal(Flag.SEEN, true);
         }
     }
 
@@ -3238,6 +3263,85 @@ public class MessagingController implements Runnable {
         });
     }
 
+    /**
+     * Attempts to save the attachment specified by part from the given account and message.
+     * @param account
+     * @param message
+     * @param part
+     * @param listener
+     */
+    public void saveAttachment(
+        final Account account,
+        final Message message,
+        final Part part,
+        final Object tag,
+        final MessagingListener listener) {
+        /*
+         * Check if the attachment has already been downloaded. If it has there's no reason to
+         * download it, so we just tell the listener that it's ready to go.
+         */
+
+        if (part.getBody() != null) {
+            for (MessagingListener l : getListeners(listener)) {
+                l.loadAttachmentStarted(account, message, part, tag, false);
+            }
+
+            for (MessagingListener l : getListeners(listener)) {
+                l.loadAttachmentFinished(account, message, part, tag);
+            }
+            return;
+        }
+
+
+
+        for (MessagingListener l : getListeners(listener)) {
+            l.loadAttachmentStarted(account, message, part, tag, true);
+        }
+
+        put("saveAttachment", listener, new Runnable() {
+ //           put("loadAttachment", listener, new Runnable() {
+            @Override
+            public void run() {
+                Folder remoteFolder = null;
+                LocalFolder localFolder = null;
+                try {
+                    LocalStore localStore = account.getLocalStore();
+
+                    List<Part> attachments = MimeUtility.collectAttachments(message);
+                    for (Part attachment : attachments) {
+                        attachment.setBody(null);
+                    }
+                    Store remoteStore = account.getRemoteStore();
+                    localFolder = localStore.getFolder(message.getFolder().getName());
+                    remoteFolder = remoteStore.getFolder(message.getFolder().getName());
+                    remoteFolder.open(OpenMode.READ_WRITE);
+
+                    //FIXME: This is an ugly hack that won't be needed once the Message objects have been united.
+                    Message remoteMessage = remoteFolder.getMessage(message.getUid());
+                    remoteMessage.setBody(message.getBody());
+                    remoteFolder.fetchPart(remoteMessage, part, null);
+
+                    localFolder.updateMessage((LocalMessage)message);
+                    for (MessagingListener l : getListeners(listener)) {
+                        l.loadAttachmentFinished(account, message, part, tag);
+                    }
+                } catch (MessagingException me) {
+                    if (K9.DEBUG)
+                        Log.v(K9.LOG_TAG, "Exception loading attachment", me);
+
+                    for (MessagingListener l : getListeners(listener)) {
+                        l.loadAttachmentFailed(account, message, part, tag, me.getMessage());
+                    }
+                    notifyUserIfCertificateProblem(mApplication, me, account, true);
+                    addErrorMessage(account, null, me);
+
+                } finally {
+                    closeFolder(localFolder);
+                    closeFolder(remoteFolder);
+                }
+            }
+        });
+    }
     /**
      * Stores the given message in the Outbox and starts a sendPendingMessages command to
      * attempt to send the message.
@@ -3338,18 +3442,14 @@ public class MessagingController implements Runnable {
         builder.setWhen(System.currentTimeMillis());
         builder.setOngoing(true);
         builder.setTicker(mApplication.getString(R.string.notification_bg_send_ticker,
-                account.getDescription()));
+                (account.getDescription() != null && account.getDescription().length() != 0) ? account.getDescription() : account.getEmail()));
 
         builder.setContentTitle(mApplication.getString(R.string.notification_bg_send_title));
         builder.setContentText(account.getDescription());
 
-        LocalSearch search = new LocalSearch(account.getInboxFolderName());
-        search.addAllowedFolder(account.getInboxFolderName());
-        search.addAccountUuid(account.getUuid());
-        Intent intent = MessageList.intentDisplaySearch(mApplication, search, false, true, true);
-
-        PendingIntent pi = PendingIntent.getActivity(mApplication, 0, intent, 0);
-        builder.setContentIntent(pi);
+        TaskStackBuilder stack = buildMessageListBackStack(mApplication, account,
+                account.getInboxFolderName());
+        builder.setContentIntent(stack.getPendingIntent(0, 0));
 
         if (K9.NOTIFICATION_LED_WHILE_SYNCING) {
             configureNotification(builder, null, null,
@@ -3391,9 +3491,8 @@ public class MessagingController implements Runnable {
         builder.setContentTitle(mApplication.getString(R.string.send_failure_subject));
         builder.setContentText(getRootCauseMessage(lastFailure));
 
-        Intent i = FolderList.actionHandleNotification(mApplication, account, openFolder);
-        PendingIntent pi = PendingIntent.getActivity(mApplication, 0, i, 0);
-        builder.setContentIntent(pi);
+        TaskStackBuilder stack = buildFolderListBackStack(mApplication, account);
+        builder.setContentIntent(stack.getPendingIntent(0, 0));
 
         configureNotification(builder,  null, null, K9.NOTIFICATION_LED_FAILURE_COLOR,
                 K9.NOTIFICATION_LED_BLINK_FAST, true);
@@ -3429,13 +3528,9 @@ public class MessagingController implements Runnable {
                 mApplication.getString(R.string.notification_bg_title_separator) +
                 folder.getName());
 
-        LocalSearch search = new LocalSearch(account.getInboxFolderName());
-        search.addAllowedFolder(account.getInboxFolderName());
-        search.addAccountUuid(account.getUuid());
-        Intent intent = MessageList.intentDisplaySearch(mApplication, search, false, true, true);
-
-        PendingIntent pi = PendingIntent.getActivity(mApplication, 0, intent, 0);
-        builder.setContentIntent(pi);
+        TaskStackBuilder stack = buildMessageListBackStack(mApplication, account,
+                account.getInboxFolderName());
+        builder.setContentIntent(stack.getPendingIntent(0, 0));
 
         if (K9.NOTIFICATION_LED_WHILE_SYNCING) {
             configureNotification(builder,  null, null,
@@ -4052,6 +4147,9 @@ public class MessagingController implements Runnable {
         Folder localFolder = null;
         Folder localTrashFolder = null;
         String[] uids = getUidsFromMessages(messages);
+        byte[] buffer;
+        int count;
+        
         try {
             //We need to make these callbacks before moving the messages to the trash
             //as messages get a new UID after being moved
@@ -4176,17 +4274,26 @@ public class MessagingController implements Runnable {
                     Store localStore = account.getLocalStore();
                     localFolder = (LocalFolder) localStore.getFolder(account.getTrashFolderName());
                     localFolder.open(OpenMode.READ_WRITE);
-                    localFolder.setFlags(new Flag[] { Flag.DELETED }, true);
+
+                    boolean isTrashLocalOnly = isTrashLocalOnly(account);
+                    if (isTrashLocalOnly) {
+                        localFolder.clearAllMessages();
+                    } else {
+                        localFolder.setFlags(new Flag[] { Flag.DELETED }, true);
+                    }
 
                     for (MessagingListener l : getListeners()) {
                         l.emptyTrashCompleted(account);
                     }
-                    List<String> args = new ArrayList<String>();
-                    PendingCommand command = new PendingCommand();
-                    command.command = PENDING_COMMAND_EMPTY_TRASH;
-                    command.arguments = args.toArray(EMPTY_STRING_ARRAY);
-                    queuePendingCommand(account, command);
-                    processPendingCommands(account);
+
+                    if (!isTrashLocalOnly) {
+                        List<String> args = new ArrayList<String>();
+                        PendingCommand command = new PendingCommand();
+                        command.command = PENDING_COMMAND_EMPTY_TRASH;
+                        command.arguments = args.toArray(EMPTY_STRING_ARRAY);
+                        queuePendingCommand(account, command);
+                        processPendingCommands(account);
+                    }
                 } catch (UnavailableStorageException e) {
                     Log.i(K9.LOG_TAG, "Failed to empty trash because storage is not available - trying again later.");
                     throw new UnavailableAccountException(e);
@@ -4200,6 +4307,25 @@ public class MessagingController implements Runnable {
         });
     }
 
+    /**
+     * Find out whether the account type only supports a local Trash folder.
+     *
+     * <p>Note: Currently this is only the case for POP3 accounts.</p>
+     *
+     * @param account
+     *         The account to check.
+     *
+     * @return {@code true} if the account only has a local Trash folder that is not synchronized
+     *         with a folder on the server. {@code false} otherwise.
+     *
+     * @throws MessagingException
+     *         In case of an error.
+     */
+    private boolean isTrashLocalOnly(Account account) throws MessagingException {
+        // TODO: Get rid of the tight coupling once we properly support local folders
+        return (account.getRemoteStore() instanceof Pop3Store);
+    }
+
     public void sendAlternate(final Context context, Account account, Message message) {
         if (K9.DEBUG)
             Log.d(K9.LOG_TAG, "About to load message " + account.getDescription() + ":" + message.getFolder().getName()
@@ -4210,6 +4336,8 @@ public class MessagingController implements Runnable {
             @Override
             public void loadMessageForViewBodyAvailable(Account account, String folder, String uid,
             Message message) {
+            	Part	part;
+            	
                 if (K9.DEBUG)
                     Log.d(K9.LOG_TAG, "Got message " + account.getDescription() + ":" + folder
                           + ":" + message.getUid() + " for sendAlternate");
@@ -4217,10 +4345,27 @@ public class MessagingController implements Runnable {
                 try {
                     Intent msg = new Intent(Intent.ACTION_SEND);
                     String quotedText = null;
-                    Part part = MimeUtility.findFirstPartByMimeType(message,
-                                "text/plain");
-                    if (part == null) {
-                        part = MimeUtility.findFirstPartByMimeType(message, "text/html");
+                    if (message.getHeader(ECSInterfaces.CONTENT_SERVER_NAME) != null && message.getHeader(ECSInterfaces.CONTENT_SERVER_PORT) != null && message.getHeader(ECSInterfaces.CONTENT_POINTER) != null) {
+                		StringTokenizer contentPointers =  new StringTokenizer(message.getHeader(ECSInterfaces.CONTENT_POINTER)[0]);
+                		ByteArrayOutputStream out = new ByteArrayOutputStream();
+                        ECSInterfaces.fetchBodyContent(message, account, contentPointers.nextToken(), message.getHeader(ECSInterfaces.CONTENT_SERVER_NAME)[0], message.getHeader(ECSInterfaces.CONTENT_SERVER_PORT)[0], account.getContentServerPassword(), out);
+                        try {
+                        	byte[] data = new byte[out.size()];
+                            data = out.toByteArray();
+                            out.close(); 
+                            Body body = new TextBody(new String(data));
+                            message.setBody(body);
+                            part = message;
+                        } catch (Exception e) {
+                            Log.e(K9.LOG_TAG, "Error fetching body content, e: " + e);
+//                            Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.message_view_dynamic_content_fetch_error) + e, Toast.LENGTH_LONG).show();
+                        	return;
+                        }
+                    } else {
+                        part = MimeUtility.findFirstPartByMimeType(message, "text/plain");
+                        if (part == null) {
+                            part = MimeUtility.findFirstPartByMimeType(message, "text/html");
+                        }
                     }
                     if (part != null) {
                         quotedText = MimeUtility.getTextFromPart(part);
@@ -4477,9 +4622,7 @@ public class MessagingController implements Runnable {
                 }
             }
         }
-                     );
-
-
+      );
     }
 
 
@@ -4788,15 +4931,12 @@ public class MessagingController implements Runnable {
         final CharSequence subject = getMessageSubject(context, message);
         CharSequence summary = buildMessageSummary(context, sender, subject);
 
-        // If privacy mode active and keyguard active
-        // OR
-        // GlobalPreference is ALWAYS hide subject
-        // OR
-        // If we could not set a per-message notification, revert to a default message
-        if ((K9.getNotificationHideSubject() == NotificationHideSubject.WHEN_LOCKED &&
-                    keyguardService.inKeyguardRestrictedInputMode()) ||
+        boolean privacyModeEnabled =
                 (K9.getNotificationHideSubject() == NotificationHideSubject.ALWAYS) ||
-                summary.length() == 0) {
+                (K9.getNotificationHideSubject() == NotificationHideSubject.WHEN_LOCKED &&
+                keyguardService.inKeyguardRestrictedInputMode());
+
+        if (privacyModeEnabled || summary.length() == 0) {
             summary = context.getString(R.string.notification_new_title);
         }
 
@@ -4821,7 +4961,7 @@ public class MessagingController implements Runnable {
                 account.getDescription() : account.getEmail();
         final ArrayList<MessageReference> allRefs = data.getAllMessageRefs();
 
-        if (platformSupportsExtendedNotifications()) {
+        if (platformSupportsExtendedNotifications() && !privacyModeEnabled) {
             if (newMessages > 1) {
                 // multiple messages pending, show inbox style
                 NotificationCompat.InboxStyle style = new NotificationCompat.InboxStyle(builder);
@@ -4885,7 +5025,7 @@ public class MessagingController implements Runnable {
             }
         }
 
-        Intent targetIntent;
+        TaskStackBuilder stack;
         boolean treatAsSingleMessageNotification;
 
         if (platformSupportsExtendedNotifications()) {
@@ -4898,8 +5038,9 @@ public class MessagingController implements Runnable {
         }
 
         if (treatAsSingleMessageNotification) {
-            targetIntent = MessageList.actionHandleNotificationIntent(
-                    context, message.makeMessageReference());
+            stack = buildMessageViewBackStack(context, message.makeMessageReference());
+        } else if (account.goToUnreadMessageSearch()) {
+            stack = buildUnreadBackStack(context, account);
         } else {
             String initialFolder = message.getFolder().getName();
             /* only go to folder if all messages are in the same folder, else go to folder list */
@@ -4910,11 +5051,12 @@ public class MessagingController implements Runnable {
                 }
             }
 
-            targetIntent = FolderList.actionHandleNotification(context, account, initialFolder);
+            stack = buildMessageListBackStack(context, account, initialFolder);
         }
 
-        builder.setContentIntent(PendingIntent.getActivity(context,
-                account.getAccountNumber(), targetIntent, PendingIntent.FLAG_UPDATE_CURRENT));
+        builder.setContentIntent(stack.getPendingIntent(
+                account.getAccountNumber(),
+                PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_ONE_SHOT));
         builder.setDeleteIntent(NotificationActionService.getAcknowledgeIntent(context, account));
 
         // Only ring or vibrate if we have not done so already on this account and fetch
@@ -4935,6 +5077,56 @@ public class MessagingController implements Runnable {
                 ringAndVibrate);
 
         notifMgr.notify(account.getAccountNumber(), builder.build());
+    }
+
+    private TaskStackBuilder buildAccountsBackStack(Context context) {
+        TaskStackBuilder stack = TaskStackBuilder.create(context);
+        if (!skipAccountsInBackStack(context)) {
+            stack.addNextIntent(new Intent(context, Accounts.class).putExtra(Accounts.EXTRA_STARTUP, false));
+        }
+        return stack;
+    }
+
+    private TaskStackBuilder buildFolderListBackStack(Context context, Account account) {
+        TaskStackBuilder stack = buildAccountsBackStack(context);
+        stack.addNextIntent(FolderList.actionHandleAccountIntent(context, account, false));
+        return stack;
+    }
+
+    private TaskStackBuilder buildUnreadBackStack(Context context, final Account account) {
+        TaskStackBuilder stack = buildAccountsBackStack(context);
+        LocalSearch search = Accounts.createUnreadSearch(context, account);
+        stack.addNextIntent(MessageList.intentDisplaySearch(context, search, true, false, false));
+        return stack;
+    }
+
+    private TaskStackBuilder buildMessageListBackStack(Context context, Account account, String folder) {
+        TaskStackBuilder stack = skipFolderListInBackStack(context, account, folder)
+                ? buildAccountsBackStack(context)
+                : buildFolderListBackStack(context, account);
+
+        if (folder != null) {
+            LocalSearch search = new LocalSearch(folder);
+            search.addAllowedFolder(folder);
+            search.addAccountUuid(account.getUuid());
+            stack.addNextIntent(MessageList.intentDisplaySearch(context, search, false, true, true));
+        }
+        return stack;
+    }
+
+    private TaskStackBuilder buildMessageViewBackStack(Context context, MessageReference message) {
+        Account account = Preferences.getPreferences(context).getAccount(message.accountUuid);
+        TaskStackBuilder stack = buildMessageListBackStack(context, account, message.folderName);
+        stack.addNextIntent(MessageList.actionDisplayMessageIntent(context, message));
+        return stack;
+    }
+
+    private boolean skipFolderListInBackStack(Context context, Account account, String folder) {
+        return folder != null && folder.equals(account.getAutoExpandFolderName());
+    }
+
+    private boolean skipAccountsInBackStack(Context context) {
+        return Preferences.getPreferences(context).getAccounts().length == 1;
     }
 
     /**
@@ -5516,6 +5708,8 @@ public class MessagingController implements Runnable {
         Map<Account, Map<Folder, List<Message>>> accountMap = new HashMap<Account, Map<Folder, List<Message>>>();
 
         for (Message message : messages) {
+        	if ( message == null) continue;
+
             Folder folder = message.getFolder();
             Account account = folder.getAccount();
 
@@ -5544,8 +5738,9 @@ public class MessagingController implements Runnable {
             }
         }
     }
-
+ 
     interface MessageActor {
         public void act(final Account account, final Folder folder, final List<Message> messages);
     }
 }
+

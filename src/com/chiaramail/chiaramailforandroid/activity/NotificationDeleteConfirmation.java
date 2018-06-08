@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.ArrayList;
 
@@ -10,11 +10,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.service.NotificationActionService;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.service.NotificationActionService;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class NotificationDeleteConfirmation extends Activity {
     private final static String EXTRA_ACCOUNT = "account";
@@ -90,7 +90,7 @@ public class NotificationDeleteConfirmation extends Activity {
         case DIALOG_CONFIRM:
             int messageCount = mMessageRefs.size();
             alert.setMessage(getResources().getQuantityString(
-                    R.plurals.dialog_confirm_delete_message, messageCount, messageCount));
+                    R.plurals.dialog_confirm_delete_messages, messageCount, messageCount));
             break;
         }
 

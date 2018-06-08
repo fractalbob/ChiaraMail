@@ -1,5 +1,5 @@
 
-package com.fsck.k9;
+package com.chiaramail.chiaramailforandroid;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -27,21 +27,22 @@ import android.os.Looper;
 import android.text.format.Time;
 import android.util.Log;
 
-import com.fsck.k9.Account.SortType;
-import com.fsck.k9.activity.MessageCompose;
-import com.fsck.k9.activity.UpgradeDatabases;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.controller.MessagingListener;
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.internet.BinaryTempFileBody;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.provider.UnreadWidgetProvider;
-import com.fsck.k9.service.BootReceiver;
-import com.fsck.k9.service.MailService;
-import com.fsck.k9.service.ShutdownReceiver;
-import com.fsck.k9.service.StorageGoneReceiver;
+import com.chiaramail.chiaramailforandroid.Account.SortType;
+import com.chiaramail.chiaramailforandroid.activity.MessageCompose;
+import com.chiaramail.chiaramailforandroid.activity.UpgradeDatabases;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.controller.MessagingListener;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.internet.BinaryTempFileBody;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.provider.UnreadWidgetProvider;
+import com.chiaramail.chiaramailforandroid.service.BootReceiver;
+import com.chiaramail.chiaramailforandroid.service.MailService;
+import com.chiaramail.chiaramailforandroid.service.ShutdownReceiver;
+import com.chiaramail.chiaramailforandroid.service.StorageGoneReceiver;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class K9 extends Application {
     /**
@@ -237,7 +238,8 @@ public class K9 extends Application {
     private static boolean mStartIntegratedInbox = false;
     private static boolean mMeasureAccounts = true;
     private static boolean mCountSearchMessages = true;
-    private static boolean mHideSpecialAccounts = false;
+//    private static boolean mHideSpecialAccounts = false;
+    private static boolean mHideSpecialAccounts = true;
     private static boolean mMobileOptimizedLayout = false;
     private static boolean mQuietTimeEnabled = false;
     private static String mQuietTimeStarts = null;
@@ -362,27 +364,27 @@ public class K9 extends Application {
     public static class Intents {
 
         public static class EmailReceived {
-            public static final String ACTION_EMAIL_RECEIVED    = "com.fsck.k9.intent.action.EMAIL_RECEIVED";
-            public static final String ACTION_EMAIL_DELETED     = "com.fsck.k9.intent.action.EMAIL_DELETED";
-            public static final String ACTION_REFRESH_OBSERVER  = "com.fsck.k9.intent.action.REFRESH_OBSERVER";
-            public static final String EXTRA_ACCOUNT            = "com.fsck.k9.intent.extra.ACCOUNT";
-            public static final String EXTRA_FOLDER             = "com.fsck.k9.intent.extra.FOLDER";
-            public static final String EXTRA_SENT_DATE          = "com.fsck.k9.intent.extra.SENT_DATE";
-            public static final String EXTRA_FROM               = "com.fsck.k9.intent.extra.FROM";
-            public static final String EXTRA_TO                 = "com.fsck.k9.intent.extra.TO";
-            public static final String EXTRA_CC                 = "com.fsck.k9.intent.extra.CC";
-            public static final String EXTRA_BCC                = "com.fsck.k9.intent.extra.BCC";
-            public static final String EXTRA_SUBJECT            = "com.fsck.k9.intent.extra.SUBJECT";
-            public static final String EXTRA_FROM_SELF          = "com.fsck.k9.intent.extra.FROM_SELF";
+            public static final String ACTION_EMAIL_RECEIVED    = "com.chiaramail.chiaramailforandroid.intent.action.EMAIL_RECEIVED";
+            public static final String ACTION_EMAIL_DELETED     = "com.chiaramail.chiaramailforandroid.intent.action.EMAIL_DELETED";
+            public static final String ACTION_REFRESH_OBSERVER  = "com.chiaramail.chiaramailforandroid.intent.action.REFRESH_OBSERVER";
+            public static final String EXTRA_ACCOUNT            = "com.chiaramail.chiaramailforandroid.intent.extra.ACCOUNT";
+            public static final String EXTRA_FOLDER             = "com.chiaramail.chiaramailforandroid.intent.extra.FOLDER";
+            public static final String EXTRA_SENT_DATE          = "com.chiaramail.chiaramailforandroid.intent.extra.SENT_DATE";
+            public static final String EXTRA_FROM               = "com.chiaramail.chiaramailforandroid.intent.extra.FROM";
+            public static final String EXTRA_TO                 = "com.chiaramail.chiaramailforandroid.intent.extra.TO";
+            public static final String EXTRA_CC                 = "com.chiaramail.chiaramailforandroid.intent.extra.CC";
+            public static final String EXTRA_BCC                = "com.chiaramail.chiaramailforandroid.intent.extra.BCC";
+            public static final String EXTRA_SUBJECT            = "com.chiaramail.chiaramailforandroid.intent.extra.SUBJECT";
+            public static final String EXTRA_FROM_SELF          = "com.chiaramail.chiaramailforandroid.intent.extra.FROM_SELF";
         }
 
         public static class Share {
             /*
-             * We don't want to use EmailReceived.EXTRA_FROM ("com.fsck.k9.intent.extra.FROM")
+             * We don't want to use EmailReceived.EXTRA_FROM ("com.chiaramail.chiaramailforandroid.intent.extra.FROM")
              * because of different semantics (String array vs. string with comma separated
              * email addresses)
              */
-            public static final String EXTRA_FROM               = "com.fsck.k9.intent.extra.SENDER";
+            public static final String EXTRA_FROM               = "com.chiaramail.chiaramailforandroid.intent.extra.SENDER";
         }
     }
 
@@ -678,7 +680,8 @@ public class K9 extends Application {
         mStartIntegratedInbox = sprefs.getBoolean("startIntegratedInbox", false);
         mMeasureAccounts = sprefs.getBoolean("measureAccounts", true);
         mCountSearchMessages = sprefs.getBoolean("countSearchMessages", true);
-        mHideSpecialAccounts = sprefs.getBoolean("hideSpecialAccounts", false);
+        mHideSpecialAccounts = sprefs.getBoolean("hideSpecialAccounts", true);
+//        mHideSpecialAccounts = sprefs.getBoolean("hideSpecialAccounts", false);
         mMessageListSenderAboveSubject = sprefs.getBoolean("messageListSenderAboveSubject", false);
         mMessageListCheckboxes = sprefs.getBoolean("messageListCheckboxes", false);
         mMessageListPreviewLines = sprefs.getInt("messageListPreviewLines", 2);
@@ -736,7 +739,8 @@ public class K9 extends Application {
             sSplitViewMode = SplitViewMode.valueOf(splitViewMode);
         }
 
-        mAttachmentDefaultPath = sprefs.getString("attachmentdefaultpath",  Environment.getExternalStorageDirectory().toString());
+  //      mAttachmentDefaultPath = sprefs.getString("attachmentdefaultpath",  K9.getAttachmentDefaultPath().toString());
+        mAttachmentDefaultPath = sprefs.getString("attachmentdefaultpath",  K9.getAttachmentDefaultPath().toString() + "/ChiaraMail");
         sUseBackgroundAsUnreadIndicator = sprefs.getBoolean("useBackgroundAsUnreadIndicator", true);
         sThreadedViewEnabled = sprefs.getBoolean("threadedView", true);
         fontSizes.load(sprefs);

@@ -1,0 +1,242 @@
+[
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\chiaramail_icon_green.png",
+        "source": "C:\\k-9\\res\\drawable\\chiaramail_icon_green.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__progress_horizontal_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__progress_horizontal_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.Android-PullToRefresh\\library\\unspecified\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\thread_count_box_light.xml",
+        "source": "C:\\k-9\\res\\drawable\\thread_count_box_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\envelope_icon.png",
+        "source": "C:\\k-9\\res\\drawable\\envelope_icon.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_check_message_list_dark.xml",
+        "source": "C:\\k-9\\res\\drawable\\btn_check_message_list_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_corners_gray.xml",
+        "source": "C:\\k-9\\res\\drawable\\rounded_corners_gray.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_right_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__textfield_searchview_right_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\update_content.png",
+        "source": "C:\\k-9\\res\\drawable\\update_content.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\chiaramail_icon_with_text.png",
+        "source": "C:\\k-9\\res\\drawable\\chiaramail_icon_with_text.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\stop_spoofing_icon.png",
+        "source": "C:\\k-9\\res\\drawable\\stop_spoofing_icon.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_menu_moreoverflow_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__ic_menu_moreoverflow_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__spinner_ab_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__spinner_ab_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\chiaramail_icon_red.png",
+        "source": "C:\\k-9\\res\\drawable\\chiaramail_icon_red.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__textfield_searchview_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "C:\\k-9\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_corners_blue.xml",
+        "source": "C:\\k-9\\res\\drawable\\rounded_corners_blue.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__textfield_searchview_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_background_transition_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__progress_horizontal_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__progress_horizontal_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_notify_check_mail.xml",
+        "source": "C:\\k-9\\res\\drawable\\ic_notify_check_mail.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\unread_count_background.xml",
+        "source": "C:\\k-9\\res\\drawable\\unread_count_background.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__item_background_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.Android-PullToRefresh\\library\\unspecified\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__spinner_ab_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__spinner_ab_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\delete_content.png",
+        "source": "C:\\k-9\\res\\drawable\\delete_content.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\chiaramail_icon_color_gradient.png",
+        "source": "C:\\k-9\\res\\drawable\\chiaramail_icon_color_gradient.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__search_dropdown_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__search_dropdown_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_check_message_list_light.xml",
+        "source": "C:\\k-9\\res\\drawable\\btn_check_message_list_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__tab_indicator_ab_holo.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__tab_indicator_ab_holo.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\chiaramail_icon.png",
+        "source": "C:\\k-9\\res\\drawable\\chiaramail_icon.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__search_dropdown_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__search_dropdown_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_clear.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__ic_clear.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\tutorial_send_ecs.gif",
+        "source": "C:\\k-9\\res\\drawable\\tutorial_send_ecs.gif"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__activated_background_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__activated_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\message_list_item_footer_background.xml",
+        "source": "C:\\k-9\\res\\drawable\\message_list_item_footer_background.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_menu_moreoverflow_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__ic_menu_moreoverflow_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_right_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__textfield_searchview_right_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\chiaramail_icon_blue.png",
+        "source": "C:\\k-9\\res\\drawable\\chiaramail_icon_blue.png"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_dialog.xml",
+        "source": "C:\\k-9\\res\\drawable\\btn_dialog.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__activated_background_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__activated_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__btn_cab_done_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__btn_cab_done_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_edit.xml",
+        "source": "C:\\k-9\\res\\drawable\\btn_edit.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__btn_cab_done_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__btn_cab_done_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__item_background_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_clear_holo_light.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__ic_clear_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\thread_count_box_dark.xml",
+        "source": "C:\\k-9\\res\\drawable\\thread_count_box_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\unread_widget_background.xml",
+        "source": "C:\\k-9\\res\\drawable\\unread_widget_background.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_corners.xml",
+        "source": "C:\\k-9\\res\\drawable\\rounded_corners.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\drawable\\abs__list_selector_background_transition_holo_dark.xml"
+    }
+]

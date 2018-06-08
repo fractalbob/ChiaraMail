@@ -1,0 +1,366 @@
+[
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_layout.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_compose.xml",
+        "source": "C:\\k-9\\res\\layout\\message_compose.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__screen_action_bar.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_menu_item_layout.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_ecs_graphical.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_ecs_graphical.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple_overlay_action_mode.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\edit_identity.xml",
+        "source": "C:\\k-9\\res\\layout\\edit_identity.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\email_address_list.xml",
+        "source": "C:\\k-9\\res\\layout\\email_address_list.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.Android-PullToRefresh\\library\\unspecified\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_radio.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\choose_account_item.xml",
+        "source": "C:\\k-9\\res\\layout\\choose_account_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\tos.xml",
+        "source": "C:\\k-9\\res\\layout\\tos.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_outgoing.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_outgoing.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\accessible_email_content.xml",
+        "source": "C:\\k-9\\res\\layout\\accessible_email_content.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__activity_chooser_view.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_view_crypto_layout.xml",
+        "source": "C:\\k-9\\res\\layout\\message_view_crypto_layout.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\change_password.xml",
+        "source": "C:\\k-9\\res\\layout\\change_password.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\ecs_config_fields_display.xml",
+        "source": "C:\\k-9\\res\\layout\\ecs_config_fields_display.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__simple_dropdown_hint.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__simple_dropdown_hint.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_view_attachment.xml",
+        "source": "C:\\k-9\\res\\layout\\message_view_attachment.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\wizard_cancel.xml",
+        "source": "C:\\k-9\\res\\layout\\wizard_cancel.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\upgrade_databases.xml",
+        "source": "C:\\k-9\\res\\layout\\upgrade_databases.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_view_header.xml",
+        "source": "C:\\k-9\\res\\layout\\message_view_header.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_icon.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_list_fragment.xml",
+        "source": "C:\\k-9\\res\\layout\\message_list_fragment.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_check_settings.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_check_settings.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\recipient_dropdown_item.xml",
+        "source": "C:\\k-9\\res\\layout\\recipient_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__popup_menu_item_layout.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_spinner.xml",
+        "source": "C:\\k-9\\res\\layout\\actionbar_spinner.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_list_item_footer.xml",
+        "source": "C:\\k-9\\res\\layout\\message_list_item_footer.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\reset_password.xml",
+        "source": "C:\\k-9\\res\\layout\\reset_password.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_ecs_login.xml",
+        "source": "C:\\k-9\\res\\layout\\account_ecs_login.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_options.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_options.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\contact_list_item.xml",
+        "source": "C:\\k-9\\res\\layout\\contact_list_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_menu_layout.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__screen_simple.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\chiaramail_welcome.xml",
+        "source": "C:\\k-9\\res\\layout\\chiaramail_welcome.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.Android-PullToRefresh\\library\\unspecified\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\k-9\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\wizard_next.xml",
+        "source": "C:\\k-9\\res\\layout\\wizard_next.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\contacts_list.xml",
+        "source": "C:\\k-9\\res\\layout\\contacts_list.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\manage_content_servers.xml",
+        "source": "C:\\k-9\\res\\layout\\manage_content_servers.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\split_message_list.xml",
+        "source": "C:\\k-9\\res\\layout\\split_message_list.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\accounts_folders_icons.xml",
+        "source": "C:\\k-9\\res\\layout\\accounts_folders_icons.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\color_picker_dialog.xml",
+        "source": "C:\\k-9\\res\\layout\\color_picker_dialog.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_dynamic_content.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_dynamic_content.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\update_content.xml",
+        "source": "C:\\k-9\\res\\layout\\update_content.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\simple_list_item2_multiple_choice.xml",
+        "source": "C:\\k-9\\res\\layout\\simple_list_item2_multiple_choice.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_composition.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_composition.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_list.xml",
+        "source": "C:\\k-9\\res\\layout\\account_list.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_list_item.xml",
+        "source": "C:\\k-9\\res\\layout\\message_list_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_list_loading.xml",
+        "source": "C:\\k-9\\res\\layout\\message_list_loading.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\accounts.xml",
+        "source": "C:\\k-9\\res\\layout\\accounts.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\video_loading_progress.xml",
+        "source": "C:\\k-9\\res\\layout\\video_loading_progress.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_list.xml",
+        "source": "C:\\k-9\\res\\layout\\message_list.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_names.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_names.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__search_dropdown_item_icons_2line.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__activity_chooser_view_list_item.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_checkbox.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\folder_list_item.xml",
+        "source": "C:\\k-9\\res\\layout\\folder_list_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_home.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__action_bar_home.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_invite.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_invite.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__dialog_title_holo.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__dialog_title_holo.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\ecs_delete_config.xml",
+        "source": "C:\\k-9\\res\\layout\\ecs_delete_config.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\list_content_simple.xml",
+        "source": "C:\\k-9\\res\\layout\\list_content_simple.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_indeterminate_progress_actionview.xml",
+        "source": "C:\\k-9\\res\\layout\\actionbar_indeterminate_progress_actionview.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__search_view.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__search_view.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message_compose_attachment.xml",
+        "source": "C:\\k-9\\res\\layout\\message_compose_attachment.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_tab_bar_view.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__action_bar_tab_bar_view.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_indeterminate_progress.xml",
+        "source": "C:\\k-9\\res\\layout\\actionbar_indeterminate_progress.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\email_address_list_item.xml",
+        "source": "C:\\k-9\\res\\layout\\email_address_list_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\unread_widget_layout.xml",
+        "source": "C:\\k-9\\res\\layout\\unread_widget_layout.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\folder_list.xml",
+        "source": "C:\\k-9\\res\\layout\\folder_list.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_custom.xml",
+        "source": "C:\\k-9\\res\\layout\\actionbar_custom.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\accounts_password_prompt.xml",
+        "source": "C:\\k-9\\res\\layout\\accounts_password_prompt.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_incoming.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_incoming.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_tab.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__action_bar_tab.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\accounts_item.xml",
+        "source": "C:\\k-9\\res\\layout\\accounts_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_title_item.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\videoview.xml",
+        "source": "C:\\k-9\\res\\layout\\videoview.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\welcome_message.xml",
+        "source": "C:\\k-9\\res\\layout\\welcome_message.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\message.xml",
+        "source": "C:\\k-9\\res\\layout\\message.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\custom_screen.xml",
+        "source": "C:\\k-9\\res\\layout\\custom_screen.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\choose_identity_item.xml",
+        "source": "C:\\k-9\\res\\layout\\choose_identity_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_account_type.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_account_type.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_mode_bar.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\empty_message_view.xml",
+        "source": "C:\\k-9\\res\\layout\\empty_message_view.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\ecs_config_fields.xml",
+        "source": "C:\\k-9\\res\\layout\\ecs_config_fields.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_mode_close_item.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__action_mode_close_item.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\account_setup_basics.xml",
+        "source": "C:\\k-9\\res\\layout\\account_setup_basics.xml"
+    },
+    {
+        "merged": "C:\\k-9\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar_overlay.xml",
+        "source": "C:\\k-9\\build\\intermediates\\exploded-aar\\k-9.ActionBarSherlock\\library\\unspecified\\res\\layout\\abs__screen_action_bar_overlay.xml"
+    }
+]

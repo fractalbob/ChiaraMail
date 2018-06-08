@@ -361,7 +361,7 @@ public class ChangeLog {
         SparseArray<ReleaseItem> defaultChangelog;
         try {
             XmlPullParser xml = XmlPullParserFactory.newInstance().newPullParser();
-            InputStreamReader reader = new InputStreamReader(resources.openRawResource(R.raw.changelog));
+            InputStreamReader reader = new InputStreamReader(resources.openRawResource(R.raw.ecschangelog));
             xml.setInput(reader);
             try {
                 defaultChangelog = readChangeLog(xml, full);
@@ -374,7 +374,7 @@ public class ChangeLog {
         }
 
         // Read localized change log from xml[-lang]/changelog.xml
-        XmlResourceParser resXml = mContext.getResources().getXml(R.xml.changelog);
+        XmlResourceParser resXml = mContext.getResources().getXml(R.xml.ecschangelog);
         SparseArray<ReleaseItem> changelog;
         try {
             changelog = readChangeLog(resXml, full);

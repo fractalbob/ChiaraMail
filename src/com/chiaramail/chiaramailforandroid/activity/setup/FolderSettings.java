@@ -1,5 +1,5 @@
 
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,21 +8,23 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.util.Log;
-import com.fsck.k9.*;
-import com.fsck.k9.activity.FolderInfoHolder;
-import com.fsck.k9.activity.K9PreferenceActivity;
-import com.fsck.k9.mail.Folder.FolderClass;
-import com.fsck.k9.mail.Folder.OpenMode;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.LocalStore.LocalFolder;
-import com.fsck.k9.service.MailService;
+
+import com.chiaramail.chiaramailforandroid.*;
+import com.chiaramail.chiaramailforandroid.activity.FolderInfoHolder;
+import com.chiaramail.chiaramailforandroid.activity.K9PreferenceActivity;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.Folder.FolderClass;
+import com.chiaramail.chiaramailforandroid.mail.Folder.OpenMode;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.service.MailService;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class FolderSettings extends K9PreferenceActivity {
 
-    private static final String EXTRA_FOLDER_NAME = "com.fsck.k9.folderName";
-    private static final String EXTRA_ACCOUNT = "com.fsck.k9.account";
+    private static final String EXTRA_FOLDER_NAME = "com.chiaramail.chiaramailforandroid.folderName";
+    private static final String EXTRA_ACCOUNT = "com.chiaramail.chiaramailforandroid.account";
 
     private static final String PREFERENCE_TOP_CATERGORY = "folder_settings";
     private static final String PREFERENCE_DISPLAY_CLASS = "folder_settings_folder_display_mode";
@@ -53,7 +55,7 @@ public class FolderSettings extends K9PreferenceActivity {
         String folderName = (String)getIntent().getSerializableExtra(EXTRA_FOLDER_NAME);
         String accountUuid = getIntent().getStringExtra(EXTRA_ACCOUNT);
         Account mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
-
+        if (mAccount == null) return;
         try {
             LocalStore localStore = mAccount.getLocalStore();
             mFolder = localStore.getFolder(folderName);

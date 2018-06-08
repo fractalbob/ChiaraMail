@@ -1,10 +1,12 @@
 
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
 import android.util.Log;
-import com.fsck.k9.K9;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
+
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

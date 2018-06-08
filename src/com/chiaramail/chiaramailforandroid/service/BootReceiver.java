@@ -1,5 +1,5 @@
 
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import java.util.Date;
 
@@ -11,16 +11,16 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.util.Log;
 
-import com.fsck.k9.K9;
+import com.chiaramail.chiaramailforandroid.K9;
 
 public class BootReceiver extends CoreReceiver {
 
-    public static String FIRE_INTENT = "com.fsck.k9.service.BroadcastReceiver.fireIntent";
-    public static String SCHEDULE_INTENT = "com.fsck.k9.service.BroadcastReceiver.scheduleIntent";
-    public static String CANCEL_INTENT = "com.fsck.k9.service.BroadcastReceiver.cancelIntent";
+    public static String FIRE_INTENT = "com.chiaramail.chiaramailforandroid.service.BroadcastReceiver.fireIntent";
+    public static String SCHEDULE_INTENT = "com.chiaramail.chiaramailforandroid.service.BroadcastReceiver.scheduleIntent";
+    public static String CANCEL_INTENT = "com.chiaramail.chiaramailforandroid.service.BroadcastReceiver.cancelIntent";
 
-    public static String ALARMED_INTENT = "com.fsck.k9.service.BroadcastReceiver.pendingIntent";
-    public static String AT_TIME = "com.fsck.k9.service.BroadcastReceiver.atTime";
+    public static String ALARMED_INTENT = "com.chiaramail.chiaramailforandroid.service.BroadcastReceiver.pendingIntent";
+    public static String AT_TIME = "com.chiaramail.chiaramailforandroid.service.BroadcastReceiver.atTime";
 
     @Override
     public Integer receive(Context context, Intent intent, Integer tmpWakeLockId) {

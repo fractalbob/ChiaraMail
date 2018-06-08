@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="send_mode_choices">
+		<item>Envoyer en ECS</item>
+		<item>Envoyer en e-mail ordinaire</item>
+		<item>Mode mixte</item>
+	</string-array>
+    <integer name="content_server_port_default">443</integer>
+    <plurals name="dialog_confirm_delete_message">
+        <item quantity="one">Voulez-vous vraiment supprimer ce message?</item>
+        <item quantity="other">Voulez-vous vraiment supprimer les <ns1:g id="message_count">%1$d</ns1:g> messages?</item>
+    </plurals>
+    <plurals name="dialog_confirm_spam_message">
+        <item quantity="one">Voulez-vous déplacer ce message vers le dossiers à spams\u00A0?</item>
+        <item quantity="other">Voulez-vous déplacer <ns1:g id="message_count">%1$d</ns1:g> messages vers le dossiers à spams\u00A0?</item>
+<!--
+  Translators:
+
+  Please review how to handle pluralization for your language at (1) and ajust
+  the <item> elements accordingly
+
+  Possible values for 'quantity': zero, one, two, few, many, other
+
+  (1) http://developer.android.com/guide/topics/resources/string-resource.html#Plurals
+
+-->
+    </plurals>
+    <plurals name="settings_import_server_passwords">
+        <item quantity="one">mot de passe serveur</item>
+        <item quantity="other">mots de passe serveur</item>
+    </plurals>
+    <plurals name="settings_import_setting_passwords">
+        <item quantity="one">Réglage du mot de passe…</item>
+        <item quantity="other">Réglages des mots de passe…</item>
+    </plurals>
+    <plurals name="settings_import_success">
+        <item quantity="one">1 compte</item>
+        <item quantity="other"><ns1:g id="numAccounts">%s</ns1:g> comptes</item>
+    </plurals>
+    <string name="abbrev_bytes">oct.</string>
+    <string name="abbrev_gigabytes">Go</string>
+    <string name="abbrev_kilobytes">ko</string>
+    <string name="abbrev_megabytes">Mo</string>
+    <string name="about_action">À propos</string>
+    <string name="about_title_fmt">À propos de <ns1:g id="app_name">%s</ns1:g></string>
+    <string name="account_clear_dlg_instructions_fmt">
+	Les copies locales des messages dans « 
+	<ns1:g id="account">%s</ns1:g>
+	» seront supprimées. Les paramètres du compte seront conservés.
+	</string>
+    <string name="account_clear_dlg_title">Vider le compte</string>
+    <string name="account_delete_dlg_instructions_fmt">
+	Le compte « 
+	<ns1:g id="account">%s</ns1:g>
+	» sera supprimé de ChiaraMail.
+	</string>
+    <string name="account_delete_dlg_title">Supprimer</string>
+    <string name="account_recreate_dlg_instructions_fmt">
+	Toutes les données locales pour « 
+	<ns1:g id="account">%s</ns1:g>
+	» seront supprimées. Les paramètres du compte seront conservés.
+	</string>
+    <string name="account_recreate_dlg_title">Recréer compte</string>
+    <string name="account_settings_action">Paramètres du compte</string>
+    <string name="account_settings_always_bcc_label">Envoyer une copie de tous les messages à</string>
+    <string name="account_settings_always_show_cc_bcc_label">Toujours afficher Cc/Cci</string>
+    <string name="account_settings_always_show_cc_bcc_summary">Toujours afficher les champs Copie et Copie cachée</string>
+    <string name="account_settings_autodownload_message_size_1">1\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_1024">1\u00A0Mo</string>
+    <string name="account_settings_autodownload_message_size_10240">10Mo</string>
+    <string name="account_settings_autodownload_message_size_128">128\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_16">16\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_2">2\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_2048">2\u00A0Mo</string>
+    <string name="account_settings_autodownload_message_size_256">256\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_32">32\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_4">4\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_512">512\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_5120">5Mo</string>
+    <string name="account_settings_autodownload_message_size_64">64\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_8">8\u00A0ko</string>
+    <string name="account_settings_autodownload_message_size_any">Aucune limite</string>
+    <string name="account_settings_autodownload_message_size_label">Télécharger automatiquement le contenu des messages jusqu\'à</string>
+    <string name="account_settings_color_label">Couleur du compte</string>
+    <string name="account_settings_color_summary">Choisir la couleur du compte tel qu\'affichée dans les listes de dossiers ou de comptes</string>
+    <string name="account_settings_composition">Composition de messages</string>
+    <string name="account_settings_composition_label">Défauts pour la composition</string>
+    <string name="account_settings_composition_summary">Choisir vos champs De, Cci et signature par défaut</string>
+    <string name="account_settings_composition_title">Options de composition</string>
+    <string name="account_settings_crypto">Cryptographie</string>
+    <string name="account_settings_crypto_apg_not_installed">APG non installé</string>
+    <string name="account_settings_crypto_app">Fournisseur OpenPGP</string>
+    <string name="account_settings_crypto_app_none">Aucun</string>
+    <string name="account_settings_crypto_auto_encrypt">Cryptation automatique</string>
+    <string name="account_settings_crypto_auto_encrypt_summary">Cryptation automatique si une clé publique correspond au destinataire.</string>
+    <string name="account_settings_crypto_auto_signature">Signature automatique</string>
+    <string name="account_settings_crypto_auto_signature_summary">Utiliser l\'adresse e-mail du compte pour déduire la clé de signature</string>
+    <string name="account_settings_default_label">Compte par défaut</string>
+    <string name="account_settings_default_quoted_text_shown_label">Citer le message original</string>
+    <string name="account_settings_default_quoted_text_shown_summary">Inclure le message d\'origine dans la réponse</string>
+    <string name="account_settings_default_summary">Envoyer les messages de ce compte par défaut</string>
+    <string name="account_settings_description_label">Nom du compte</string>
+    <string name="account_settings_dynamic_content">Fractionnement du Contenu-Enveloppe (ECS)</string>
+    <string name="account_settings_email_label">Votre adresse e-mail</string>
+    <string name="account_settings_folder_display_mode_all">Tous</string>
+    <string name="account_settings_folder_display_mode_first_and_second_class">Dossiers de 1ère et 2ème classes</string>
+    <string name="account_settings_folder_display_mode_first_class">Seulement dossiers de 1ère classe</string>
+    <string name="account_settings_folder_display_mode_label">Dossiers à afficher</string>
+    <string name="account_settings_folder_display_mode_not_second_class">Tous sauf les dossiers de 2ème classe</string>
+    <string name="account_settings_folder_push_mode_all">Tous</string>
+    <string name="account_settings_folder_push_mode_first_and_second_class">Dossiers de 1ère et 2ème classes</string>
+    <string name="account_settings_folder_push_mode_first_class">Seulement dossiers de 1ère classe</string>
+    <string name="account_settings_folder_push_mode_label">Dossiers à vérifier avec Push</string>
+    <string name="account_settings_folder_push_mode_none">Aucun</string>
+    <string name="account_settings_folder_push_mode_not_second_class">Tous sauf les dossiers de 2ème classe</string>
+    <string name="account_settings_folder_sync_mode_all">Tous</string>
+    <string name="account_settings_folder_sync_mode_first_and_second_class">Dossiers de 1ère et 2ème classes</string>
+    <string name="account_settings_folder_sync_mode_first_class">Seulement dossiers de 1ère classe</string>
+    <string name="account_settings_folder_sync_mode_label">Dossiers à vérifier en récupération</string>
+    <string name="account_settings_folder_sync_mode_none">Aucun</string>
+    <string name="account_settings_folder_sync_mode_not_second_class">Tous sauf les dossiers de 2ème classe</string>
+    <string name="account_settings_folder_target_mode_all">Tous</string>
+    <string name="account_settings_folder_target_mode_first_and_second_class">Dossiers de 1ère et 2ème classes</string>
+    <string name="account_settings_folder_target_mode_first_class">Seulement dossiers de 1ère classe</string>
+    <string name="account_settings_folder_target_mode_label">Dossiers de destination déplacer/copier</string>
+    <string name="account_settings_folder_target_mode_not_second_class">Tous sauf les dossiers de 2ème classe</string>
+    <string name="account_settings_folders">Dossiers</string>
+    <string name="account_settings_general_title">Paramètres généraux</string>
+    <string name="account_settings_identities_label">Gérer les identités</string>
+    <string name="account_settings_identities_summary">Créer des adresses «\u00A0De\u00A0» et signatures alternatives</string>
+    <string name="account_settings_incoming_label">Paramètres entrants</string>
+    <string name="account_settings_incoming_summary">Configurer le serveur de messagerie entrant</string>
+    <string name="account_settings_led_color_label">Couleur de la DEL de notification</string>
+    <string name="account_settings_led_color_summary">Choisissez la couleur de clignotement de la DEL de votre téléphone</string>
+    <string name="account_settings_led_label">Clignotement DEL</string>
+    <string name="account_settings_led_summary">Clignotement de la DEL quand un message arrive</string>
+    <string name="account_settings_mail_check_frequency_label">Fréquence de vérification du dossier</string>
+    <string name="account_settings_mail_display_count_label">Nombre de messages à afficher</string>
+    <string name="account_settings_mark_message_as_read_on_view_label">Message lu à l\'ouverture</string>
+    <string name="account_settings_mark_message_as_read_on_view_summary">Marquer le message comme lu à l\'ouverture</string>
+    <string name="account_settings_message_age_0">Aujourd\'hui</string>
+    <string name="account_settings_message_age_1">2 jours</string>
+    <string name="account_settings_message_age_14">les dernières 2 semaines</string>
+    <string name="account_settings_message_age_1_month">le dernier mois</string>
+    <string name="account_settings_message_age_1_year">la dernière année</string>
+    <string name="account_settings_message_age_2">3 jours</string>
+    <string name="account_settings_message_age_21">les dernières 3 semaines</string>
+    <string name="account_settings_message_age_2_months">les derniers 2 mois</string>
+    <string name="account_settings_message_age_3_months">les derniers 3 mois</string>
+    <string name="account_settings_message_age_6_months">les derniers 6 mois</string>
+    <string name="account_settings_message_age_7">la dernière semaine</string>
+    <string name="account_settings_message_age_any">Toutes dates</string>
+    <string name="account_settings_message_age_label">Âge maximal des messages</string>
+    <string name="account_settings_message_format_auto">Automatique (Text brut à moins de répondre à un message HTML)</string>
+    <string name="account_settings_message_format_html">HTML (formattage et images conservés)</string>
+    <string name="account_settings_message_format_label">Format du message</string>
+    <string name="account_settings_message_format_text">Text brut (formattage et images omis)</string>
+    <string name="account_settings_message_read_receipt_label">Accusé de réception</string>
+    <string name="account_settings_message_read_receipt_summary">Toujours demander un accusé de réception</string>
+    <string name="account_settings_name_label">Votre nom</string>
+    <string name="account_settings_notification_opens_unread_label">Ouvrir message non lu via notification</string>
+    <string name="account_settings_notification_opens_unread_summary">Recherche des messages non lus après un accès à partir des notifications</string>
+    <string name="account_settings_notification_unread_count_label">Afficher le nombre de messages non lus</string>
+    <string name="account_settings_notification_unread_count_summary">Afficher le nombre de messages non lus dans la barre de notification</string>
+    <string name="account_settings_notify_label">Nouveaux e-mails</string>
+    <string name="account_settings_notify_self_label">Messages dont je suis l\'expéditeur</string>
+    <string name="account_settings_notify_self_summary">Afficher une notification dans la barre d\'état même lors d\'un envoi à partir d\'une identité reliée à un compte</string>
+    <string name="account_settings_notify_summary">Afficher une notification dans la barre d\'état à la réception d\'un e-mail</string>
+    <string name="account_settings_notify_sync_label">Synchronisation</string>
+    <string name="account_settings_notify_sync_summary">Afficher une notification dans la barre d\'état à la vérification de nouveaux messages</string>
+    <string name="account_settings_outgoing_label">Paramètres sortants</string>
+    <string name="account_settings_outgoing_summary">Configurer le serveur de messagerie sortant</string>
+    <string name="account_settings_push_advanced_title">Paramètres Push</string>
+    <string name="account_settings_quote_prefix_label">Préfixe de citation</string>
+    <string name="account_settings_quote_style_header">En-tête (Outlook, Yahoo!, Hotmail)</string>
+    <string name="account_settings_quote_style_label">Style de citation</string>
+    <string name="account_settings_quote_style_prefix">Préfixe (Gmail, Pine)</string>
+    <string name="account_settings_reading_mail">Lecture mail</string>
+    <string name="account_settings_remote_search_enabled">Activer la recherche distante</string>
+    <string name="account_settings_remote_search_enabled_summary">Rechercher des messages sur le serveur en plus de ceux de votre appareil</string>
+    <string name="account_settings_remote_search_full_text">Inclure le corps du texte dans la recherche distante</string>
+    <string name="account_settings_remote_search_full_text_summary">La recherche dans le corps du texte peut être lente.</string>
+    <string name="account_settings_remote_search_num_label">Limite les résultats de la recherche distante</string>
+    <string name="account_settings_remote_search_num_results_entries_10">10</string>
+    <string name="account_settings_remote_search_num_results_entries_100">100</string>
+    <string name="account_settings_remote_search_num_results_entries_1000">1000</string>
+    <string name="account_settings_remote_search_num_results_entries_25">25</string>
+    <string name="account_settings_remote_search_num_results_entries_250">250</string>
+    <string name="account_settings_remote_search_num_results_entries_50">50</string>
+    <string name="account_settings_remote_search_num_results_entries_500">500</string>
+    <string name="account_settings_remote_search_num_results_entries_all">Tous</string>
+    <string name="account_settings_remote_search_num_summary">La recherche s\'arrêtera après que <ns1:g id="num_results">%s</ns1:g> résultats ont été trouvés.</string>
+    <string name="account_settings_reply_after_quote_label">Réponse après la citation</string>
+    <string name="account_settings_reply_after_quote_summary">Faire précéder la réponse par le texte d\'origine</string>
+    <string name="account_settings_ringtone">Sonnerie</string>
+    <string name="account_settings_search">Rechercher</string>
+    <string name="account_settings_searchable_all">Tous</string>
+    <string name="account_settings_searchable_displayable">Affichables</string>
+    <string name="account_settings_searchable_label">Dossiers dans lesquels chercher</string>
+    <string name="account_settings_searchable_none">Aucuns</string>
+    <string name="account_settings_show_pictures_always">Toujours</string>
+    <string name="account_settings_show_pictures_label">Afficher automatiquement les images</string>
+    <string name="account_settings_show_pictures_never">Jamais</string>
+    <string name="account_settings_show_pictures_only_from_contacts">Contacts uniquement</string>
+    <string name="account_settings_signature__location_after_quoted_text">Après la citation</string>
+    <string name="account_settings_signature__location_before_quoted_text">Avant la citation</string>
+    <string name="account_settings_signature__location_label">Emplacement de la signature</string>
+    <string name="account_settings_signature_label">Signature</string>
+    <string name="account_settings_signature_use_label">Utiliser la signature</string>
+    <string name="account_settings_storage_title">Stockage</string>
+    <string name="account_settings_strip_signature_label">Retirer signature dans réponse citée</string>
+    <string name="account_settings_strip_signature_summary">Lorsque vous répondez à des messages, la signature du texte cité sera éffacée</string>
+    <string name="account_settings_sync">Synchronisation de dossiers</string>
+    <string name="account_settings_sync_remote_deletetions_label">Synchroniser les suppression à distance</string>
+    <string name="account_settings_sync_remote_deletetions_summary">Supprimer les messages lorsqu\'effacés du serveur</string>
+    <string name="account_settings_title_fmt">Paramètres du compte</string>
+    <string name="account_settings_vibrate_enable">Vibreur</string>
+    <string name="account_settings_vibrate_pattern_1">Type 1</string>
+    <string name="account_settings_vibrate_pattern_2">Type 2</string>
+    <string name="account_settings_vibrate_pattern_3">Type 3</string>
+    <string name="account_settings_vibrate_pattern_4">Type 4</string>
+    <string name="account_settings_vibrate_pattern_5">Type 5</string>
+    <string name="account_settings_vibrate_pattern_default">Défauts</string>
+    <string name="account_settings_vibrate_pattern_label">Type de vibration</string>
+    <string name="account_settings_vibrate_summary">Vibrer à la réception d\'un e-mail</string>
+    <string name="account_settings_vibrate_times">Nombre de vibrations</string>
+    <string name="account_setup_account_type_imap_action">Compte IMAP</string>
+    <string name="account_setup_account_type_instructions">Quel type de compte est-ce\u00A0?</string>
+    <string name="account_setup_account_type_pop_action">Compte POP3</string>
+    <string name="account_setup_account_type_title">Ajouter un nouveau compte de messagerie</string>
+    <string name="account_setup_account_type_webdav_action">Exchange (WebDAV)</string>
+    <string name="account_setup_auto_expand_folder">Ouvrir automatiquement le dossier</string>
+    <string name="account_setup_bad_uri">Paramétrage incorrect\u00A0: <ns1:g id="err_mess">%s</ns1:g></string>
+    <string name="account_setup_basics_email_hint">Adresse e-mail</string>
+    <string name="account_setup_basics_manual_setup_action">Configuration manuelle</string>
+    <string name="account_setup_basics_password_hint">Mot de passe</string>
+    <string name="account_setup_basics_title">Configurer la messagerie</string>
+    <string name="account_setup_bypass_ecs">Contourner ECS</string>
+    <string name="account_setup_check_settings_authenticate">Authentification\u2026</string>
+    <string name="account_setup_check_settings_canceling_msg">Annulation\u2026</string>
+    <string name="account_setup_check_settings_check_content_server_msg">Vérification des paramètres du serveur de contenu ...</string>
+    <string name="account_setup_check_settings_check_incoming_msg">Vérification des paramètres de serveur entrant\u2026</string>
+    <string name="account_setup_check_settings_check_outgoing_msg">Vérification des paramètres de serveur sortant\u2026</string>
+    <string name="account_setup_check_settings_fetch">Récupération des paramètres du compte\u2026</string>
+    <string name="account_setup_check_settings_retr_info_msg">Récupération des informations de compte\u2026</string>
+    <string name="account_setup_check_settings_title"/>
+    <string name="account_setup_content_server_name_label">Nom du serveur de contenu</string>
+    <string name="account_setup_content_server_name_summary">Indiquez le nom complet ou l\'adresse IP du serveur de contenu.</string>
+    <string name="account_setup_content_server_password_label">Mot de passe du serveur de contenu</string>
+    <string name="account_setup_content_server_password_summary">Vérifiez votre e-mail si vous avez reçu le message de confirmation de votre enregistrement de ChiaraMail. Sélectionnez le lien pour activer votre enregistrement et afficher votre mot de passe du serveur de contenu. Ensuite, entrez le mot de passe dans le champ ci-dessus.</string>
+    <string name="account_setup_content_server_port_label">Port du serveur de contenu</string>
+    <string name="account_setup_content_server_port_summary">Spécifiez le numéro de port du serveur de contenu (par défaut = 443).</string>
+    <string name="account_setup_content_server_registration_error">Une erreur s\'est produite lors de l\'auto-enregistrement du serveur de contenu :</string>
+    <string name="account_setup_content_server_title">Paramètres du serveur de contenu ECS</string>
+    <string name="account_setup_dynamic_content_default_label">Envoyer en ECS</string>
+    <string name="account_setup_dynamic_content_default_summary">Lorsque cette case est cochée, l\'e-mail sera envoyé en utilisant la technologie ECS.</string>
+    <string name="account_setup_dynamic_content_display_duration_10_sec">10 secondes</string>
+    <string name="account_setup_dynamic_content_display_duration_1_sec">1 seconde</string>
+    <string name="account_setup_dynamic_content_display_duration_2_sec">2 secondes</string>
+    <string name="account_setup_dynamic_content_display_duration_3_sec">3 secondes</string>
+    <string name="account_setup_dynamic_content_display_duration_4_sec">4 secondes</string>
+    <string name="account_setup_dynamic_content_display_duration_5_sec">5 secondes</string>
+    <string name="account_setup_dynamic_content_display_duration_6_sec">6 secondes</string>
+    <string name="account_setup_dynamic_content_display_duration_7_sec">7 secondes</string>
+    <string name="account_setup_dynamic_content_display_duration_8_sec">8 secondes</string>
+    <string name="account_setup_dynamic_content_display_duration_9_sec">9 secondes</string>
+    <string name="account_setup_dynamic_content_encryption_default_label">Crypter le contenu</string>
+    <string name="account_setup_dynamic_content_encryption_default_summary">Lorsque cette case est cochée, le contenu du message sera crypté avant d\'être envoyé au serveur de contenu.</string>
+    <string name="account_setup_dynamic_content_ephemeral_mode_default_label">Mode auto-destruction</string>
+    <string name="account_setup_dynamic_content_ephemeral_mode_default_summary">Lorsque cette case et la case « Envoyer en ECS » sont cochées, les messages s\'auto-détruiront automatiquement passé un temps prédéterminé après leur lecture.</string>
+    <string name="account_setup_dynamic_content_ephemeral_mode_display_duration_label">Durée d\'affichage</string>
+    <string name="account_setup_dynamic_content_ephemeral_mode_display_duration_summary">Indique la période de temps pendant lequel le message sera affiché avant de s\'autodétruire.</string>
+    <string name="account_setup_dynamic_content_filter_nonecs_default_label">Filtrer les non-ECS</string>
+    <string name="account_setup_dynamic_content_filter_nonecs_default_summary">Lorsque cette case est cochée, les messages non-ECS reçus d\'expéditeurs enregistrés n\'apparaîtront pas dans la boîte de réception.</string>
+    <string name="account_setup_dynamic_content_include_content_default_label">Inclure le contenu</string>
+    <string name="account_setup_dynamic_content_include_content_default_summary">Lorsque cette case et la case « Envoyer en ECS » sont cochées, les messages incluront le contenu réel, au lieu de paramètres fictifs.</string>
+    <string name="account_setup_dynamic_content_menu_label">Mode d\'envoi par défaut</string>
+    <string name="account_setup_dynamic_content_override_label">Ces paramètres peuvent être écrasés avant d\'envoyer l\'e-mail.</string>
+    <string name="account_setup_dynamic_content_settings_title">Paramètres du serveur de contenu ECS</string>
+    <string name="account_setup_dynamic_content_show_password">Afficher le mot de passe</string>
+    <string name="account_setup_dynamic_content_show_password_summary">Afficher le mot de passe du serveur de contenu</string>
+    <string name="account_setup_dynamic_content_warning_label">Important : Les messages envoyés en utilisant la technologie ECS ne peuvent être lus que par des clients de messagerie en mode ECS.</string>
+    <string name="account_setup_ecs_login_title">Connectez-vous à votre compte ChiaraMail</string>
+    <string name="account_setup_ecs_not_registered">Utilisateur non enregistré ou Identifiant / mot de passe du compte non valide</string>
+    <string name="account_setup_ecs_password_hint">Mot de passe du serveur de contenu</string>
+    <string name="account_setup_expunge_policy_immediately">Immédiatement après avoir supprimé ou déplacé</string>
+    <string name="account_setup_expunge_policy_label">Élimination des messages</string>
+    <string name="account_setup_expunge_policy_manual">Seulement manuellement</string>
+    <string name="account_setup_expunge_policy_on_poll">Pendant chaque récupération</string>
+    <string name="account_setup_failed_dlg_auth_message_fmt">Nom d\'utilisateur ou mot de passe incorrect.\n(<ns1:g id="error">%s</ns1:g>)</string>
+    <string name="account_setup_failed_dlg_certificate_message_fmt">Impossible de se connecter de manière sûre au serveur.\n(<ns1:g id="error">%s</ns1:g>)</string>
+    <string name="account_setup_failed_dlg_continue_action">Continuer</string>
+    <string name="account_setup_failed_dlg_edit_details_action">Modifier les détails</string>
+    <string name="account_setup_failed_dlg_invalid_certificate_accept">Accepter le certificat</string>
+    <string name="account_setup_failed_dlg_invalid_certificate_reject">Rejetter le certificat</string>
+    <string name="account_setup_failed_dlg_invalid_certificate_title">Certificat non reconnu</string>
+    <string name="account_setup_failed_dlg_server_message_fmt">Impossible de se connecter au serveur.\n(<ns1:g id="error">%s</ns1:g>)</string>
+    <string name="account_setup_failed_dlg_title">La configuration n\'a pu terminer</string>
+    <string name="account_setup_incoming_auth_type_label">Type d\'authentification</string>
+    <string name="account_setup_incoming_autodetect_namespace_label">Auto-detection des espaces de noms IMAP</string>
+    <string name="account_setup_incoming_compression_label">Utiliser la compression sur le réseau\u00A0:</string>
+    <string name="account_setup_incoming_delete_policy_delete_label">Lorsque je supprime de la boîte de réception</string>
+    <string name="account_setup_incoming_delete_policy_label">Supprimer les messages du serveur\u00A0:</string>
+    <string name="account_setup_incoming_delete_policy_markread_label">Marquer comme lu sur le serveur</string>
+    <string name="account_setup_incoming_delete_policy_never_label">Jamais</string>
+    <string name="account_setup_incoming_imap_path_prefix_label">Préfixe de chemin IMAP</string>
+    <string name="account_setup_incoming_imap_server_label">Serveur IMAP</string>
+    <string name="account_setup_incoming_mobile_label">Réseau mobile</string>
+    <string name="account_setup_incoming_other_label">Autre</string>
+    <string name="account_setup_incoming_password_label">Mot de passe</string>
+    <string name="account_setup_incoming_pop_server_label">Serveur POP3</string>
+    <string name="account_setup_incoming_port_label">Port</string>
+    <string name="account_setup_incoming_security_label">Type de sécurité</string>
+    <string name="account_setup_incoming_security_none_label">Aucun</string>
+    <string name="account_setup_incoming_security_ssl_label">SSL (toujours)</string>
+    <string name="account_setup_incoming_security_ssl_optional_label">SSL (si disponible)</string>
+    <string name="account_setup_incoming_security_tls_label">TLS (toujours)</string>
+    <string name="account_setup_incoming_security_tls_optional_label">TLS (si disponible)</string>
+    <string name="account_setup_incoming_subscribed_folders_only_label">Afficher seulement les dossiers auxquels je suis abonné</string>
+    <string name="account_setup_incoming_title">Paramètres de serveur entrant</string>
+    <string name="account_setup_incoming_username_label">Nom d\'utilisateur</string>
+    <string name="account_setup_incoming_webdav_auth_path_hint">Optionnel</string>
+    <string name="account_setup_incoming_webdav_auth_path_label">Chemin d\'authentification</string>
+    <string name="account_setup_incoming_webdav_mailbox_path_hint">Optionnel</string>
+    <string name="account_setup_incoming_webdav_mailbox_path_label">Alias du compte</string>
+    <string name="account_setup_incoming_webdav_path_prefix_hint">Optionnel</string>
+    <string name="account_setup_incoming_webdav_path_prefix_label">Chemin OWA</string>
+    <string name="account_setup_incoming_webdav_server_label">Serveur Exchange (WebDAV)</string>
+    <string name="account_setup_incoming_wifi_label">Wifi</string>
+    <string name="account_setup_names_account_name_label">Donnez un nom à ce compte (optionnel)\u00A0:</string>
+    <string name="account_setup_names_title">Presque terminé\u00A0!</string>
+    <string name="account_setup_names_user_name_label">Saisissez votre nom (s\'affiche sur les messages sortants)\u00A0:</string>
+    <string name="account_setup_no_account_text">&lt;a href=https://www.chiaramail.com/index.jsp>Pas de compte ChiaraMail pour cette adresse? &lt;/ a></string>
+    <string name="account_setup_options_enable_push_label">Activer le Push sur ce compte</string>
+    <string name="account_setup_options_enable_push_summary">Si supporté par le serveur, les messages apparaîtront instantanément. Cette option peut considérablement améliorer ou dégrader les performances</string>
+    <string name="account_setup_options_mail_check_frequency_10min">Toutes les 10 minutes</string>
+    <string name="account_setup_options_mail_check_frequency_12hour">Toutes les 12 heures</string>
+    <string name="account_setup_options_mail_check_frequency_15min">Toutes les 15 minutes</string>
+    <string name="account_setup_options_mail_check_frequency_1hour">Toutes les heures</string>
+    <string name="account_setup_options_mail_check_frequency_1min">Toutes les minutes</string>
+    <string name="account_setup_options_mail_check_frequency_24hour">Toutes les 24 heures</string>
+    <string name="account_setup_options_mail_check_frequency_2hour">Toutes les 2 heures</string>
+    <string name="account_setup_options_mail_check_frequency_30min">Toutes les 30 minutes</string>
+    <string name="account_setup_options_mail_check_frequency_3hour">Toutes les 3 heures</string>
+    <string name="account_setup_options_mail_check_frequency_5min">Toutes les 5 minutes</string>
+    <string name="account_setup_options_mail_check_frequency_6hour">Toutes les 6 heures</string>
+    <string name="account_setup_options_mail_check_frequency_label">Fréquence de vérification de la messagerie</string>
+    <string name="account_setup_options_mail_check_frequency_never">Jamais</string>
+    <string name="account_setup_options_mail_display_count_10">10 messages</string>
+    <string name="account_setup_options_mail_display_count_100">100 messages</string>
+    <string name="account_setup_options_mail_display_count_1000">1000 messages</string>
+    <string name="account_setup_options_mail_display_count_25">25 messages</string>
+    <string name="account_setup_options_mail_display_count_250">250 messages</string>
+    <string name="account_setup_options_mail_display_count_50">50 messages</string>
+    <string name="account_setup_options_mail_display_count_500">500 messages</string>
+    <string name="account_setup_options_mail_display_count_all">Tous</string>
+    <string name="account_setup_options_mail_display_count_label">Nombre de messages à afficher</string>
+    <string name="account_setup_options_notify_label">Me notifier à l\'arrivée de messages</string>
+    <string name="account_setup_options_notify_sync_label">M\'avertir pendant la vérification des messages</string>
+    <string name="account_setup_options_title">Options du compte</string>
+    <string name="account_setup_outgoing_authentication_label">Type d\'authentification</string>
+    <string name="account_setup_outgoing_password_label">Mot de passe</string>
+    <string name="account_setup_outgoing_port_label">Port</string>
+    <string name="account_setup_outgoing_require_login_label">Authentification requise</string>
+    <string name="account_setup_outgoing_security_label">Type de sécurité</string>
+    <string name="account_setup_outgoing_smtp_server_label">Serveur SMTP</string>
+    <string name="account_setup_outgoing_title">Paramètres du serveur sortant</string>
+    <string name="account_setup_outgoing_username_label">Nom d\'utilisateur</string>
+    <string name="account_setup_private_content_server_password_summary">Vérifiez votre e-mail si vous avez reçu le message de confirmation de l\'enregistrement de votre fournisseur de contenu ECS. Sélectionnez le lien pour activer votre enregistrement et afficher votre mot de passe du serveur de contenu. Ensuite, entrez le mot de passe dans le champ ci-dessus.</string>
+    <string name="account_setup_push_limit_10">10 dossiers</string>
+    <string name="account_setup_push_limit_100">100 dossiers</string>
+    <string name="account_setup_push_limit_1000">1000 dossiers</string>
+    <string name="account_setup_push_limit_25">25 dossiers</string>
+    <string name="account_setup_push_limit_250">250 dossiers</string>
+    <string name="account_setup_push_limit_50">50 dossiers</string>
+    <string name="account_setup_push_limit_500">500 dossiers</string>
+    <string name="account_setup_push_limit_label">Maximum de dossiers Push à vérifier</string>
+    <string name="account_setup_register_me">Créer mon compte !</string>
+    <string name="account_size_changed">
+    Espace sur «\u00A0<ns1:g id="account">%s</ns1:g>\u00A0» passé de
+    <ns1:g id="oldSize">%s</ns1:g>
+    à
+    <ns1:g id="newSize">%s</ns1:g>
+    </string>
+    <string name="account_unavailable">Le compte «\u00A0<ns1:g id="account">%s</ns1:g>\u00A0» n\'est pas disponible\u00A0; veuillez vérifier le stockage</string>
+    <string name="accountlist_preferences">Liste de comptes</string>
+    <string name="accounts_context_menu_title">Options du compte</string>
+    <string name="accounts_title">Comptes</string>
+    <string name="accounts_welcome">&lt;p> Bienvenue à l\'installation de ChiaraMail pour Android. ChiaraMail pour Android (ou, tout simplement, ChiaraMail) est un programme de messagerie basé sur K-9 Mail, un client de messagerie open source pour Android basé à l\'origine sur le client de messagerie standard d\'Android. L\'utilisation de ChiaraMail est simple et intuitive, surtout si vous êtes habitué à K-9 Mail. &lt;/ p>&lt;p> Les caractéristiques de ChiaraMail comprennent : &lt;/ p> Protection facile du contenu des messages contre la lecture non autorisée d\'une tierce partie sans l\'utilisation de cryptage&lt;br> * Messagerie éphémère avec impossibilité de prendre des captures d\'écran&lt;br> * 100% protection contre l\'usurpation d\'adresse e-mail&lt;br> * Livraison plus efficace d\'e-mails pour les grandes listes de distribution&lt;br> * Vous permet de modifier vos e-mails, y compris les pièces jointes, après qu\'ils aient été envoyés&lt;br> * Réduction importante dans l\'espace de stockage d\'e-mails&lt;br> * Envoyez des pièces jointes de taille pratiquement illimitée&lt;br> * ... et plus encore ! &lt;br> &lt;p> Le programme de messagerie ChiaraMail est un sur-ensemble fonctionnel de K-9 Mail. Cela signifie qu\'il fait tout ce que K-9 Mail fait et bien plus encore. La principale différence est l\'utilisation de la technologie du Fractionnement du Contenu-Enveloppe (ECS) (voir ci-dessus pour une liste de quelques-uns des avantages de l\'ECS sur la technologie d\'e-mail traditionnelle). ChiaraMail offre également des implémentations ECS qui permettent à vos clients de messagerie préférés, y compris Mozilla Thunderbird et Microsoft Outlook **, d\'utiliser la technologie. Pour plus d\'informations sur ECS, comment il fonctionne et bien plus sur ses avantages, voir &lt;a href=http://www.chiaramailcorp.com/about/works/> http://www.chiaramailcorp.com/about/works/ &lt;/ a>. &lt;/ p>&lt;p> Veuillez soumettre les rapports de bugs, vos suggestions pour de nouvelles fonctionnalités et vos questions à &lt;a href=mailto:extension_support\@chiaramail.com> extension_support\@chiaramail.com &lt;/ a>. &lt;/ p>&lt;p> Améliorations et corrections de bugs dans la version 4.33 : &lt;/ p>&lt;p> 1. Correction d\'un bug : l\'appli affiche NullPointerException lorsque le bouton Retour est appuyée dans certains cas. 2. Correction d\'un bug : MessageViewFragment affiche IllegalStateException lors de l\'échec du chargement de la visualisation d\'un message. 3. Correction d\'un bug : l\'appli se bloque lorsqu\'un article de Flipboard est partagée par elle. 4. Correction d\'un bug : MessageList affiche IllegalStateException après onSaveInstanceState. ** Suppose que tous les destinataires d\'e-mail sont en mode ECS (télécharger des implémentations supplémentaires depuis &lt;a href=http://www.chiaramailcorp.com/downloads/> http://www.chiaramailcorp.com/downloads &lt;/ a>) &lt;/ p></string>
+    <string name="action_remote_search">Rechercher des messages distant</string>
+    <string name="actionbar_selected"><ns1:g id="selection_count">%d</ns1:g> sélectionné(s)</string>
+    <string name="activate_account_action">Activer</string>
+    <string name="add_account_action">Ajouter un compte</string>
+    <string name="add_attachment_action">Ajouter une pièce jointe</string>
+    <string name="add_attachment_action_image">Joindre une image</string>
+    <string name="add_attachment_action_video">Joindre une vidéo</string>
+    <string name="add_cc_bcc_action">Ajouter Cc/Cci</string>
+    <string name="add_inline_image_canceled">Annulation de l\'ajout d\'image insérée</string>
+    <string name="add_inline_image_failed">Échec de l\'ajout d\'image insérée</string>
+    <string name="add_inline_video_canceled">Annulation de l\'ajout de vidéo insérée</string>
+    <string name="add_inline_video_failed">Échec de l\'ajout de vidéo insérée</string>
+    <string name="advanced">Avancé</string>
+    <string name="animations_summary">Utiliser des effets visuels criards</string>
+    <string name="animations_title">Animation</string>
+    <string name="app_authors">Google, le K-9 Dog Walkers et ChiaraMail Corp.</string>
+    <string name="app_authors_fmt">Auteurs\u00A0: <ns1:g id="app_authors">%s</ns1:g></string>
+    <string name="app_copyright_fmt">
+	Portions Copyright 2012-2014 ChiaraMail Corp Portions Copyright 2008 - 
+	<ns1:g>%s</ns1:g>
+	Le K-9 Dog Walkers. Portions Copyright 2006 - 
+	<ns1:g>%s</ns1:g>
+	le projet Open Source d\'Android.
+	</string>
+    <string name="app_emoji_icons">Icônes Emoji\u00A0: <ns1:g id="app_emoji_icons_link">%s</ns1:g></string>
+    <string name="app_libraries">Tierces librairies utilisées\u00A0: <ns1:g id="app_libraries_list">%s</ns1:g></string>
+    <string name="app_license">Sous licence Apache License, Version 2.0.</string>
+    <string name="app_name">ChiaraMail</string>
+    <string name="app_revision_fmt">Information de révision\u00A0: %s</string>
+    <string name="archive_action">Archiver</string>
+    <string name="archive_folder_label">Nom du dossier des archives</string>
+    <string name="attachment_encryption_unsupported">Attention\u00A0: La signature et le chiffrement des pièces jointes ne sont pas encore supportés.</string>
+    <string name="attachment_save_desc">Aucun gestionnaire de fichiers trouvé. Où souhaitez-vous enregistrer cette pièce jointe\u00A0?</string>
+    <string name="attachment_save_title">Enregistrer les pièces jointes</string>
+    <string name="back_action">Retour</string>
+    <string name="background_ops_always">Toujours</string>
+    <string name="background_ops_auto_sync">Lorsque «\u00A0Données en arrière-plan\u00A0» et «\u00A0Synchronisation auto\u00A0» sont activés</string>
+    <string name="background_ops_auto_sync_only">Lorsque «\u00A0Synchronisation auto\u00A0» est activée</string>
+    <string name="background_ops_enabled">Lorsque «\u00A0Données en arrière-plan\u00A0» est activé</string>
+    <string name="background_ops_label">Synchronisation en arrière-plan</string>
+    <string name="background_ops_never">Jamais</string>
+    <string name="batch_select_all">Sélectionner tout</string>
+    <string name="beta_app_name">ChiaraMail Beta</string>
+    <string name="btn_crypto_sign">Signer</string>
+    <string name="btn_decrypt">Déchiffrer</string>
+    <string name="btn_encrypt">Chiffrer</string>
+    <string name="btn_verify">Vérifier</string>
+    <string name="cancel_action">Annuler</string>
+    <string name="change_password_no_button">Non</string>
+    <string name="change_password_title">Changer le mot de passe</string>
+    <string name="change_password_yes_button">Oui</string>
+    <string name="changelog_full_title">Journal des modifications</string>
+    <string name="check_mail_action">Vérif. messages</string>
+    <string name="chiaramail_logo">Logo ChiaraMail.</string>
+    <string name="chiaramail_user">Utilisateur ChiaraMail pour Android</string>
+    <string name="choose_contacts_to_invite">Choisissez les contacts à inviter</string>
+    <string name="choose_folder_title">Choisir un dossier</string>
+    <string name="choose_identity_title">Choisir l\'identité</string>
+    <string name="clear_action">Vider les messages (Danger\u00A0!)</string>
+    <string name="clear_local_folder_action">Effacer les messages locaux</string>
+    <string name="clear_pending_action">Annuler les actions en attente (Danger\u00A0!)</string>
+    <string name="clearing_account">Effacement du compte «\u00A0<ns1:g id="account">%s</ns1:g>\u00A0»</string>
+    <string name="close">Fermer</string>
+    <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nécessite un ou plusieurs services Google Play qui ne sont pas disponibles actuellement. Veuillez contacter le développeur pour obtenir de l\'aide."</string>
+    <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Activer les services Google Play"</string>
+    <string msgid="2016066508617425489" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas tant que vous n\'aurez pas activé les services Google Play."</string>
+    <string msgid="4763733806837472840" name="common_google_play_services_enable_title">"Activer les services Google Play"</string>
+    <string msgid="5765996826213593005" name="common_google_play_services_install_button">"Installer les services Google Play"</string>
+    <string msgid="1545874412485515659" name="common_google_play_services_install_text_phone">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas sans les services Google Play, qui ne sont pas installés sur votre téléphone."</string>
+    <string msgid="2742131317258851812" name="common_google_play_services_install_text_tablet">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas sans les services Google Play, qui ne sont pas installés sur votre tablette."</string>
+    <string msgid="2110712637922504348" name="common_google_play_services_install_title">"Installer les services Google Play"</string>
+    <string msgid="8004809446015217370" name="common_google_play_services_invalid_account_text">"Le compte indiqué n\'existe pas sur cet appareil. Veuillez sélectionner un autre compte."</string>
+    <string msgid="9894539456463288" name="common_google_play_services_invalid_account_title">"Compte non valide"</string>
+    <string msgid="2602915190038884860" name="common_google_play_services_network_error_text">"Vous devez disposer d\'une connexion de données pour utiliser les services Google Play."</string>
+    <string msgid="5183831421651758225" name="common_google_play_services_network_error_title">"Erreur réseau"</string>
+    <string msgid="3936796119014022295" name="common_google_play_services_notification_ticker">"Erreur liée aux services Google Play"</string>
+    <string msgid="6951442375899151085" name="common_google_play_services_restricted_profile_text">"L\'accès aux comptes à partir d\'un profil limité n\'est pas possible."</string>
+    <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Profil limité"</string>
+    <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Erreur lors de la connexion au compte indiqué. Veuillez en sélectionner un autre."</string>
+    <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Échec de la connexion"</string>
+    <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"L\'application <ns1:g id="APP_NAME">%1$s</ns1:g> rencontre des problèmes avec les services Google Play. Si le problème persiste, veuillez contacter le développeur pour obtenir de l\'aide."</string>
+    <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> dépend des services Google Play, qui ne sont pas compatibles avec votre appareil. Veuillez contacter le fabricant pour obtenir de l\'aide."</string>
+    <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Services Google Play"</string>
+    <string msgid="2221302284291941971" name="common_google_play_services_update_button">"Mettre à jour"</string>
+    <string msgid="6230553430311881723" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas tant que vous n\'aurez pas mis à jour les services Google Play."</string>
+    <string msgid="2926201203597631481" name="common_google_play_services_update_title">"Mettre à jour les services Google Play"</string>
+    <string msgid="1576144479907495032" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas sans les services Google Play, qui sont en cours de mise à jour."</string>
+    <string msgid="1604540693139938838" name="common_google_play_services_updating_title">"Mise à jour des services Google Play"</string>
+    <string msgid="8334920661858223093" name="common_google_play_services_wear_update_text">"La nouvelle version des services Google Play est nécessaire. Elle sera bientôt installée automatiquement."</string>
+    <string msgid="311697239335516384" name="common_open_on_phone">"Ouvrir sur le téléphone"</string>
+    <string msgid="3156914698180786012" name="common_signin_button_text">"Se connecter"</string>
+    <string msgid="1483290677806110088" name="common_signin_button_text_long">"Se connecter avec Google"</string>
+    <string name="compact_action">Compacter</string>
+    <string name="compacting_account">Compactage du compte «\u00A0<ns1:g id="account">%s</ns1:g>\u00A0»</string>
+    <string name="compose_action">Composer</string>
+    <string name="compose_title_compose">Composer</string>
+    <string name="compose_title_forward">Transférer</string>
+    <string name="compose_title_reply">Répondre</string>
+    <string name="compose_title_reply_all">Répondre à tous</string>
+    <string name="config_default"> (Par défaut)</string>
+    <string name="config_name_summary">Entrez le nom de la configuration</string>
+    <string name="config_name_text">Nom de la configuration</string>
+    <string name="config_ok">Ok</string>
+    <string name="config_private_servers_summary">La messagerie ECS peut être hébergée par le serveur de contenu public (géré par ChiaraMail et dont le nom du serveur est www.chiaramail.com) ou par un serveur privé, par exemple, par votre banque. Vous pouvez configurer ici des serveurs privés, en spécifiant le nom du serveur de contenu, le port, le mot de passe du compte et d\'autres paramètres. Le propriétaire du serveur de contenu fournira ces données lorsque vous vous enregistrez.\n\nLorsque vous recevez un message ECS, l\'adresse du serveur de contenu (public ou privé) sera précisée dans l\'en-tête du message, et la configuration que vous avez créée pour ce serveur sera utilisée pour récupérer le contenu du message.\n\nLa configuration du serveur de contenu par défaut est utilisée lorsque vous envoyez un message ECS, ou lorsque vous répondez à ou faîtes suivre un message dont le contenu est hébergé sur un autre serveur.</string>
+    <string name="confirm_discard_draft_message">Etes-vous sûr de vouloir abandonner l\'écriture du message?</string>
+    <string name="confirm_discard_draft_message_title">Abandonner le message?</string>
+    <string name="contacts_missing_addresses">Les contacts sélectionnés n\'ont pas d\'adresse e-mail.</string>
+    <string name="content_does_not_exist">Ce contenu n\'existe pas (il a peut-être été supprimé par l\'expéditeur)</string>
+    <string name="content_server_name_default">www.chiaramail.com</string>
+    <string name="continue_action">Continuer</string>
+    <string name="continue_without_public_key_dlg_title">Continuer sans clé publique?</string>
+    <string name="continue_without_public_key_instructions_fmt">Un ou plusieurs destinataires n\'ont pas de clé publique enregistrée. Continuer?</string>
+    <string name="copy_action">Copier</string>
+    <string name="count_search_summary">Désactiver pour un affichage plus rapide</string>
+    <string name="count_search_title">Compter les résultats de recherche</string>
+    <string name="create_content_server_config_title">Ajouter la configuration</string>
+    <string name="debug_enable_debug_logging_summary">Journaliser les informations de diagnostic supplémentaires</string>
+    <string name="debug_enable_debug_logging_title">Activer le journal de déboguage</string>
+    <string name="debug_enable_sensitive_logging_summary">Vos mots de passe pourront se retrouver dans le journal</string>
+    <string name="debug_enable_sensitive_logging_title">Journaliser les informations personnelles</string>
+    <string name="debug_logging_enabled">Sortie de deboguage «\u00A0logcat\u00A0» activée</string>
+    <string name="debug_preferences">Déboguage</string>
+    <string name="debug_version_fmt">Version\u00A0: <ns1:g id="version">%s</ns1:g></string>
+    <string name="default_identity_description">Identité initiale</string>
+    <string name="default_signature">-\nEnvoyé de mon appareil Android avec ChiaraMail.</string>
+    <string name="delete_action">Supprimer</string>
+    <string name="delete_content_delete_content">Etes-vous sûr de vouloir effacer le contenu de ce message ?</string>
+    <string name="delete_content_delete_content_title">Supprimez le contenu</string>
+    <string name="delete_content_message_content_deleted">Le contenu du message est supprimé</string>
+    <string name="delete_content_msg_delete">Voulez-vous aussi supprimer le contenu de ce message ?</string>
+    <string name="delete_content_server_config_msg">Etes-vous sûr de vouloir supprimer cette configuration ?</string>
+    <string name="delete_content_server_config_title">Supprimer la configuration</string>
+    <string name="delete_messages_desc">Permet à cette application d\'effacer vos emails.</string>
+    <string name="delete_messages_label">Supprimer les emails</string>
+    <string name="dialog_attachment_progress_title">Téléchargement de la pièce jointe</string>
+    <string name="dialog_config_cancel_button">Annuler</string>
+    <string name="dialog_config_no_button">Non</string>
+    <string name="dialog_confirm_create_config_button">Créer</string>
+    <string name="dialog_confirm_delete_cancel_button">Ne pas supprimer</string>
+    <string name="dialog_confirm_delete_config_button">Oui</string>
+    <string name="dialog_confirm_delete_confirm_button">Supprimer</string>
+    <string name="dialog_confirm_delete_message">Voulez-vous supprimer ce message\u00A0?</string>
+    <string name="dialog_confirm_delete_title">Confirmer la suppression</string>
+    <string name="dialog_confirm_edit_config_button">Sauvegarder</string>
+    <string name="dialog_confirm_spam_cancel_button">Ne pas déplacer</string>
+    <string name="dialog_confirm_spam_confirm_button">Déplacer</string>
+    <string name="dialog_confirm_spam_title">Confirmer le déplacement</string>
+    <string name="discard_action">Abandonner</string>
+    <string name="display_preferences">Affichage</string>
+    <string name="doInvite">Oui !</string>
+    <string name="done_action">Terminé</string>
+    <string name="drafts_folder_label">Nom du dossier des brouillons</string>
+    <string name="duplicate_config_name">Dupliquer le nom de la configuration</string>
+    <string name="ecs_video_viewer">Lecteur vidéo ECS</string>
+    <string name="edit_content_server_config_title">Modifier la configuration</string>
+    <string name="edit_identity_description_hint">(Optionnel)</string>
+    <string name="edit_identity_description_label">Description de l\'identité</string>
+    <string name="edit_identity_email_hint">(Requise)</string>
+    <string name="edit_identity_email_label">Adresse e-mail</string>
+    <string name="edit_identity_name_hint">(Optionnel)</string>
+    <string name="edit_identity_name_label">Votre nom</string>
+    <string name="edit_identity_reply_to_hint">(Optionnel)</string>
+    <string name="edit_identity_reply_to_label">Adresse de réponse</string>
+    <string name="edit_identity_signature_hint">(Optionnel)</string>
+    <string name="edit_identity_signature_label">Signature</string>
+    <string name="edit_identity_title">Éditer l\'identité</string>
+    <string name="empty_trash_action">Vider la corbeille</string>
+    <string name="error_activity_not_found">Aucune application n\'a été trouvée pour cette action.</string>
+    <string name="error_apg_version_not_supported">La version installée de APG n\'est pas supportée.</string>
+    <string name="error_contact_address_not_found">Aucune adresse e-mail trouvée</string>
+    <string name="error_unable_to_connect">Connexion impossible</string>
+    <string name="expunge_action">Éliminer les messages supprimés</string>
+    <string name="feedback">Envoyez vos remarques</string>
+    <string name="feedback_url">http://www.chiaramailcorp.com/help/contact/</string>
+    <string name="filter_folders_action">Chercher dossier</string>
+    <string name="flag_action">Ajouter une étoile</string>
+    <string name="flagged_modifier"> - Avec étoile</string>
+    <string name="folder_list_display_mode_all">Afficher tous les dossiers</string>
+    <string name="folder_list_display_mode_first_and_second_class">Afficher les dossiers de 1ère et 2ème classes</string>
+    <string name="folder_list_display_mode_first_class">Afficher seulement les dossiers de 1ère classe</string>
+    <string name="folder_list_display_mode_label">Dossiers</string>
+    <string name="folder_list_display_mode_not_second_class">Afficher tous sauf les dossiers de 2ème classe</string>
+    <string name="folder_list_filter_hint">Nom des dossiers contenant</string>
+    <string name="folder_list_help_key">
+    1 - Afficher seulement les dossiers de 1ère classe \u000A
+    2 - Afficher les dossiers de 1ère et 2ème classes\u000A
+    3 - Afficher tous les dossiers sauf 2ème classe\u000A
+    4 - Afficher tous les dossiers\u000A
+    Q - Retourner au comptes\u000A
+    S - Éditer les paramètres du compte</string>
+    <string name="folder_progress">\u0020<ns1:g id="completed">%s</ns1:g>/<ns1:g id="total">%s</ns1:g></string>
+    <string name="folder_settings_action">Paramètres du dossier</string>
+    <string name="folder_settings_folder_display_mode_first_class">1ère classe</string>
+    <string name="folder_settings_folder_display_mode_label">Classe d\'affichage du dossier</string>
+    <string name="folder_settings_folder_display_mode_normal">Aucune</string>
+    <string name="folder_settings_folder_display_mode_second_class">2ème classe</string>
+    <string name="folder_settings_folder_push_mode_first_class">1ère classe</string>
+    <string name="folder_settings_folder_push_mode_inherited">Pareille à la classe de synchronisation</string>
+    <string name="folder_settings_folder_push_mode_label">Classe Push du dossier</string>
+    <string name="folder_settings_folder_push_mode_normal">Aucune</string>
+    <string name="folder_settings_folder_push_mode_second_class">2ème classe</string>
+    <string name="folder_settings_folder_sync_mode_first_class">1ère classe</string>
+    <string name="folder_settings_folder_sync_mode_inherited">Pareille à la classe d\'affichage</string>
+    <string name="folder_settings_folder_sync_mode_label">Classe de synchronisation du dossier</string>
+    <string name="folder_settings_folder_sync_mode_normal">Aucune</string>
+    <string name="folder_settings_folder_sync_mode_second_class">2ème classe</string>
+    <string name="folder_settings_in_top_group_label">Afficher dans le groupe principal</string>
+    <string name="folder_settings_in_top_group_summary">Afficher dans le haut de la liste de dossiers</string>
+    <string name="folder_settings_include_in_integrated_inbox_label">Unifier</string>
+    <string name="folder_settings_include_in_integrated_inbox_summary">Les messages non lus sont affichés dans la boîte de messagerie unifiée</string>
+    <string name="folder_settings_title">Paramètres du dossier</string>
+    <string name="folderlist_preferences">Liste des dossiers</string>
+    <string name="folders_title">Dossiers</string>
+    <string name="font_size_account_description">Description du compte</string>
+    <string name="font_size_account_list">Liste de comptes</string>
+    <string name="font_size_account_name">Nom du compte</string>
+    <string name="font_size_default">Défaut</string>
+    <string name="font_size_folder_list">Liste des dossiers</string>
+    <string name="font_size_folder_name">Nom du dossier</string>
+    <string name="font_size_folder_status">Status du dossier</string>
+    <string name="font_size_large">Grand</string>
+    <string name="font_size_larger">Plus grand</string>
+    <string name="font_size_medium">Moyen</string>
+    <string name="font_size_message_compose">Taille de police des message</string>
+    <string name="font_size_message_compose_input">Champ texte</string>
+    <string name="font_size_message_list">Liste de messages</string>
+    <string name="font_size_message_list_date">Date du message</string>
+    <string name="font_size_message_list_preview">Aperçu</string>
+    <string name="font_size_message_list_sender">Expéditeur du message</string>
+    <string name="font_size_message_list_subject">Sujet du message</string>
+    <string name="font_size_message_view">Vue du message</string>
+    <string name="font_size_message_view_additional_headers">Entêtes supplémentaires</string>
+    <string name="font_size_message_view_cc">Destinataire du message (CC)</string>
+    <string name="font_size_message_view_content">Contenu du message</string>
+    <string name="font_size_message_view_date">Heure et date du message</string>
+    <string name="font_size_message_view_sender">Expéditeur du message</string>
+    <string name="font_size_message_view_subject">Sujet du message</string>
+    <string name="font_size_message_view_to">Destinataire du message (Pour)</string>
+    <string name="font_size_settings_description">Configurer la taille de police</string>
+    <string name="font_size_settings_title">Taille de police</string>
+    <string name="font_size_small">Petit</string>
+    <string name="font_size_smaller">Plus petit</string>
+    <string name="font_size_tiniest">Plus minuscule</string>
+    <string name="font_size_tiny">Minuscule</string>
+    <string name="font_size_webview_large">Grand</string>
+    <string name="font_size_webview_larger">Plus grand</string>
+    <string name="font_size_webview_normal">Normal</string>
+    <string name="font_size_webview_small">Petit</string>
+    <string name="font_size_webview_smaller">Plus petit</string>
+    <string name="forward_action">Transférer</string>
+    <string name="from_same_sender">Plus de cet expéditeur</string>
+    <string name="general_no_sender">Aucun expéditeur</string>
+    <string name="general_no_subject">(Aucun objet)</string>
+    <string name="gestures_summary">Accepter le contrôle par gestuelle</string>
+    <string name="gestures_title">Interface gestuelle</string>
+    <string name="global_preferences">Préférences globales</string>
+    <string name="global_settings_action">Paramètres globaux</string>
+    <string name="global_settings_archive">Archiver</string>
+    <string name="global_settings_archive_disabled_reason">Aucun dosssier d\'archivage</string>
+    <string name="global_settings_background_as_unread_indicator_label">Utiliser le fond comme indicateur de lecture</string>
+    <string name="global_settings_background_as_unread_indicator_summary">Montrer les messages lus et non lus avec différentes couleurs de fond</string>
+    <string name="global_settings_batch_buttons">Boutons batch</string>
+    <string name="global_settings_batch_buttons_summary">Configurer les boutons batch de la liste des messages</string>
+    <string name="global_settings_checkbox_label">Cases à cocher</string>
+    <string name="global_settings_checkbox_summary">Toujours afficher les cases à cocher</string>
+    <string name="global_settings_confirm_action_delete">Supprimer (mode lecture)</string>
+    <string name="global_settings_confirm_action_delete_notif">Supprimer (depuis notification)</string>
+    <string name="global_settings_confirm_action_delete_starred">Supprimer étoilé (mode lecture)</string>
+    <string name="global_settings_confirm_action_spam">Spam</string>
+    <string name="global_settings_confirm_actions_summary">Demander une confirmation pour chacune des actions sélectionnées</string>
+    <string name="global_settings_confirm_actions_title">Confirmer les actions</string>
+    <string name="global_settings_delete">Supprimer</string>
+    <string name="global_settings_flag">Marquer</string>
+    <string name="global_settings_folderlist_wrap_folder_names_label">Couper les noms de dossier long</string>
+    <string name="global_settings_folderlist_wrap_folder_names_summary">Utiliser les sauts de lignes pour les noms de dossier long</string>
+    <string name="global_settings_mark_read">Marquer comme lu/non lu</string>
+    <string name="global_settings_messageview_fixedwidth_label">Polices à taille fixe</string>
+    <string name="global_settings_messageview_fixedwidth_summary">Utiliser une police à taille fixe pour les messages en texte brut</string>
+    <string name="global_settings_messageview_return_to_list_label">Retour à la liste après suppression</string>
+    <string name="global_settings_messageview_return_to_list_summary">Retourner à la liste de messages après la suppression d\'un message</string>
+    <string name="global_settings_messageview_show_next_label">Voir le message suivant après suppression</string>
+    <string name="global_settings_messageview_show_next_summary">Voir le message suivant par défaut après suppression</string>
+    <string name="global_settings_move">Déplacer</string>
+    <string name="global_settings_notification_hide_subject_always">Toujours</string>
+    <string name="global_settings_notification_hide_subject_never">Jamais</string>
+    <string name="global_settings_notification_hide_subject_title">Masquer le sujet du message lors de la nofication</string>
+    <string name="global_settings_notification_hide_subject_when_locked">Lorsque le téléphone est verouillé</string>
+    <string name="global_settings_notification_quick_delete_always">Toujours</string>
+    <string name="global_settings_notification_quick_delete_description">Affiche un bouton dans les notification permettant de supprimer rapidement les messages</string>
+    <string name="global_settings_notification_quick_delete_never">Jamais</string>
+    <string name="global_settings_notification_quick_delete_title">Afficher le bouton \'Supprimer\'</string>
+    <string name="global_settings_notification_quick_delete_when_single_msg">Pour la notification de message unique</string>
+    <string name="global_settings_preview_lines_label">Lignes dʼaperçu</string>
+    <string name="global_settings_registered_name_color_changed">Mettre en évidence (couleur) les contacts connus</string>
+    <string name="global_settings_registered_name_color_default">Ne pas mettre en évidence les contacts connus</string>
+    <string name="global_settings_registered_name_color_label">Couleur des contacts connus</string>
+    <string name="global_settings_sender_above_subject_label">Correspondants au-dessus de l\'objet</string>
+    <string name="global_settings_sender_above_subject_summary">Afficher les noms des correspondants au dessus de la ligne d\'objet, plutôt qu\'en dessous</string>
+    <string name="global_settings_show_contact_name_label">Utiliser les noms du carnet d\'adresses</string>
+    <string name="global_settings_show_contact_name_summary">Utiliser en priorité les noms du carnet d\'adresses</string>
+    <string name="global_settings_show_contact_picture_label">Afficher les images des contacts</string>
+    <string name="global_settings_show_contact_picture_summary">Afficher les images des contacts dans la liste des messages</string>
+    <string name="global_settings_show_correspondent_names_label">Afficher le nom des correspondants</string>
+    <string name="global_settings_show_correspondent_names_summary">Afficher le nom des correspondants plutôt que leurs adresses e-mail</string>
+    <string name="global_settings_splitview_always">Toujours</string>
+    <string name="global_settings_splitview_mode_label">Afficher un écran partagé</string>
+    <string name="global_settings_splitview_never">Jamais</string>
+    <string name="global_settings_splitview_when_in_landscape">En mode paysage</string>
+    <string name="global_settings_threaded_view_label">Vue par fil</string>
+    <string name="global_settings_threaded_view_summary">Réduire les messages appartenant à un même fil</string>
+    <string name="global_settings_unselect">Déselectionner</string>
+    <string name="help_content_server_config_title">Aide</string>
+    <string name="hide_headers_action">Cacher entêtes</string>
+    <string name="hide_special_accounts_summary">Cacher «\u00A0Boîte de messagerie unifiée\u00A0» et «\u00A0Tous les messages\u00A0»</string>
+    <string name="hide_special_accounts_title">Cacher les comptes spéciaux</string>
+    <string name="identity_has_no_email">Vous ne pouvez pas utiliser une identité sans adresse e-mail</string>
+    <string name="idle_refresh_period_12min">Toutes les 12 minutes</string>
+    <string name="idle_refresh_period_1min">Toutes les minutes</string>
+    <string name="idle_refresh_period_24min">Toutes les 24 minutes</string>
+    <string name="idle_refresh_period_2min">Toutes les 2 minutes</string>
+    <string name="idle_refresh_period_36min">Toutes les 36 minutes</string>
+    <string name="idle_refresh_period_3min">Toutes les 3 minutes</string>
+    <string name="idle_refresh_period_48min">Toutes les 48 minutes</string>
+    <string name="idle_refresh_period_60min">Toutes les 60 minutes</string>
+    <string name="idle_refresh_period_6min">Toutes les 6 minutes</string>
+    <string name="idle_refresh_period_label">Rafraîchir la connexion IDLE</string>
+    <string name="image_capture_canceled">Annulation de la capture d\'image</string>
+    <string name="image_capture_failed">Échec de la capture d\'image</string>
+    <string name="image_file_deletion_failed">Échec de la suppression du fichier image</string>
+    <string name="image_missing">Impossible de localiser l\'image, image non ajoutée</string>
+    <string name="image_saved_as">Sauvegarder l\'image en tant que \"<ns1:g id="filename">%s</ns1:g>\"</string>
+    <string name="image_saving_failed">Echec de la sauvegarde de l\'image.</string>
+    <string name="image_scaling_failed">Échec de redimensionnement de l\'image, image non ajoutée</string>
+    <string name="import_dialog_error_message">Veuillez installer un gestionnaire de fichier pour continuer avec cette importation.</string>
+    <string name="import_dialog_error_title">Gestionnaire de fichiers manquant</string>
+    <string name="import_export_action">Paramètres d\'import &amp; d\'export</string>
+    <string name="insufficient_apg_permissions">ChiaraMail n\'a pas la permission d\'accéder pleinement à l\'APG, veuillez réinstaller ChiaraMail pour résoudre ce problème.</string>
+    <string name="integrated_inbox_detail">Tous les messages des dossiers à unifier</string>
+    <string name="integrated_inbox_title">Boîte de messagerie unifiée</string>
+    <string name="interaction_preferences">Interaction</string>
+    <string name="invalid_config_input_msg">Ce paramètre est manquant ou non valide</string>
+    <string name="invalid_config_input_title">Paramètre non valide ou manquant</string>
+    <string name="invite_contacts">Invitez les contacts</string>
+    <string name="invite_contacts_preamble">Voulez-vous inviter certains de vos contacts à télécharger ChiaraMail pour Android ou d\'autres produits ECS de ChiaraMail ? Rappelez-vous, pour que vos destinataires puissent lire les messages que vous leur envoyez en utilisant ECS, leurs programmes de messagerie doivent être configurés pour ECS.\n\nPour envoyer une invitation à vos contacts, appuyez sur le bouton de menu, puis sur « Invitez des contacts », pour faire apparaître la liste de vos contacts. Sélectionnez les personnes sur la liste à qui vous souhaitez envoyer une invitation par e-mail, puis appuyez sur le bouton « Aperçu de l\'invitation » pour visualiser le message avant de l\'envoyer.</string>
+    <string name="invite_contacts_title">Invitez les contacts</string>
+    <string name="key_id">id\u00A0: %s</string>
+    <string name="last_refresh_time_format">Dernière vérification <ns1:g id="formatted_time">%s</ns1:g></string>
+    <string name="last_refresh_time_format_with_push">Dernière vérification <ns1:g id="time_with_preposition">%s</ns1:g> (Push activé)</string>
+    <string name="load_more_messages_fmt">Charger jusqu\'à %d
+de plus</string>
+    <string name="loading_video">Chargement de la vidéo</string>
+    <string name="local_storage_provider_external_label">Stockage externe (carte SD)</string>
+    <string name="local_storage_provider_internal_label">Stockage interne</string>
+    <string name="local_storage_provider_label">Emplacement du stockage</string>
+    <string name="local_storage_provider_samsunggalaxy_label">Stockage additionnel %1$s</string>
+    <string name="manage_accounts_move_down_action">Déplacer bas</string>
+    <string name="manage_accounts_move_up_action">Déplacer haut</string>
+    <string name="manage_accounts_moving_message">Déplacer compte…</string>
+    <string name="manage_content_servers_configs">Configurations du serveur de contenu</string>
+    <string name="manage_content_servers_create">Ajouter ...</string>
+    <string name="manage_content_servers_default">Par défaut</string>
+    <string name="manage_content_servers_delete">Supprimer ...</string>
+    <string name="manage_content_servers_done">Terminé</string>
+    <string name="manage_content_servers_edit">Modifier ...</string>
+    <string name="manage_content_servers_help">Aide</string>
+    <string name="manage_content_servers_null_account">Erreur du système, compte nul pour le compte uuid</string>
+    <string name="manage_content_servers_title">Gérer les serveurs de contenu</string>
+    <string name="manage_identities_context_menu_title">Gérer l\'identité</string>
+    <string name="manage_identities_edit_action">Éditer</string>
+    <string name="manage_identities_move_down_action">Descendre</string>
+    <string name="manage_identities_move_top_action">Monter en haut / mettre par défaut</string>
+    <string name="manage_identities_move_up_action">Monter</string>
+    <string name="manage_identities_remove_action">Enlever</string>
+    <string name="manage_identities_title">Gérer les identités</string>
+    <string name="mark_as_read_action">Marquer comme lu</string>
+    <string name="mark_as_unread_action">Marquer comme non lu</string>
+    <string name="measure_accounts_summary">Désactiver pour un affichage plus rapide</string>
+    <string name="measure_accounts_title">Afficher la taille du compte</string>
+    <string name="message_additional_headers_not_downloaded">Les entêtes n\'ont pas toutes été téléchargées ou enregistrées. Sélectionnez «\u00A0Enregistrer toutes les entêtes localement\u00A0» dans les paramètres du serveur entrant pour activer cette fonction.</string>
+    <string name="message_additional_headers_retrieval_failed">La récupération d\'entêtes supplémentaires de la base de données ou du serveur a échouée.</string>
+    <string name="message_compose_add_header_error">Erreur dans l\'ajout du champ d\'en-tête :</string>
+    <string name="message_compose_attachment_too_big_1">Pièce jointe</string>
+    <string name="message_compose_attachment_too_big_2"> non comprise ; doit être inférieure à 4 Mo.</string>
+    <string name="message_compose_attachments_skipped_toast">Certaines pièces jointes ne peuvent pas être transmises car elles n\'ont pas été téléchargées.</string>
+    <string name="message_compose_bcc_hint">Cci</string>
+    <string name="message_compose_buggy_gallery">Cochez «\u00A0Paramètres > Utiliser le contounement du bogue de Gallerie\u00A0» pour être capable d\'attacher des images ou vidéos en utilisant Gallerie 3D.</string>
+    <string name="message_compose_canned_message">
+	Pour votre protection et votre confidentialité, ce message a été envoyé via la technologie ECS 
+	<sup>®</sup>
+	, mais votre programme d\'email n\'est pas encore paramétrée pour ECS. Pour lire ce message sécurisé, veuillez télécharger l\'extension ECS appropriée pour votre client de messagerie ou l\'un de nos clients de messagerie portables compatibles à ECS (http://www.chiaramailcorp.com/downloads/).
+	</string>
+    <string name="message_compose_cc_hint">Cc</string>
+    <string name="message_compose_content_hint">Texte du message</string>
+    <string name="message_compose_default_error">Serveur de contenu par défaut non spécifié</string>
+    <string name="message_compose_description_add_bcc">Ajouter un destinataire en copie cachée (Cci)</string>
+    <string name="message_compose_description_add_cc">Ajouter un destinataire en copie (Cc)</string>
+    <string name="message_compose_description_add_to">Ajouter un destinataire (Pour)</string>
+    <string name="message_compose_description_delete_quoted_text">Supprimer la citation</string>
+    <string name="message_compose_description_edit_quoted_text">Modifier la citation</string>
+    <string name="message_compose_dynamic_content_delete_error">Erreur dans la suppression du contenu ECS :</string>
+    <string name="message_compose_dynamic_content_send_attachment_error">Erreur d\'envoi de pièce jointe au message, au serveur de contenu :</string>
+    <string name="message_compose_dynamic_content_send_body_error">Erreur d\'envoi du corps du message, au serveur de contenu :</string>
+    <string name="message_compose_encryption_error">Erreur dans le cryptage du contenu :</string>
+    <string name="message_compose_error_bogus_content_pointer">Mauvaise valeur du pointeur de contenu :</string>
+    <string name="message_compose_error_bogus_content_server_port">Mauvaise valeur du port du serveur de contenu :</string>
+    <string name="message_compose_error_missing_content_pointers">Pointeur (s) de contenu manquant dans les paramètres.</string>
+    <string name="message_compose_error_missing_content_server_name">Nom du serveur de contenu manquant dans les paramètres.</string>
+    <string name="message_compose_error_missing_content_server_password">Mot de passe du serveur de contenu manquant dans les paramètres.</string>
+    <string name="message_compose_error_missing_content_server_port">Port du serveur de contenu manquant dans les paramètres.</string>
+    <string name="message_compose_error_no_recipients">Vous devez ajouter au moins un destinataire.</string>
+    <string name="message_compose_error_rangerr_content_server_port">Port du serveur de contenu hors de portée :</string>
+    <string name="message_compose_inline_error">Images et vidéos insérées prises en charge uniquement avec les messages ECS</string>
+    <string name="message_compose_quote_header_cc">Cc\u00A0:</string>
+    <string name="message_compose_quote_header_from">De\u00A0:</string>
+    <string name="message_compose_quote_header_send_date">Envoyé:</string>
+    <string name="message_compose_quote_header_separator">-------- Message d\'origine --------</string>
+    <string name="message_compose_quote_header_subject">Objet\u00A0:</string>
+    <string name="message_compose_quote_header_to">À\u00A0:</string>
+    <string name="message_compose_reply_header_fmt">\n<ns1:g id="sender">%s</ns1:g> a écrit\u00A0:\n\n</string>
+    <string name="message_compose_sender_name_address_mismatch">L\'adresse dans le nom de l\'expéditeur ne correspond pas à l\'adresse e-mail de l\'expéditeur.</string>
+    <string name="message_compose_show_quoted_text_action">Citer le message</string>
+    <string name="message_compose_signature_hint">Signature</string>
+    <string name="message_compose_subject_hint">Objet</string>
+    <string name="message_compose_to_hint">Pour</string>
+    <string name="message_compose_use_workaround">Utiliser «\u00A0Joindre une image\u00A0» ou «\u00A0Joindre une vidéo\u00A0» pour joindres des images ou vidéos avec Gallerie 3D</string>
+    <string name="message_discarded_toast">Message abandonné</string>
+    <string name="message_error_unknown_content_server">Nom / port du serveur de contenu inconnu.</string>
+    <string name="message_invite_canned_message">Salut, \n\nJe ne veux plus que mon fournisseur de messagerie (Google, Microsoft, Yahoo, ...) lise mon e-mail, j\'ai donc installé l\'extension ChiaraMail dans mes programmes de messagerie et je vous invite à en faire de même. \n\nOutre la protection de notre vie privée, les produits ChiaraMail de ChiaraMail Corp nous protègent contre l\'usurpation d\'email dans lequel d\'autres personnes tentent de nous inciter à révéler nos références bancaires et autres. ChiaraMail nous permet aussi de garder le contrôle de tout e-mail que nous envoyons, y compris de nous laisser changer ou supprimer un e-mail après que nous l\'ayons envoyé (Eh oui ! Vraiment !) et même de le faire disparaître quelques secondes après qu\'il ait été lu. \n\nComme si cela ne suffisait pas, ChiaraMail nous permet d\'envoyer des pièces jointes de taille pratiquement illimitée (imaginez envoyer une vidéo à des amis qui ne prend que 291 octets d\'espace dans leur boîte de réception) et accélère aussi la livraison d\'e-mail. \n\nJe pense que c\'est un grand progrès et voulais partager cette nouvelle avec vous. Téléchargez ChiaraMail aujourd\'hui depuis http://www.chiaramailcorp.com/downloads et prenez le contrôle de votre e-mail comme moi ! \n\nCordialement,</string>
+    <string name="message_invite_canned_subject">Ecrivez-moi en utilisant ChiaraMail, la technologie e-mail de la prochaine génération !</string>
+    <string name="message_list_help_key">
+    Suppr (ou D) - Supprimer\n
+    R - Répondre\n
+    A - Répondre à tous\n
+    C - Composer\n
+    F - Transférer\n
+    M - Déplacer\n
+    V - Archive\n
+    Y - Copier\n
+    Z - Marquer (Non)lu\n
+    G - Étoile\n
+    O - Trier\n
+    I - Ordre de tri\n
+    Q - Retourner aux dossiers\n
+    S - Sélectionner/Désélectionner\n
+    J ou P - Message précédent\n
+    K ou N - Prochain message
+    </string>
+    <string name="message_list_load_more_messages_action">Charger plus de messages</string>
+    <string name="message_list_loading">Chargement…</string>
+    <string name="message_list_title"><ns1:g id="account">%s</ns1:g>:<ns1:g id="folder">%s</ns1:g></string>
+    <string name="message_no_additional_headers_available">Toutes les entêtes ont été téléchargées, mais il n\'y en a pas d\'autres à montrer.</string>
+    <string name="message_saved_toast">Message enregistré comme brouillon</string>
+    <string name="message_to_fmt">Pour\u00A0: <ns1:g id="counterParty">%s</ns1:g></string>
+    <string name="message_to_label">Pour\u00A0:</string>
+    <string name="message_view_attachment_download_action">Enregistrer</string>
+    <string name="message_view_attachment_view_action">Ouvrir</string>
+    <string name="message_view_cc_label">Cc\u00A0:</string>
+    <string name="message_view_delete_content_action">Supprimer tout le contenu de ce message</string>
+    <string name="message_view_download_remainder">Télécharger le message complet</string>
+    <string name="message_view_downloading">Téléchargement…</string>
+    <string name="message_view_dynamic_content_delete_error">Erreur lors de la suppression du fichier temporaire des pièce jointes</string>
+    <string name="message_view_dynamic_content_fetch_error">Erreur lors de l\'ouverture du contenu / pièce jointe du message :</string>
+    <string name="message_view_dynamic_content_fetching_attachment">Ouverture de la pièce jointe du message</string>
+    <string name="message_view_dynamic_content_retrieving_inline_image">Récupération de l\'image insérée</string>
+    <string name="message_view_dynamic_content_retrieving_inline_video">Récupération la vidéo insérée</string>
+    <string name="message_view_dynamic_content_save_error">Erreur lors de la sauvegarde de la pièce jointe :</string>
+    <string name="message_view_dynamic_content_saving_attachment">Sauvegarde de la pièce jointe du message</string>
+    <string name="message_view_dynamic_content_send_attachment_error">Erreur lors de l\'envoi de la pièce jointe du message :</string>
+    <string name="message_view_dynamic_content_send_body_error">Erreur lors de l\'envoi du corps du message:</string>
+    <string name="message_view_dynamic_content_sending_attachment">Envoi de la pièce jointe du message</string>
+    <string name="message_view_dynamic_content_sending_body">Envoi du corps du message ...</string>
+    <string name="message_view_edit_msg_content">Modifier le corps du message:</string>
+    <string name="message_view_empty">Sélectionner un message sur la gauche</string>
+    <string name="message_view_fetching_attachment_toast">Récupération de la pièce jointe</string>
+    <string name="message_view_from_format">De\u00A0: <ns1:g id="name">%s</ns1:g> &lt;<ns1:g id="email">%s</ns1:g>></string>
+    <string name="message_view_no_viewer">Impossible de trouver un visualisateur pour <ns1:g id="mimetype">%s</ns1:g>.</string>
+    <string name="message_view_reserved_name_error">Possibilité de tentative d\'usurpation ; message bloqué.</string>
+    <string name="message_view_show_attachments_action">Pièces jointes</string>
+    <string name="message_view_show_message_action">Message</string>
+    <string name="message_view_show_more_attachments_action">Afficher plus…</string>
+    <string name="message_view_show_pictures_action">Afficher les images</string>
+    <string name="message_view_status_DC_attachment_open_canceled">Annulation de l\'ouverture de la pièce jointe</string>
+    <string name="message_view_status_DC_attachment_save_canceled">Annulation de la sauvegarde de la pièce jointe</string>
+    <string name="message_view_status_DC_attachment_saved">Pièce jointe enregistrée sur la carte mémoire SD sous le nom de</string>
+    <string name="message_view_status_DC_attachment_send_canceled">Annulation de l\'envoi de la pièce jointe</string>
+    <string name="message_view_status_attachment_not_saved">Impossible d\'enregistrer la pièce jointe sur la carte SD.</string>
+    <string name="message_view_status_attachment_saved">Pièce jointe enregistrée sur la carte SD en tant que <ns1:g id="filename">%s</ns1:g>.</string>
+    <string name="message_view_theme_action_dark">Basculer sur le thème foncé</string>
+    <string name="message_view_theme_action_light">Basculer sur le thème clair</string>
+    <string name="message_view_update_all">Mettre à jour le corps du message et la (les) pièce (s) jointe (s)</string>
+    <string name="message_view_update_cancel">Annuler la mise à jour</string>
+    <string name="message_view_update_content">Mettre à jour le contenu</string>
+    <string name="message_view_update_content_action">Modifier le contenu du message / pièce jointe</string>
+    <string name="message_view_update_content_dialog_title">Mettre à jour le contenu du message</string>
+    <string name="message_view_update_msg_body">Mettre à jour le corps du message</string>
+    <string name="messagelist_preferences">Liste de messages</string>
+    <string name="messagelist_sent_cc_me_sigil">›</string>
+    <string name="messagelist_sent_to_me_sigil">»</string>
+    <string name="messageview_preferences">Messages</string>
+    <string name="misc_preferences_attachment_description">Afficher les boutons pour ajouter des images ou vidéos en pièces jointes (pour contourner le bogue de Gallerie 3D)</string>
+    <string name="misc_preferences_attachment_title">Utiliser le contounement du bogue de Gallerie</string>
+    <string name="miscellaneous_preferences">Divers</string>
+    <string name="move_action">Déplacer</string>
+    <string name="move_copy_cannot_copy_unsynced_message">Impossibilité de copier ou déplacer un message qui n\'est pas synchronisé aver le serveur</string>
+    <string name="msg_attachment_update">pour la pièce jointe du message</string>
+    <string name="msg_body_update">pour le corps du message</string>
+    <string name="network_preferences">Réseau</string>
+    <string name="new_identity_action">Nouvelle identité</string>
+    <string name="next_action">Suivant</string>
+    <string name="no_removable_identity">Vous ne pouvez votre seule identité</string>
+    <string name="notification_action_delete">Supprimer</string>
+    <string name="notification_action_read">Lire</string>
+    <string name="notification_action_reply">Répondre</string>
+    <string name="notification_additional_messages">+ <ns1:g id="additional_messages">%d</ns1:g> sur <ns1:g id="account">%s</ns1:g></string>
+    <string name="notification_bg_send_ticker">Envoi du message\u00A0: <ns1:g id="account">%s</ns1:g></string>
+    <string name="notification_bg_send_title">Envoi du message</string>
+    <string name="notification_bg_sync_ticker">Vérification des messages\u00A0: <ns1:g id="account">%s</ns1:g>:<ns1:g id="folder">%s</ns1:g></string>
+    <string name="notification_bg_sync_title">Vérification des messages</string>
+    <string name="notification_bg_title_separator">:</string>
+    <string name="notification_certificate_error_text">Vérifier les paramètres serveur</string>
+    <string name="notification_certificate_error_title">Erreur de certificat (<ns1:g id="account">%s</ns1:g>)</string>
+    <string name="notification_new_messages_title"><ns1:g id="new_message_count">%d</ns1:g> nouveaux messages</string>
+    <string name="notification_new_one_account_fmt"><ns1:g id="unread_message_count">%d</ns1:g> non lu(s) (<ns1:g id="account">%s</ns1:g>)</string>
+    <string name="notification_new_title">Nouvel e-mail</string>
+    <string name="notifications_title">Paramètres de notification</string>
+    <string name="okay_action">OK</string>
+    <string name="open_market">Ouvrir Play Store</string>
+    <string name="open_source_licenses">Licences open source</string>
+    <string name="open_source_licenses_url">http://www.chiaramailcorp.com/open-source-licenses</string>
+    <string name="out_of_memory_error">Mémoire insuffisante : image ou vidéo trop grande</string>
+    <string name="pdf_reader_missing">Lecteur PDF manquant. Veuillez en installer un afin de configurer un compte dans ChiaraMail.</string>
+    <string name="pgp_mime_unsupported">Les messages PGP/MIME ne sont pas encore supportés</string>
+    <string name="preferences_action">Préférences</string>
+    <string name="prefs_title">Préférences</string>
+    <string name="preposition_for_date">le <ns1:g id="date">%s</ns1:g></string>
+    <string name="preview_invite">Aperçu de l\'invitation</string>
+    <string name="previous_action">Précédent</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="privacy_policy_url">http://www.chiaramailcorp.com/chiaramail-privacy-policy/</string>
+    <string name="privacy_preferences">Confidentialité</string>
+    <string name="provider_note_auonejp">Pour utiliser IMAP ou POP3 avec ce fournisseur, veuillez vous assurer que les options IMAP ou POP3 soient activées dans les paramètres de Au One.</string>
+    <string name="provider_note_hanmail">Pour utiliser IMAP ou POP3 avec ce fournisseur, veuillez vous assurer que les options IMAP ou POP3 soient activées dans les paramètres de Hanmail(Daum) mail.</string>
+    <string name="provider_note_live">Seuls certains comptes «\u00A0Plus\u00A0» autorisent l\'accès POP
+    permettant à ce programme de se connecter. Si vous ne pouvez pas
+    vous connecter avec votre adresse électronique et votre mot de passe,
+    il est possible que vous n\'ayez pas payé un compte «\u00A0Plus\u00A0». Veuillez
+    lancer le navigateur Web pour accéder à ces comptes de messagerie.</string>
+    <string name="provider_note_nate">Pour utiliser IMAP ou POP3 avec ce fournisseur, veuillez vous assurer que les options IMAP ou POP3 soient activées dans les paramètres de Nate mail.</string>
+    <string name="provider_note_naver">Pour utiliser IMAP ou POP3 avec ce fournisseur, veuillez vous assurer que les options IMAP ou POP3 soient activées dans les paramètres de Naver Mail.</string>
+    <string name="provider_note_paran">Pour utiliser IMAP ou POP3 avec ce fournisseur, veuillez vous assurer que les options IMAP ou POP3 soient activées dans les paramètres de Paran mail.</string>
+    <string name="provider_note_yahoojp">Pour utiliser POP3 avec ce fournisseur, vous devez activer POP3 dans les paramètres Yahoo Mail.</string>
+    <string name="pull_to_refresh_pull_label">Tirez pour rafraîchir…</string>
+    <string name="pull_to_refresh_refreshing_label">Chargement…</string>
+    <string name="pull_to_refresh_release_label">Relâcher pour rafraîchir…</string>
+    <string name="pull_to_refresh_remote_search_from_local_search_pull">Tirez pour la recherche distante…</string>
+    <string name="pull_to_refresh_remote_search_from_local_search_release">Relâchez pour la recherche distante…</string>
+    <string name="push_poll_on_connect_label">Effectuer une récupération lors d\'une connexion Push</string>
+    <string name="quiet_time">Heures silencieuses</string>
+    <string name="quiet_time_description">Désactiver les sons, vibrations et éclairage DEL aux heures programmées</string>
+    <string name="quiet_time_ends">Fin des heures silencieuses</string>
+    <string name="quiet_time_starts">Début des heures silencieuses</string>
+    <string name="read_attachment_desc">Permet à cette application de lire vos pièces jointes.</string>
+    <string name="read_attachment_label">lire les pièces jointes</string>
+    <string name="read_messages_desc">Permet à cette application de lire vos emails.</string>
+    <string name="read_messages_label">lire les emails</string>
+    <string name="read_receipt">Accusé de réception</string>
+    <string name="read_receipt_disabled">Un accusé de réception ne sera pas demandé</string>
+    <string name="read_receipt_enabled">Un accusé de réception sera demandé</string>
+    <string name="recreate_action">Recréer les données (Dernier recours\u00A0!)</string>
+    <string name="recreating_account">Recréation du compte «\u00A0<ns1:g id="account">%s</ns1:g>\u00A0»</string>
+    <string name="refile_action">Déposer</string>
+    <string name="refresh_folders_action">Rafraîchir les dossiers</string>
+    <string name="refuse_to_save_draft_marked_encrypted_dlg_title">Refuser d\'enregistrer des brouillons.</string>
+    <string name="refuse_to_save_draft_marked_encrypted_instructions_fmt">Refuser d\'enregistrer un message marqué comme crypté.</string>
+    <string name="remote_control_desc">Permet à cette application de contrôler les activités et paramètres de ChiaraMail.</string>
+    <string name="remote_control_label">ChiaraMail Accès à distance</string>
+    <string name="remote_search_downloading">Récupération de %d résultats</string>
+    <string name="remote_search_downloading_limited">Récupération %1$d sur %2$d résultats</string>
+    <string name="remote_search_error">Echec de la recherche distante</string>
+    <string name="remote_search_sending_query">Envoi de la requête au serveur</string>
+    <string name="remote_search_unavailable_no_network">La recherche à distance n\'est pas disponible sans connexion au réseau.</string>
+    <string name="remove_account_action">Supprimer le compte</string>
+    <string name="reply_action">Répondre</string>
+    <string name="reply_all_action">Répondre à tous</string>
+    <string name="reserved_config">Serveur de contenu ChiaraMail</string>
+    <string name="reset_password_affirmative">Réinitialiser votre mot de passe du serveur de contenu ?</string>
+    <string name="reset_password_no_button">Non</string>
+    <string name="reset_password_title">Réinitialiser le mot de passe</string>
+    <string name="reset_password_yes_button">Oui</string>
+    <string name="save_draft_action">Enregistrer dans les brouillons</string>
+    <string name="save_or_discard_draft_message_dlg_title">Enregistrer le brouillon\u00A0?</string>
+    <string name="save_or_discard_draft_message_instructions_fmt">Enregistrer ou abandonner ce message\u00A0?</string>
+    <string name="search_action">Rechercher</string>
+    <string name="search_all_messages_detail">Tous les messages dans les dossiers recherchables</string>
+    <string name="search_all_messages_title">Tous les messages</string>
+    <string name="search_results">Résultats de la recherche</string>
+    <string name="search_title"><ns1:g id="search_name">%s</ns1:g> <ns1:g id="modifier">%s</ns1:g></string>
+    <string name="select_text_action">Sélection de texte</string>
+    <string name="select_text_now">Sélectionnez le texte à copier</string>
+    <string name="send_aborted">Envoi annulé.</string>
+    <string name="send_action">Envoyer</string>
+    <string name="send_again_action">Envoyer à nouveau</string>
+    <string name="send_alternate_action">Transférer avec une autre application</string>
+    <string name="send_alternate_chooser_title">Choisir l\'expéditeur</string>
+    <string name="send_as">Envoyer en tant que</string>
+    <string name="send_failure_subject">Échec d\'envoi de certains messages</string>
+    <string name="send_messages_action">Envoyer les messages</string>
+    <string name="sent_folder_label">Nom du dossier des envoyés</string>
+    <string name="setting_language_system">Langue du système</string>
+    <string name="setting_theme_dark">Foncé</string>
+    <string name="setting_theme_global">Thème de l\'application</string>
+    <string name="setting_theme_light">Clair</string>
+    <string name="settings_attachment_default_path">Enregistrer les pièces jointes dans…</string>
+    <string name="settings_compose_theme_label">Thème composition</string>
+    <string name="settings_export_account">Exporter les comptes</string>
+    <string name="settings_export_all">Exporter paramètres et comptes</string>
+    <string name="settings_export_dialog_title">Exportation</string>
+    <string name="settings_export_failed_header">Exporation échoué</string>
+    <string name="settings_export_failure">Impossible d\'exporter les paramètres</string>
+    <string name="settings_export_success">Paramètres exportés vers <ns1:g id="filename">%s</ns1:g></string>
+    <string name="settings_export_success_header">Exporation réussi</string>
+    <string name="settings_exporting">Exportation des paramètres…</string>
+    <string name="settings_import">Importer les paramètres</string>
+    <string name="settings_import_activate_account_header">Activer le compte</string>
+    <string name="settings_import_activate_account_intro">Pour pouvoir utiliser le compte \"<ns1:g id="account">%s</ns1:g>\" vous devez fournir le <ns1:g id="server_passwords">%s</ns1:g>.</string>
+    <string name="settings_import_dialog_title">Importation</string>
+    <string name="settings_import_failed_header">Importation échoué</string>
+    <string name="settings_import_failure">Impossible d\'importer les paramètres de <ns1:g id="filename">%s</ns1:g></string>
+    <string name="settings_import_global_settings">Paramètres globaux</string>
+    <string name="settings_import_global_settings_success">Paramètres globaux importés depuis <ns1:g id="filename">%s</ns1:g></string>
+    <string name="settings_import_incoming_server">Serveur entrant (<ns1:g id="hostname">%s</ns1:g>):</string>
+    <string name="settings_import_outgoing_server">Serveur sortant (<ns1:g id="hostname">%s</ns1:g>):</string>
+    <string name="settings_import_scanning_file">Balayage des fichiers…</string>
+    <string name="settings_import_selection">Importer la sélection</string>
+    <string name="settings_import_success">Importés <ns1:g id="accounts">%s</ns1:g> depuis <ns1:g id="filename">%s</ns1:g></string>
+    <string name="settings_import_success_header">Importation réussi</string>
+    <string name="settings_import_use_incoming_server_password">Utilisez le mot de passe du serveur entrant</string>
+    <string name="settings_importing">Importation des paramètres…</string>
+    <string name="settings_language_label">Langue</string>
+    <string name="settings_message_theme_label">Thème vue des messages</string>
+    <string name="settings_message_theme_selection_label">Thème message fixe</string>
+    <string name="settings_message_theme_selection_summary_off">Sélectionner le thème vue tout en regardant le message</string>
+    <string name="settings_message_theme_selection_summary_on">Utiliser un thème message fixe</string>
+    <string name="settings_messageview_mobile_layout_label">Disposition colonne unique</string>
+    <string name="settings_messageview_mobile_layout_summary">Réarranger les messages HTML pour les petits écrans</string>
+    <string name="settings_theme_label">Thème</string>
+    <string name="shortcuts_title">Comptes ChiaraMail</string>
+    <string name="show_headers_action">Afficher entêtes</string>
+    <string name="single_message_options_action">Options de message</string>
+    <string name="skipInvite">Non, merci!</string>
+    <string name="sort_attach_first">Messages avec pièces jointes en premier</string>
+    <string name="sort_by">Trier…</string>
+    <string name="sort_by_arrival">Date de réception</string>
+    <string name="sort_by_attach">Pièces jointes</string>
+    <string name="sort_by_date">Date</string>
+    <string name="sort_by_flag">Étoile</string>
+    <string name="sort_by_subject">Sujet</string>
+    <string name="sort_by_unread">Lu/Non lu</string>
+    <string name="sort_earliest_first">Plus ancient en premier</string>
+    <string name="sort_flagged_first">Messages avec étoiles en premier</string>
+    <string name="sort_flagged_last">Messages sans étoiles en premier</string>
+    <string name="sort_latest_first">Plus récents en premier</string>
+    <string name="sort_subject_alpha">A-Z par sujet</string>
+    <string name="sort_subject_re_alpha">Z-A par sujet</string>
+    <string name="sort_unattached_first">Messages sans pièces jointes en premier</string>
+    <string name="sort_unread_first">Messages non lus en premier</string>
+    <string name="sort_unread_last">Messages lus en premier</string>
+    <string name="spam_action">Spam</string>
+    <string name="spam_folder_label">Nom du dossier des spams</string>
+    <string name="special_mailbox_name_archive">Archive</string>
+    <string name="special_mailbox_name_archive_fmt"><ns1:g id="folder">%s</ns1:g> (Archive)</string>
+    <string name="special_mailbox_name_drafts">Brouillons</string>
+    <string name="special_mailbox_name_drafts_fmt"><ns1:g id="folder">%s</ns1:g> (Brouillons)</string>
+    <string name="special_mailbox_name_inbox">Boîte de réception</string>
+    <string name="special_mailbox_name_outbox">Boîte d\'envoi</string>
+    <string name="special_mailbox_name_sent">Envoyés</string>
+    <string name="special_mailbox_name_sent_fmt"><ns1:g id="folder">%s</ns1:g> (Envoyés)</string>
+    <string name="special_mailbox_name_spam">Spams</string>
+    <string name="special_mailbox_name_spam_fmt"><ns1:g id="folder">%s</ns1:g> (Spams)</string>
+    <string name="special_mailbox_name_trash">Corbeille</string>
+    <string name="special_mailbox_name_trash_fmt"><ns1:g id="folder">%s</ns1:g> (Corbeille)</string>
+    <string name="start_integrated_inbox_summary">Afficher la boîte de messagerie unifiée au démarrage</string>
+    <string name="start_integrated_inbox_title">Boîte de messagerie unifiée au démarrage</string>
+    <string name="status_invalid_id_error">Message non trouvé</string>
+    <string name="status_loading">Récupération\u2026</string>
+    <string name="status_loading_account_folder">Récup. <ns1:g id="account">%s</ns1:g>:<ns1:g id="folder">%s</ns1:g><ns1:g id="progress">%s</ns1:g></string>
+    <string name="status_loading_account_folder_headers">Récup. entêtes <ns1:g id="account">%s</ns1:g>:<ns1:g id="folder">%s</ns1:g><ns1:g id="progress">%s</ns1:g></string>
+    <string name="status_loading_more">Chargement des messages\u2026</string>
+    <string name="status_loading_more_failed">Réessayer de charger plus de messages</string>
+    <string name="status_network_error">Erreur de connexion</string>
+    <string name="status_next_poll">Prochaine récup. <ns1:g id="nexttime">%s</ns1:g></string>
+    <string name="status_processing_account">Prép <ns1:g id="account">%s</ns1:g>:<ns1:g id="command">%s</ns1:g><ns1:g id="progress">%s</ns1:g></string>
+    <string name="status_sending_account">Envoi <ns1:g id="account">%s</ns1:g><ns1:g id="progress">%s</ns1:g></string>
+    <string name="status_syncing_off">Synchronisation désactivée</string>
+    <string name="tag_line">La technologie e-mail pour le 21ème siècle</string>
+    <string name="take_photo">Prendre une photo</string>
+    <string name="take_video">Prendre une vidéo</string>
+    <string name="tap_hint">Tapoter l\'enveloppe ou l\'étoile pour les messages non lus ou avec étoile</string>
+    <string name="tos_msg">En cliquant sur Continuer, vous acceptez le Contrat de Licence de l\'Utilisateur Final</string>
+    <string name="tos_title">Contrat de Licence de l\'Utilisateur Final de ChiaraMail</string>
+    <string name="trash_folder_label">Nom du dossier de la corbeille</string>
+    <string name="tutorial_link">Pour obtenir une aide sur la configuration et l\'utilisation de ChiaraMail, consultez le site de ChiaraMail pour Android sur http://www.chiaramailcorp.com/help/.</string>
+    <string name="unflag_action">Enlever l\'étoile</string>
+    <string name="unknown_crypto_signature_user_id">«\u00A0inconnu\u00A0»</string>
+    <string name="unread_modifier"> - Non lu</string>
+    <string name="unread_widget_label">ChiaraMail non lus</string>
+    <string name="unread_widget_select_account">Afficher le nombre de messages non lus pour le compte…</string>
+    <string name="upgrade_database_format">Mise à jour base de données du compte \"<ns1:g id="account">%s</ns1:g>\"</string>
+    <string name="upgrade_databases_title">Mise à jour base de données</string>
+    <string name="upgrade_databases_unspecified">Mise à jour base de données…</string>
+    <string name="user_registered_error">Impossible de déterminer si l\'utilisateur est inscrit sur le serveur de contenu. Continuer quand même.</string>
+    <string name="users_already_registered">Les contacts sélectionnés sont déjà enregistrés sur le serveur de contenu.</string>
+    <string name="video_capture_canceled">Enregistrement vidéo annulé</string>
+    <string name="video_capture_failed">Échec de l\'enregistrement vidéo</string>
+    <string name="video_missing">Impossible de localiser la vidéo,vidéo non ajoutée</string>
+    <string name="volume_navigation_list">Différents écrans à liste</string>
+    <string name="volume_navigation_message">Visualisation d\'un message</string>
+    <string name="volume_navigation_summary">Passer d\'un élément à l\'autre grâce aux touches de volume</string>
+    <string name="volume_navigation_title">Navigation à l\'aide du volume</string>
+    <string name="webview_contextmenu_email_clipboard_label">Adresse e-mail</string>
+    <string name="webview_contextmenu_email_copy_action">Copier l\'adresse e-mail dans le presse-papier</string>
+    <string name="webview_contextmenu_email_save_action">Sauvegarder dans mes contacts</string>
+    <string name="webview_contextmenu_email_send_action">Envoyer un e-mail</string>
+    <string name="webview_contextmenu_image_clipboard_label">URL de l\'image</string>
+    <string name="webview_contextmenu_image_copy_action">Copier l\'URL de l\'image dans le presse-papier</string>
+    <string name="webview_contextmenu_image_download_action">Télécharger l\'image</string>
+    <string name="webview_contextmenu_image_save_action">Sauvegarder l\'image</string>
+    <string name="webview_contextmenu_image_title">Image</string>
+    <string name="webview_contextmenu_image_view_action">Afficher l\'image</string>
+    <string name="webview_contextmenu_link_clipboard_label">Lien</string>
+    <string name="webview_contextmenu_link_copy_action">Copier le lien dans le presse-papier</string>
+    <string name="webview_contextmenu_link_share_action">Partager le lien</string>
+    <string name="webview_contextmenu_link_view_action">Afficher</string>
+    <string name="webview_contextmenu_phone_call_action">Appeler le numéro</string>
+    <string name="webview_contextmenu_phone_clipboard_label">Numéro de téléphone</string>
+    <string name="webview_contextmenu_phone_copy_action">Copier le numéro de téléphone dans le presse-papier</string>
+    <string name="webview_contextmenu_phone_save_action">Sauvegarder dans mes contacts</string>
+    <string name="webview_empty_message">Vide</string>
+    <string name="welcome_message_title">Bienvenue à ChiaraMail pour Android</string>
+</resources>

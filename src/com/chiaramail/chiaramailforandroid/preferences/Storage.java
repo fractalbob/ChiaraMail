@@ -1,4 +1,4 @@
-package com.fsck.k9.preferences;
+package com.chiaramail.chiaramailforandroid.preferences;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.helper.Utility;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
 
 import java.net.URI;
 import java.net.URLEncoder;
@@ -297,8 +297,8 @@ public class Storage implements SharedPreferences {
     }
 
     //@Override
-    public com.fsck.k9.preferences.Editor edit() {
-        return new com.fsck.k9.preferences.Editor(this);
+    public com.chiaramail.chiaramailforandroid.preferences.Editor edit() {
+        return new com.chiaramail.chiaramailforandroid.preferences.Editor(this);
     }
 
     //@Override

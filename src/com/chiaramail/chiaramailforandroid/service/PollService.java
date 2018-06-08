@@ -1,21 +1,22 @@
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.util.Log;
-import com.fsck.k9.*;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.controller.MessagingListener;
-import com.fsck.k9.helper.power.TracingPowerManager;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
+
+import com.chiaramail.chiaramailforandroid.*;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.controller.MessagingListener;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
 
 import java.util.HashMap;
 
 public class PollService extends CoreService {
-    private static String START_SERVICE = "com.fsck.k9.service.PollService.startService";
-    private static String STOP_SERVICE = "com.fsck.k9.service.PollService.stopService";
+    private static String START_SERVICE = "com.chiaramail.chiaramailforandroid.service.PollService.startService";
+    private static String STOP_SERVICE = "com.chiaramail.chiaramailforandroid.service.PollService.stopService";
 
     private Listener mListener = new Listener();
 

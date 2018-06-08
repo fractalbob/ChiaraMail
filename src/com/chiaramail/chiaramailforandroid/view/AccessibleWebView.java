@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fsck.k9.view;
+package com.chiaramail.chiaramailforandroid.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -25,8 +25,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.TextView;
 
-import com.fsck.k9.activity.AccessibleEmailContentActivity;
-import com.fsck.k9.controller.MessagingListener;
+import com.chiaramail.chiaramailforandroid.activity.AccessibleEmailContentActivity;
+import com.chiaramail.chiaramailforandroid.controller.MessagingListener;
 
 import java.util.Set;
 

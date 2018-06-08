@@ -1,6 +1,6 @@
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
-import com.fsck.k9.Account;
+import com.chiaramail.chiaramailforandroid.Account;
 
 /**
  * An {@link Account} is not

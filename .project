@@ -3,6 +3,12 @@
 	<name>k9mail</name>
 	<comment></comment>
 	<projects>
+		<project>ActionBarSherlock</project>
+		<project>Android-PullToRefresh</project>
+		<project>android-support-v7-appcompat</project>
+		<project>ckChangeLog</project>
+		<project>google-play-services_lib</project>
+		<project>HoloColorPicker</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

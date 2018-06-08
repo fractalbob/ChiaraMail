@@ -1,9 +1,11 @@
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import android.text.TextUtils;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.filter.FixedLengthInputStream;
-import com.fsck.k9.mail.filter.PeekableInputStream;
+
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.filter.FixedLengthInputStream;
+import com.chiaramail.chiaramailforandroid.mail.filter.PeekableInputStream;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

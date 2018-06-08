@@ -1,4 +1,4 @@
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -21,23 +21,21 @@ import android.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.K9.NotificationHideSubject;
-import com.fsck.k9.K9.NotificationQuickDelete;
-import com.fsck.k9.K9.SplitViewMode;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.ColorPickerDialog;
-import com.fsck.k9.activity.K9PreferenceActivity;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.helper.FileBrowserHelper;
-import com.fsck.k9.helper.FileBrowserHelper.FileBrowserFailOverCallback;
-import com.fsck.k9.preferences.CheckBoxListPreference;
-import com.fsck.k9.preferences.TimePickerPreference;
-
-import com.fsck.k9.service.MailService;
-import com.fsck.k9.view.MessageWebView;
-
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.K9.NotificationHideSubject;
+import com.chiaramail.chiaramailforandroid.K9.NotificationQuickDelete;
+import com.chiaramail.chiaramailforandroid.K9.SplitViewMode;
+import com.chiaramail.chiaramailforandroid.activity.ColorPickerDialog;
+import com.chiaramail.chiaramailforandroid.activity.K9PreferenceActivity;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.helper.FileBrowserHelper;
+import com.chiaramail.chiaramailforandroid.helper.FileBrowserHelper.FileBrowserFailOverCallback;
+import com.chiaramail.chiaramailforandroid.preferences.CheckBoxListPreference;
+import com.chiaramail.chiaramailforandroid.preferences.TimePickerPreference;
+import com.chiaramail.chiaramailforandroid.service.MailService;
+import com.chiaramail.chiaramailforandroid.view.MessageWebView;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class Prefs extends K9PreferenceActivity {
 
@@ -66,10 +64,10 @@ public class Prefs extends K9PreferenceActivity {
     private static final String PREFERENCE_HIDE_SPECIAL_ACCOUNTS = "hide_special_accounts";
     private static final String PREFERENCE_MESSAGELIST_CHECKBOXES = "messagelist_checkboxes";
     private static final String PREFERENCE_MESSAGELIST_PREVIEW_LINES = "messagelist_preview_lines";
-    private static final String PREFERENCE_MESSAGELIST_SENDER_ABOVE_SUBJECT = "messagelist_sender_above_subject";
+//    private static final String PREFERENCE_MESSAGELIST_SENDER_ABOVE_SUBJECT = "messagelist_sender_above_subject";
     private static final String PREFERENCE_MESSAGELIST_SHOW_CORRESPONDENT_NAMES = "messagelist_show_correspondent_names";
     private static final String PREFERENCE_MESSAGELIST_SHOW_CONTACT_NAME = "messagelist_show_contact_name";
-    private static final String PREFERENCE_MESSAGELIST_CONTACT_NAME_COLOR = "messagelist_contact_name_color";
+//    private static final String PREFERENCE_MESSAGELIST_CONTACT_NAME_COLOR = "messagelist_contact_name_color";
     private static final String PREFERENCE_MESSAGELIST_SHOW_CONTACT_PICTURE = "messagelist_show_contact_picture";
     private static final String PREFERENCE_MESSAGEVIEW_FIXEDWIDTH = "messageview_fixedwidth_font";
 
@@ -108,13 +106,13 @@ public class Prefs extends K9PreferenceActivity {
     private ListPreference mNotificationHideSubject;
     private CheckBoxPreference mMeasureAccounts;
     private CheckBoxPreference mCountSearch;
-    private CheckBoxPreference mHideSpecialAccounts;
+//    private CheckBoxPreference mHideSpecialAccounts;
     private ListPreference mPreviewLines;
-    private CheckBoxPreference mSenderAboveSubject;
+//    private CheckBoxPreference mSenderAboveSubject;
     private CheckBoxPreference mCheckboxes;
     private CheckBoxPreference mShowCorrespondentNames;
     private CheckBoxPreference mShowContactName;
-    private CheckBoxPreference mChangeContactNameColor;
+//    private CheckBoxPreference mChangeContactNameColor;
     private CheckBoxPreference mShowContactPicture;
     private CheckBoxPreference mFixedWidth;
     private CheckBoxPreference mReturnToList;
@@ -127,8 +125,8 @@ public class Prefs extends K9PreferenceActivity {
     private CheckBoxPreference mWrapFolderNames;
 
     private CheckBoxPreference mQuietTimeEnabled;
-    private com.fsck.k9.preferences.TimePickerPreference mQuietTimeStarts;
-    private com.fsck.k9.preferences.TimePickerPreference mQuietTimeEnds;
+    private com.chiaramail.chiaramailforandroid.preferences.TimePickerPreference mQuietTimeStarts;
+    private com.chiaramail.chiaramailforandroid.preferences.TimePickerPreference mQuietTimeEnds;
     private ListPreference mNotificationQuickDelete;
     private Preference mAttachmentPathPreference;
 
@@ -189,8 +187,8 @@ public class Prefs extends K9PreferenceActivity {
         mVolumeNavigation.setItems(new CharSequence[] {getString(R.string.volume_navigation_message), getString(R.string.volume_navigation_list)});
         mVolumeNavigation.setCheckedItems(new boolean[] {K9.useVolumeKeysForNavigationEnabled(), K9.useVolumeKeysForListNavigationEnabled()});
 
-        mStartIntegratedInbox = (CheckBoxPreference)findPreference(PREFERENCE_START_INTEGRATED_INBOX);
-        mStartIntegratedInbox.setChecked(K9.startIntegratedInbox());
+//        mStartIntegratedInbox = (CheckBoxPreference)findPreference(PREFERENCE_START_INTEGRATED_INBOX);
+//        mStartIntegratedInbox.setChecked(K9.startIntegratedInbox());
 
         mConfirmActions = (CheckBoxListPreference) findPreference(PREFERENCE_CONFIRM_ACTIONS);
 
@@ -222,15 +220,18 @@ public class Prefs extends K9PreferenceActivity {
         mCountSearch = (CheckBoxPreference)findPreference(PREFERENCE_COUNT_SEARCH);
         mCountSearch.setChecked(K9.countSearchMessages());
 
-        mHideSpecialAccounts = (CheckBoxPreference)findPreference(PREFERENCE_HIDE_SPECIAL_ACCOUNTS);
-        mHideSpecialAccounts.setChecked(K9.isHideSpecialAccounts());
+//        mHideSpecialAccounts = (CheckBoxPreference)findPreference(PREFERENCE_HIDE_SPECIAL_ACCOUNTS);
+//        mHideSpecialAccounts.setChecked(true);
+//        mHideSpecialAccounts.setChecked(K9.isHideSpecialAccounts());
 
 
         mPreviewLines = setupListPreference(PREFERENCE_MESSAGELIST_PREVIEW_LINES,
                                             Integer.toString(K9.messageListPreviewLines()));
 
-        mSenderAboveSubject = (CheckBoxPreference)findPreference(PREFERENCE_MESSAGELIST_SENDER_ABOVE_SUBJECT);
-        mSenderAboveSubject.setChecked(K9.messageListSenderAboveSubject());
+//        mSenderAboveSubject = (CheckBoxPreference)findPreference(PREFERENCE_MESSAGELIST_SENDER_ABOVE_SUBJECT);
+//        mSenderAboveSubject.setChecked(false);
+//        mSenderAboveSubject.setSelectable(false);
+//        mSenderAboveSubject.setChecked(K9.messageListSenderAboveSubject());
         mCheckboxes = (CheckBoxPreference)findPreference(PREFERENCE_MESSAGELIST_CHECKBOXES);
         mCheckboxes.setChecked(K9.messageListCheckboxes());
 
@@ -247,12 +248,14 @@ public class Prefs extends K9PreferenceActivity {
         mBackgroundAsUnreadIndicator = (CheckBoxPreference)findPreference(PREFERENCE_BACKGROUND_AS_UNREAD_INDICATOR);
         mBackgroundAsUnreadIndicator.setChecked(K9.useBackgroundAsUnreadIndicator());
 
-        mChangeContactNameColor = (CheckBoxPreference)findPreference(PREFERENCE_MESSAGELIST_CONTACT_NAME_COLOR);
-        mChangeContactNameColor.setChecked(K9.changeContactNameColor());
+//        mChangeContactNameColor = (CheckBoxPreference)findPreference(PREFERENCE_MESSAGELIST_CONTACT_NAME_COLOR);
+//        mChangeContactNameColor.setChecked(false);
+//        mChangeContactNameColor.setSelectable(false);
+//        mChangeContactNameColor.setChecked(K9.changeContactNameColor());
 
         mThreadedView = (CheckBoxPreference) findPreference(PREFERENCE_THREADED_VIEW);
         mThreadedView.setChecked(K9.isThreadedViewEnabled());
-
+/**
         if (K9.changeContactNameColor()) {
             mChangeContactNameColor.setSummary(R.string.global_settings_registered_name_color_changed);
         } else {
@@ -271,7 +274,7 @@ public class Prefs extends K9PreferenceActivity {
                 return false;
             }
         });
-
+**/
         mFixedWidth = (CheckBoxPreference)findPreference(PREFERENCE_MESSAGEVIEW_FIXEDWIDTH);
         mFixedWidth.setChecked(K9.messageViewFixedWidthFont());
 
@@ -350,7 +353,9 @@ public class Prefs extends K9PreferenceActivity {
                 mBackgroundOps.setSummary(mBackgroundOps.getEntry());
             }
         }
-
+      //Workaround for bug that causes app to crash at end of new account creation
+//        mBackgroundOps.setValue(K9.BACKGROUND_OPS.NEVER.toString());
+        
         mUseGalleryBugWorkaround = (CheckBoxPreference)findPreference(PREFERENCE_GALLERY_BUG_WORKAROUND);
         mUseGalleryBugWorkaround.setChecked(K9.useGalleryBugWorkaround());
 
@@ -362,6 +367,7 @@ public class Prefs extends K9PreferenceActivity {
 
         mAttachmentPathPreference = findPreference(PREFERENCE_ATTACHMENT_DEF_PATH);
         mAttachmentPathPreference.setSummary(K9.getAttachmentDefaultPath());
+ //       mAttachmentPathPreference.setSummary("/storage/emulated/0/ChiaraMail");
         mAttachmentPathPreference
         .setOnPreferenceClickListener(new OnPreferenceClickListener() {
             @Override
@@ -369,7 +375,8 @@ public class Prefs extends K9PreferenceActivity {
                 FileBrowserHelper
                 .getInstance()
                 .showFileBrowserActivity(Prefs.this,
-                                         new File(K9.getAttachmentDefaultPath()),
+ //                       new File("/storage/emulated/0/ChiaraMail"),
+                        new File(K9.getAttachmentDefaultPath()),
                                          ACTIVITY_CHOOSE_FOLDER, callback);
 
                 return true;
@@ -430,7 +437,8 @@ public class Prefs extends K9PreferenceActivity {
         K9.setGesturesEnabled(mGestures.isChecked());
         K9.setUseVolumeKeysForNavigation(mVolumeNavigation.getCheckedItems()[0]);
         K9.setUseVolumeKeysForListNavigation(mVolumeNavigation.getCheckedItems()[1]);
-        K9.setStartIntegratedInbox(!mHideSpecialAccounts.isChecked() && mStartIntegratedInbox.isChecked());
+//        K9.setStartIntegratedInbox(true);
+//        K9.setStartIntegratedInbox(!mHideSpecialAccounts.isChecked() && mStartIntegratedInbox.isChecked());
         K9.setNotificationHideSubject(NotificationHideSubject.valueOf(mNotificationHideSubject.getValue()));
 
         int index = 0;
@@ -443,16 +451,17 @@ public class Prefs extends K9PreferenceActivity {
 
         K9.setMeasureAccounts(mMeasureAccounts.isChecked());
         K9.setCountSearchMessages(mCountSearch.isChecked());
-        K9.setHideSpecialAccounts(mHideSpecialAccounts.isChecked());
+        K9.setHideSpecialAccounts(true);
+//        K9.setHideSpecialAccounts(mHideSpecialAccounts.isChecked());
         K9.setMessageListPreviewLines(Integer.parseInt(mPreviewLines.getValue()));
         K9.setMessageListCheckboxes(mCheckboxes.isChecked());
         K9.setShowCorrespondentNames(mShowCorrespondentNames.isChecked());
-        K9.setMessageListSenderAboveSubject(mSenderAboveSubject.isChecked());
+//        K9.setMessageListSenderAboveSubject(mSenderAboveSubject.isChecked());
         K9.setShowContactName(mShowContactName.isChecked());
         K9.setShowContactPicture(mShowContactPicture.isChecked());
         K9.setUseBackgroundAsUnreadIndicator(mBackgroundAsUnreadIndicator.isChecked());
         K9.setThreadedViewEnabled(mThreadedView.isChecked());
-        K9.setChangeContactNameColor(mChangeContactNameColor.isChecked());
+//        K9.setChangeContactNameColor(mChangeContactNameColor.isChecked());
         K9.setMessageViewFixedWidthFont(mFixedWidth.isChecked());
         K9.setMessageViewReturnToList(mReturnToList.isChecked());
         K9.setMessageViewShowNext(mShowNext.isChecked());

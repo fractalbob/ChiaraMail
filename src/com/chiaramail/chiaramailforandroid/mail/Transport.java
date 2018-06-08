@@ -1,9 +1,9 @@
 
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.mail.transport.SmtpTransport;
-import com.fsck.k9.mail.transport.WebDavTransport;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.mail.transport.SmtpTransport;
+import com.chiaramail.chiaramailforandroid.mail.transport.WebDavTransport;
 
 public abstract class Transport {
     protected static final int SOCKET_CONNECT_TIMEOUT = 10000;

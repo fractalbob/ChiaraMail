@@ -1,14 +1,15 @@
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import android.util.Log;
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.controller.MessageRetrievalListener;
+
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.controller.MessageRetrievalListener;
 
 
 public abstract class Folder {

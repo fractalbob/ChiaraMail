@@ -1,5 +1,5 @@
 
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,11 +9,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.K9Activity;
+
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.activity.K9Activity;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.R;
 import java.net.URI;
 
 /**
@@ -53,7 +55,11 @@ public class AccountSetupAccountType extends K9Activity implements OnClickListen
     private void onPop() {
         try {
             URI uri = new URI(mAccount.getStoreUri());
-            uri = new URI("pop3", uri.getUserInfo(), uri.getHost(), uri.getPort(), null, null, null);
+            //Replace "imap" with "pop" in host name and uri.getPort() with 995 that were set prematurely in AccountSetupBasics.
+            String host = uri.getHost();
+            host = "pop" + host.substring(host.indexOf("."));
+            uri = new URI("pop3", uri.getUserInfo(), host, uri.getPort(), null, null, null);
+//            uri = new URI("pop3", uri.getUserInfo(), host, 995, null, null, null);
             mAccount.setStoreUri(uri.toString());
             AccountSetupIncoming.actionIncomingSettings(this, mAccount, mMakeDefault);
             finish();
@@ -66,7 +72,7 @@ public class AccountSetupAccountType extends K9Activity implements OnClickListen
     private void onImap() {
         try {
             URI uri = new URI(mAccount.getStoreUri());
-            uri = new URI("imap", uri.getUserInfo(), uri.getHost(), uri.getPort(), null, null, null);
+            if (uri.toString().startsWith("placeholder")) uri = new URI("imap", uri.getUserInfo(), uri.getHost(), uri.getPort(), null, null, null);
             mAccount.setStoreUri(uri.toString());
             AccountSetupIncoming.actionIncomingSettings(this, mAccount, mMakeDefault);
             finish();
@@ -102,11 +108,31 @@ public class AccountSetupAccountType extends K9Activity implements OnClickListen
             break;
         }
     }
+	
     private void failure(Exception use) {
         Log.e(K9.LOG_TAG, "Failure", use);
         String toastText = getString(R.string.account_setup_bad_uri, use.getMessage());
 
         Toast toast = Toast.makeText(getApplication(), toastText, Toast.LENGTH_LONG);
         toast.show();
+    }
+    
+    @Override
+    public void onBackPressed() {
+      if (mAccount != null) {	  
+          try {
+        	  mAccount.getLocalStore().delete();
+          } catch (Exception e) {
+              // Ignore, this may lead to localStores on sd-cards that
+              // are currently not inserted to be left
+              super.onBackPressed();
+        	  return;
+          }
+          MessagingController.getInstance(getApplication()).notifyAccountCancel(this, mAccount);
+          Preferences.getPreferences(this).deleteAccount(mAccount);
+//          K9.setServicesEnabled(this);
+//          refresh();
+      }
+      super.onBackPressed();
     }
 }

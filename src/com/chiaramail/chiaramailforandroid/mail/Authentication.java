@@ -1,9 +1,9 @@
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 import java.security.MessageDigest;
 
-import com.fsck.k9.mail.filter.Base64;
-import com.fsck.k9.mail.filter.Hex;
+import com.chiaramail.chiaramailforandroid.mail.filter.Base64;
+import com.chiaramail.chiaramailforandroid.mail.filter.Hex;
 
 public class Authentication {
     private static final String US_ASCII = "US-ASCII";

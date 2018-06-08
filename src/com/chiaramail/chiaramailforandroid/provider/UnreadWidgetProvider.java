@@ -1,17 +1,17 @@
-package com.fsck.k9.provider;
+package com.chiaramail.chiaramailforandroid.provider;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.AccountStats;
-import com.fsck.k9.BaseAccount;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.UnreadWidgetConfiguration;
-import com.fsck.k9.activity.FolderList;
-import com.fsck.k9.activity.MessageList;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.search.LocalSearch;
-import com.fsck.k9.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.AccountStats;
+import com.chiaramail.chiaramailforandroid.BaseAccount;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.activity.FolderList;
+import com.chiaramail.chiaramailforandroid.activity.MessageList;
+import com.chiaramail.chiaramailforandroid.activity.UnreadWidgetConfiguration;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.search.LocalSearch;
+import com.chiaramail.chiaramailforandroid.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.R;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -79,8 +79,7 @@ public class UnreadWidgetProvider extends AppWidgetProvider {
                     stats = realAccount.getStats(context);
 
                     if (K9.FOLDER_NONE.equals(realAccount.getAutoExpandFolderName())) {
-                        clickIntent = FolderList.actionHandleAccountIntent(context, realAccount,
-                                null, false);
+                        clickIntent = FolderList.actionHandleAccountIntent(context, realAccount, false);
                     } else {
                         LocalSearch search = new LocalSearch(realAccount.getAutoExpandFolderName());
                         search.addAllowedFolder(realAccount.getAutoExpandFolderName());

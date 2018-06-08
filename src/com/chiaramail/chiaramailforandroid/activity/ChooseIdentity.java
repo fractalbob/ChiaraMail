@@ -1,5 +1,5 @@
 
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,18 +9,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.fsck.k9.Account;
-import com.fsck.k9.Identity;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
+
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.Identity;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.R;
 import java.util.List;
 
 public class ChooseIdentity extends K9ListActivity {
     Account mAccount;
     ArrayAdapter<String> adapter;
 
-    public static final String EXTRA_ACCOUNT = "com.fsck.k9.ChooseIdentity_account";
-    public static final String EXTRA_IDENTITY = "com.fsck.k9.ChooseIdentity_identity";
+    public static final String EXTRA_ACCOUNT = "com.chiaramail.chiaramailforandroid.ChooseIdentity_account";
+    public static final String EXTRA_IDENTITY = "com.chiaramail.chiaramailforandroid.ChooseIdentity_identity";
 
     protected List<Identity> identities = null;
 
@@ -37,7 +38,11 @@ public class ChooseIdentity extends K9ListActivity {
         Intent intent = getIntent();
         String accountUuid = intent.getStringExtra(EXTRA_ACCOUNT);
         mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
-
+        if (mAccount == null) {
+            Toast.makeText(this, R.string.unexpected_error_null_account,
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
 
         setListAdapter(adapter);
@@ -53,6 +58,7 @@ public class ChooseIdentity extends K9ListActivity {
 
 
     protected void refreshView() {
+    	if (adapter == null) return;
         adapter.setNotifyOnChange(false);
         adapter.clear();
 

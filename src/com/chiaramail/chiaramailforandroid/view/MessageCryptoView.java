@@ -1,4 +1,4 @@
-package com.fsck.k9.view;
+package com.chiaramail.chiaramailforandroid.view;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -6,14 +6,15 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
-import com.fsck.k9.crypto.CryptoProvider;
-import com.fsck.k9.crypto.PgpData;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Part;
-import com.fsck.k9.mail.internet.MimeUtility;
+
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.crypto.CryptoProvider;
+import com.chiaramail.chiaramailforandroid.crypto.PgpData;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Part;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.R;
 
 
 public class MessageCryptoView extends LinearLayout {

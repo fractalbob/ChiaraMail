@@ -1,4 +1,4 @@
-package com.fsck.k9.provider;
+package com.chiaramail.chiaramailforandroid.provider;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -10,14 +10,15 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.internet.MimeUtility;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.LocalStore.AttachmentInfo;
-import com.fsck.k9.mail.store.StorageManager;
+
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.AttachmentInfo;
 
 import java.io.*;
 import java.util.List;
@@ -31,7 +32,7 @@ import java.util.List;
  * </p>
  */
 public class AttachmentProvider extends ContentProvider {
-    public static final Uri CONTENT_URI = Uri.parse("content://com.fsck.k9.attachmentprovider");
+    public static final Uri CONTENT_URI = Uri.parse("content://com.chiaramail.chiaramailforandroid.attachmentprovider");
 
     private static final String FORMAT_RAW = "RAW";
     private static final String FORMAT_VIEW = "VIEW";

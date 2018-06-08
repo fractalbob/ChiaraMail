@@ -1,13 +1,15 @@
 
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+//import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Process;
 import android.util.Log;
 import android.view.View;
@@ -15,16 +17,20 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.fsck.k9.*;
-import com.fsck.k9.activity.K9Activity;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.mail.AuthenticationFailedException;
-import com.fsck.k9.mail.CertificateValidationException;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.Transport;
-import com.fsck.k9.mail.store.TrustManagerFactory;
-import com.fsck.k9.mail.store.WebDavStore;
-import com.fsck.k9.mail.filter.Hex;
+import android.widget.Toast;
+
+import com.chiaramail.chiaramailforandroid.*;
+import com.chiaramail.chiaramailforandroid.activity.K9Activity;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.mail.AuthenticationFailedException;
+import com.chiaramail.chiaramailforandroid.mail.CertificateValidationException;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.Transport;
+import com.chiaramail.chiaramailforandroid.mail.filter.Hex;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapStore;
+import com.chiaramail.chiaramailforandroid.mail.store.TrustManagerFactory;
+import com.chiaramail.chiaramailforandroid.mail.store.WebDavStore;
+import com.chiaramail.chiaramailforandroid.R;
 
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateEncodingException;
@@ -33,6 +39,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest;
 import java.util.Collection;
 import java.util.List;
+
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
 
 /**
  * Checks the given settings to make sure that they can be used to send and
@@ -51,28 +60,40 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
 
     private static final String EXTRA_CHECK_OUTGOING = "checkOutgoing";
 
+    private static final String EXTRA_CHECK_CONTENT_SERVER = "checkContentServer";
+
     private Handler mHandler = new Handler();
 
     private ProgressBar mProgressBar;
 
     private TextView mMessageView;
 
-    private Account mAccount;
+//    private Account mAccount;
+    private static Account mAccount;
 
     private boolean mCheckIncoming;
 
     private boolean mCheckOutgoing;
+    
+    private boolean mCheckContentServer;
 
     private boolean mCanceled;
 
     private boolean mDestroyed;
+        
+    private static Activity setupContext;
+    
+    private Handler handler;
 
     public static void actionCheckSettings(Activity context, Account account,
-                                           boolean checkIncoming, boolean checkOutgoing) {
+                                           boolean checkIncoming, boolean checkOutgoing, boolean checkContentServer) {
+//    	mContext = context;
         Intent i = new Intent(context, AccountSetupCheckSettings.class);
         i.putExtra(EXTRA_ACCOUNT, account.getUuid());
         i.putExtra(EXTRA_CHECK_INCOMING, checkIncoming);
         i.putExtra(EXTRA_CHECK_OUTGOING, checkOutgoing);
+        i.putExtra(EXTRA_CHECK_CONTENT_SERVER, checkContentServer);
+        setupContext = context;
         context.startActivityForResult(i, ACTIVITY_REQUEST_CODE);
     }
 
@@ -91,6 +112,9 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
         mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
         mCheckIncoming = getIntent().getBooleanExtra(EXTRA_CHECK_INCOMING, false);
         mCheckOutgoing = getIntent().getBooleanExtra(EXTRA_CHECK_OUTGOING, false);
+        mCheckContentServer = getIntent().getBooleanExtra(EXTRA_CHECK_CONTENT_SERVER, false);
+
+        handler= new Handler(Looper.getMainLooper());
 
         new Thread() {
             @Override
@@ -119,7 +143,7 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
                             setMessage(R.string.account_setup_check_settings_check_incoming_msg);
                         }
                         store.checkSettings();
-
+                        
                         if (store instanceof WebDavStore) {
                             setMessage(R.string.account_setup_check_settings_fetch);
                         }
@@ -141,6 +165,16 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
                         transport.close();
                         transport.open();
                         transport.close();
+                        
+                        mAccount.setContentServerName("www.chiaramail.com");
+                        mAccount.setContentServerPort("443");
+                        if (mAccount.getContentServerPassword().length() == 0) mAccount.setContentServerPassword(onRegisterMe(mAccount, "www.chiaramail.com", "443"));
+                    }
+                    if (mCheckContentServer) {
+                        setMessage(R.string.account_setup_check_settings_check_content_server_msg);
+                		String reply = ECSInterfaces.isUserRegistered(mAccount.getContentServerName(), mAccount.getContentServerPort(), mAccount.getEmail(), mAccount.getContentServerPassword(), mAccount.getEmail());
+//                		String reply = ECSInterfaces.isUserRegistered(mAccount, mAccount.getEmail());
+                		if (!reply.equals("true")) throw new AuthenticationFailedException("");
                     }
                     if (mDestroyed) {
                         return;
@@ -153,10 +187,18 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
                     finish();
                 } catch (final AuthenticationFailedException afe) {
                     Log.e(K9.LOG_TAG, "Error while testing settings", afe);
+                    handler.post(new Runnable() {
+                        public void run() {
+                        	// When configuring a Gmail account whose e-mail address ends in .gmail.com, an auth error returns to the initial screen, before the account has been set up.
+                        	// When configuring a Gmail account whose e-mail address does NOT end in .gmail.com, the account has been set up. 
+                            AccountSetupBasics.mBugList.setVisibility(TextView.VISIBLE);
+                            mAccount.setBugListLink(true);
+                        }
+                    });
                     showErrorDialog(
                         R.string.account_setup_failed_dlg_auth_message_fmt,
                         afe.getMessage() == null ? "" : afe.getMessage());
-                } catch (final CertificateValidationException cve) {
+                 } catch (final CertificateValidationException cve) {
                     Log.e(K9.LOG_TAG, "Error while testing settings", cve);
 
                     // Avoid NullPointerException in acceptKeyDialog()
@@ -177,16 +219,23 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
 
                 }
             }
-
         }
         .start();
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mDestroyed = true;
-        mCanceled = true;
+    private String onRegisterMe(Account mAccount, String url, String port) {
+    	String toastText;
+    	
+    	try {
+        	return ECSInterfaces.doRegisterUser(url, mAccount.getEmail(),
+        			mAccount.getName(), "Unknown", port);
+    	}
+    	catch (Exception e){
+            toastText = getString(R.string.account_setup_content_server_registration_error) + e.getMessage();
+            Toast toast = Toast.makeText(getApplication(), toastText, Toast.LENGTH_LONG);
+            toast.show();
+    	}
+    	return "";
     }
 
     private void setMessage(final int resId) {
@@ -211,8 +260,8 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
                 .setTitle(getString(R.string.account_setup_failed_dlg_title))
                 .setMessage(getString(msgResId, args))
                 .setCancelable(true)
-                .setNegativeButton(
-                    getString(R.string.account_setup_failed_dlg_continue_action),
+/**                .setNegativeButton(
+                		getString(R.string.account_setup_failed_dlg_continue_action),
 
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
@@ -220,18 +269,34 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
                         setResult(RESULT_OK);
                         finish();
                     }
-                })
+                })**/
                 .setPositiveButton(
                     getString(R.string.account_setup_failed_dlg_edit_details_action),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        finish();
+                    	deleteAccount();
+                    	finish();
                     }
                 })
                 .show();
             }
         });
     }
+    
+	private void deleteAccount() {
+        if (mAccount != null) {
+            try {
+          	  mAccount.getLocalStore().delete();
+            } catch (Exception e) {
+                // Ignore, this may lead to localStores on sd-cards that
+                // are currently not inserted to be left
+          	  return;
+            }
+            MessagingController.getInstance(getApplication()).notifyAccountCancel(setupContext, mAccount);
+            Preferences.getPreferences(setupContext).deleteAccount(mAccount);
+        }
+	}
+	
     private void acceptKeyDialog(final int msgResId, final Object... args) {
         mHandler.post(new Runnable() {
             public void run() {
@@ -369,6 +434,9 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
                             if (mCheckOutgoing) {
                                 alias = alias + ".outgoing";
                             }
+                            if (mCheckContentServer) {
+                                alias = alias + ".contentserver";
+                            }
                             TrustManagerFactory.addCertificateChain(alias, chain);
                         } catch (CertificateException e) {
                             showErrorDialog(
@@ -376,7 +444,7 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
                                 e.getMessage() == null ? "" : e.getMessage());
                         }
                         AccountSetupCheckSettings.actionCheckSettings(AccountSetupCheckSettings.this, mAccount,
-                                mCheckIncoming, mCheckOutgoing);
+                                mCheckIncoming, mCheckOutgoing, mCheckContentServer);
                     }
                 })
                 .setNegativeButton(
@@ -392,12 +460,12 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
     }
 
     @Override
-    public void onActivityResult(int reqCode, int resCode, Intent data) {
-        setResult(resCode);
-        finish();
+    public void onDestroy() {
+        super.onDestroy();
+        mDestroyed = true;
+        mCanceled = true;
     }
-
-
+	
     private void onCancel() {
         mCanceled = true;
         setMessage(R.string.account_setup_check_settings_canceling_msg);

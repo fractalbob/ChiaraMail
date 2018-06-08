@@ -1,4 +1,4 @@
-package com.fsck.k9.view;
+package com.chiaramail.chiaramailforandroid.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * This {@link TextView} is used in the custom view of the {@link com.fsck.k9.activity.MessageList}
+ * This {@link TextView} is used in the custom view of the {@link com.chiaramail.chiaramailforandroid.activity.MessageList}
  * action bar.
  * It will hide the subject line in {@link MessageHeader} if the subject fits completely into the
  * action bar's title view.

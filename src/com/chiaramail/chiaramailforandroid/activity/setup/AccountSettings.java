@@ -1,5 +1,5 @@
 
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import android.app.Dialog;
 import java.util.Iterator;
@@ -21,27 +21,27 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.RingtonePreference;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.Account.FolderMode;
-import com.fsck.k9.Account.QuoteStyle;
-import com.fsck.k9.K9;
-import com.fsck.k9.NotificationSetting;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.ChooseFolder;
-import com.fsck.k9.activity.ChooseIdentity;
-import com.fsck.k9.activity.ColorPickerDialog;
-import com.fsck.k9.activity.K9PreferenceActivity;
-import com.fsck.k9.activity.ManageIdentities;
-import com.fsck.k9.crypto.Apg;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.store.LocalStore.LocalFolder;
-import com.fsck.k9.mail.store.StorageManager;
-import com.fsck.k9.service.MailService;
-
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.NotificationSetting;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.Account.FolderMode;
+import com.chiaramail.chiaramailforandroid.Account.QuoteStyle;
+import com.chiaramail.chiaramailforandroid.activity.ChooseFolder;
+import com.chiaramail.chiaramailforandroid.activity.ChooseIdentity;
+import com.chiaramail.chiaramailforandroid.activity.ColorPickerDialog;
+import com.chiaramail.chiaramailforandroid.activity.K9PreferenceActivity;
+import com.chiaramail.chiaramailforandroid.activity.ManageIdentities;
+import com.chiaramail.chiaramailforandroid.crypto.Apg;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.service.MailService;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class AccountSettings extends K9PreferenceActivity {
     private static final String EXTRA_ACCOUNT = "account";
@@ -110,6 +110,17 @@ public class AccountSettings extends K9PreferenceActivity {
     private static final String PREFERENCE_CLOUD_SEARCH_ENABLED = "remote_search_enabled";
     private static final String PREFERENCE_REMOTE_SEARCH_NUM_RESULTS = "account_remote_search_num_results";
     private static final String PREFERENCE_REMOTE_SEARCH_FULL_TEXT = "account_remote_search_full_text";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_PASSWORD = "content_server_password";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_SHOW_PASSWORD = "content_server_show_password";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_SEND_MODE = "dynamic_content_send_mode";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_ENCRYPTION = "dynamic_content_encryption";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_INCLUDE_CONTENT = "dynamic_content_include_content";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_ALLOW_FORWARDING = "dynamic_content_allow_forwarding";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_EPHEMERAL_MODE = "dynamic_content_ephemeral_mode";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_DISPLAY_DURATION = "dynamic_content_display_duration";
+    private static final String PREFERENCE_DYNAMIC_CONTENT_FILTER_NONECS = "dynamic_content_filter_nonecs";
+    private static final String PREFERENCE_CONTENT_SERVER_NAME = "content_server_name";
+    private static final String PREFERENCE_CONTENT_SERVER_PORT = "content_server_port";
 
     private static final String PREFERENCE_LOCAL_STORAGE_PROVIDER = "local_storage_provider";
     private static final String PREFERENCE_CATEGORY_FOLDERS = "folders";
@@ -173,6 +184,17 @@ public class AccountSettings extends K9PreferenceActivity {
     private ListPreference mCryptoApp;
     private CheckBoxPreference mCryptoAutoSignature;
     private CheckBoxPreference mCryptoAutoEncrypt;
+    private EditTextPreference mContentServerPassword;
+    private CheckBoxPreference mContentServerSendMode;
+    private CheckBoxPreference mContentServerShowPassword;
+    private CheckBoxPreference mContentServerEncryption;
+    private CheckBoxPreference mContentServerIncludeContent;
+    private CheckBoxPreference mContentServerAllowForwarding;
+    private CheckBoxPreference mContentServerEphemeralMode;
+    private ListPreference mContentServerDisplayDuration;
+//    private CheckBoxPreference mContentServerFilterNonecs;
+    private EditTextPreference mContentServerName;
+    private EditTextPreference mContentServerPort;
 
     private PreferenceScreen mSearchScreen;
     private CheckBoxPreference mCloudSearchEnabled;
@@ -619,7 +641,7 @@ public class AccountSettings extends K9PreferenceActivity {
          *
          * See http://code.google.com/p/android/issues/detail?id=21477
          */
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {	// aka API 11
             PreferenceScreen notificationsPrefs =
                     (PreferenceScreen) findPreference(PREFERENCE_SCREEN_NOTIFICATIONS);
             notificationsPrefs.removePreference(notificationUnreadCount);
@@ -710,6 +732,103 @@ public class AccountSettings extends K9PreferenceActivity {
             mCryptoMenu.setEnabled(false);
             mCryptoMenu.setSummary(R.string.account_settings_crypto_apg_not_installed);
         }
+        
+        mContentServerPassword = (EditTextPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_PASSWORD);
+//        mContentServerPassword.setSummary(mAccount.getContentServerPassword());
+        mContentServerPassword.setText(mAccount.getContentServerPassword());
+        mContentServerPassword.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+            	if (mContentServerShowPassword.isChecked()) {
+            		mContentServerPassword.getEditText().setTransformationMethod(null);
+            	} else {
+            		mContentServerPassword.getEditText().setTransformationMethod(PasswordTransformationMethod.getInstance());
+            	}
+            	mContentServerPassword.getEditText().setSelection(mContentServerPassword.getText().length()); 
+                return false;
+            }
+        });
+
+        mContentServerShowPassword = (CheckBoxPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_SHOW_PASSWORD);
+
+        mContentServerSendMode = (CheckBoxPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_SEND_MODE);
+        mContentServerSendMode.setChecked(mAccount.isContentServerSendMode());
+//        mContentServerSendMode.setDisableDependentsState(false);
+        
+        mContentServerEncryption = (CheckBoxPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_ENCRYPTION);
+        mContentServerEncryption.setChecked(mAccount.isContentServerEncryption());
+
+        mContentServerIncludeContent = (CheckBoxPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_INCLUDE_CONTENT);
+        mContentServerIncludeContent.setChecked(mAccount.isContentServerContentIncluded());
+//        mContentServerIncludeContent.setDisableDependentsState(true);
+
+        mContentServerAllowForwarding = (CheckBoxPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_ALLOW_FORWARDING);
+        mContentServerAllowForwarding.setChecked(mAccount.isForwardingAllowed());
+//        mContentServerAllowForwarding.setDisableDependentsState(true);
+
+        mContentServerEphemeralMode = (CheckBoxPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_EPHEMERAL_MODE);
+        mContentServerEphemeralMode.setChecked(mAccount.isContentServerEphemeralMode());
+//        mContentServerEphemeralMode.setEnabled(mContentServerSendMode.isChecked() && !mContentServerIncludeContent.isChecked() ? true : false);
+        
+        mContentServerDisplayDuration = (ListPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_DISPLAY_DURATION);
+        mContentServerDisplayDuration.setSummary(mAccount.getContentServerDisplayDuration());
+        mContentServerDisplayDuration.setValue(mAccount.getContentServerDisplayDuration());
+//        mContentServerDisplayDuration.setEnabled(mContentServerEphemeralMode.isEnabled() ? true : false);
+        mContentServerDisplayDuration.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                final String summary = newValue.toString();
+                int index = mContentServerDisplayDuration.findIndexOfValue(summary);
+                mContentServerDisplayDuration.setSummary(mContentServerDisplayDuration.getEntries()[index]);
+                mContentServerDisplayDuration.setValue(summary);
+                return false;
+            }
+        });
+       
+//        mContentServerFilterNonecs = (CheckBoxPreference) findPreference(PREFERENCE_DYNAMIC_CONTENT_FILTER_NONECS);
+//        mContentServerFilterNonecs.setChecked(mAccount.isContentServerFilterNonecs());
+        
+        mContentServerName = (EditTextPreference) findPreference(PREFERENCE_CONTENT_SERVER_NAME);
+        mContentServerName.setSummary(mAccount.getContentServerName());
+        mContentServerName.setText(mAccount.getContentServerName());
+        mContentServerName.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+            	mContentServerName.getEditText().setSelection(mContentServerName.getText().length());
+                return false;
+            }
+        });        
+        mContentServerName.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                final String summary = newValue.toString();
+            	if (summary == null || summary.length() == 0) {
+                    mContentServerName.setText(mAccount.CONTENT_SERVER_NAME);
+                    return false;
+            	}
+            	mContentServerName.setSummary(summary);
+                mContentServerName.setText(summary);
+                return false;
+            }
+        });
+        
+        mContentServerPort = (EditTextPreference) findPreference(PREFERENCE_CONTENT_SERVER_PORT);
+        mContentServerPort.setSummary(mAccount.getContentServerPort());
+        mContentServerPort.setText(mAccount.getContentServerPort());
+        mContentServerPort.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+            	mContentServerPort.getEditText().setSelection(mContentServerPort.getText().length());
+                return false;
+            }
+        });        
+        mContentServerPort.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                final String summary = newValue.toString();
+            	if (summary == null || summary.length() == 0) {
+                    mContentServerPort.setText(mAccount.CONTENT_SERVER_PORT);
+                    return false;
+            	}             
+            	mContentServerPort.setSummary(summary);
+                mContentServerPort.setText(summary);
+                return false;
+            }
+        });
     }
 
     private void handleCryptoAppDependencies() {
@@ -761,6 +880,20 @@ public class AccountSettings extends K9PreferenceActivity {
         mAccount.setReplyAfterQuote(mReplyAfterQuote.isChecked());
         mAccount.setStripSignature(mStripSignature.isChecked());
         mAccount.setLocalStorageProviderId(mLocalStorageProvider.getValue());
+        
+//        mContentServerPassword.setText(mAccount.getContentServerPassword());
+ //   	mAccount.setContentServerPassword(mContentServerPassword.getText());
+    	if (mContentServerPassword.getText().length() != 0) mAccount.setContentServerPassword(mContentServerPassword.getText());
+        mAccount.setContentServerSendMode(mContentServerSendMode.isChecked());
+        mAccount.setContentServerEncryption(mContentServerEncryption.isChecked());
+        mAccount.setContentServerInclude(mContentServerIncludeContent.isChecked());
+        mAccount.setForwardingAllowed(mContentServerAllowForwarding.isChecked());
+        mAccount.setContentServerEphemeralMode(mContentServerEphemeralMode.isChecked());
+        mAccount.setContentServerDisplayDuration(mContentServerDisplayDuration.getValue());
+//        mAccount.setContentServerFilter(mContentServerFilterNonecs.isChecked());
+        mAccount.setContentServerName(mContentServerName.getText());
+        mAccount.setContentServerPort(mContentServerPort.getText());
+
         if (mHasCrypto) {
             mAccount.setCryptoApp(mCryptoApp.getValue());
             mAccount.setCryptoAutoSignature(mCryptoAutoSignature.isChecked());

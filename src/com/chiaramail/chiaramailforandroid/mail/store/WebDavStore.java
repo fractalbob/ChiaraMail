@@ -1,16 +1,17 @@
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.controller.MessageRetrievalListener;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.*;
-import com.fsck.k9.mail.Folder.OpenMode;
-import com.fsck.k9.mail.filter.EOLConvertingOutputStream;
-import com.fsck.k9.mail.internet.MimeMessage;
-import com.fsck.k9.mail.transport.TrustedSocketFactory;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.controller.MessageRetrievalListener;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.*;
+import com.chiaramail.chiaramailforandroid.mail.Folder.OpenMode;
+import com.chiaramail.chiaramailforandroid.mail.filter.EOLConvertingOutputStream;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeMessage;
+import com.chiaramail.chiaramailforandroid.mail.transport.TrustedSocketFactory;
+
 import org.apache.commons.io.IOUtils;
 import org.apache.http.*;
 import org.apache.http.client.CookieStore;

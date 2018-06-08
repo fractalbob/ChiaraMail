@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_id": "chiaramail-for-android",
+    "project_number": "17083355095",
+    "name": "ChiaraMail for Android"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17083355095:android:709781a8c36a8498",
+        "client_id": "android:com.chiaramail.chiaramailforandroid",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.chiaramail.chiaramailforandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17083355095-l3t486vdufm3l6tenhlsbhch4cda4ch0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chiaramail.chiaramailforandroid",
+            "certificate_hash": "023C4AF5672AC7239B9C2A5D237EDEC01BA58B55"
+          }
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     >
+     
+     <TextView
+        android:text="@string/choose_contacts_to_invite"
+        android:textStyle="bold"
+   	 	android:textColor="#ffb0b0b0"
+   	 	android:background="#ff202020"
+        android:textSize="26dip"
+        android:padding="0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         />
+ 
+     <ListView
+        android:id="@+id/contactsList"
+        android:layout_weight="1.0"
+        android:choiceMode="multipleChoice"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip" />
+           
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal" >
+
+         <Button
+             android:id="@+id/previewInvite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.16"
+             android:padding="5dip"
+             android:enabled="false"
+             android:text="@string/preview_invite"
+             android:textSize="16dip" />
+         
+         <Button
+             android:id="@+id/clearCheckmarks"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.16"
+             android:padding="5dip"
+             android:enabled="false"
+             android:text="@string/clear_checkmarks"
+             android:textSize="16dip" />        
+
+         <Button
+             android:id="@+id/done"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.31"
+             android:padding="5dip"
+             android:text="@string/done_action"
+             android:textSize="16dip" />
+     </LinearLayout>
+
+ </LinearLayout>

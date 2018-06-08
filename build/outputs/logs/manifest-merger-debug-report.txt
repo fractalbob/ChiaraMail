@@ -1,0 +1,794 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\k-9\AndroidManifest.xml:2:1-513:12
+	package
+		ADDED from C:\k-9\AndroidManifest.xml:3:5-50
+	android:versionName
+		ADDED from C:\k-9\AndroidManifest.xml:5:5-31
+		INJECTED from C:\k-9\AndroidManifest.xml
+		INJECTED from C:\k-9\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\k-9\AndroidManifest.xml:4:5-31
+		INJECTED from C:\k-9\AndroidManifest.xml
+		INJECTED from C:\k-9\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\k-9\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from C:\k-9\AndroidManifest.xml:7:5-9:41
+MERGED from [k-9.ActionBarSherlock:library:unspecified] C:\k-9\build\intermediates\exploded-aar\k-9.ActionBarSherlock\library\unspecified\AndroidManifest.xml:7:5-9:41
+MERGED from [k-9:HoloColorPicker:unspecified] C:\k-9\build\intermediates\exploded-aar\k-9\HoloColorPicker\unspecified\AndroidManifest.xml:7:5-9:41
+MERGED from [k-9.Android-PullToRefresh:library:unspecified] C:\k-9\build\intermediates\exploded-aar\k-9.Android-PullToRefresh\library\unspecified\AndroidManifest.xml:7:5-43
+MERGED from [k-9.ckChangeLog:library:unspecified] C:\k-9\build\intermediates\exploded-aar\k-9.ckChangeLog\library\unspecified\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.0.0] C:\k-9\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.0.0] C:\k-9\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.0.0] C:\k-9\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from C:\k-9\AndroidManifest.xml:9:9-38
+		INJECTED from C:\k-9\AndroidManifest.xml
+		INJECTED from C:\k-9\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\k-9\AndroidManifest.xml:8:9-35
+		INJECTED from C:\k-9\AndroidManifest.xml
+		INJECTED from C:\k-9\AndroidManifest.xml
+supports-screens
+ADDED from C:\k-9\AndroidManifest.xml:11:5-15:39
+	android:largeScreens
+		ADDED from C:\k-9\AndroidManifest.xml:13:9-36
+	android:smallScreens
+		ADDED from C:\k-9\AndroidManifest.xml:15:9-36
+	android:normalScreens
+		ADDED from C:\k-9\AndroidManifest.xml:14:9-37
+	android:anyDensity
+		ADDED from C:\k-9\AndroidManifest.xml:12:9-34
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\k-9\AndroidManifest.xml:18:5-72
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:18:22-69
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from C:\k-9\AndroidManifest.xml:19:5-73
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:19:22-70
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\k-9\AndroidManifest.xml:20:5-81
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:20:22-78
+uses-permission#android.permission.CAMERA
+ADDED from C:\k-9\AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:21:22-62
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\k-9\AndroidManifest.xml:24:5-81
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:24:22-78
+uses-permission#android.permission.READ_SYNC_SETTINGS
+ADDED from C:\k-9\AndroidManifest.xml:25:5-77
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:25:22-74
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\k-9\AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:26:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\k-9\AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:27:22-64
+uses-permission#android.permission.VIBRATE
+ADDED from C:\k-9\AndroidManifest.xml:28:5-66
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:28:22-63
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\k-9\AndroidManifest.xml:29:5-68
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:29:22-65
+uses-permission#com.chiaramail.chiaramailforandroid.permission.READ_ATTACHMENT
+ADDED from C:\k-9\AndroidManifest.xml:30:5-102
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:30:22-99
+uses-permission#org.thialfihar.android.apg.permission.READ_KEY_DETAILS
+ADDED from C:\k-9\AndroidManifest.xml:31:5-94
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:31:22-91
+uses-permission#com.android.launcher.permission.INSTALL_SHORTCUT
+ADDED from C:\k-9\AndroidManifest.xml:32:5-88
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:32:22-85
+uses-permission#com.chiaramail.chiaramailforandroid.permission.REMOTE_CONTROL
+ADDED from C:\k-9\AndroidManifest.xml:33:5-101
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:33:22-98
+uses-permission#com.chiaramail.chiaramailforandroid.permission.READ_MESSAGES
+ADDED from C:\k-9\AndroidManifest.xml:34:5-100
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:34:22-97
+uses-permission#com.chiaramail.chiaramailforandroid.permission.DELETE_MESSAGES
+ADDED from C:\k-9\AndroidManifest.xml:35:5-102
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:35:22-99
+permission#com.chiaramail.chiaramailforandroid.permission.READ_ATTACHMENT
+ADDED from C:\k-9\AndroidManifest.xml:37:5-42:47
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:40:9-54
+	android:protectionLevel
+		ADDED from C:\k-9\AndroidManifest.xml:42:9-44
+	android:permissionGroup
+		ADDED from C:\k-9\AndroidManifest.xml:41:9-68
+	android:description
+		ADDED from C:\k-9\AndroidManifest.xml:39:9-59
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:38:9-86
+permission#com.chiaramail.chiaramailforandroid.permission.REMOTE_CONTROL
+ADDED from C:\k-9\AndroidManifest.xml:44:5-49:47
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:47:9-53
+	android:protectionLevel
+		ADDED from C:\k-9\AndroidManifest.xml:49:9-44
+	android:permissionGroup
+		ADDED from C:\k-9\AndroidManifest.xml:48:9-68
+	android:description
+		ADDED from C:\k-9\AndroidManifest.xml:46:9-58
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:45:9-85
+permission#com.chiaramail.chiaramailforandroid.permission.READ_MESSAGES
+ADDED from C:\k-9\AndroidManifest.xml:51:5-56:47
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:54:9-52
+	android:protectionLevel
+		ADDED from C:\k-9\AndroidManifest.xml:56:9-44
+	android:permissionGroup
+		ADDED from C:\k-9\AndroidManifest.xml:55:9-68
+	android:description
+		ADDED from C:\k-9\AndroidManifest.xml:53:9-57
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:52:9-84
+permission#com.chiaramail.chiaramailforandroid.permission.DELETE_MESSAGES
+ADDED from C:\k-9\AndroidManifest.xml:58:5-63:47
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:61:9-54
+	android:protectionLevel
+		ADDED from C:\k-9\AndroidManifest.xml:63:9-44
+	android:permissionGroup
+		ADDED from C:\k-9\AndroidManifest.xml:62:9-68
+	android:description
+		ADDED from C:\k-9\AndroidManifest.xml:60:9-59
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:59:9-86
+uses-feature#android.hardware.touchscreen
+ADDED from C:\k-9\AndroidManifest.xml:65:5-67:36
+	android:required
+		ADDED from C:\k-9\AndroidManifest.xml:67:9-33
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:66:9-52
+uses-feature#android.hardware.camera
+ADDED from C:\k-9\AndroidManifest.xml:68:5-70:36
+	android:required
+		ADDED from C:\k-9\AndroidManifest.xml:70:9-33
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:69:9-47
+application
+ADDED from C:\k-9\AndroidManifest.xml:72:5-511:19
+MERGED from [k-9.Android-PullToRefresh:library:unspecified] C:\k-9\build\intermediates\exploded-aar\k-9.Android-PullToRefresh\library\unspecified\AndroidManifest.xml:9:5-20
+MERGED from [k-9.ckChangeLog:library:unspecified] C:\k-9\build\intermediates\exploded-aar\k-9.ckChangeLog\library\unspecified\AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.0.0] C:\k-9\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:20:5-32:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.0.0] C:\k-9\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.0.0] C:\k-9\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:77:9-41
+	android:hardwareAccelerated
+		ADDED from C:\k-9\AndroidManifest.xml:75:9-43
+	android:allowTaskReparenting
+		ADDED from C:\k-9\AndroidManifest.xml:74:9-45
+	android:icon
+		ADDED from C:\k-9\AndroidManifest.xml:76:9-53
+	android:theme
+		ADDED from C:\k-9\AndroidManifest.xml:78:9-46
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:73:9-27
+meta-data#android.app.default_searchable
+ADDED from C:\k-9\AndroidManifest.xml:79:9-81:83
+	android:value
+		ADDED from C:\k-9\AndroidManifest.xml:81:13-80
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:80:13-58
+activity#com.chiaramail.chiaramailforandroid.activity.Accounts
+ADDED from C:\k-9\AndroidManifest.xml:92:9-113:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:96:13-45
+	android:launchMode
+		ADDED from C:\k-9\AndroidManifest.xml:97:13-43
+	android:exported
+		ADDED from C:\k-9\AndroidManifest.xml:95:13-36
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:94:13-43
+	android:uiOptions
+		ADDED from C:\k-9\AndroidManifest.xml:98:13-57
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:93:13-46
+intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT+android.intent.category.LAUNCHER
+ADDED from C:\k-9\AndroidManifest.xml:99:13-104:29
+action#android.intent.action.MAIN
+ADDED from C:\k-9\AndroidManifest.xml:100:17-69
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:100:25-66
+category#android.intent.category.DEFAULT
+ADDED from C:\k-9\AndroidManifest.xml:102:17-76
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:102:27-73
+category#android.intent.category.LAUNCHER
+ADDED from C:\k-9\AndroidManifest.xml:103:17-77
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:103:27-74
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from C:\k-9\AndroidManifest.xml:105:13-112:29
+action#android.intent.action.VIEW
+ADDED from C:\k-9\AndroidManifest.xml:106:17-69
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:106:25-66
+data
+ADDED from C:\k-9\AndroidManifest.xml:108:17-69
+	android:mimeType
+		ADDED from C:\k-9\AndroidManifest.xml:108:23-66
+category#android.intent.category.BROWSABLE
+ADDED from C:\k-9\AndroidManifest.xml:111:17-78
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:111:27-75
+activity#com.chiaramail.chiaramailforandroid.activity.setup.Prefs
+ADDED from C:\k-9\AndroidManifest.xml:114:9-120:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:118:13-48
+	android:excludeFromRecents
+		ADDED from C:\k-9\AndroidManifest.xml:117:13-46
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:116:13-43
+	android:taskAffinity
+		ADDED from C:\k-9\AndroidManifest.xml:119:13-101
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:115:13-49
+activity#com.chiaramail.chiaramailforandroid.activity.setup.WelcomeMessage
+ADDED from C:\k-9\AndroidManifest.xml:121:9-125:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:124:13-58
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:123:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:122:13-58
+activity#com.chiaramail.chiaramailforandroid.activity.setup.FontSizeSettings
+ADDED from C:\k-9\AndroidManifest.xml:126:9-130:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:129:13-61
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:128:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:127:13-60
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupBasics
+ADDED from C:\k-9\AndroidManifest.xml:138:9-142:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:141:13-63
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:140:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:139:13-62
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupAccountType
+ADDED from C:\k-9\AndroidManifest.xml:143:9-147:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:146:13-69
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:145:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:144:13-67
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupIncoming
+ADDED from C:\k-9\AndroidManifest.xml:148:9-152:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:151:13-65
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:150:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:149:13-64
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupComposition
+ADDED from C:\k-9\AndroidManifest.xml:153:9-157:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:156:13-71
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:155:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:154:13-67
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupOutgoing
+ADDED from C:\k-9\AndroidManifest.xml:158:9-162:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:161:13-65
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:160:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:159:13-64
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupInvite
+ADDED from C:\k-9\AndroidManifest.xml:163:9-167:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:166:13-58
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:165:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:164:13-62
+activity#com.chiaramail.chiaramailforandroid.view.ECSVideoViewer
+ADDED from C:\k-9\AndroidManifest.xml:168:9-172:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:171:13-53
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:170:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:169:13-48
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupDynamicContent
+ADDED from C:\k-9\AndroidManifest.xml:173:9-177:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:176:13-81
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:175:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:174:13-70
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupOptions
+ADDED from C:\k-9\AndroidManifest.xml:185:9-189:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:188:13-64
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:187:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:186:13-63
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupNames
+ADDED from C:\k-9\AndroidManifest.xml:190:9-194:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:193:13-62
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:192:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:191:13-61
+activity#com.chiaramail.chiaramailforandroid.activity.ChooseFolder
+ADDED from C:\k-9\AndroidManifest.xml:195:9-201:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:198:13-56
+	android:noHistory
+		ADDED from C:\k-9\AndroidManifest.xml:199:13-37
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:197:13-43
+	android:theme
+		ADDED from C:\k-9\AndroidManifest.xml:200:13-50
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:196:13-50
+activity#com.chiaramail.chiaramailforandroid.activity.ChooseIdentity
+ADDED from C:\k-9\AndroidManifest.xml:202:9-207:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:205:13-58
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:204:13-43
+	android:theme
+		ADDED from C:\k-9\AndroidManifest.xml:206:13-50
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:203:13-52
+activity#com.chiaramail.chiaramailforandroid.activity.ManageIdentities
+ADDED from C:\k-9\AndroidManifest.xml:208:9-212:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:211:13-60
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:210:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:209:13-54
+activity#com.chiaramail.chiaramailforandroid.activity.EditIdentity
+ADDED from C:\k-9\AndroidManifest.xml:213:9-217:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:216:13-56
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:215:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:214:13-50
+activity#com.chiaramail.chiaramailforandroid.activity.NotificationDeleteConfirmation
+ADDED from C:\k-9\AndroidManifest.xml:218:9-224:20
+	android:excludeFromRecents
+		ADDED from C:\k-9\AndroidManifest.xml:220:13-46
+	android:launchMode
+		ADDED from C:\k-9\AndroidManifest.xml:221:13-43
+	android:theme
+		ADDED from C:\k-9\AndroidManifest.xml:223:13-72
+	android:taskAffinity
+		ADDED from C:\k-9\AndroidManifest.xml:222:13-36
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:219:13-68
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSetupCheckSettings
+ADDED from C:\k-9\AndroidManifest.xml:230:9-234:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:233:13-71
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:232:13-70
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:231:13-69
+activity#com.chiaramail.chiaramailforandroid.activity.setup.AccountSettings
+ADDED from C:\k-9\AndroidManifest.xml:235:9-239:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:238:13-63
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:237:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:236:13-59
+activity#com.chiaramail.chiaramailforandroid.activity.setup.FolderSettings
+ADDED from C:\k-9\AndroidManifest.xml:240:9-245:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:243:13-58
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:242:13-43
+	android:theme
+		ADDED from C:\k-9\AndroidManifest.xml:244:13-56
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:241:13-58
+activity#com.chiaramail.chiaramailforandroid.activity.FolderList
+ADDED from C:\k-9\AndroidManifest.xml:246:9-255:20
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:248:13-43
+	android:uiOptions
+		ADDED from C:\k-9\AndroidManifest.xml:249:13-57
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:247:13-48
+intent-filter#android.intent.action.MAIN
+ADDED from C:\k-9\AndroidManifest.xml:250:13-254:29
+activity#com.chiaramail.chiaramailforandroid.activity.MessageList
+ADDED from C:\k-9\AndroidManifest.xml:256:9-275:20
+	android:launchMode
+		ADDED from C:\k-9\AndroidManifest.xml:259:13-43
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:258:13-43
+	android:uiOptions
+		ADDED from C:\k-9\AndroidManifest.xml:260:13-57
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:257:13-49
+intent-filter#android.intent.action.VIEW+android.intent.category.DEFAULT
+ADDED from C:\k-9\AndroidManifest.xml:266:13-274:29
+activity#com.chiaramail.chiaramailforandroid.activity.MessageCompose
+ADDED from C:\k-9\AndroidManifest.xml:276:9-310:20
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:279:13-36
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:280:13-45
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:278:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:277:13-52
+intent-filter#android.intent.action.SENDTO+android.intent.category.DEFAULT
+ADDED from C:\k-9\AndroidManifest.xml:281:13-287:29
+action#android.intent.action.SENDTO
+ADDED from C:\k-9\AndroidManifest.xml:282:17-71
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:282:25-68
+intent-filter#android.intent.action.SEND+android.intent.category.DEFAULT
+ADDED from C:\k-9\AndroidManifest.xml:288:13-294:29
+action#android.intent.action.SEND
+ADDED from C:\k-9\AndroidManifest.xml:289:17-69
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:289:25-66
+intent-filter#android.intent.action.SEND_MULTIPLE+android.intent.category.DEFAULT
+ADDED from C:\k-9\AndroidManifest.xml:295:13-301:29
+action#android.intent.action.SEND_MULTIPLE
+ADDED from C:\k-9\AndroidManifest.xml:296:17-78
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:296:25-75
+activity#com.chiaramail.chiaramailforandroid.activity.Search
+ADDED from C:\k-9\AndroidManifest.xml:312:9-326:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:315:13-50
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:314:13-43
+	android:uiOptions
+		ADDED from C:\k-9\AndroidManifest.xml:316:13-57
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:313:13-44
+intent-filter#android.intent.action.SEARCH+android.intent.category.DEFAULT
+ADDED from C:\k-9\AndroidManifest.xml:317:13-321:29
+action#android.intent.action.SEARCH
+ADDED from C:\k-9\AndroidManifest.xml:318:17-71
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:318:25-68
+meta-data#android.app.searchable
+ADDED from C:\k-9\AndroidManifest.xml:323:13-325:54
+	android:resource
+		ADDED from C:\k-9\AndroidManifest.xml:325:17-51
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:324:17-54
+activity#com.chiaramail.chiaramailforandroid.activity.LauncherShortcuts
+ADDED from C:\k-9\AndroidManifest.xml:327:9-336:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:330:13-52
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:329:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:328:13-55
+intent-filter#android.intent.action.CREATE_SHORTCUT+android.intent.category.DEFAULT
+ADDED from C:\k-9\AndroidManifest.xml:331:13-335:29
+action#android.intent.action.CREATE_SHORTCUT
+ADDED from C:\k-9\AndroidManifest.xml:332:17-80
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:332:25-77
+activity#com.chiaramail.chiaramailforandroid.activity.AccessibleEmailContentActivity
+ADDED from C:\k-9\AndroidManifest.xml:337:9-338:20
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:337:19-74
+activity#com.chiaramail.chiaramailforandroid.helper.ContactPicker
+ADDED from C:\k-9\AndroidManifest.xml:339:9-343:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:342:13-29
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:341:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:340:13-49
+activity#com.chiaramail.chiaramailforandroid.activity.EmailAddressList
+ADDED from C:\k-9\AndroidManifest.xml:344:9-347:20
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:346:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:345:13-54
+activity#com.chiaramail.chiaramailforandroid.activity.ManageContentServers
+ADDED from C:\k-9\AndroidManifest.xml:348:9-352:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:351:13-65
+	android:configChanges
+		ADDED from C:\k-9\AndroidManifest.xml:350:13-43
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:349:13-58
+receiver#com.chiaramail.chiaramailforandroid.service.BootReceiver
+ADDED from C:\k-9\AndroidManifest.xml:365:9-389:20
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:367:13-35
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:366:13-49
+intent-filter#android.intent.action.BOOT_COMPLETED
+ADDED from C:\k-9\AndroidManifest.xml:368:13-370:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\k-9\AndroidManifest.xml:369:17-79
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:369:25-76
+intent-filter#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from C:\k-9\AndroidManifest.xml:371:13-373:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from C:\k-9\AndroidManifest.xml:372:17-83
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:372:25-80
+intent-filter#android.intent.action.DEVICE_STORAGE_OK
+ADDED from C:\k-9\AndroidManifest.xml:374:13-376:29
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from C:\k-9\AndroidManifest.xml:375:17-82
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:375:25-79
+intent-filter#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from C:\k-9\AndroidManifest.xml:377:13-379:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from C:\k-9\AndroidManifest.xml:378:17-79
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:378:25-76
+intent-filter#android.net.conn.BACKGROUND_DATA_SETTING_CHANGED
+ADDED from C:\k-9\AndroidManifest.xml:380:13-382:29
+action#android.net.conn.BACKGROUND_DATA_SETTING_CHANGED
+ADDED from C:\k-9\AndroidManifest.xml:381:17-91
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:381:25-88
+intent-filter#com.android.sync.SYNC_CONN_STATUS_CHANGED
+ADDED from C:\k-9\AndroidManifest.xml:383:13-385:29
+action#com.android.sync.SYNC_CONN_STATUS_CHANGED
+ADDED from C:\k-9\AndroidManifest.xml:384:17-84
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:384:25-81
+intent-filter#com.chiaramail.chiaramailforandroid.service.BroadcastReceiver.scheduleIntent
+ADDED from C:\k-9\AndroidManifest.xml:386:13-388:29
+action#com.chiaramail.chiaramailforandroid.service.BroadcastReceiver.scheduleIntent
+ADDED from C:\k-9\AndroidManifest.xml:387:17-119
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:387:25-116
+receiver#com.chiaramail.chiaramailforandroid.service.RemoteControlReceiver
+ADDED from C:\k-9\AndroidManifest.xml:390:9-400:20
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:392:13-35
+	android:permission
+		ADDED from C:\k-9\AndroidManifest.xml:393:13-95
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:391:13-58
+intent-filter#com.chiaramail.chiaramailforandroid.K9RemoteControl.set
+ADDED from C:\k-9\AndroidManifest.xml:394:13-396:29
+action#com.chiaramail.chiaramailforandroid.K9RemoteControl.set
+ADDED from C:\k-9\AndroidManifest.xml:395:17-98
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:395:25-95
+intent-filter#com.chiaramail.chiaramailforandroid.K9RemoteControl.requestAccounts
+ADDED from C:\k-9\AndroidManifest.xml:397:13-399:29
+action#com.chiaramail.chiaramailforandroid.K9RemoteControl.requestAccounts
+ADDED from C:\k-9\AndroidManifest.xml:398:17-110
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:398:25-107
+receiver#com.chiaramail.chiaramailforandroid.service.CoreReceiver
+ADDED from C:\k-9\AndroidManifest.xml:401:9-407:20
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:403:13-35
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:402:13-49
+intent-filter#com.chiaramail.chiaramailforandroid.service.CoreReceiver.wakeLockRelease
+ADDED from C:\k-9\AndroidManifest.xml:404:13-406:29
+action#com.chiaramail.chiaramailforandroid.service.CoreReceiver.wakeLockRelease
+ADDED from C:\k-9\AndroidManifest.xml:405:17-115
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:405:25-112
+receiver#com.chiaramail.chiaramailforandroid.service.StorageReceiver
+ADDED from C:\k-9\AndroidManifest.xml:408:9-430:20
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:410:13-35
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:409:13-52
+intent-filter#android.intent.action.MEDIA_MOUNTED
+ADDED from C:\k-9\AndroidManifest.xml:411:13-429:29
+action#android.intent.action.MEDIA_MOUNTED
+ADDED from C:\k-9\AndroidManifest.xml:422:17-78
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:422:25-75
+service#com.chiaramail.chiaramailforandroid.service.MailService
+ADDED from C:\k-9\AndroidManifest.xml:432:9-435:19
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:434:13-35
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:433:13-48
+service#com.chiaramail.chiaramailforandroid.service.NotificationActionService
+ADDED from C:\k-9\AndroidManifest.xml:436:9-439:19
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:438:13-35
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:437:13-62
+service#com.chiaramail.chiaramailforandroid.service.PushService
+ADDED from C:\k-9\AndroidManifest.xml:440:9-443:19
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:442:13-35
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:441:13-48
+service#com.chiaramail.chiaramailforandroid.service.PollService
+ADDED from C:\k-9\AndroidManifest.xml:444:9-447:19
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:446:13-35
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:445:13-48
+service#com.chiaramail.chiaramailforandroid.service.RemoteControlService
+ADDED from C:\k-9\AndroidManifest.xml:448:9-452:19
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:450:13-35
+	android:permission
+		ADDED from C:\k-9\AndroidManifest.xml:451:13-95
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:449:13-57
+service#com.chiaramail.chiaramailforandroid.service.SleepService
+ADDED from C:\k-9\AndroidManifest.xml:453:9-456:19
+	android:enabled
+		ADDED from C:\k-9\AndroidManifest.xml:455:13-35
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:454:13-49
+provider#com.chiaramail.chiaramailforandroid.provider.AttachmentProvider
+ADDED from C:\k-9\AndroidManifest.xml:458:9-464:103
+	android:readPermission
+		ADDED from C:\k-9\AndroidManifest.xml:464:13-100
+	android:authorities
+		ADDED from C:\k-9\AndroidManifest.xml:460:13-89
+	android:grantUriPermissions
+		ADDED from C:\k-9\AndroidManifest.xml:461:13-47
+	android:multiprocess
+		ADDED from C:\k-9\AndroidManifest.xml:462:13-40
+	android:permission
+		ADDED from C:\k-9\AndroidManifest.xml:463:13-69
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:459:13-56
+provider#com.chiaramail.chiaramailforandroid.provider.MessageProvider
+ADDED from C:\k-9\AndroidManifest.xml:465:9-471:104
+	android:readPermission
+		ADDED from C:\k-9\AndroidManifest.xml:470:13-98
+	android:authorities
+		ADDED from C:\k-9\AndroidManifest.xml:467:13-86
+	android:grantUriPermissions
+		ADDED from C:\k-9\AndroidManifest.xml:468:13-47
+	android:multiprocess
+		ADDED from C:\k-9\AndroidManifest.xml:469:13-40
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:466:13-53
+	android:writePermission
+		ADDED from C:\k-9\AndroidManifest.xml:471:13-101
+provider#com.chiaramail.chiaramailforandroid.provider.EmailProvider
+ADDED from C:\k-9\AndroidManifest.xml:472:9-475:40
+	android:authorities
+		ADDED from C:\k-9\AndroidManifest.xml:474:13-85
+	android:exported
+		ADDED from C:\k-9\AndroidManifest.xml:475:13-37
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:473:13-51
+receiver#com.chiaramail.chiaramailforandroid.provider.UnreadWidgetProvider
+ADDED from C:\k-9\AndroidManifest.xml:477:9-488:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:480:13-56
+	android:icon
+		ADDED from C:\k-9\AndroidManifest.xml:479:13-57
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:478:13-58
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\k-9\AndroidManifest.xml:481:13-483:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\k-9\AndroidManifest.xml:482:17-84
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:482:25-81
+meta-data#android.appwidget.provider
+ADDED from C:\k-9\AndroidManifest.xml:485:13-487:62
+	android:resource
+		ADDED from C:\k-9\AndroidManifest.xml:487:17-59
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:486:17-58
+activity#com.chiaramail.chiaramailforandroid.activity.UnreadWidgetConfiguration
+ADDED from C:\k-9\AndroidManifest.xml:490:9-494:20
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:490:19-69
+intent-filter#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from C:\k-9\AndroidManifest.xml:491:13-493:29
+action#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from C:\k-9\AndroidManifest.xml:492:17-87
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:492:25-84
+activity#com.chiaramail.chiaramailforandroid.activity.AccountList
+ADDED from C:\k-9\AndroidManifest.xml:495:9-496:20
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:495:19-55
+activity#com.chiaramail.chiaramailforandroid.activity.UpgradeDatabases
+ADDED from C:\k-9\AndroidManifest.xml:497:9-500:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:499:13-60
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:498:13-54
+service#com.chiaramail.chiaramailforandroid.service.DatabaseUpgradeService
+ADDED from C:\k-9\AndroidManifest.xml:502:9-505:19
+	android:exported
+		ADDED from C:\k-9\AndroidManifest.xml:504:13-37
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:503:13-59
+activity#com.chiaramail.chiaramailforandroid.MainActivity
+ADDED from C:\k-9\AndroidManifest.xml:507:9-510:20
+	android:label
+		ADDED from C:\k-9\AndroidManifest.xml:509:13-56
+	android:name
+		ADDED from C:\k-9\AndroidManifest.xml:508:13-41
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:22:13-58
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:21:9-24:46
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:23:19-52
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:24:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:22:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:21:19-72
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:28:9-31:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:30:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:31:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:29:13-62
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:23:8-40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\k-9\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:24:8-31

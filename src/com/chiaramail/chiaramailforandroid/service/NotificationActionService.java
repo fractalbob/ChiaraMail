@@ -1,15 +1,17 @@
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import java.util.ArrayList;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.activity.MessageCompose;
-import com.fsck.k9.activity.MessageReference;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.Message;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.activity.MessageCompose;
+import com.chiaramail.chiaramailforandroid.activity.MessageReference;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -17,10 +19,10 @@ import android.content.Intent;
 import android.util.Log;
 
 public class NotificationActionService extends CoreService {
-    private final static String REPLY_ACTION = "com.fsck.k9.service.NotificationActionService.REPLY_ACTION";
-    private final static String READ_ALL_ACTION = "com.fsck.k9.service.NotificationActionService.READ_ALL_ACTION";
-    private final static String DELETE_ALL_ACTION = "com.fsck.k9.service.NotificationActionService.DELETE_ALL_ACTION";
-    private final static String ACKNOWLEDGE_ACTION = "com.fsck.k9.service.NotificationActionService.ACKNOWLEDGE_ACTION";
+    private final static String REPLY_ACTION = "com.chiaramail.chiaramailforandroid.service.NotificationActionService.REPLY_ACTION";
+    private final static String READ_ALL_ACTION = "com.chiaramail.chiaramailforandroid.service.NotificationActionService.READ_ALL_ACTION";
+    private final static String DELETE_ALL_ACTION = "com.chiaramail.chiaramailforandroid.service.NotificationActionService.DELETE_ALL_ACTION";
+    private final static String ACKNOWLEDGE_ACTION = "com.chiaramail.chiaramailforandroid.service.NotificationActionService.ACKNOWLEDGE_ACTION";
 
     private final static String EXTRA_ACCOUNT = "account";
     private final static String EXTRA_MESSAGE = "message";
@@ -104,8 +106,20 @@ public class NotificationActionService extends CoreService {
 
                 MessageReference ref = (MessageReference) intent.getParcelableExtra(EXTRA_MESSAGE);
                 Message message = ref.restoreToLocalMessage(this);
+            	String forward_flag = "false";
                 if (message != null) {
-                    Intent i = MessageCompose.getActionReplyIntent(this, account, message, false, null);
+                	String[] forward_allowed = new String[2];
+                	try {
+                    	forward_allowed = message.getHeader(ECSInterfaces.ALLOW_FORWARDING);
+                    	if (forward_allowed == null) {
+                    		forward_flag = "false";
+                    	} else {
+                    		forward_flag = forward_allowed[0];
+                    	}
+                	} catch (MessagingException e)
+                	{
+                	}
+                    Intent i = MessageCompose.getActionReplyIntent(this, account, message, false, forward_flag, null);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(i);
                 } else {

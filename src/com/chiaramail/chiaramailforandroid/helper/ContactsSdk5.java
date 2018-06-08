@@ -1,4 +1,4 @@
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import java.util.ArrayList;
 
@@ -14,15 +14,15 @@ import android.provider.ContactsContract.Intents;
 import android.provider.ContactsContract.CommonDataKinds.Email;
 import android.provider.ContactsContract.Intents.Insert;
 
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.K9;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.mail.Address;
 
 /**
  * Access the contacts on the device using the API introduced with SDK 5.
  *
  * @see android.provider.ContactsContract
  */
-public class ContactsSdk5 extends com.fsck.k9.helper.Contacts {
+public class ContactsSdk5 extends com.chiaramail.chiaramailforandroid.helper.Contacts {
     /**
      * The order in which the search results are returned by
      * {@link #searchContacts(CharSequence)}.
@@ -36,7 +36,7 @@ public class ContactsSdk5 extends com.fsck.k9.helper.Contacts {
      * Array of columns to load from the database.
      *
      * Important: The _ID field is needed by
-     * {@link com.fsck.k9.EmailAddressAdapter} or more specificly by
+     * {@link com.chiaramail.chiaramailforandroid.EmailAddressAdapter} or more specificly by
      * {@link android.widget.ResourceCursorAdapter}.
      */
     protected static final String PROJECTION[] = {

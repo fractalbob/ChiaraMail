@@ -1,5 +1,5 @@
 
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -10,15 +10,15 @@ import android.content.Intent;
 import android.os.PowerManager;
 import android.util.Log;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.helper.power.TracingPowerManager;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
 
 public class CoreReceiver extends BroadcastReceiver {
 
-    public static String WAKE_LOCK_RELEASE = "com.fsck.k9.service.CoreReceiver.wakeLockRelease";
+    public static String WAKE_LOCK_RELEASE = "com.chiaramail.chiaramailforandroid.service.CoreReceiver.wakeLockRelease";
 
-    public static String WAKE_LOCK_ID = "com.fsck.k9.service.CoreReceiver.wakeLockId";
+    public static String WAKE_LOCK_ID = "com.chiaramail.chiaramailforandroid.service.CoreReceiver.wakeLockId";
 
     private static ConcurrentHashMap<Integer, TracingWakeLock> wakeLocks = new ConcurrentHashMap<Integer, TracingWakeLock>();
     private static AtomicInteger wakeLockSeq = new AtomicInteger(0);

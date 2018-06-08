@@ -1,4 +1,4 @@
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.mail.store.StorageManager;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager;
 
 /**
  * That BroadcastReceiver is only interested in MOUNT events.

@@ -1,14 +1,14 @@
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.remotecontrol.K9RemoteControl;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.Account.FolderMode;
-import com.fsck.k9.K9.BACKGROUND_OPS;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.Account.FolderMode;
+import com.chiaramail.chiaramailforandroid.K9.BACKGROUND_OPS;
+import com.chiaramail.chiaramailforandroid.remotecontrol.K9RemoteControl;
+import com.chiaramail.chiaramailforandroid.R;
 
-import static com.fsck.k9.remotecontrol.K9RemoteControl.*;
+import static com.chiaramail.chiaramailforandroid.remotecontrol.K9RemoteControl.*;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,10 +18,10 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class RemoteControlService extends CoreService {
-    private final static String RESCHEDULE_ACTION = "com.fsck.k9.service.RemoteControlService.RESCHEDULE_ACTION";
-    private final static String PUSH_RESTART_ACTION = "com.fsck.k9.service.RemoteControlService.PUSH_RESTART_ACTION";
+    private final static String RESCHEDULE_ACTION = "com.chiaramail.chiaramailforandroid.service.RemoteControlService.RESCHEDULE_ACTION";
+    private final static String PUSH_RESTART_ACTION = "com.chiaramail.chiaramailforandroid.service.RemoteControlService.PUSH_RESTART_ACTION";
 
-    private final static String SET_ACTION = "com.fsck.k9.service.RemoteControlService.SET_ACTION";
+    private final static String SET_ACTION = "com.chiaramail.chiaramailforandroid.service.RemoteControlService.SET_ACTION";
 
     public static void set(Context context, Intent i, Integer wakeLockId) {
         //  Intent i = new Intent();
@@ -134,14 +134,14 @@ public class RemoteControlService extends CoreService {
 
                         if (needsReschedule) {
                             Intent i = new Intent();
-                            i.setClassName(getApplication().getPackageName(), "com.fsck.k9.service.RemoteControlService");
+                            i.setClassName(getApplication().getPackageName(), "com.chiaramail.chiaramailforandroid.service.RemoteControlService");
                             i.setAction(RESCHEDULE_ACTION);
                             long nextTime = System.currentTimeMillis() + 10000;
                             BootReceiver.scheduleIntent(RemoteControlService.this, nextTime, i);
                         }
                         if (needsPushRestart) {
                             Intent i = new Intent();
-                            i.setClassName(getApplication().getPackageName(), "com.fsck.k9.service.RemoteControlService");
+                            i.setClassName(getApplication().getPackageName(), "com.chiaramail.chiaramailforandroid.service.RemoteControlService");
                             i.setAction(PUSH_RESTART_ACTION);
                             long nextTime = System.currentTimeMillis() + 10000;
                             BootReceiver.scheduleIntent(RemoteControlService.this, nextTime, i);

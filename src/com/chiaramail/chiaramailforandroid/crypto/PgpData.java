@@ -1,4 +1,4 @@
-package com.fsck.k9.crypto;
+package com.chiaramail.chiaramailforandroid.crypto;
 
 import java.io.Serializable;
 

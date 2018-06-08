@@ -1,6 +1,7 @@
-package com.fsck.k9.view;
+package com.chiaramail.chiaramailforandroid.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -20,24 +21,27 @@ import android.widget.QuickContactBadge;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.fsck.k9.FontSizes;
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.misc.ContactPictureLoader;
-import com.fsck.k9.helper.Contacts;
-import com.fsck.k9.Account;
-import com.fsck.k9.helper.MessageHelper;
-import com.fsck.k9.helper.StringUtils;
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.internet.MimeUtility;
+
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.FontSizes;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.activity.misc.ContactPictureLoader;
+import com.chiaramail.chiaramailforandroid.helper.Contacts;
+import com.chiaramail.chiaramailforandroid.helper.MessageHelper;
+import com.chiaramail.chiaramailforandroid.helper.StringUtils;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.R;
 
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
 
 public class MessageHeader extends ScrollView implements OnClickListener {
     private Context mContext;
@@ -203,7 +207,7 @@ public class MessageHeader extends ScrollView implements OnClickListener {
                 // All headers have been downloaded, but there are no additional headers.
                 messageToShow = R.string.message_no_additional_headers_available;
             }
-        } catch (MessagingException e) {
+        } catch (Exception e) {
             messageToShow = R.string.message_additional_headers_retrieval_failed;
         }
         // Show a message to the user, if any
@@ -227,16 +231,27 @@ public class MessageHeader extends ScrollView implements OnClickListener {
         boolean fromMe = mMessageHelper.toMe(account, fromAddrs);
 
         String counterpartyAddress = null;
+        String nickName = null;
+
+//        counterpartyAddress = fromAddrs[0].getAddress();
+//        nickName = fromAddrs[0].getPersonal();
+//        if (nickName == null) nickName = counterpartyAddress;
         if (fromMe) {
             if (toAddrs.length > 0) {
                 counterpartyAddress = toAddrs[0].getAddress();
+                nickName = toAddrs[0].getPersonal();
             } else if (ccAddrs.length > 0) {
                 counterpartyAddress = ccAddrs[0].getAddress();
+                nickName = ccAddrs[0].getPersonal();
             }
         } else if (fromAddrs.length > 0) {
             counterpartyAddress = fromAddrs[0].getAddress();
+            nickName = fromAddrs[0].getPersonal();
+        }  else {
+        	return;
         }
-
+        
+        if (nickName == null) nickName = counterpartyAddress;
         /*
          * Only reset visibility of the subject if populate() was called because a new
          * message is shown. If it is the same, do not force the subject visible, because
@@ -257,15 +272,13 @@ public class MessageHeader extends ScrollView implements OnClickListener {
         }  else {
             mContactBadge.setVisibility(View.GONE);
         }
-
+        
         final String subject = message.getSubject();
         if (StringUtils.isNullOrEmpty(subject)) {
             mSubjectView.setText(mContext.getText(R.string.general_no_subject));
         } else {
             mSubjectView.setText(subject);
         }
-        mSubjectView.setTextColor(0xff000000 | defaultSubjectColor);
-
         String dateTime = DateUtils.formatDateTime(mContext,
                 message.getSentDate().getTime(),
                 DateUtils.FORMAT_SHOW_DATE
@@ -277,13 +290,25 @@ public class MessageHeader extends ScrollView implements OnClickListener {
         if (K9.showContactPicture()) {
             mContactBadge.assignContactFromEmail(counterpartyAddress, true);
             if (counterpartyAddress != null) {
-                mContactsPictureLoader.loadContactPicture(counterpartyAddress, mContactBadge);
+                mContactsPictureLoader.loadContactPicture(counterpartyAddress, nickName, mContactBadge);
             } else {
-                mContactBadge.setImageResource(R.drawable.ic_contact_picture);
+                mContactBadge.setImageDrawable(mContactsPictureLoader.new CharacterDrawable(nickName.substring(0, 1).toUpperCase().charAt(0), 0xFF805781));
+//                mContactBadge.setImageResource(R.drawable.ic_contact_picture);
             }
         }
 
         mFromView.setText(from);
+        
+        try {
+            if ((message.getHeader(ECSInterfaces.CONTENT_SERVER_NAME) != null && message.getHeader(ECSInterfaces.CONTENT_SERVER_PORT) != null && message.getHeader(ECSInterfaces.CONTENT_POINTER) != null) || ECSInterfaces.senderRegistered.contains(mMessage.getFrom()[0].getAddress())) {
+            	// Set text color to magenta, to indicate that sender can read ECS messages
+            	mFromView.setTextColor(Color.MAGENTA);
+            } else {
+            	mFromView.setTextColor(0xff000000 | defaultSubjectColor);
+            }
+        } catch (Exception e) {
+            Log.e(K9.LOG_TAG, "Exception fetching ECS headers: ", e);
+        }
 
         updateAddressField(mToView, to, mToLabel);
         updateAddressField(mCcView, cc, mCcLabel);
@@ -321,7 +346,6 @@ public class MessageHeader extends ScrollView implements OnClickListener {
         }
         layoutChanged();
     }
-
 
     private void updateAddressField(TextView v, CharSequence text, View label) {
         boolean hasText = !TextUtils.isEmpty(text);

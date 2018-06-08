@@ -14,10 +14,13 @@
  * limitations under the License.
  */
 
-package com.fsck.k9;
+package com.chiaramail.chiaramailforandroid;
 
-import com.fsck.k9.helper.Contacts;
-import com.fsck.k9.mail.Address;
+import com.chiaramail.chiaramailforandroid.helper.Contacts;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.R;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.view.View;

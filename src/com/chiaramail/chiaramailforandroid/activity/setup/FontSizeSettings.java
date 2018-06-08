@@ -1,4 +1,4 @@
-package com.fsck.k9.activity.setup;
+package com.chiaramail.chiaramailforandroid.activity.setup;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,8 +6,10 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.preference.*;
-import com.fsck.k9.*;
-import com.fsck.k9.activity.K9PreferenceActivity;
+
+import com.chiaramail.chiaramailforandroid.*;
+import com.chiaramail.chiaramailforandroid.activity.K9PreferenceActivity;
+import com.chiaramail.chiaramailforandroid.R;
 
 /**
  * Activity to configure the font size of the information displayed in the

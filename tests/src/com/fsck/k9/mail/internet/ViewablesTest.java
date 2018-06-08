@@ -1,16 +1,16 @@
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 import android.test.AndroidTestCase;
 
-import com.fsck.k9.activity.K9Activity;
-import com.fsck.k9.activity.K9ActivityCommon;
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Message.RecipientType;
-import com.fsck.k9.mail.internet.MimeUtility.ViewableContainer;
+import com.chiaramail.chiaramailforandroid.activity.K9Activity;
+import com.chiaramail.chiaramailforandroid.activity.K9ActivityCommon;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Message.RecipientType;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility.ViewableContainer;
 
 public class ViewablesTest extends AndroidTestCase {
 

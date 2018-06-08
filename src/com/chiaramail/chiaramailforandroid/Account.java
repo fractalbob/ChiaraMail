@@ -1,5 +1,5 @@
 
-package com.fsck.k9;
+package com.chiaramail.chiaramailforandroid;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,26 +22,29 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.util.Log;
 
-import com.fsck.k9.crypto.Apg;
-import com.fsck.k9.crypto.CryptoProvider;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.Folder.FolderClass;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.StorageManager;
-import com.fsck.k9.mail.store.StorageManager.StorageProvider;
-import com.fsck.k9.provider.EmailProvider;
-import com.fsck.k9.provider.EmailProvider.StatsColumns;
-import com.fsck.k9.search.ConditionsTreeNode;
-import com.fsck.k9.search.LocalSearch;
-import com.fsck.k9.search.SqlQueryBuilder;
-import com.fsck.k9.search.SearchSpecification.Attribute;
-import com.fsck.k9.search.SearchSpecification.SearchCondition;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
-import com.fsck.k9.view.ColorChip;
+import com.chiaramail.chiaramailforandroid.crypto.Apg;
+import com.chiaramail.chiaramailforandroid.crypto.CryptoProvider;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.Folder.FolderClass;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager.StorageProvider;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider.StatsColumns;
+import com.chiaramail.chiaramailforandroid.search.ConditionsTreeNode;
+import com.chiaramail.chiaramailforandroid.search.LocalSearch;
+import com.chiaramail.chiaramailforandroid.search.SqlQueryBuilder;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Attribute;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.SearchCondition;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.view.ColorChip;
+import com.chiaramail.chiaramailforandroid.R;
 import com.larswerkman.colorpicker.ColorPicker;
+
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
 
 /**
  * Account stores all of the settings for a single account defined by the user. It is able to save
@@ -57,6 +60,10 @@ public class Account implements BaseAccount {
      * This local folder is used to store messages to be sent.
      */
     public static final String OUTBOX = "K9MAIL_INTERNAL_OUTBOX";
+    
+    public static final String CONTENT_SERVER_NAME = "www.chiaramail.com";
+    public static final String CONTENT_SERVER_PORT = "443";
+    public static final String CONTENT_SERVER_PASSWORD = "";
 
     public static final String EXPUNGE_IMMEDIATELY = "EXPUNGE_IMMEDIATELY";
     public static final String EXPUNGE_MANUALLY = "EXPUNGE_MANUALLY";
@@ -106,7 +113,7 @@ public class Account implements BaseAccount {
         SORT_DATE(R.string.sort_earliest_first, R.string.sort_latest_first, false),
         SORT_ARRIVAL(R.string.sort_earliest_first, R.string.sort_latest_first, false),
         SORT_SUBJECT(R.string.sort_subject_alpha, R.string.sort_subject_re_alpha, true),
-//        SORT_SENDER(R.string.sort_sender_alpha, R.string.sort_sender_re_alpha, true),
+        SORT_SENDER(R.string.sort_sender_alpha, R.string.sort_sender_re_alpha, true),
         SORT_UNREAD(R.string.sort_unread_first, R.string.sort_unread_last, true),
         SORT_FLAGGED(R.string.sort_flagged_first, R.string.sort_flagged_last, true),
         SORT_ATTACHMENT(R.string.sort_attach_first, R.string.sort_unattached_first, true);
@@ -165,6 +172,7 @@ public class Account implements BaseAccount {
     private String mInboxFolderName;
     private String mDraftsFolderName;
     private String mSentFolderName;
+    private String mSpoofedFolderName;
     private String mTrashFolderName;
     private String mArchiveFolderName;
     private String mSpamFolderName;
@@ -212,6 +220,36 @@ public class Account implements BaseAccount {
     private int mRemoteSearchNumResults;
 
     private CryptoProvider mCryptoProvider = null;
+    
+    private Context context;
+    
+    private String mContentServerName = CONTENT_SERVER_NAME;
+    public String mContentServerPassword = CONTENT_SERVER_PASSWORD;
+//    private String mContentServerPassword = CONTENT_SERVER_PASSWORD;
+    private String mContentServerPort = CONTENT_SERVER_PORT;
+    private boolean mContentServerSendMode;
+    private boolean mContentServerEncryption;
+//    private boolean mShowPassword;
+    private boolean mContentServerContentIncluded;
+    private boolean mForwardingAllowed;
+    private boolean mContentServerEphemeralMode;
+    private boolean mDefaultConfig;
+    private boolean mShowBugListLink;
+    private String  mContentServerDisplayDuration = "";
+    private String  mDefaultConfigs = "";
+    private String  mPrivateContentServerConfigNames = "";
+    private String  mPrivateContentServerNames = "";
+    private String  mPrivateContentServerPasswords = "";
+    private String  mPrivateContentServerPorts = "";
+    private String  mPrivateContentServerSendModes = "";
+    private String  mPrivateContentServerEncryptions = "";
+    private String  mPrivateContentServerIncludes = "";
+    private String  mPrivateContentServerForwarding = "";
+    private String  mPrivateContentServerEphemeralModes = "";
+    private String  mPrivateContentServerDisplayDurations = "";
+    private int		mLicenseStatus;
+    private long 	mLicenseCheckDate;
+//    private boolean mContentServerFilterNonecs;
 
     private ColorChip mUnreadColorChip;
     private ColorChip mReadColorChip;
@@ -271,6 +309,7 @@ public class Account implements BaseAccount {
 
     protected Account(Context context) {
         mUuid = UUID.randomUUID().toString();
+        this.context = context;
         mLocalStorageProviderId = StorageManager.getInstance(K9.app).getDefaultProviderId();
         mAutomaticCheckIntervalMinutes = -1;
         mIdleRefreshMinutes = 24;
@@ -397,6 +436,34 @@ public class Account implements BaseAccount {
         mArchiveFolderName = prefs.getString(mUuid  + ".archiveFolderName", "Archive");
         mSpamFolderName = prefs.getString(mUuid  + ".spamFolderName", "Spam");
         mExpungePolicy = prefs.getString(mUuid  + ".expungePolicy", EXPUNGE_IMMEDIATELY);
+        mContentServerName = prefs.getString(mUuid  + ".contentServerName", CONTENT_SERVER_NAME);
+        mContentServerPassword = Utility.base64Decode(prefs.getString(mUuid + ".contentServerPassword", CONTENT_SERVER_PASSWORD));
+//        mShowPassword = prefs.getBoolean(mUuid  + ".contentServerShowPassword", false);
+        mContentServerPort = prefs.getString(mUuid  + ".contentServerPort", CONTENT_SERVER_PORT);
+        mContentServerSendMode = prefs.getBoolean(mUuid  + ".contentServerSendMode", false);
+        mContentServerEncryption = prefs.getBoolean(mUuid  + ".contentServerEncryption", false);
+        mContentServerContentIncluded = prefs.getBoolean(mUuid  + ".contentServerContentIncluded", false);
+        mForwardingAllowed = prefs.getBoolean(mUuid  + ".contentForwardingAllowed", false);
+        mContentServerEphemeralMode = prefs.getBoolean(mUuid  + ".contentServerEphemeralMode", false);
+        if (preferences.getDefaultAccount() != null) context = preferences.getDefaultAccount().context;
+        mContentServerDisplayDuration = prefs.getString(mUuid  + ".contentServerDisplayDuration", preferences.getDefaultAccount() != null && preferences.getDefaultAccount().context != null ? preferences.getDefaultAccount().context.getResources().getString(R.string.account_setup_dynamic_content_display_duration_3_sec) : "");
+ //       mContentServerFilterNonecs = prefs.getBoolean(mUuid  + ".contentServerFilterNonecs", false);
+        mPrivateContentServerConfigNames = prefs.getString(mUuid  + ".privateContentServerConfigNames", "");
+        mPrivateContentServerNames = prefs.getString(mUuid  + ".privateContentServerNames", "");
+        mPrivateContentServerPasswords = prefs.getString(mUuid + ".privateContentServerPasswords", "");
+        mPrivateContentServerPorts = prefs.getString(mUuid  + ".privateContentServerPorts", "");
+        mPrivateContentServerSendModes = prefs.getString(mUuid  + ".privateContentServerSendModes", "");
+        mPrivateContentServerEncryptions = prefs.getString(mUuid  + ".privateContentServerEncryptions", "");
+        mPrivateContentServerIncludes = prefs.getString(mUuid  + ".privateContentServerIncludes", "");
+        mPrivateContentServerForwarding = prefs.getString(mUuid  + ".privateContentServerForwarding", "");
+        mPrivateContentServerEphemeralModes = prefs.getString(mUuid  + ".privateContentServerEphemeralModes", "");
+        mPrivateContentServerDisplayDurations = prefs.getString(mUuid  + ".privateContentServerDisplayDurations", "3 sec.");
+        mDefaultConfigs = prefs.getString(mUuid  + ".defaultConfigs", "");
+//        mLicenseStatus = prefs.getInt(mUuid  + ".licenseStatus", ECSInterfaces.LICENSE_UNKNOWN);
+        mLicenseCheckDate = prefs.getLong(mUuid  + ".licenseCheckDate", 0);
+        
+        mDefaultConfig = prefs.getBoolean(mUuid  + ".defaultConfig", false);
+
         mSyncRemoteDeletions = prefs.getBoolean(mUuid  + ".syncRemoteDeletions", true);
 
         mMaxPushFolders = prefs.getInt(mUuid + ".maxPushFolders", 10);
@@ -494,6 +561,7 @@ public class Account implements BaseAccount {
         mCryptoApp = prefs.getString(mUuid + ".cryptoApp", Apg.NAME);
         mCryptoAutoSignature = prefs.getBoolean(mUuid + ".cryptoAutoSignature", false);
         mCryptoAutoEncrypt = prefs.getBoolean(mUuid + ".cryptoAutoEncrypt", false);
+        
         mAllowRemoteSearch = prefs.getBoolean(mUuid + ".allowRemoteSearch", false);
         mRemoteSearchFullText = prefs.getBoolean(mUuid + ".remoteSearchFullText", false);
         mRemoteSearchNumResults = prefs.getInt(mUuid + ".remoteSearchNumResults", DEFAULT_REMOTE_SEARCH_NUM_RESULTS);
@@ -746,6 +814,33 @@ public class Account implements BaseAccount {
         editor.putString(mUuid + ".cryptoApp", mCryptoApp);
         editor.putBoolean(mUuid + ".cryptoAutoSignature", mCryptoAutoSignature);
         editor.putBoolean(mUuid + ".cryptoAutoEncrypt", mCryptoAutoEncrypt);
+        editor.putString(mUuid + ".contentServerName", mContentServerName);
+        editor.putString(mUuid + ".contentServerPassword", Utility.base64Encode(mContentServerPassword));
+        editor.putString(mUuid + ".contentServerPort", mContentServerPort);
+        editor.putBoolean(mUuid + ".contentServerSendMode", mContentServerSendMode);
+        editor.putBoolean(mUuid + ".contentServerEncryption", mContentServerEncryption);
+//        editor.putBoolean(mUuid + ".contentServerShowPassword", mShowPassword);
+        editor.putBoolean(mUuid + ".contentServerContentIncluded", mContentServerContentIncluded);
+        editor.putBoolean(mUuid + ".contentForwardingAllowed", mForwardingAllowed);
+        editor.putBoolean(mUuid + ".contentServerEphemeralMode", mContentServerEphemeralMode);
+        editor.putString(mUuid + ".contentServerDisplayDuration", mContentServerDisplayDuration);
+//        editor.putBoolean(mUuid + ".contentServerFilterNonecs", mContentServerFilterNonecs);
+        editor.putString(mUuid + ".privateContentServerConfigNames", mPrivateContentServerConfigNames);
+        editor.putString(mUuid + ".privateContentServerNames", mPrivateContentServerNames);
+        editor.putString(mUuid + ".privateContentServerPasswords", mPrivateContentServerPasswords);
+        editor.putString(mUuid + ".privateContentServerPorts", mPrivateContentServerPorts);
+        editor.putString(mUuid + ".privateContentServerSendModes", mPrivateContentServerSendModes);
+        editor.putString(mUuid + ".privateContentServerEncryptions", mPrivateContentServerEncryptions);
+        editor.putString(mUuid + ".privateContentServerIncludes", mPrivateContentServerIncludes);
+        editor.putString(mUuid + ".privateContentServerForwarding", mPrivateContentServerForwarding);
+        editor.putString(mUuid + ".privateContentServerEphemeralModes", mPrivateContentServerEphemeralModes);
+        editor.putString(mUuid + ".privateContentServerDisplayDurations", mPrivateContentServerDisplayDurations);
+        editor.putString(mUuid + ".defaultConfigs", mDefaultConfigs);
+        editor.putBoolean(mUuid + ".defaultConfig", mDefaultConfig);
+        editor.putBoolean(mUuid + ".showBugListLink", mShowBugListLink);
+        editor.putInt(mUuid + ".licenseStatus", mLicenseStatus);
+        editor.putLong(mUuid + ".licenseCheckDate", mLicenseCheckDate);
+
         editor.putBoolean(mUuid + ".allowRemoteSearch", mAllowRemoteSearch);
         editor.putBoolean(mUuid + ".remoteSearchFullText", mRemoteSearchFullText);
         editor.putInt(mUuid + ".remoteSearchNumResults", mRemoteSearchNumResults);
@@ -827,7 +922,7 @@ public class Account implements BaseAccount {
                 stats.flaggedMessageCount = cursor.getInt(1);
             }
         } finally {
-            cursor.close();
+//            if (cursor != null) cursor.close();
         }
 
         LocalStore localStore = getLocalStore();
@@ -874,24 +969,24 @@ public class Account implements BaseAccount {
         if (messageRead) {
             if (messageFlagged) {
                 chip = mFlaggedReadColorChip;
-            } else if (toMe) {
-                chip = mToMeReadColorChip;
-            } else if (ccMe) {
-                chip = mCcMeReadColorChip;
-            } else if (fromMe) {
-                chip = mFromMeReadColorChip;
+          //  } else if (toMe) {
+          //      chip = mToMeReadColorChip;
+          //  } else if (ccMe) {
+          //      chip = mCcMeReadColorChip;
+          //  } else if (fromMe) {
+          //      chip = mFromMeReadColorChip;
             } else {
                 chip = mReadColorChip;
             }
         } else {
             if (messageFlagged) {
                 chip = mFlaggedUnreadColorChip;
-            } else if (toMe) {
-                chip = mToMeUnreadColorChip;
-            } else if (ccMe) {
-                chip = mCcMeUnreadColorChip;
-            } else if (fromMe) {
-                chip = mFromMeUnreadColorChip;
+          //  } else if (toMe) {
+          //      chip = mToMeUnreadColorChip;
+          //  } else if (ccMe) {
+          //      chip = mCcMeUnreadColorChip;
+          //  } else if (fromMe) {
+          //      chip = mFromMeUnreadColorChip;
             } else {
                 chip = mUnreadColorChip;
             }
@@ -973,7 +1068,7 @@ public class Account implements BaseAccount {
         identities.get(0).setEmail(email);
     }
 
-    public synchronized String getAlwaysBcc() {
+   public synchronized String getAlwaysBcc() {
         return mAlwaysBcc;
     }
 
@@ -1087,6 +1182,7 @@ public class Account implements BaseAccount {
                 folderName.equals(getSpamFolderName()) ||
                 folderName.equals(getOutboxFolderName()) ||
                 folderName.equals(getSentFolderName()) ||
+//                folderName.equals(getSpoofedFolderName()) ||
                 folderName.equals(getErrorFolderName())));
     }
 
@@ -1108,6 +1204,14 @@ public class Account implements BaseAccount {
 
     public synchronized String getSentFolderName() {
         return mSentFolderName;
+    }
+
+    public synchronized String getSpoofedFolderName() {
+        return mSpoofedFolderName;
+    }
+
+    public synchronized void setSpoofedFolderName(String spoofedFolderName) {
+    	mSpoofedFolderName = spoofedFolderName;
     }
 
     public synchronized String getErrorFolderName() {
@@ -1173,6 +1277,14 @@ public class Account implements BaseAccount {
      */
     public synchronized boolean hasSpamFolder() {
         return !K9.FOLDER_NONE.equalsIgnoreCase(mSpamFolderName);
+    }
+
+    /**
+     * Checks if this account has a spoofed folder set.
+     * @return true if account has a spoofed folder set.
+     */
+    public synchronized boolean hasSpoofedFolder() {
+        return !K9.FOLDER_NONE.equalsIgnoreCase(mSpoofedFolderName);
     }
 
     public synchronized String getOutboxFolderName() {
@@ -1696,7 +1808,215 @@ public class Account implements BaseAccount {
     public void setRemoteSearchNumResults(int val) {
         mRemoteSearchNumResults = (val >= 0 ? val : 0);
     }
+ 
+ /**   
+    public void setContentServerFilter(boolean contentServerFilterNonecs) {
+    	mContentServerFilterNonecs = contentServerFilterNonecs;
+    }
+    
+    public boolean isContentServerFilterNonecs() {
+        return mContentServerFilterNonecs;
+    }
+ **/   
+    public String getContentServerName() {
+        return mContentServerName;
+    }
 
+    public void setContentServerName(String contentServerName) {
+        mContentServerName = contentServerName;
+    }
+
+    public String getContentServerPassword() {
+        return mContentServerPassword;
+    }
+
+    public void setContentServerPassword(String contentServerPassword) {
+        mContentServerPassword = contentServerPassword;
+    }
+
+    public String getContentServerPort() {
+        return mContentServerPort;
+    }
+
+    public void setContentServerPort(String contentServerPort) {
+        mContentServerPort = contentServerPort;
+    }
+
+	public boolean isContentServerSendMode() {
+	    return mContentServerSendMode;
+	}
+
+	public void setContentServerSendMode(boolean contentServerSendMode) {
+		mContentServerSendMode = contentServerSendMode;
+	}
+	
+	public boolean isContentServerEncryption() {
+	    return mContentServerEncryption;
+	}
+	
+	public void setContentServerEncryption(boolean contentServerEncryption) {
+		mContentServerEncryption = contentServerEncryption;
+	}
+/**	
+	public boolean isContentServerShowPassword() {
+	    return mShowPassword;
+	}
+	
+	public void setContentServerShowPassword(boolean showPassword) {
+		mShowPassword = showPassword;
+	}
+**/	
+	public void setContentServerInclude(boolean contentServerInclude) {
+		mContentServerContentIncluded = contentServerInclude;
+	}
+	
+	public void setForwardingAllowed(boolean forwardingAllowed) {
+		mForwardingAllowed = forwardingAllowed;
+	}
+	
+	public void setContentServerEphemeralMode(boolean contentServerEphemeral) {
+		mContentServerEphemeralMode = contentServerEphemeral;
+	}
+	
+    public String getContentServerDisplayDuration() {
+        return mContentServerDisplayDuration;
+    }
+
+    public void setContentServerDisplayDuration(String contentServerDisplayDuration) {
+        mContentServerDisplayDuration = contentServerDisplayDuration;
+    }
+
+	public boolean isContentServerContentIncluded() {
+	    return mContentServerContentIncluded;
+	}
+
+	public boolean isForwardingAllowed() {
+	    return mForwardingAllowed;
+	}
+
+	public boolean isContentServerEphemeralMode() {
+	    return mContentServerEphemeralMode;
+	}
+
+    public String getPrivateContentServerConfigNames() {
+        return mPrivateContentServerConfigNames;
+    }
+
+    public void setPrivateContentServerConfigNames(String privateContentServerConfigNames) {
+    	mPrivateContentServerConfigNames = privateContentServerConfigNames;
+    }
+    
+    public String getPrivateContentServerNames() {
+        return mPrivateContentServerNames;
+    }
+
+    public void setPrivateContentServerNames(String privateContentServerNames) {
+    	mPrivateContentServerNames = privateContentServerNames;
+    }
+    
+    public String getPrivateContentServerPasswords() {
+        return mPrivateContentServerPasswords;
+    }
+
+    public void setPrivateContentServerPasswords(String privateContentServerPasswords) {
+    	mPrivateContentServerPasswords = privateContentServerPasswords;
+    }
+    public String getPrivateContentServerPorts() {
+        return mPrivateContentServerPorts;
+    }
+
+    public void setPrivateContentServerPorts(String privateContentServerPorts) {
+    	mPrivateContentServerPorts = privateContentServerPorts;
+    }
+    
+    public String getPrivateContentServerSendModes() {
+        return mPrivateContentServerSendModes;
+    }
+    
+    public void setPrivateContentServerSendModes(String privateContentServerSendModes) {
+    	mPrivateContentServerSendModes = privateContentServerSendModes;
+    }
+    
+    public String getPrivateContentServerEncryptions() {
+        return mPrivateContentServerEncryptions;
+    }
+    
+    public void setPrivateContentServerEncryptions(String privateContentServerEncryptions) {
+    	mPrivateContentServerEncryptions = privateContentServerEncryptions;
+    }
+
+    public String getPrivateContentServerIncludes() {
+        return mPrivateContentServerIncludes;
+    }
+    
+    public void setPrivateContentServerIncludes(String privateContentServerIncludes) {
+    	mPrivateContentServerIncludes = privateContentServerIncludes;
+    }
+
+    public String getPrivateContentServerForwarding() {
+        return mPrivateContentServerForwarding;
+    }
+    
+    public void setPrivateContentServerForwarding(String privateContentServerForwarding) {
+    	mPrivateContentServerForwarding = privateContentServerForwarding;
+    }
+
+    public String getPrivateContentServerEphemeralModes() {
+        return mPrivateContentServerEphemeralModes;
+    }
+    
+    public void setPrivateContentServerEphemeralModes(String privateContentServerEphemeralModes) {
+    	mPrivateContentServerEphemeralModes = privateContentServerEphemeralModes;
+    }
+
+    public String getPrivateContentServerDisplayDurations() {
+        return mPrivateContentServerDisplayDurations;
+    }
+    
+    public void setPrivateContentServerDisplayDurations(String privateContentServerDisplayDurations) {
+    	mPrivateContentServerDisplayDurations = privateContentServerDisplayDurations;
+    }
+
+    public int getLicenseStatus() {
+        return mLicenseStatus;
+    }
+    
+    public void setLicenseStatus(int licenseStatus) {
+    	mLicenseStatus = licenseStatus;
+    }
+
+    public long getLicenseCheckDate() {
+        return mLicenseCheckDate;
+    }
+    
+    public void setLicenseCheckDate(long licenseCheckDate) {
+    	mLicenseCheckDate = licenseCheckDate;
+    }
+
+    public String getDefaultConfigs() {
+        return mDefaultConfigs;
+    }
+    
+	public void setDefaultConfigs(String defaultConfigs) {
+		mDefaultConfigs = defaultConfigs;
+	}
+	
+    public boolean isDefaultConfig() {
+        return mDefaultConfig;
+    }
+    
+	public void setDefaultConfig(boolean defaultConfig) {
+		mDefaultConfig = defaultConfig;
+	}
+
+    public boolean showBugListLink() {
+        return mShowBugListLink;
+    }
+    
+    public void setBugListLink(boolean showBugListLink) {
+        mShowBugListLink = showBugListLink;
+    }
+    
     public String getInboxFolderName() {
         return mInboxFolderName;
     }
@@ -1847,11 +2167,41 @@ public class Account implements BaseAccount {
      *         The {@code LocalSearch} instance to modify.
      */
     public void excludeSpecialFolders(LocalSearch search) {
-        search.and(Searchfield.FOLDER, getTrashFolderName(), Attribute.NOT_EQUALS);
-        search.and(Searchfield.FOLDER, getDraftsFolderName(), Attribute.NOT_EQUALS);
-        search.and(Searchfield.FOLDER, getSpamFolderName(), Attribute.NOT_EQUALS);
-        search.and(Searchfield.FOLDER, getOutboxFolderName(), Attribute.NOT_EQUALS);
-        search.and(Searchfield.FOLDER, getSentFolderName(), Attribute.NOT_EQUALS);
+        excludeSpecialFolder(search, getTrashFolderName());
+        excludeSpecialFolder(search, getDraftsFolderName());
+        excludeSpecialFolder(search, getSpamFolderName());
+        excludeSpecialFolder(search, getOutboxFolderName());
+        excludeSpecialFolder(search, getSentFolderName());
         search.or(new SearchCondition(Searchfield.FOLDER, Attribute.EQUALS, getInboxFolderName()));
+    }
+
+    /**
+     * Modify the supplied {@link LocalSearch} instance to exclude "unwanted" folders.
+     *
+     * <p>
+     * Currently the following folders are excluded:
+     * <ul>
+     *   <li>Trash</li>
+     *   <li>Spam</li>
+     *   <li>Outbox</li>
+     * </ul>
+     * The Inbox will always be included even if one of the special folders is configured to point
+     * to the Inbox.
+     * </p>
+     *
+     * @param search
+     *         The {@code LocalSearch} instance to modify.
+     */
+    public void excludeUnwantedFolders(LocalSearch search) {
+        excludeSpecialFolder(search, getTrashFolderName());
+        excludeSpecialFolder(search, getSpamFolderName());
+        excludeSpecialFolder(search, getOutboxFolderName());
+        search.or(new SearchCondition(Searchfield.FOLDER, Attribute.EQUALS, getInboxFolderName()));
+    }
+
+    private void excludeSpecialFolder(LocalSearch search, String folderName) {
+        if (!K9.FOLDER_NONE.equals(folderName)) {
+            search.and(Searchfield.FOLDER, folderName, Attribute.NOT_EQUALS);
+        }
     }
 }

@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="send_mode_choices">
+        <item>Send as ECS</item>
+        <item>Send as regular mail</item>
+        <item>Mixed-mode</item>
+    </string-array>
+    <integer name="content_server_port_default">443</integer>
+    <string name="abbrev_bytes">B</string>
+    <string name="abbrev_gigabytes">GB</string>
+    <string name="abbrev_kilobytes">KB</string>
+    <string name="abbrev_megabytes">MB</string>
+    <string name="about_action">Om</string>
+    <string name="about_title_fmt">Om <ns1:g id="app_name">%s</ns1:g></string>
+    <string name="account_clear_dlg_instructions_fmt">All e-post i \"<ns1:g id="account">%s</ns1:g>\" kommer att raderas ifrån ChiaraMail, men kontoinställningar behålls.</string>
+    <string name="account_clear_dlg_title">Rensa konto</string>
+    <string name="account_delete_dlg_instructions_fmt">Kontot \"<ns1:g id="account">%s</ns1:g>\" kommer att raderas från ChiaraMail.</string>
+    <string name="account_delete_dlg_title">Radera konto</string>
+    <string name="account_recreate_dlg_instructions_fmt">Alla meddelanden, bifogade filer, mappar och inställningar mapp för \"<ns1:g id="account">%s</ns1:g>\" kommer att raderas ifrån ChiaraMail, men kontoinställningar behålls.</string>
+    <string name="account_recreate_dlg_title">Återskapa konto</string>
+    <string name="account_settings_action">Kontoinställningar</string>
+    <string name="account_settings_always_bcc_label">Skicka alltid Bcc till</string>
+    <string name="account_settings_autodownload_message_size_1">1Kb</string>
+    <string name="account_settings_autodownload_message_size_1024">1Mb</string>
+    <string name="account_settings_autodownload_message_size_10240">10Mb</string>
+    <string name="account_settings_autodownload_message_size_128">128Kb</string>
+    <string name="account_settings_autodownload_message_size_16">16Kb</string>
+    <string name="account_settings_autodownload_message_size_2">2Kb</string>
+    <string name="account_settings_autodownload_message_size_2048">2Mb</string>
+    <string name="account_settings_autodownload_message_size_256">256Kb</string>
+    <string name="account_settings_autodownload_message_size_32">32Kb</string>
+    <string name="account_settings_autodownload_message_size_4">4Kb</string>
+    <string name="account_settings_autodownload_message_size_512">512Kb</string>
+    <string name="account_settings_autodownload_message_size_5120">5Mb</string>
+    <string name="account_settings_autodownload_message_size_64">64Kb</string>
+    <string name="account_settings_autodownload_message_size_8">8Kb</string>
+    <string name="account_settings_autodownload_message_size_any">Ingen gräns</string>
+    <string name="account_settings_autodownload_message_size_label">Hämta automatiskt brev upp till</string>
+    <string name="account_settings_color_label">Kontofärg</string>
+    <string name="account_settings_color_summary">Välj färg för att visa detta konto i mappar och kontolistor</string>
+    <string name="account_settings_composition">Skriva brev</string>
+    <string name="account_settings_composition_label">Standardinställningar</string>
+    <string name="account_settings_composition_summary">Standardinställningar för avsändare, BCC och signatur</string>
+    <string name="account_settings_composition_title">Inställningar för att skriva brev</string>
+    <string name="account_settings_crypto">Kryptografi</string>
+    <string name="account_settings_crypto_app">OpenPGP-leverantör</string>
+    <string name="account_settings_crypto_app_none">Ingen</string>
+    <string name="account_settings_crypto_auto_signature">Auto-signera</string>
+    <string name="account_settings_crypto_auto_signature_summary">Använd kontots e-post-adress för att gissa signaturnyckeln.</string>
+    <string name="account_settings_default_label">Standardkonto</string>
+    <string name="account_settings_default_summary">Skicka e-post från detta konto som standard</string>
+    <string name="account_settings_description_label">Kontonamn</string>
+    <string name="account_settings_dynamic_content">Envelope-Content Splitting (ECS)</string>
+    <string name="account_settings_email_label">Din e-postadress</string>
+    <string name="account_settings_folder_display_mode_all">Alla</string>
+    <string name="account_settings_folder_display_mode_first_and_second_class">Första och andra klassens mappar</string>
+    <string name="account_settings_folder_display_mode_first_class">Bara första klassens mappar</string>
+    <string name="account_settings_folder_display_mode_label">Mappar att visa</string>
+    <string name="account_settings_folder_display_mode_not_second_class">Allt utom andra klassens mappar</string>
+    <string name="account_settings_folder_push_mode_all">Alla</string>
+    <string name="account_settings_folder_push_mode_first_and_second_class">Första och andra klassens mappar</string>
+    <string name="account_settings_folder_push_mode_first_class">Bara första klassens mappar</string>
+    <string name="account_settings_folder_push_mode_label">Folders to check with push</string>
+    <string name="account_settings_folder_push_mode_none">Inga</string>
+    <string name="account_settings_folder_push_mode_not_second_class">Allt utom andra klassens mappar</string>
+    <string name="account_settings_folder_sync_mode_all">Alla</string>
+    <string name="account_settings_folder_sync_mode_first_and_second_class">Första och andra klassens mappar</string>
+    <string name="account_settings_folder_sync_mode_first_class">Bara första klassens mappar</string>
+    <string name="account_settings_folder_sync_mode_label">Mappar att kontrollera</string>
+    <string name="account_settings_folder_sync_mode_none">Inga</string>
+    <string name="account_settings_folder_sync_mode_not_second_class">Allt utom andra klassens mappar</string>
+    <string name="account_settings_folder_target_mode_all">Alla</string>
+    <string name="account_settings_folder_target_mode_first_and_second_class">Första och andra klassens mappar</string>
+    <string name="account_settings_folder_target_mode_first_class">Bara första klassens mappar</string>
+    <string name="account_settings_folder_target_mode_label">Flytta/kopiera destinationsmappar</string>
+    <string name="account_settings_folder_target_mode_not_second_class">Allt utom andra klassens mappar</string>
+    <string name="account_settings_folders">Mappar</string>
+    <string name="account_settings_general_title">Allmänna inställningar</string>
+    <string name="account_settings_identities_label">Hantera identiteter</string>
+    <string name="account_settings_identities_summary">Ställ in alternativa avsändaradresser och signaturer</string>
+    <string name="account_settings_incoming_label">Inkommande server</string>
+    <string name="account_settings_incoming_summary">Konfigurera servern för inkommande e-post</string>
+    <string name="account_settings_led_color_label">Färg på notifierings-LED</string>
+    <string name="account_settings_led_color_summary">Välj den färg med vilken telefonens LED ska blinka för detta konto</string>
+    <string name="account_settings_led_label">Blinka LED</string>
+    <string name="account_settings_led_summary">Blinka LED när det kommer ny e-post</string>
+    <string name="account_settings_mail_check_frequency_label">Frekvens för att kontrollera mappar</string>
+    <string name="account_settings_mail_display_count_label">Antal brev att visa</string>
+    <string name="account_settings_message_age_0">idag</string>
+    <string name="account_settings_message_age_1">senaste 2 dagarna</string>
+    <string name="account_settings_message_age_14">senaste 2 veckorna</string>
+    <string name="account_settings_message_age_1_month">senaste månaden</string>
+    <string name="account_settings_message_age_1_year">senaste året</string>
+    <string name="account_settings_message_age_2">senaste 3 dagarna</string>
+    <string name="account_settings_message_age_21">senaste tre veckorna</string>
+    <string name="account_settings_message_age_2_months">senaste 2 månaderna</string>
+    <string name="account_settings_message_age_3_months">senaste 3 månaderna</string>
+    <string name="account_settings_message_age_6_months">senaste 6 månaderna</string>
+    <string name="account_settings_message_age_7">senaste veckan</string>
+    <string name="account_settings_message_age_any">När som helst (ingen gräns)</string>
+    <string name="account_settings_message_age_label">Synka e-post från</string>
+    <string name="account_settings_message_format_html">HTML (bilder och formatering behålls)</string>
+    <string name="account_settings_message_format_label">Brevformat</string>
+    <string name="account_settings_message_format_text">Ren text (bilder och formatering tas bort)</string>
+    <string name="account_settings_name_label">Ditt namn</string>
+    <string name="account_settings_notification_opens_unread_label">Notifieringar öppnar oläst e-post</string>
+    <string name="account_settings_notification_opens_unread_summary">Letar efter oläst e-post när notifieringen öppnas</string>
+    <string name="account_settings_notification_unread_count_label">Visa antal olästa</string>
+    <string name="account_settings_notification_unread_count_summary">Visar antalet olästa brev i notifieringsytan.</string>
+    <string name="account_settings_notify_label">Notifiera om ny e-post</string>
+    <string name="account_settings_notify_self_label">Notifiera för e-post från mig själv</string>
+    <string name="account_settings_notify_self_summary">Notifiera även för e-post som jag själv har skickat</string>
+    <string name="account_settings_notify_summary">Notifiera i statusraden när det kommer ny e-post</string>
+    <string name="account_settings_notify_sync_label">Synkronisera notifieringar</string>
+    <string name="account_settings_notify_sync_summary">Notifiera i statusraden vid kontroll efter ny e-post</string>
+    <string name="account_settings_outgoing_label">Utgående server</string>
+    <string name="account_settings_outgoing_summary">Konfigurera server för utgående e-post (SMTP)</string>
+    <string name="account_settings_push_advanced_title">Advancerat</string>
+    <string name="account_settings_quote_prefix_label">Citatprefix</string>
+    <string name="account_settings_quote_style_header">Header (som Outlook, Yahoo!, Hotmail)</string>
+    <string name="account_settings_quote_style_label">Citationsstil vid svar</string>
+    <string name="account_settings_quote_style_prefix">Prefix (som Gmail, Pine)</string>
+    <string name="account_settings_reply_after_quote_label">Svar efter citat</string>
+    <string name="account_settings_reply_after_quote_summary">Vid svar på e-post placeras originalmeddelandet ovanför ditt svar.</string>
+    <string name="account_settings_ringtone">Ringsignal för ny e-post</string>
+    <string name="account_settings_searchable_all">Alla</string>
+    <string name="account_settings_searchable_displayable">Visningsbara</string>
+    <string name="account_settings_searchable_label">Mappar att söka i</string>
+    <string name="account_settings_searchable_none">Inga</string>
+    <string name="account_settings_show_pictures_always">Alltid</string>
+    <string name="account_settings_show_pictures_label">Visa bilder automatiskt</string>
+    <string name="account_settings_show_pictures_never">Aldrig</string>
+    <string name="account_settings_show_pictures_only_from_contacts">Bara från kontakter</string>
+    <string name="account_settings_signature__location_after_quoted_text">Efter citerad text</string>
+    <string name="account_settings_signature__location_before_quoted_text">Före citerad text</string>
+    <string name="account_settings_signature__location_label">Signaturposition</string>
+    <string name="account_settings_signature_label">Signatur</string>
+    <string name="account_settings_signature_use_label">Använd signatur</string>
+    <string name="account_settings_storage_title">Lagring</string>
+    <string name="account_settings_sync">Mappsynkronisering</string>
+    <string name="account_settings_sync_remote_deletetions_label">Synkronisera fjärradering</string>
+    <string name="account_settings_sync_remote_deletetions_summary">Radera e-post när den raderas från servern</string>
+    <string name="account_settings_title_fmt">Allmänna inställningar</string>
+    <string name="account_settings_vibrate_enable">Vibrera</string>
+    <string name="account_settings_vibrate_pattern_1">mönster 1</string>
+    <string name="account_settings_vibrate_pattern_2">mönster 2</string>
+    <string name="account_settings_vibrate_pattern_3">mönster 3</string>
+    <string name="account_settings_vibrate_pattern_4">mönster 4</string>
+    <string name="account_settings_vibrate_pattern_5">mönster 5</string>
+    <string name="account_settings_vibrate_pattern_default">standard</string>
+    <string name="account_settings_vibrate_pattern_label">Vibrationsmönster</string>
+    <string name="account_settings_vibrate_summary">Vibrera när det kommer e-post</string>
+    <string name="account_settings_vibrate_times">Antal vibrationer</string>
+    <string name="account_setup_account_type_imap_action">IMAP</string>
+    <string name="account_setup_account_type_instructions">Vilken typ av konto är detta?</string>
+    <string name="account_setup_account_type_pop_action">POP3</string>
+    <string name="account_setup_account_type_title">Kontotyp</string>
+    <string name="account_setup_account_type_webdav_action">WebDAV (Exchange)</string>
+    <string name="account_setup_auto_expand_folder">Auto-expandera mapp</string>
+    <string name="account_setup_bad_uri">Ogiltig konfiguration: <ns1:g id="err_mess">%s</ns1:g></string>
+    <string name="account_setup_basics_email_hint">e-postadress</string>
+    <string name="account_setup_basics_manual_setup_action">Konfigurera manuellt</string>
+    <string name="account_setup_basics_password_hint">Lösenord</string>
+    <string name="account_setup_basics_title">Konfigurera ett nytt konto</string>
+    <string name="account_setup_bypass_ecs">Bypass ECS</string>
+    <string name="account_setup_check_settings_authenticate">Authentiserar\u2026</string>
+    <string name="account_setup_check_settings_canceling_msg">Avbryter\u2026</string>
+    <string name="account_setup_check_settings_check_content_server_msg">Checking content server settings\u2026</string>
+    <string name="account_setup_check_settings_check_incoming_msg">Kontrollerar inställningar för inkommande server\u2026</string>
+    <string name="account_setup_check_settings_check_outgoing_msg">Kontrollerar inställningar för utgående server\u2026</string>
+    <string name="account_setup_check_settings_fetch">Hämtar kontoinställningar\u2026</string>
+    <string name="account_setup_check_settings_retr_info_msg">Hämtar kontoinformation\u2026</string>
+    <string name="account_setup_check_settings_title"/>
+    <string name="account_setup_content_server_name_label">Content server name</string>
+    <string name="account_setup_content_server_name_summary">Specify the fully-qualified name or the IP address of the content server.</string>
+    <string name="account_setup_content_server_password_label">Content server password</string>
+    <string name="account_setup_content_server_password_summary">Check your e-mail for a registration confirmation message from ChiaraMail and select the link to activate registration and display your content server password. Then, enter the password in the above field.\n</string>
+    <string name="account_setup_content_server_port_label">Content server port</string>
+    <string name="account_setup_content_server_port_summary">Specify the port number of the content server (default = 443).</string>
+    <string name="account_setup_content_server_registration_complete">Account registration confirmation has been e-mailed to you. To activate your ChiaraMail account, select the link in the message and then enter your content server password into the field above.</string>
+    <string name="account_setup_content_server_registration_error">An error occured during content server auto-registration: </string>
+    <string name="account_setup_content_server_title">ECS Content Server Settings</string>
+    <string name="account_setup_dynamic_content_default_label">Send as ECS</string>
+    <string name="account_setup_dynamic_content_default_summary">When this box is checked, mail will be sent using ECS technology.</string>
+    <string name="account_setup_dynamic_content_encryption_default_label">Encrypt content</string>
+    <string name="account_setup_dynamic_content_encryption_default_summary">When this box is checked, the message content will be encrypted before sending it to the content server.</string>
+    <string name="account_setup_dynamic_content_include_content_default_label">Include content</string>
+    <string name="account_setup_dynamic_content_include_content_default_summary">When this box and the \'Send as ECS\' box are checked, messages will include the actual content, rather than placeholders.</string>
+    <string name="account_setup_dynamic_content_menu_label">Default Send mode</string>
+    <string name="account_setup_dynamic_content_override_label">These settings may be overriden prior to sending the mail.</string>
+    <string name="account_setup_dynamic_content_settings_title">ECS Content Server Settings</string>
+    <string name="account_setup_dynamic_content_warning_label">Important: Mail sent using ECS technology can only be read by ECS-enabled mail clients.</string>
+    <string name="account_setup_ecs_login_title">Sign into your ChiaraMail account</string>
+    <string name="account_setup_ecs_not_registered">User not registered or invalid account ID/password</string>
+    <string name="account_setup_ecs_password_hint">Content server password</string>
+    <string name="account_setup_expunge_policy_immediately">Direkt efter radering eller flytt</string>
+    <string name="account_setup_expunge_policy_label">Utplåna e-post</string>
+    <string name="account_setup_expunge_policy_manual">Endast manuellt</string>
+    <string name="account_setup_expunge_policy_on_poll">Vid varje e-post-kontroll</string>
+    <string name="account_setup_failed_dlg_auth_message_fmt">Felaktigt användarnamn eller lösenord.\n(<ns1:g id="error">%s</ns1:g>)</string>
+    <string name="account_setup_failed_dlg_certificate_message_fmt">Kan inte upprätta säker anslutning till servern.\n(<ns1:g id="error">%s</ns1:g>)</string>
+    <string name="account_setup_failed_dlg_continue_action">Fortsätt</string>
+    <string name="account_setup_failed_dlg_edit_details_action">Redigera detaljer</string>
+    <string name="account_setup_failed_dlg_invalid_certificate_accept">Acceptera nyckel</string>
+    <string name="account_setup_failed_dlg_invalid_certificate_reject">Neka nyckel</string>
+    <string name="account_setup_failed_dlg_invalid_certificate_title">Okänt Certifikat</string>
+    <string name="account_setup_failed_dlg_server_message_fmt">Kan inte ansluta till servern.\n(<ns1:g id="error">%s</ns1:g>)</string>
+    <string name="account_setup_failed_dlg_title">Kunde inte fullborda konfigurationen</string>
+    <string name="account_setup_incoming_auth_type_label">Autentiseringstyp</string>
+    <string name="account_setup_incoming_compression_label">Använd kompression på nätverket:</string>
+    <string name="account_setup_incoming_delete_policy_delete_label">Radera från servern</string>
+    <string name="account_setup_incoming_delete_policy_label">När jag raderar ett brev</string>
+    <string name="account_setup_incoming_delete_policy_markread_label">Markera som lästa på servern</string>
+    <string name="account_setup_incoming_delete_policy_never_label">Radera inte på servern</string>
+    <string name="account_setup_incoming_imap_path_prefix_label">Sökvägsprefix för IMAP</string>
+    <string name="account_setup_incoming_imap_server_label">IMAP-server</string>
+    <string name="account_setup_incoming_mobile_label">Mobilt nätverk</string>
+    <string name="account_setup_incoming_other_label">Annat</string>
+    <string name="account_setup_incoming_password_label">Lösenord</string>
+    <string name="account_setup_incoming_pop_server_label">POP3-server</string>
+    <string name="account_setup_incoming_port_label">Port</string>
+    <string name="account_setup_incoming_security_label">Säkerhetstyp</string>
+    <string name="account_setup_incoming_security_none_label">Ingen</string>
+    <string name="account_setup_incoming_security_ssl_label">SSL (alltid)</string>
+    <string name="account_setup_incoming_security_ssl_optional_label">SSL (om tillgängligt)</string>
+    <string name="account_setup_incoming_security_tls_label">TLS (alltid)</string>
+    <string name="account_setup_incoming_security_tls_optional_label">TLS (om tillgängligt)</string>
+    <string name="account_setup_incoming_subscribed_folders_only_label">Visa endast prenumererade mappar</string>
+    <string name="account_setup_incoming_title">Inställningar för inkommande server</string>
+    <string name="account_setup_incoming_username_label">Användarnanm</string>
+    <string name="account_setup_incoming_webdav_auth_path_hint">Frivillig</string>
+    <string name="account_setup_incoming_webdav_auth_path_label">Sökväg för authentisering</string>
+    <string name="account_setup_incoming_webdav_mailbox_path_hint">Frivillig</string>
+    <string name="account_setup_incoming_webdav_mailbox_path_label">Sökväg för brevlåda</string>
+    <string name="account_setup_incoming_webdav_path_prefix_hint">Frivillig</string>
+    <string name="account_setup_incoming_webdav_path_prefix_label">Sökväg för WebDAV (Exchange)</string>
+    <string name="account_setup_incoming_webdav_server_label">Server för WebDAV (Exchange)</string>
+    <string name="account_setup_incoming_wifi_label">Wi-Fi</string>
+    <string name="account_setup_names_account_name_label">Ge detta konto ett namn (frivilligt):</string>
+    <string name="account_setup_names_title">Nästan färdig!</string>
+    <string name="account_setup_names_user_name_label">Ange ditt namn (visas på utgående e-post):</string>
+    <string name="account_setup_no_account_text">&lt;a href="https://www.chiaramail.com/index.jsp">Don\'t have a ChiaraMail account for this address?&lt;/a></string>
+    <string name="account_setup_options_enable_push_label">Aktivera push-mail för detta konto</string>
+    <string name="account_setup_options_enable_push_summary">Om det stöds av din server så kommer nya brev att levereras omedelbart. Denna inställning kan dramatiskt förbättra eller försämra prestanda.</string>
+    <string name="account_setup_options_mail_check_frequency_10min">Var 10:e minut</string>
+    <string name="account_setup_options_mail_check_frequency_12hour">Var 12:e timme</string>
+    <string name="account_setup_options_mail_check_frequency_15min">Var 15:e minut</string>
+    <string name="account_setup_options_mail_check_frequency_1hour">Varje timme</string>
+    <string name="account_setup_options_mail_check_frequency_1min">Varje minut</string>
+    <string name="account_setup_options_mail_check_frequency_24hour">Var 24:e timme</string>
+    <string name="account_setup_options_mail_check_frequency_2hour">Varannan timme</string>
+    <string name="account_setup_options_mail_check_frequency_30min">Var 30:e minut</string>
+    <string name="account_setup_options_mail_check_frequency_3hour">Var 3:e timme</string>
+    <string name="account_setup_options_mail_check_frequency_5min">Var 5:e minut</string>
+    <string name="account_setup_options_mail_check_frequency_6hour">Var 6:e timme</string>
+    <string name="account_setup_options_mail_check_frequency_label">Frekvens för kontroll av mappar</string>
+    <string name="account_setup_options_mail_check_frequency_never">Aldrig</string>
+    <string name="account_setup_options_mail_display_count_10">10 brev</string>
+    <string name="account_setup_options_mail_display_count_100">100 brev</string>
+    <string name="account_setup_options_mail_display_count_1000">1000 brev</string>
+    <string name="account_setup_options_mail_display_count_25">25 brev</string>
+    <string name="account_setup_options_mail_display_count_250">250 brev</string>
+    <string name="account_setup_options_mail_display_count_50">50 brev</string>
+    <string name="account_setup_options_mail_display_count_500">500 brev</string>
+    <string name="account_setup_options_mail_display_count_all">alla brev</string>
+    <string name="account_setup_options_mail_display_count_label">Antal brev att visa</string>
+    <string name="account_setup_options_notify_label">Meddela mig vid ny e-post</string>
+    <string name="account_setup_options_notify_sync_label">Meddela mig vid kontroll efter ny e-post</string>
+    <string name="account_setup_options_title">Kontoinställningar</string>
+    <string name="account_setup_outgoing_authentication_label">Autentiseringstyp</string>
+    <string name="account_setup_outgoing_password_label">Lösenord</string>
+    <string name="account_setup_outgoing_port_label">Port</string>
+    <string name="account_setup_outgoing_require_login_label">Kräv inloggning.</string>
+    <string name="account_setup_outgoing_security_label">Säkerhetstyp</string>
+    <string name="account_setup_outgoing_smtp_server_label">SMTP-server</string>
+    <string name="account_setup_outgoing_title">Inställningar för utgående server</string>
+    <string name="account_setup_outgoing_username_label">Användarnamn</string>
+    <string name="account_setup_push_limit_10">10 mappar</string>
+    <string name="account_setup_push_limit_100">100 mappar</string>
+    <string name="account_setup_push_limit_1000">1000 mappar</string>
+    <string name="account_setup_push_limit_25">25 mappar</string>
+    <string name="account_setup_push_limit_250">250 mappar</string>
+    <string name="account_setup_push_limit_50">50 mappar</string>
+    <string name="account_setup_push_limit_500">500 mappar</string>
+    <string name="account_setup_push_limit_label">Max antal mappar att kontrollera med push</string>
+    <string name="account_setup_register_me">Create my account!</string>
+    <string name="account_size_changed">
+    Kontot \"<ns1:g id="account">%s</ns1:g>\" har krympt från
+    <ns1:g id="oldSize">%s</ns1:g>
+    till
+    <ns1:g id="newSize">%s</ns1:g>
+    </string>
+    <string name="accountlist_preferences">Kontolista</string>
+    <string name="accounts_context_menu_title">Kontoinställningar</string>
+    <string name="accounts_title">Konton</string>
+    <string name="accounts_welcome">
+&lt;p>
+K-9 Mail är en e-postklient med öppen källkod för Android, ursprungligen baserad på standard-e-postklienten i Android.
+&lt;/p>&lt;p>
+K-9\'s förbättrade funktioner inkluderar:
+&lt;/p>
+&lt;ul>
+  &lt;li>Push-mail med hjälp av IMAP IDLE&lt;/li>
+  &lt;li>Bättre prestanda&lt;/li>
+  &lt;li>Omarkivering av e-post&lt;/li>
+  &lt;li>E-post-signaturer&lt;/li>
+  &lt;li>Bcc till dig själv&lt;/li>
+  &lt;li>Mapp-prenumerationer&lt;/li>
+  &lt;li>Synkronisera alla mappar&lt;/li>
+  &lt;li>Inställning av avsändaradress&lt;/li>
+  &lt;li>Tangentbordsgenvägar&lt;/li>
+  &lt;li>Bättre support för IMAP&lt;/li>
+  &lt;li>Spara bilagor till SD-kort&lt;/li>
+  &lt;li>Töm papperskorgen&lt;/li>
+  &lt;li>Meddelandesortering&lt;/li>
+  &lt;li>…och mer&lt;/li>
+&lt;/ul>
+&lt;p>
+Vänligen notera att K-9 inte har någon support för gratis Hotmail-konton och liksom många andra e-postklienter har vissa problem vid kommunikation med Microsoft Exchange.
+&lt;/p>&lt;p>
+Vänligen skicka felrapporter, hjälp till med nya funktioner och ställ frågor på
+&lt;a href="http://k9mail.googlecode.com/">http://k9mail.googlecode.com/&lt;/a>.
+&lt;/p>
+    </string>
+    <string name="add_account_action">Lägg till konto</string>
+    <string name="add_attachment_action">Lägg till bilaga</string>
+    <string name="add_attachment_action_image">Lägg till bilaga (Bild)</string>
+    <string name="add_attachment_action_video">Lägg till bilaga (Video)</string>
+    <string name="add_cc_bcc_action">Lägg till Cc/Bcc</string>
+    <string name="advanced">Avancerat</string>
+    <string name="animations_summary">Använd snygga visuella effekter</string>
+    <string name="animations_title">Animation</string>
+    <string name="app_authors">Google, The K-9 Dog Walkers and ChiaraMail Corp.</string>
+    <string name="app_authors_fmt">Upphovsmän: <ns1:g id="app_authors">%s</ns1:g></string>
+    <string name="app_copyright_fmt">Copyright 2008-<ns1:g>%s</ns1:g> The K-9 Dog Walkers and ChiaraMail Corp. Vissa delar Copyright 2006-<ns1:g>%s</ns1:g> the Android Open Source Project.</string>
+    <string name="app_emoji_icons">Emoji-ikoner: <ns1:g id="app_emoji_icons_link">%s</ns1:g></string>
+    <string name="app_libraries">Vi använder följande tredjepartsbibliotek: <ns1:g id="app_libraries_list">%s</ns1:g></string>
+    <string name="app_license">Licensierat under Apache-licensen, version 2.0.</string>
+    <string name="app_name">ChiaraMail for Android</string>
+    <string name="app_revision_fmt">Revisionsinformation: <ns1:g id="app_revision_url">%s</ns1:g></string>
+    <string name="archive_action">Arkivera</string>
+    <string name="archive_folder_label">Namn på arkivmapp</string>
+    <string name="attachment_encryption_unsupported">Varning: bilagor är INTE signerade eller krypterade än.</string>
+    <string name="background_ops_always">Alltid</string>
+    <string name="background_ops_auto_sync">När \'Bakgrundsdata\' &amp; \'Auto-sync\' är aktiverade</string>
+    <string name="background_ops_enabled">När \'Bakgrundsdata\' är aktiverad</string>
+    <string name="background_ops_label">Bakgrundssynkronisering</string>
+    <string name="background_ops_never">Aldrig</string>
+    <string name="batch_select_all">Markera alla</string>
+    <string name="beta_app_name">ChiaraMail BETA</string>
+    <string name="btn_crypto_sign">Signera</string>
+    <string name="btn_decrypt">Dekryptera</string>
+    <string name="btn_encrypt">Kryptera</string>
+    <string name="btn_verify">Verifiera</string>
+    <string name="cancel_action">Avbryt</string>
+    <string name="check_mail_action">Kontrollera e-post</string>
+    <string name="choose_contacts_to_invite">Choose Contacts to Invite</string>
+    <string name="choose_folder_title">Välj en mapp</string>
+    <string name="choose_identity_title">Välj identitet</string>
+    <string name="clear_action">Rensa e-post (farligt!)</string>
+    <string name="clear_local_folder_action">Rensa lokalt lagrade meddelanden</string>
+    <string name="clear_pending_action">Rensa avvaktande handlingar (farligt!)</string>
+    <string name="clearing_account">Rensar konto \"<ns1:g id="account">%s</ns1:g>\"</string>
+    <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"För <ns1:g id="APP_NAME">%1$s</ns1:g> krävs en eller flera Google Play-tjänster som inte är tillgängliga för närvarande. Kontakta utvecklaren om du vill ha hjälp."</string>
+    <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Aktivera Google Play-tjänster"</string>
+    <string msgid="2016066508617425489" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> fungerar inte om du inte aktiverar Google Play-tjänster."</string>
+    <string msgid="4763733806837472840" name="common_google_play_services_enable_title">"Aktivera Google Play-tjänster"</string>
+    <string msgid="5765996826213593005" name="common_google_play_services_install_button">"Hämta Google Play-tjänster"</string>
+    <string msgid="1545874412485515659" name="common_google_play_services_install_text_phone">"Du måste installera Google Play-tjänster för att kunna köra <ns1:g id="APP_NAME">%1$s</ns1:g> på mobilen."</string>
+    <string msgid="2742131317258851812" name="common_google_play_services_install_text_tablet">"Du måste installera Google Play-tjänster för att kunna köra <ns1:g id="APP_NAME">%1$s</ns1:g> på surfplattan."</string>
+    <string msgid="2110712637922504348" name="common_google_play_services_install_title">"Hämta Google Play-tjänster"</string>
+    <string msgid="8004809446015217370" name="common_google_play_services_invalid_account_text">"Det angivna kontot finns inte på den här enheten. Välj ett annat konto."</string>
+    <string msgid="9894539456463288" name="common_google_play_services_invalid_account_title">"Ogiltigt konto"</string>
+    <string msgid="2602915190038884860" name="common_google_play_services_network_error_text">"Du måste ha en dataanslutning för att kunna ansluta till Google Play-tjänster."</string>
+    <string msgid="5183831421651758225" name="common_google_play_services_network_error_title">"Nätverksfel"</string>
+    <string msgid="3936796119014022295" name="common_google_play_services_notification_ticker">"Fel på Google Play-tjänster"</string>
+    <string msgid="6951442375899151085" name="common_google_play_services_restricted_profile_text">"Det går inte att komma åt konton från en begränsad profil."</string>
+    <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Begränsad profil"</string>
+    <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Ett fel uppstod när du försökte logga in på kontot. Välj ett annat konto."</string>
+    <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Det gick inte att logga in"</string>
+    <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> har problem med Google Play-tjänster. Om problemet kvarstår kontaktar du utvecklaren."</string>
+    <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"För <ns1:g id="APP_NAME">%1$s</ns1:g> krävs Google Play-tjänster, och dessa stöds inte på enheten. Kontakta tillverkaren om du vill ha hjälp."</string>
+    <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Google Play-tjänster"</string>
+    <string msgid="2221302284291941971" name="common_google_play_services_update_button">"Uppdatera"</string>
+    <string msgid="6230553430311881723" name="common_google_play_services_update_text">"Om du vill köra <ns1:g id="APP_NAME">%1$s</ns1:g> måste du först uppdatera Google Play-tjänster."</string>
+    <string msgid="2926201203597631481" name="common_google_play_services_update_title">"Uppdatera Google Play-tjänster"</string>
+    <string msgid="1576144479907495032" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan inte köras utan Google Play-tjänster, och dessa uppdateras för närvarande."</string>
+    <string msgid="1604540693139938838" name="common_google_play_services_updating_title">"Google Play-tjänster uppdateras"</string>
+    <string msgid="8334920661858223093" name="common_google_play_services_wear_update_text">"En ny version av Google Play-tjänster krävs. Den uppdateras automatiskt inom kort."</string>
+    <string msgid="311697239335516384" name="common_open_on_phone">"Öppna på mobilen"</string>
+    <string msgid="3156914698180786012" name="common_signin_button_text">"Logga in"</string>
+    <string msgid="1483290677806110088" name="common_signin_button_text_long">"Logga in med Google"</string>
+    <string name="compact_action">Komprimera</string>
+    <string name="compacting_account">Komprimerar konto \"<ns1:g id="account">%s</ns1:g>\"</string>
+    <string name="compose_action">Skriv</string>
+    <string name="compose_title_compose">Skriv</string>
+    <string name="contacts_missing_addresses">Selected contacts have no e-mail addresses</string>
+    <string name="content_server_name_default">www.chiaramail.com</string>
+    <string name="content_server_password_default"/>
+    <string name="continue_action">Fortsätt</string>
+    <string name="copy_action">Kopiera</string>
+    <string name="count_search_summary">Avaktivera för snabbare visning</string>
+    <string name="count_search_title">Räkna sökresultat</string>
+    <string name="debug_enable_debug_logging_summary">Logga extra diagnostisk information</string>
+    <string name="debug_enable_debug_logging_title">Aktivera debugloggning</string>
+    <string name="debug_enable_sensitive_logging_summary">Kan visa lösenord i loggarna.</string>
+    <string name="debug_enable_sensitive_logging_title">Logga känslig information</string>
+    <string name="debug_logging_enabled">Debug-loggning till Androids loggsystem är aktiverat</string>
+    <string name="debug_preferences">Avlusning</string>
+    <string name="debug_version_fmt">Version: <ns1:g id="version">%s</ns1:g></string>
+    <string name="default_identity_description">Ursprunglig identitet</string>
+    <string name="default_signature">-- \nSkickat från min Android-telefon med ChiaraMail. Ursäkta min fåordighet.</string>
+    <string name="delete_action">Radera</string>
+    <string name="delete_messages_desc">Tillåter denna applikation att radera dina e-post-meddelanden.</string>
+    <string name="delete_messages_label">Radera e-post</string>
+    <string name="dialog_confirm_delete_cancel_button">Radera inte</string>
+    <string name="dialog_confirm_delete_confirm_button">Radera</string>
+    <string name="dialog_confirm_delete_message">Vill du radera detta brev?</string>
+    <string name="dialog_confirm_delete_title">Bekräfta radering</string>
+    <string name="discard_action">Radera</string>
+    <string name="display_preferences">Utseende</string>
+    <string name="doInvite">Yes!</string>
+    <string name="done_action">Färdig</string>
+    <string name="drafts_folder_label">Namn på utkastmapp</string>
+    <string name="edit_identity_description_hint">(Frivilligt)</string>
+    <string name="edit_identity_description_label">Beskrivning av identitet</string>
+    <string name="edit_identity_email_hint">(Required)</string>
+    <string name="edit_identity_email_label">E-postadress</string>
+    <string name="edit_identity_name_hint">(Frivilligt)</string>
+    <string name="edit_identity_name_label">Ditt namn</string>
+    <string name="edit_identity_reply_to_hint">(Frivilligt)</string>
+    <string name="edit_identity_reply_to_label">Svara-till-adress</string>
+    <string name="edit_identity_signature_hint">(Frivilligt)</string>
+    <string name="edit_identity_signature_label">Signatur</string>
+    <string name="edit_identity_title">Redigera identitet</string>
+    <string name="empty_trash_action">Töm papperskorg</string>
+    <string name="error_activity_not_found">Ingen passande applikation för denna åtgärd funnen.</string>
+    <string name="error_apg_version_not_supported">Den installerade versionen av APG stöds inte.</string>
+    <string name="error_unable_to_connect">Kan inte ansluta.</string>
+    <string name="expunge_action">Utplåna</string>
+    <string name="flag_action">Lägg till stjärna</string>
+    <string name="flagged_modifier"> - Stjärnmärkta</string>
+    <string name="folder_list_display_mode_all">Visa alla mappar</string>
+    <string name="folder_list_display_mode_first_and_second_class">Visa första och andra klassens mappar</string>
+    <string name="folder_list_display_mode_first_class">Visa endast första klassens mappar</string>
+    <string name="folder_list_display_mode_label">Mappar</string>
+    <string name="folder_list_display_mode_not_second_class">Visa alla förutom andra klassens mappar</string>
+    <string name="folder_list_help_key">
+    1 - Visa endast första klassens mappar\u000A
+    2 - Visa första och andra klassens mappar\u000A
+    3 - Visa alla förutom andra klassens mappar\u000A
+    4 - Visa alla mappar\u000A
+    Q - Återvänd till konton\u000A
+    S - Redigera kontoinställningar</string>
+    <string name="folder_progress">\u0020<ns1:g id="completed">%s</ns1:g>/<ns1:g id="total">%s</ns1:g></string>
+    <string name="folder_settings_action">Mappinställningar</string>
+    <string name="folder_settings_folder_display_mode_first_class">första klassen</string>
+    <string name="folder_settings_folder_display_mode_label">Visningsklass för mapp</string>
+    <string name="folder_settings_folder_display_mode_normal">Ingen</string>
+    <string name="folder_settings_folder_display_mode_second_class">andra klassen</string>
+    <string name="folder_settings_folder_push_mode_first_class">första klassen</string>
+    <string name="folder_settings_folder_push_mode_inherited">Samma som synkroniseringsklass</string>
+    <string name="folder_settings_folder_push_mode_label">push-klass för mapp</string>
+    <string name="folder_settings_folder_push_mode_normal">Ingen</string>
+    <string name="folder_settings_folder_push_mode_second_class">andra klassen</string>
+    <string name="folder_settings_folder_sync_mode_first_class">första klassen</string>
+    <string name="folder_settings_folder_sync_mode_inherited">Samma som visningsklass</string>
+    <string name="folder_settings_folder_sync_mode_label">Synkroniseringsklass för mapp</string>
+    <string name="folder_settings_folder_sync_mode_normal">Ingen</string>
+    <string name="folder_settings_folder_sync_mode_second_class">andra klassen</string>
+    <string name="folder_settings_in_top_group_label">Visa i toppgruppen</string>
+    <string name="folder_settings_in_top_group_summary">Visa nära toppen av mapplistan</string>
+    <string name="folder_settings_include_in_integrated_inbox_label">Integrera</string>
+    <string name="folder_settings_include_in_integrated_inbox_summary">Olästa brev visas i den integrerade inkorgen</string>
+    <string name="folder_settings_title">Mappinställningar</string>
+    <string name="font_size_account_description">Kontobeskrivning</string>
+    <string name="font_size_account_list">Kontolista</string>
+    <string name="font_size_account_name">Kontonamn</string>
+    <string name="font_size_folder_list">Mapplista</string>
+    <string name="font_size_folder_name">Mappnamn</string>
+    <string name="font_size_folder_status">Mappstatus</string>
+    <string name="font_size_large">Större</string>
+    <string name="font_size_larger">Störst</string>
+    <string name="font_size_medium">Stor</string>
+    <string name="font_size_message_list">E-post-lista</string>
+    <string name="font_size_message_list_date">Datum</string>
+    <string name="font_size_message_list_preview">Förhandsvisning</string>
+    <string name="font_size_message_list_sender">Avsändare</string>
+    <string name="font_size_message_list_subject">Ämne</string>
+    <string name="font_size_message_view">E-post-vy</string>
+    <string name="font_size_message_view_additional_headers">Ytterligare huvuden</string>
+    <string name="font_size_message_view_cc">Mottagare (CC)</string>
+    <string name="font_size_message_view_content">Innehåll</string>
+    <string name="font_size_message_view_date">Tid och datum</string>
+    <string name="font_size_message_view_sender">Avsändare</string>
+    <string name="font_size_message_view_subject">Ämne</string>
+    <string name="font_size_message_view_to">Mottagare (Till)</string>
+    <string name="font_size_settings_description">Konfigurera teckenstorlek</string>
+    <string name="font_size_settings_title">Teckenstorlek</string>
+    <string name="font_size_small">Medium</string>
+    <string name="font_size_smaller">Liten</string>
+    <string name="font_size_tiniest">Minst</string>
+    <string name="font_size_tiny">Mindre</string>
+    <string name="font_size_webview_large">Större</string>
+    <string name="font_size_webview_larger">Störst</string>
+    <string name="font_size_webview_normal">Normal</string>
+    <string name="font_size_webview_small">Liten</string>
+    <string name="font_size_webview_smaller">Minst</string>
+    <string name="forward_action">Vidarebefordra</string>
+    <string name="from_same_sender">Mer från denna avsändare</string>
+    <string name="general_no_sender">Ingen avsändare</string>
+    <string name="general_no_subject">(Inget ämne)</string>
+    <string name="gestures_summary">Acceptera gestkontroll</string>
+    <string name="gestures_title">Gester</string>
+    <string name="global_preferences">Globala inställningar</string>
+    <string name="global_settings_action">Globala inställningar</string>
+    <string name="global_settings_checkbox_label">Checkboxar för flerval</string>
+    <string name="global_settings_checkbox_summary">Visa alltid checkboxar för flerval</string>
+    <string name="global_settings_confirm_action_delete">Radera (endast meddelandevyn)</string>
+    <string name="global_settings_confirm_action_spam">Skräp</string>
+    <string name="global_settings_confirm_actions_summary">Visa en dialogruta när du genomför utvalda åtgärder</string>
+    <string name="global_settings_confirm_actions_title">Bekräfta åtgärder</string>
+    <string name="global_settings_messageview_fixedwidth_label">Teckensnitt med fast bredd</string>
+    <string name="global_settings_messageview_fixedwidth_summary">Använd ett teckensnitt med fast bredd för att visa brev med enbart text</string>
+    <string name="global_settings_messageview_return_to_list_label">Återvänd till listan efter radering</string>
+    <string name="global_settings_messageview_return_to_list_summary">Återvänd till listan efter att ha raderat ett brev</string>
+    <string name="global_settings_preview_lines_label">Förhandsgranska rader</string>
+    <string name="global_settings_registered_name_color_changed">Färglägg namn i kontaktlistan</string>
+    <string name="global_settings_registered_name_color_default">Färglägg inte namn i kontaktlistan</string>
+    <string name="global_settings_registered_name_color_label">Färglägg kontakter</string>
+    <string name="global_settings_show_contact_name_label">Visa kontaktnamn</string>
+    <string name="global_settings_show_contact_name_summary">Använd avsändarnamn ifrån kontakter när tillgängligt</string>
+    <string name="global_settings_show_correspondent_names_label">Visa korrespondensnamn</string>
+    <string name="global_settings_show_correspondent_names_summary">Visa namn på korrespondens hellre än e-post-adresser</string>
+    <string name="identity_has_no_email">Du kan inte använda en identitet utan e-postadress</string>
+    <string name="idle_refresh_period_12min">Var 12:e minut</string>
+    <string name="idle_refresh_period_1min">Varje minut</string>
+    <string name="idle_refresh_period_24min">Var 24:e minut</string>
+    <string name="idle_refresh_period_2min">Varannan minut</string>
+    <string name="idle_refresh_period_36min">Var 36:e minut</string>
+    <string name="idle_refresh_period_3min">Var 3:e minut</string>
+    <string name="idle_refresh_period_48min">Var 48:e minut</string>
+    <string name="idle_refresh_period_60min">Var 60:e minut</string>
+    <string name="idle_refresh_period_6min">Var 6:e minut</string>
+    <string name="idle_refresh_period_label">Förnya IDLE-anslutning</string>
+    <string name="insufficient_apg_permissions">ChiaraMail har inte nödvändig behörighet att komma åt APG, vänligen ominstallera ChiaraMail för att åtgärda detta.</string>
+    <string name="integrated_inbox_detail">All e-post i integrerade mappar</string>
+    <string name="integrated_inbox_title">Integrerad inkorg</string>
+    <string name="interaction_preferences">Interaktion</string>
+    <string name="invite_contacts">Invite contacts</string>
+    <string name="invite_contacts_preamble">Would you like to invite some of your contacts to download ChiaraMail for Android or another of ChiaraMail\'s Envelope-Content Splitting (ECS)-enabling products? Remember, in order for your recipients to be able to read messages you send using ECS, their mail programs must be enabled for ECS.\n\nYou may also send your contacts an invitation later from within a mail account by pressing the menu button, followed by More and \"Invite contacts\"</string>
+    <string name="invite_contacts_title">Invite contacts</string>
+    <string name="key_id">id: %s</string>
+    <string name="load_more_messages_fmt">Hämta ytterligare upp
+    till <ns1:g id="messages_to_load">%d</ns1:g></string>
+    <string name="local_storage_provider_external_label">Extern lagring (SD-kort)</string>
+    <string name="local_storage_provider_internal_label">Vanlig intern lagring</string>
+    <string name="local_storage_provider_label">Lagringsplacering</string>
+    <string name="local_storage_provider_samsunggalaxy_label">%1$s ytterligare intern lagring</string>
+    <string name="manage_identities_context_menu_title">Hantera identitet</string>
+    <string name="manage_identities_edit_action">Redigera</string>
+    <string name="manage_identities_move_down_action">Flytta ner</string>
+    <string name="manage_identities_move_top_action">Flytta längst upp / gör till standard</string>
+    <string name="manage_identities_move_up_action">Flytta upp</string>
+    <string name="manage_identities_remove_action">Radera</string>
+    <string name="manage_identities_title">Hantera identiteter</string>
+    <string name="mark_as_read_action">Markera som läst</string>
+    <string name="mark_as_unread_action">Markera som oläst</string>
+    <string name="measure_accounts_summary">Avaktivera för snabbare visning</string>
+    <string name="measure_accounts_title">Visa kontostorlek</string>
+    <string name="message_additional_headers_not_downloaded">Alla huvuden har inte hämtats eller sparats. Välj \"Spara alla huvuden lokalt\" i inställningarna för kontots inkommande server för att aktivera detta för framtiden.</string>
+    <string name="message_additional_headers_retrieval_failed">Hämtningen av ytterligare huvuden från databasen eller e-postservern misslyckades.</string>
+    <string name="message_compose_add_header_error">Error adding header field: </string>
+    <string name="message_compose_attachment_too_big_1">Attachment </string>
+    <string name="message_compose_attachment_too_big_2"> not included; must be less than 4 MB</string>
+    <string name="message_compose_attachments_skipped_toast">Några bilagor kan inte vidarebefordras eftersom de inte har hämtats.</string>
+    <string name="message_compose_bcc_hint">Bcc</string>
+    <string name="message_compose_buggy_gallery">Kontrollera \"Inställningar\" -> \"Använd work-adound för bug i Gallery\" för att kunna bifoga bilder och filmer med Gallery 3D.</string>
+    <string name="message_compose_canned_message">This message was sent using ECS technology (http://www.chiaramail.com/technology.html), but your mail client does not support ECS. Please download and install the appropriate ECS-enabling software for your mail client (http://www.chiaramail.com/download_extension.html) to read this message.</string>
+    <string name="message_compose_cc_hint">Cc</string>
+    <string name="message_compose_content_hint">Meddelandetext</string>
+    <string name="message_compose_dynamic_content_delete_error">Error deleting ECS-enabled content: </string>
+    <string name="message_compose_dynamic_content_send_error">Error sending content to content server: </string>
+    <string name="message_compose_encryption_error">Error encrypting content: </string>
+    <string name="message_compose_error_bogus_content_pointer">Bad value for content pointer: </string>
+    <string name="message_compose_error_bogus_content_server_port">Bad value for content server port: </string>
+    <string name="message_compose_error_missing_content_pointers">Content pointer(s) missing from settings.</string>
+    <string name="message_compose_error_missing_content_server_name">Content server name missing from settings.</string>
+    <string name="message_compose_error_missing_content_server_password">Content server password missing from settings.</string>
+    <string name="message_compose_error_missing_content_server_port">Content server port missing from settings.</string>
+    <string name="message_compose_error_no_recipients">Du måste ange åtminstone en mottagare.</string>
+    <string name="message_compose_error_rangerr_content_server_port">Content server port out of range: </string>
+    <string name="message_compose_quote_header_cc">CC:</string>
+    <string name="message_compose_quote_header_from">Från:</string>
+    <string name="message_compose_quote_header_send_date">Skickat:</string>
+    <string name="message_compose_quote_header_separator">-------- Originalmeddelande --------</string>
+    <string name="message_compose_quote_header_subject">Ämne:</string>
+    <string name="message_compose_quote_header_to">Till:</string>
+    <string name="message_compose_reply_header_fmt"><ns1:g id="sender">%s</ns1:g> skrev:\n\n</string>
+    <string name="message_compose_subject_hint">Ämne</string>
+    <string name="message_compose_to_hint">Till</string>
+    <string name="message_compose_use_workaround">Använd \"Lägg till bilaga (Bild)\" eller \"Lägg till bilaga (Video)\" för att bifoga bilder eller video med Gallery 3D.</string>
+    <string name="message_discarded_toast">Brevet kasserat</string>
+    <string name="message_invite_canned_message">Hi,\n\nI don\'t want Google to read my e-mail anymore, so I installed ECS support on my computer and I invite you to do the same. Besides protecting our privacy, the ECS products from ChiaraMail help prevent mail spoofing, in which others send e-mail masquerading as us, and also enable us to change our e-mail after we\'ve sent it (Yes! Really!). As if that weren\'t enough, ECS technology also speeds up mail delivery while greatly reducing mail storage requirements for our mail recipients.\n\nI think ECS is a big deal and wanted to share the news about it with you. If you have an Android phone or tablet, download ChiaraMail for Android from https://play.google.com/store/apps/details?id=com.chiaramail.chiaramailforandroid\. For Mozilla Thunderbird or Microsoft Outlook users, download free extensions from https://www.chiaramail.com/download_extension.html and take control of your e-mail today like I did!</string>
+    <string name="message_invite_canned_subject">Write to me using ECS, the next-generation e-mail technology!</string>
+    <string name="message_list_help_key">
+    Del (eller D) - Radera\n
+    R - Svara\n
+    A - Svara alla\n
+    C - Skriv\n
+    F - Vidarebefordra\n
+    M - Flytta\n
+    V - Archive\n
+    Y - Kopiera\n
+    Z - Mark (Un)read\n
+    G - Stjärna\n
+    O - Sorteringstyp\n
+    I - Sorteringsordning\n
+    Q - Återvänd till mappar\n
+    S - Markera/avmarkera\n
+    J eller P - Föregående brev\n
+    K eller N - Nästa brev
+    </string>
+    <string name="message_list_load_more_messages_action">Hämta fler brev</string>
+    <string name="message_list_title"><ns1:g id="account">%s</ns1:g>:<ns1:g id="folder">%s</ns1:g> </string>
+    <string name="message_no_additional_headers_available">Alla huvuden har hämtats, men det det finns inga ytterligare huvuden att visa.</string>
+    <string name="message_saved_toast">Brevet sparat som utkast</string>
+    <string name="message_to_fmt">Till:<ns1:g id="counterParty">%s</ns1:g></string>
+    <string name="message_to_label">Till:</string>
+    <string name="message_view_attachment_download_action">Spara</string>
+    <string name="message_view_attachment_view_action">Öppna</string>
+    <string name="message_view_cc_label">Cc:</string>
+    <string name="message_view_download_remainder">Hämta hem hela brevet</string>
+    <string name="message_view_dynamic_content_fetch_error">Error fetching attachment content: </string>
+    <string name="message_view_edit_msg_content">Edit message body: </string>
+    <string name="message_view_fetching_attachment_toast">Hämtar bilaga.</string>
+    <string name="message_view_from_format">Från: <ns1:g id="name">%s</ns1:g> &lt;<ns1:g id="email">%s</ns1:g>></string>
+    <string name="message_view_no_viewer">Kan inte hitta visare för <ns1:g id="mimetype">%s</ns1:g>.</string>
+    <string name="message_view_show_pictures_action">Visa bilder</string>
+    <string name="message_view_status_DC_attachment_saved">Attachment saved to SD card as /mnt/sdcard/</string>
+    <string name="message_view_status_attachment_not_saved">Kan inte spara bilaga till SD-kortet.</string>
+    <string name="message_view_status_attachment_saved">Bilagan har sparats till SD-kortet som <ns1:g id="filename">%s</ns1:g>.</string>
+    <string name="message_view_update_all">Update message body and attachment(s)</string>
+    <string name="message_view_update_cancel">Cancel update</string>
+    <string name="message_view_update_content">Update content</string>
+    <string name="message_view_update_content_action">Edit message/attachment content</string>
+    <string name="message_view_update_content_dialog_title">Update message content</string>
+    <string name="message_view_update_msg_body">Update message body</string>
+    <string name="messagelist_preferences">E-post-listor</string>
+    <string name="messagelist_sent_cc_me_sigil">›</string>
+    <string name="messagelist_sent_to_me_sigil">»</string>
+    <string name="messageview_preferences">Brev</string>
+    <string name="misc_preferences_attachment_description">Visa knappar för att bifoga image/video (to work around a Gallery 3D bug)</string>
+    <string name="misc_preferences_attachment_title">Använd work-adound för bug i Gallery</string>
+    <string name="miscellaneous_preferences">Diverse</string>
+    <string name="move_action">Flytta</string>
+    <string name="move_copy_cannot_copy_unsynced_message">Kan inte kopiera eller flytta ett brev som inte är synkroniserat med servern</string>
+    <string name="msg_attachment_update">for message attachment</string>
+    <string name="msg_body_update">for message body</string>
+    <string name="network_preferences">Nätverk</string>
+    <string name="new_identity_action">Ny identitet</string>
+    <string name="next_action">Nästa</string>
+    <string name="no_removable_identity">Du kan inte radera din enda identitet</string>
+    <string name="notification_bg_send_ticker">Skickar e-post: <ns1:g id="account">%s</ns1:g></string>
+    <string name="notification_bg_send_title">Skickar e-post</string>
+    <string name="notification_bg_sync_ticker">Kontrollerar e-post: <ns1:g id="account">%s</ns1:g>:<ns1:g id="folder">%s</ns1:g></string>
+    <string name="notification_bg_sync_title">Kontrollerar e-post</string>
+    <string name="notification_bg_title_separator">:</string>
+    <string name="notification_new_one_account_fmt"><ns1:g id="unread_message_count">%d</ns1:g> olästa (<ns1:g id="account">%s</ns1:g>)</string>
+    <string name="notification_new_title">Ny e-post</string>
+    <string name="notifications_title">Notifieringar</string>
+    <string name="okay_action">OK</string>
+    <string name="pgp_mime_unsupported">Det finns ännu inget stöd för brev med PGP/MIME.</string>
+    <string name="preferences_action">Inställningar</string>
+    <string name="prefs_title">Inställningar</string>
+    <string name="previous_action">Föregående</string>
+    <string name="privacy_preferences">Sekretess</string>
+    <string name="provider_note_live">Bara vissa \"Plus\"-konton inkluderar POP-tillgång
+        vilket krävs för detta program för att ansluta. Om du misslyckas med att logga in
+        med din korrekta adress och lösenord så kanske du inte har ett betalt
+        \"Plus\"-konto. Vänligen starta webbläsaren för att komma åt dessa konton.</string>
+    <string name="provider_note_yahoojp">Om du vill använda POP3 med denna leverantör måste du välja att tillåta POP3 på inställningssidan för Yahoo!.</string>
+    <string name="push_poll_on_connect_label">Kontrollera vid anslutning för push</string>
+    <string name="quiet_time">Tyst tid</string>
+    <string name="quiet_time_description">Avaktivera ringsignaler, vibration och blinkande på natten</string>
+    <string name="quiet_time_ends">Tyst tid slutar</string>
+    <string name="quiet_time_starts">Tyst tid börjar</string>
+    <string name="read_attachment_desc">Tillåter denna applikation att läsa bifogade filer.</string>
+    <string name="read_attachment_label">Läs bilagor</string>
+    <string name="read_messages_desc">Tillåter denna applikation att läsa dina e-post-meddelanden.</string>
+    <string name="read_messages_label">Läs e-post</string>
+    <string name="recreate_action">Återskapa data (Sista utvägen!)</string>
+    <string name="recreating_account">Skapar om konto \"<ns1:g id="account">%s</ns1:g>\"</string>
+    <string name="refresh_folders_action">Läs om mappar</string>
+    <string name="remote_control_desc">Tillåter denna applikation att kontrollera aktiviteter och inställningar i ChiaraMail.</string>
+    <string name="remote_control_label">ChiaraMail fjärrkontroll</string>
+    <string name="remove_account_action">Ta bort konto</string>
+    <string name="reply_action">Svara</string>
+    <string name="reply_all_action">Svara alla</string>
+    <string name="save_draft_action">Spara som utkast</string>
+    <string name="save_or_discard_draft_message_dlg_title">Spara utkast?</string>
+    <string name="save_or_discard_draft_message_instructions_fmt">Spara eller kasta detta brev?</string>
+    <string name="search_action">Sök</string>
+    <string name="search_all_messages_detail">Alla brev i sökbara mappar</string>
+    <string name="search_all_messages_title">Alla brev</string>
+    <string name="search_results">Sökresultat</string>
+    <string name="search_title"><ns1:g id="search_name">%s</ns1:g> <ns1:g id="modifier">%s</ns1:g></string>
+    <string name="select_text_action">Markera text</string>
+    <string name="select_text_now">Välj text att kopiera.</string>
+    <string name="send_aborted">Sändningen avbruten.</string>
+    <string name="send_action">Skicka</string>
+    <string name="send_again_action">Skicka igen</string>
+    <string name="send_alternate_action">Vidarebefordra med annat program</string>
+    <string name="send_alternate_chooser_title">Välj avsändare</string>
+    <string name="send_as">Skicka som</string>
+    <string name="send_failure_subject">Misslyckades med att skicka några brev</string>
+    <string name="send_messages_action">Skicka e-post</string>
+    <string name="sent_folder_label">Namn på skickatmapp</string>
+    <string name="setting_language_system">Systemstandard</string>
+    <string name="setting_theme_dark">Mörk</string>
+    <string name="setting_theme_light">Ljus</string>
+    <string name="settings_language_label">Språk</string>
+    <string name="settings_messageview_mobile_layout_label">En-kolumns-layout</string>
+    <string name="settings_messageview_mobile_layout_summary">Formatera om HTML-brev för mindre skärmar</string>
+    <string name="settings_theme_label">Tema</string>
+    <string name="shortcuts_title">ChiaraMail-konton</string>
+    <string name="skipInvite">No, thanks!</string>
+    <string name="sort_attach_first">Brev med bilagor först</string>
+    <string name="sort_by">Sortera efter…</string>
+    <string name="sort_by_attach">Bilagor</string>
+    <string name="sort_by_date">Datum</string>
+    <string name="sort_by_flag">Stjärnor</string>
+    <string name="sort_by_subject">Ämne</string>
+    <string name="sort_by_unread">Lästa/olästa</string>
+    <string name="sort_earliest_first">Äldsta brev först</string>
+    <string name="sort_flagged_first">Stjärnmärkta brev först</string>
+    <string name="sort_flagged_last">Icke stjärnmärkta brev först</string>
+    <string name="sort_latest_first">Nyaste brev först</string>
+    <string name="sort_subject_alpha">Sortera efter ämne</string>
+    <string name="sort_subject_re_alpha">Sortera efter ämne omvänt</string>
+    <string name="sort_unattached_first">Brev utan bilagor först</string>
+    <string name="sort_unread_first">Olästa brev först</string>
+    <string name="sort_unread_last">Lästa brev först</string>
+    <string name="spam_action">Spam</string>
+    <string name="spam_folder_label">Namn på skräpmapp</string>
+    <string name="special_mailbox_name_archive">Arkiv</string>
+    <string name="special_mailbox_name_archive_fmt"><ns1:g id="folder">%s</ns1:g> (Arkiv)</string>
+    <string name="special_mailbox_name_drafts">Utkast</string>
+    <string name="special_mailbox_name_drafts_fmt"><ns1:g id="folder">%s</ns1:g> (Utkast)</string>
+    <string name="special_mailbox_name_inbox">Inkorg</string>
+    <string name="special_mailbox_name_outbox">Utkorg</string>
+    <string name="special_mailbox_name_sent">Skickat</string>
+    <string name="special_mailbox_name_sent_fmt"><ns1:g id="folder">%s</ns1:g> (Skickat)</string>
+    <string name="special_mailbox_name_spam">Skräppost</string>
+    <string name="special_mailbox_name_spam_fmt"><ns1:g id="folder">%s</ns1:g> (Skräppost)</string>
+    <string name="special_mailbox_name_trash">Papperskorg</string>
+    <string name="special_mailbox_name_trash_fmt"><ns1:g id="folder">%s</ns1:g> (Papperskorg)</string>
+    <string name="start_integrated_inbox_summary">Visa den integrerade inkorgen vid start</string>
+    <string name="start_integrated_inbox_title">Integrerad inkorg vid start</string>
+    <string name="status_invalid_id_error">Kan inte hitta brevet</string>
+    <string name="status_loading">Kontrollerar</string>
+    <string name="status_loading_account_folder">Kontrollerar <ns1:g id="account">%s</ns1:g>:<ns1:g id="folder">%s</ns1:g><ns1:g id="progress">%s</ns1:g></string>
+    <string name="status_loading_account_folder_headers">Hämtar huvuden <ns1:g id="account">%s</ns1:g>:<ns1:g id="folder">%s</ns1:g><ns1:g id="progress">%s</ns1:g></string>
+    <string name="status_loading_more">Hämtar brev\u2026</string>
+    <string name="status_loading_more_failed">Försök hämta fler brev igen</string>
+    <string name="status_network_error">Anslutningsfel</string>
+    <string name="status_next_poll">Nästa kontroll <ns1:g id="nexttime">%s</ns1:g></string>
+    <string name="status_processing_account">Behandlar <ns1:g id="account">%s</ns1:g>:<ns1:g id="command">%s</ns1:g><ns1:g id="progress">%s</ns1:g></string>
+    <string name="status_sending_account">Skickar <ns1:g id="account">%s</ns1:g><ns1:g id="progress">%s</ns1:g></string>
+    <string name="status_syncing_off">Synk avaktiverat</string>
+    <string name="tap_hint">Klicka på kuvertet eller stjärnan för olästa eller stjärnmärkta brev</string>
+    <string name="trash_folder_label">Namn på papperskorgen</string>
+    <string name="unflag_action">Ta bort stjärna</string>
+    <string name="unknown_crypto_signature_user_id">&lt;okänd></string>
+    <string name="unread_modifier"> - Olästa</string>
+    <string name="unread_widget_label">ChiaraMail Unread</string>
+    <string name="user_registered_error">Unable to tell if user is registered with content server; continuing anyway</string>
+    <string name="users_already_registered">Selected contacts are already registered with the content server</string>
+    <string name="volume_navigation_list">Diverse listvyer</string>
+    <string name="volume_navigation_message">E-post-vy</string>
+    <string name="volume_navigation_summary">Växla mellan val med hjälp av volymkontrollerna</string>
+    <string name="volume_navigation_title">Volym upp/ner-navigering</string>
+</resources>

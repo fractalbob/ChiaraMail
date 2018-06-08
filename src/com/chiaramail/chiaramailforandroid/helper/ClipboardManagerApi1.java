@@ -1,4 +1,4 @@
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import android.content.Context;
 import android.text.ClipboardManager;
@@ -7,7 +7,7 @@ import android.text.ClipboardManager;
  * Access the system clipboard using the now deprecated {@link ClipboardManager}
  */
 @SuppressWarnings("deprecation")
-public class ClipboardManagerApi1 extends com.fsck.k9.helper.ClipboardManager {
+public class ClipboardManagerApi1 extends com.chiaramail.chiaramailforandroid.helper.ClipboardManager {
 
     public ClipboardManagerApi1(Context context) {
         super(context);

@@ -1,4 +1,4 @@
-package com.fsck.k9.preferences;
+package com.chiaramail.chiaramailforandroid.preferences;
 
 import android.app.AlertDialog.Builder;
 import android.content.Context;

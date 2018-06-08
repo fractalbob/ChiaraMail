@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- package name must be unique so suffix with "tests" so package loader doesn't ignore us -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.fsck.k9.tests"
+          package="com.chiaramail.chiaramailforandroid.tests"
           android:versionCode="1"
           android:versionName="1.0">
     <!-- We add an application tag here just so that we can indicate that
@@ -12,10 +12,10 @@
     </application>
     <!--
     This declares that this application uses the instrumentation test runner targeting
-    the package of com.fsck.k9.  To run the tests use the command:
-    "adb shell am instrument -w com.fsck.k9.tests/com.zutubi.android.junitreport.JUnitReportTestRunner"
+    the package of com.chiaramail.chiaramailforandroid.  To run the tests use the command:
+    "adb shell am instrument -w com.chiaramail.chiaramailforandroid.tests/com.zutubi.android.junitreport.JUnitReportTestRunner"
     -->
     <instrumentation android:name="com.zutubi.android.junitreport.JUnitReportTestRunner"
-                     android:targetPackage="com.fsck.k9"
-                     android:label="Tests for com.fsck.k9"/>
+                     android:targetPackage="com.chiaramail.chiaramailforandroid"
+                     android:label="Tests for com.chiaramail.chiaramailforandroid"/>
 </manifest>

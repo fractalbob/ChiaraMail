@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abs__primary_text_holo_light.xml",
+        "source": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\color\\abs__primary_text_holo_light.xml"
+    },
+    {
+        "merged": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abs__primary_text_disable_only_holo_dark.xml",
+        "source": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\color\\abs__primary_text_disable_only_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abs__primary_text_holo_dark.xml",
+        "source": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\color\\abs__primary_text_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abs__primary_text_disable_only_holo_light.xml",
+        "source": "C:\\k-9\\plugins\\ActionBarSherlock\\library\\build\\intermediates\\bundles\\debug\\res\\color\\abs__primary_text_disable_only_holo_light.xml"
+    }
+]

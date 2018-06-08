@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b6779e58-f956-4027-aa78-980aff02eec2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/envelope_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k9mail.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/envelope_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/update_content.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ActionBarSherlock/ActionBarSherlock.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android-PullToRefresh/Android-PullToRefresh.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ckChangeLog/ckChangeLog.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ckChangeLog/library/.classpath" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ckChangeLog/library/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ckChangeLog/library/ckChangeLog-library.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/account_ecs_login.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/account_setup_dynamic_content.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/account_setup_invite.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/contact_list_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/contacts_list.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/simple_list_item2_multiple_choice.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/update_content.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupDynamicContent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupInvite.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ContactPicker.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/apache-mime4j-core-0.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/apache-mime4j-dom-0.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/HoloColorPicker/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/proguard.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/proguard.cfg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/icon.png" afterPath="$PROJECT_DIR$/assets/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile-only-libs/android-support-v4.jar" afterPath="$PROJECT_DIR$/compile-only-libs/android-support-v4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build_common.xml" afterPath="$PROJECT_DIR$/build_common.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/ActionBarSherlock/library/project.properties" afterPath="$PROJECT_DIR$/plugins/ActionBarSherlock/library/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/ActionBarSherlock/library/src/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java" afterPath="$PROJECT_DIR$/plugins/ActionBarSherlock/library/src/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/Android-PullToRefresh/library/project.properties" afterPath="$PROJECT_DIR$/plugins/Android-PullToRefresh/library/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/HoloColorPicker/project.properties" afterPath="$PROJECT_DIR$/plugins/HoloColorPicker/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/ckChangeLog/library/project.properties" afterPath="$PROJECT_DIR$/plugins/ckChangeLog/library/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/ckChangeLog/library/src/de/cketti/library/changelog/ChangeLog.java" afterPath="$PROJECT_DIR$/plugins/ckChangeLog/library/src/de/cketti/library/changelog/ChangeLog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/actionbar_custom.xml" afterPath="$PROJECT_DIR$/res/layout-land/actionbar_custom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/account_setup_account_type.xml" afterPath="$PROJECT_DIR$/res/layout/account_setup_account_type.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/account_setup_basics.xml" afterPath="$PROJECT_DIR$/res/layout/account_setup_basics.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/account_setup_incoming.xml" afterPath="$PROJECT_DIR$/res/layout/account_setup_incoming.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/account_setup_names.xml" afterPath="$PROJECT_DIR$/res/layout/account_setup_names.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/account_setup_outgoing.xml" afterPath="$PROJECT_DIR$/res/layout/account_setup_outgoing.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/accounts.xml" afterPath="$PROJECT_DIR$/res/layout/accounts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/accounts_item.xml" afterPath="$PROJECT_DIR$/res/layout/accounts_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/actionbar_custom.xml" afterPath="$PROJECT_DIR$/res/layout/actionbar_custom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/color_picker_dialog.xml" afterPath="$PROJECT_DIR$/res/layout/color_picker_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message.xml" afterPath="$PROJECT_DIR$/res/layout/message.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message_compose.xml" afterPath="$PROJECT_DIR$/res/layout/message_compose.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message_list.xml" afterPath="$PROJECT_DIR$/res/layout/message_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message_list_fragment.xml" afterPath="$PROJECT_DIR$/res/layout/message_list_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/message_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message_view_attachment.xml" afterPath="$PROJECT_DIR$/res/layout/message_view_attachment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message_view_crypto_layout.xml" afterPath="$PROJECT_DIR$/res/layout/message_view_crypto_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/message_view_header.xml" afterPath="$PROJECT_DIR$/res/layout/message_view_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/accounts_context.xml" afterPath="$PROJECT_DIR$/res/menu/accounts_context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/accounts_option.xml" afterPath="$PROJECT_DIR$/res/menu/accounts_option.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/message_compose_option.xml" afterPath="$PROJECT_DIR$/res/menu/message_compose_option.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/message_list_option.xml" afterPath="$PROJECT_DIR$/res/menu/message_list_option.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ca/strings.xml" afterPath="$PROJECT_DIR$/res/values-ca/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-cs/strings.xml" afterPath="$PROJECT_DIR$/res/values-cs/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-da/strings.xml" afterPath="$PROJECT_DIR$/res/values-da/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-de/strings.xml" afterPath="$PROJECT_DIR$/res/values-de/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-el/strings.xml" afterPath="$PROJECT_DIR$/res/values-el/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/res/values-es/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fi/strings.xml" afterPath="$PROJECT_DIR$/res/values-fi/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fr/strings.xml" afterPath="$PROJECT_DIR$/res/values-fr/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-gl/strings.xml" afterPath="$PROJECT_DIR$/res/values-gl/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hu/strings.xml" afterPath="$PROJECT_DIR$/res/values-hu/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-it/strings.xml" afterPath="$PROJECT_DIR$/res/values-it/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-iw/strings.xml" afterPath="$PROJECT_DIR$/res/values-iw/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ja/strings.xml" afterPath="$PROJECT_DIR$/res/values-ja/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ko/strings.xml" afterPath="$PROJECT_DIR$/res/values-ko/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-nl/strings.xml" afterPath="$PROJECT_DIR$/res/values-nl/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-pl/strings.xml" afterPath="$PROJECT_DIR$/res/values-pl/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-pt-rBR/strings.xml" afterPath="$PROJECT_DIR$/res/values-pt-rBR/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/res/values-ru/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-sv/strings.xml" afterPath="$PROJECT_DIR$/res/values-sv/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-tr/strings.xml" afterPath="$PROJECT_DIR$/res/values-tr/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-uk/strings.xml" afterPath="$PROJECT_DIR$/res/values-uk/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh-rTW/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh-rTW/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/arrays.xml" afterPath="$PROJECT_DIR$/res/values/arrays.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/attrs.xml" afterPath="$PROJECT_DIR$/res/values/attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/constants.xml" afterPath="$PROJECT_DIR$/res/values/constants.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/themes.xml" afterPath="$PROJECT_DIR$/res/values/themes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/account_settings_preferences.xml" afterPath="$PROJECT_DIR$/res/xml/account_settings_preferences.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/folder_settings_preferences.xml" afterPath="$PROJECT_DIR$/res/xml/folder_settings_preferences.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/font_preferences.xml" afterPath="$PROJECT_DIR$/res/xml/font_preferences.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/global_preferences.xml" afterPath="$PROJECT_DIR$/res/xml/global_preferences.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/providers.xml" afterPath="$PROJECT_DIR$/res/xml/providers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/unread_widget_info.xml" afterPath="$PROJECT_DIR$/res/xml/unread_widget_info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/Account.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/AccountStats.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/AccountStats.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/BaseAccount.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/BaseAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/EmailAddressAdapter.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/EmailAddressAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/EmailAddressValidator.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/EmailAddressValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/FontSizes.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/FontSizes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/Identity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/Identity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/K9.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/K9.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/NotificationSetting.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/NotificationSetting.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/Preferences.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/Preferences.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/AccessibleEmailContentActivity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/AccessibleEmailContentActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/AccountList.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/AccountList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/Accounts.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/Accounts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ActivityListener.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ActivityListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ChooseFolder.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ChooseFolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ChooseIdentity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ChooseIdentity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ColorPickerDialog.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ColorPickerDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ConfirmationDialog.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ConfirmationDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/EditIdentity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/EditIdentity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/EmailAddressList.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/EmailAddressList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/FolderInfoHolder.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/FolderInfoHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/FolderList.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/FolderList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/FolderListFilter.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/FolderListFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/InsertableHtmlContent.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/InsertableHtmlContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9Activity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9Activity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9ActivityCommon.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9ActivityCommon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9FragmentActivity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9FragmentActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9ListActivity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9ListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9PreferenceActivity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/K9PreferenceActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/LauncherShortcuts.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/LauncherShortcuts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ManageIdentities.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/ManageIdentities.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/MessageCompose.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/MessageCompose.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/MessageInfoHolder.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/MessageInfoHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/MessageList.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/MessageList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/MessageReference.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/MessageReference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/NotificationDeleteConfirmation.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/NotificationDeleteConfirmation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/Search.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/Search.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/UnreadWidgetConfiguration.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/UnreadWidgetConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/UpgradeDatabases.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/UpgradeDatabases.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/misc/ContactPictureLoader.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/misc/ContactPictureLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/misc/ExtendedAsyncTask.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/misc/ExtendedAsyncTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/misc/NonConfigurationInstance.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/misc/NonConfigurationInstance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/misc/SwipeGestureDetector.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/misc/SwipeGestureDetector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupAccountType.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupAccountType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupBasics.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupBasics.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupCheckSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupCheckSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupComposition.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupComposition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupIncoming.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupIncoming.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupNames.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupNames.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupOptions.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupOptions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupOutgoing.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/AccountSetupOutgoing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/FolderSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/FolderSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/FontSizeSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/FontSizeSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/Prefs.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/Prefs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/SpinnerOption.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/SpinnerOption.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/WelcomeMessage.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/activity/setup/WelcomeMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/cache/EmailProviderCache.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/cache/EmailProviderCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/cache/EmailProviderCacheCursor.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/cache/EmailProviderCacheCursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessageRemovalListener.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessageRemovalListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessageRetrievalListener.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessageRetrievalListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessagingController.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessagingController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessagingControllerPushReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessagingControllerPushReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessagingListener.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/controller/MessagingListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/crypto/Apg.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/crypto/Apg.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/crypto/CryptoProvider.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/crypto/CryptoProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/crypto/None.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/crypto/None.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/crypto/PgpData.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/crypto/PgpData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/fragment/ConfirmationDialogFragment.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/fragment/ConfirmationDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/fragment/MessageListFragment.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/fragment/MessageListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/fragment/MessageViewFragment.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/fragment/MessageViewFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/fragment/ProgressDialogFragment.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/fragment/ProgressDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ClipboardManager.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ClipboardManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ClipboardManagerApi1.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ClipboardManagerApi1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ClipboardManagerApi11.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ClipboardManagerApi11.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ContactItem.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ContactItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/Contacts.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/Contacts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ContactsSdk5.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ContactsSdk5.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ContactsSdk5p.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/ContactsSdk5p.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/DomainNameChecker.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/DomainNameChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/FileBrowserHelper.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/FileBrowserHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/HtmlConverter.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/HtmlConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/MediaScannerNotifier.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/MediaScannerNotifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/MergeCursor.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/MergeCursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/MergeCursorWithUniqueId.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/MergeCursorWithUniqueId.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/MessageHelper.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/MessageHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/NotificationBuilder.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/NotificationBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/Regex.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/Regex.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/SizeFormatter.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/SizeFormatter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/StringUtils.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/StringUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/Utility.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/Utility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/power/TracingPowerManager.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/helper/power/TracingPowerManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Address.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Address.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Authentication.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Authentication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/AuthenticationFailedException.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/AuthenticationFailedException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Body.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Body.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/BodyPart.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/BodyPart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/CertificateValidationException.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/CertificateValidationException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/ConnectionSecurity.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/ConnectionSecurity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/FetchProfile.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/FetchProfile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Flag.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Flag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Folder.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Folder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Message.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Message.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/MessagingException.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/MessagingException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Multipart.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Multipart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Part.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Part.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/PushReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/PushReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Pusher.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Pusher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/ServerSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/ServerSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Store.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Store.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Transport.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/Transport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/Base64.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/Base64.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/Base64OutputStream.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/Base64OutputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/CountingOutputStream.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/CountingOutputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/EOLConvertingOutputStream.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/EOLConvertingOutputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/FixedLengthInputStream.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/FixedLengthInputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/Hex.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/Hex.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/LineWrapOutputStream.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/LineWrapOutputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/PeekableInputStream.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/PeekableInputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/SmtpDataStuffing.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/filter/SmtpDataStuffing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/BinaryTempFileBody.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/BinaryTempFileBody.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/DecoderUtil.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/DecoderUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/EncoderUtil.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/EncoderUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/Iso2022JpToShiftJisInputStream.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/Iso2022JpToShiftJisInputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeBodyPart.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeBodyPart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeHeader.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeHeader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeMessage.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeMultipart.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeMultipart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeUtility.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/MimeUtility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/TextBody.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/internet/TextBody.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/ImapResponseParser.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/ImapResponseParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/ImapStore.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/ImapStore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/LocalStore.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/LocalStore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/LockableDatabase.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/LockableDatabase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/Pop3Store.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/Pop3Store.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/StorageManager.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/StorageManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/TrustManagerFactory.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/TrustManagerFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/UnavailableAccountException.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/UnavailableAccountException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/UnavailableStorageException.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/UnavailableStorageException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/WebDavStore.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/WebDavStore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/imap/ImapUtility.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/store/imap/ImapUtility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/transport/SmtpTransport.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/transport/SmtpTransport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/transport/TrustedSocketFactory.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/transport/TrustedSocketFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/transport/WebDavTransport.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/transport/WebDavTransport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/transport/imap/ImapSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/mail/transport/imap/ImapSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/AccountSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/AccountSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/CheckBoxListPreference.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/CheckBoxListPreference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/Editor.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/Editor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/FolderSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/FolderSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/GlobalSettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/GlobalSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/IdentitySettings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/IdentitySettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/Settings.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/Settings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/SettingsExporter.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/SettingsExporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/SettingsImportExportException.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/SettingsImportExportException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/SettingsImporter.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/SettingsImporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/Storage.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/Storage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/TimePickerPreference.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/preferences/TimePickerPreference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/provider/AttachmentProvider.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/provider/AttachmentProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/provider/EmailProvider.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/provider/EmailProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/provider/MessageProvider.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/provider/MessageProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/provider/UnreadWidgetProvider.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/provider/UnreadWidgetProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/remotecontrol/AccountReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/remotecontrol/AccountReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/remotecontrol/K9AccountReceptor.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/remotecontrol/K9AccountReceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/remotecontrol/K9RemoteControl.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/remotecontrol/K9RemoteControl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/ConditionsTreeNode.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/ConditionsTreeNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/LocalSearch.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/LocalSearch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/SearchAccount.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/SearchAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/SearchSpecification.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/SearchSpecification.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/SqlQueryBuilder.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/search/SqlQueryBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/BootReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/BootReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/CoreReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/CoreReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/CoreService.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/CoreService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/DatabaseUpgradeService.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/DatabaseUpgradeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/MailService.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/MailService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/NotificationActionService.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/NotificationActionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/PollService.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/PollService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/PushService.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/PushService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/RemoteControlReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/RemoteControlReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/RemoteControlService.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/RemoteControlService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/ShutdownReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/ShutdownReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/SleepService.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/SleepService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/StorageGoneReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/StorageGoneReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/StorageReceiver.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/service/StorageReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/AccessibleWebView.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/AccessibleWebView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/AttachmentView.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/AttachmentView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/ColorChip.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/ColorChip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/K9PullToRefreshListView.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/K9PullToRefreshListView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/MessageCryptoView.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/MessageCryptoView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/MessageHeader.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/MessageHeader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/MessageTitleView.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/MessageTitleView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/MessageWebView.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/MessageWebView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/SingleMessageView.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/SingleMessageView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/ViewSwitcher.java" afterPath="$PROJECT_DIR$/src/com/chiaramail/chiaramailforandroid/view/ViewSwitcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AndroidManifest.xml" afterPath="$PROJECT_DIR$/tests/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/activity/AccountsTest.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/activity/AccountsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/activity/MessageReferenceTest.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/activity/MessageReferenceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/helper/Address.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/helper/Address.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/helper/HtmlConverterTest.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/helper/HtmlConverterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/helper/Utility_quoteAtoms.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/helper/Utility_quoteAtoms.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/internet/MimeUtilityTest.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/internet/MimeUtilityTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/internet/ViewablesTest.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/internet/ViewablesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/store/ImapResponseParserTest.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/store/ImapResponseParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/store/ImapStoreUriTest.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/store/ImapStoreUriTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/store/imap/ImapUtilityTest.java" afterPath="$PROJECT_DIR$/tests/src/com/fsck/k9/mail/store/imap/ImapUtilityTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/build-beta" afterPath="$PROJECT_DIR$/tools/build-beta" />
+    </list>
+    <ignored path="k-9.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/assets/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/blame/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/bundles/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.4.0/jars/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/incremental/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/manifests/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/res/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/rs/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/shaders/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/symbols/" />
+    <ignored path="$PROJECT_DIR$/build/outputs/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/classes/debug/" />
+    <ignored path="$PROJECT_DIR$/build/intermediates/classes/test/debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="k-9" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="111" />
+    <option name="y" value="30" />
+    <option name="width" value="1655" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="android.sdk.path" value="E:/AndroidSDK" />
+    <property name="last_opened_file_path" value="L:/WhatDoWeHaveInCommon" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6779e58-f956-4027-aa78-980aff02eec2" name="Default" comment="" />
+      <created>1489294455481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1489294455481</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="111" y="30" width="1655" height="1000" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>

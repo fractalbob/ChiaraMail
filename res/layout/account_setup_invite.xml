@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"   
+    >  
+    <TextView         
+	    android:text="@string/invite_contacts_preamble"
+        android:textStyle="bold"
+        android:textSize="16dip"
+        android:padding="0dip"
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+	 <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:orientation="horizontal" >
+
+         <Button
+             android:id="@+id/doInvite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1.0"
+             android:layout_marginRight="100dip"
+             android:padding="5dip"
+             android:text="@string/doInvite"
+             android:textSize="16dip" />
+
+         <Button
+             android:id="@+id/skipInvite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1.0"
+             android:layout_marginLeft="100dip"
+             android:padding="5dip"
+             android:text="@string/skipInvite"
+             android:textSize="16dip" />
+     </LinearLayout>	-->
+<!--     <Button
+        android:id="@+id/doInvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.16"
+        android:padding="5dip"
+        android:text="@string/doInvite"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="16dip" />
+
+    <Button
+        android:id="@+id/skipInvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.31"
+        android:padding="5dip"
+        android:text="@string/skipInvite"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="16dip" />--> 
+<!--  </RelativeLayout>-->
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="vertical" >
+		    
+		    <ScrollView
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:padding="6dip"
+			    android:layout_marginBottom="54dip" 
+			    android:fadingEdge="none"
+			    android:scrollbarStyle="outsideInset">
+		    			
+				<LinearLayout
+			         android:layout_width="fill_parent"
+			         android:layout_height="fill_parent"
+			   	 	 android:gravity="center_vertical|center_horizontal"
+			         android:orientation="vertical" >
+		    
+					<TextView         
+					    android:text="@string/invite_contacts_preamble"
+				        android:textStyle="bold"
+				        android:textSize="16dip"
+				        android:padding="0dip"
+				        android:layout_weight="1"
+				        android:gravity="top"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        />
+			
+			         <Button
+			             android:id="@+id/doInvite"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:visibility="gone"
+			             android:paddingLeft="30dip"
+			             android:paddingRight="30dip"
+			             android:text="@string/doInvite"
+			             android:textSize="16dip" />
+			
+			         <Button
+			             android:id="@+id/skipInvite"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:visibility="gone"
+			             android:paddingLeft="30dip"
+			             android:paddingRight="30dip"
+			             android:text="@string/skipInvite"
+			             android:textSize="16dip" />
+			     </LinearLayout>
+			</ScrollView>	 
+    			<include layout="@layout/wizard_next" />
+		</LinearLayout>

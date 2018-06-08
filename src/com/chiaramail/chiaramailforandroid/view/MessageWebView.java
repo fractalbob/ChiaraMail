@@ -1,4 +1,4 @@
-package com.fsck.k9.view;
+package com.chiaramail.chiaramailforandroid.view;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -9,8 +9,9 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.webkit.WebSettings;
 import android.widget.Toast;
-import com.fsck.k9.K9;
-import com.fsck.k9.R;
+
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.R;
 import java.lang.reflect.Method;
 import com.nobu_games.android.view.web.TitleBarWebView;
 
@@ -64,22 +65,14 @@ public class MessageWebView extends TitleBarWebView {
      * @param shouldBlockNetworkData True if network data should be blocked, false to allow network data.
      */
     public void blockNetworkData(final boolean shouldBlockNetworkData) {
-        // Sanity check to make sure we don't blow up.
-        if (getSettings() == null) {
-            return;
-        }
-
-        // Block network loads.
-        if (mGetBlockNetworkLoads != null) {
-            try {
-                mGetBlockNetworkLoads.invoke(getSettings(), shouldBlockNetworkData);
-            } catch (Exception e) {
-                Log.e(K9.LOG_TAG, "Error on invoking WebSettings.setBlockNetworkLoads()", e);
-            }
-        }
-
-        // Block network images.
-        getSettings().setBlockNetworkImage(shouldBlockNetworkData);
+       /*
+     	* Block network loads.
+    	*
+    	* Images with content: URIs will not be blocked, nor
+    	* will network images that are already in the WebView cache.
+    	*
+    	*/
+    	getSettings().setBlockNetworkLoads(shouldBlockNetworkData);
     }
 
 
@@ -109,7 +102,7 @@ public class MessageWebView extends TitleBarWebView {
 
         disableDisplayZoomControls();
 
-        webSettings.setJavaScriptEnabled(false);
+        webSettings.setJavaScriptEnabled(true);
         webSettings.setLoadsImagesAutomatically(true);
         webSettings.setRenderPriority(WebSettings.RenderPriority.HIGH);
 
@@ -133,7 +126,7 @@ public class MessageWebView extends TitleBarWebView {
      */
     @TargetApi(11)
     private void disableDisplayZoomControls() {
-        if (Build.VERSION.SDK_INT >= 11) {
+    	if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {	// aka API 11
             PackageManager pm = getContext().getPackageManager();
             boolean supportsMultiTouch =
                     pm.hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH) ||
@@ -167,7 +160,6 @@ public class MessageWebView extends TitleBarWebView {
      * Emulate the shift key being pressed to trigger the text selection mode
      * of a WebView.
      */
-    @Override
     public void emulateShiftHeld() {
         try {
 

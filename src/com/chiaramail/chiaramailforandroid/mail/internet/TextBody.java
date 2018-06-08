@@ -1,8 +1,8 @@
 
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
-import com.fsck.k9.mail.Body;
-import com.fsck.k9.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Body;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
 
 import java.io.*;
 

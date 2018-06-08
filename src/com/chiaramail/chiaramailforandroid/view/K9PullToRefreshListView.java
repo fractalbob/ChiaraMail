@@ -1,4 +1,4 @@
-package com.fsck.k9.view;
+package com.chiaramail.chiaramailforandroid.view;
 
 import android.content.Context;
 import android.os.Parcelable;

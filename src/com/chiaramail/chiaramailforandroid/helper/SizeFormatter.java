@@ -1,7 +1,7 @@
-package com.fsck.k9.helper;
+package com.chiaramail.chiaramailforandroid.helper;
 
 import android.content.Context;
-import com.fsck.k9.R;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class SizeFormatter {
     /*

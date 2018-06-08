@@ -2,7 +2,7 @@
  * on 2010-11-27 by jessev
  */
 
-package com.fsck.k9.preferences;
+package com.chiaramail.chiaramailforandroid.preferences;
 
 import android.content.Context;
 import android.preference.DialogPreference;

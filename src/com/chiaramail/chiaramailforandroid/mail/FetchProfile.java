@@ -1,5 +1,5 @@
 
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 import java.util.ArrayList;
 

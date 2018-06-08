@@ -1,6 +1,6 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
-import com.fsck.k9.R;
+import com.chiaramail.chiaramailforandroid.R;
 import android.app.AlertDialog;
 import android.content.*;
 import android.view.LayoutInflater;

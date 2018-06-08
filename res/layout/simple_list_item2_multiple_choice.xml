@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+     <com.chiaramail.chiaramailforandroid.helper.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:orientation="vertical"
+	     android:layout_width="fill_parent"
+	     android:layout_height="fill_parent"
+	     >
+    
+    <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@android:id/text1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="?android:attr/listPreferredItemHeight"
+	    android:textAppearance="?android:attr/textAppearanceLarge"
+	    android:gravity="center_vertical"
+	    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+	    android:focusable="false"
+	    android:paddingLeft="6dip"
+	    android:paddingRight="6dip"
+		/>
+                
+    <TextView android:id="@android:id/text2"
+        android:paddingLeft="10dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/text1"
+        android:layout_alignLeft="@android:id/text1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        />
+
+</com.chiaramail.chiaramailforandroid.helper.CheckableLinearLayout>

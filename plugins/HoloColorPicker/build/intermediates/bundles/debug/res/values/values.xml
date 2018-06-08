@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorPicker"><attr format="integer" name="wheel_size"/><attr format="integer" name="pointer_size"/></declare-styleable>
+</resources>

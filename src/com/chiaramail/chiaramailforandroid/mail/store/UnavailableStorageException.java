@@ -1,6 +1,6 @@
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
-import com.fsck.k9.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
 
 public class UnavailableStorageException extends MessagingException {
 

@@ -1,11 +1,11 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.service.DatabaseUpgradeService;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.service.DatabaseUpgradeService;
+import com.chiaramail.chiaramailforandroid.R;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -180,7 +180,9 @@ public class UpgradeDatabases extends K9Activity {
      */
     private void launchOriginalActivity() {
         finish();
-        startActivity(mStartIntent);
+        if (mStartIntent != null) {
+            startActivity(mStartIntent);
+        }
     }
 
     /**

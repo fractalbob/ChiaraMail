@@ -1,11 +1,11 @@
-package com.fsck.k9.search;
+package com.chiaramail.chiaramailforandroid.search;
 
 import android.content.Context;
 
-import com.fsck.k9.BaseAccount;
-import com.fsck.k9.R;
-import com.fsck.k9.search.SearchSpecification.Attribute;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.BaseAccount;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Attribute;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.R;
 
 /**
  * This class is basically a wrapper around a LocalSearch. It allows to expose it as

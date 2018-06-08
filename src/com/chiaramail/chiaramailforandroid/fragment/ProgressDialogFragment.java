@@ -1,4 +1,4 @@
-package com.fsck.k9.fragment;
+package com.chiaramail.chiaramailforandroid.fragment;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;

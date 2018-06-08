@@ -1,4 +1,4 @@
-package com.fsck.k9.cache;
+package com.chiaramail.chiaramailforandroid.cache;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,11 +9,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.content.LocalBroadcastManager;
 
-import com.fsck.k9.fragment.MessageListFragment;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.store.LocalStore.LocalFolder;
-import com.fsck.k9.mail.store.LocalStore.LocalMessage;
-import com.fsck.k9.provider.EmailProvider;
+import com.chiaramail.chiaramailforandroid.fragment.MessageListFragment;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalMessage;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider;
 
 /**
  * Cache to bridge the time needed to write (user-initiated) changes to the database.

@@ -1,4 +1,4 @@
-package com.fsck.k9.search;
+package com.chiaramail.chiaramailforandroid.search;
 
 import java.util.ArrayList;
 import java.util.HashSet;

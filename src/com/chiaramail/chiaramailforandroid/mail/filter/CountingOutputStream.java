@@ -1,4 +1,4 @@
-package com.fsck.k9.mail.filter;
+package com.chiaramail.chiaramailforandroid.mail.filter;
 
 import java.io.IOException;
 import java.io.OutputStream;

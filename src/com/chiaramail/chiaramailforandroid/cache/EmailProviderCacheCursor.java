@@ -1,10 +1,10 @@
-package com.fsck.k9.cache;
+package com.chiaramail.chiaramailforandroid.cache;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fsck.k9.provider.EmailProvider.MessageColumns;
-import com.fsck.k9.provider.EmailProvider.ThreadColumns;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider.MessageColumns;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider.ThreadColumns;
 
 import android.content.Context;
 import android.database.Cursor;

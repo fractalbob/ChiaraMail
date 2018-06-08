@@ -1,5 +1,5 @@
 
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -15,6 +15,7 @@ import java.util.UUID;
 
 import org.apache.james.mime4j.MimeException;
 import org.apache.james.mime4j.dom.field.DateTimeField;
+//import org.apache.james.mime4j.field.DateTimeField;    // apache-mime4j-0.6.1
 import org.apache.james.mime4j.field.DefaultFieldParser;
 import org.apache.james.mime4j.io.EOLConvertingInputStream;
 import org.apache.james.mime4j.parser.ContentHandler;
@@ -22,15 +23,18 @@ import org.apache.james.mime4j.parser.MimeStreamParser;
 import org.apache.james.mime4j.stream.BodyDescriptor;
 import org.apache.james.mime4j.stream.Field;
 import org.apache.james.mime4j.stream.MimeConfig;
+//import org.apache.james.mime4j.descriptor.BodyDescriptor; // apache-mime4j-0.6.1
+//import org.apache.james.mime4j.stream.Field;  // apache-mime4j-0.6.1
+//import org.apache.james.mime4j.stream.MimeConfig; // apache-mime4j-0.6.1
 
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.mail.Body;
-import com.fsck.k9.mail.BodyPart;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Multipart;
-import com.fsck.k9.mail.Part;
-import com.fsck.k9.mail.store.UnavailableStorageException;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.Body;
+import com.chiaramail.chiaramailforandroid.mail.BodyPart;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Multipart;
+import com.chiaramail.chiaramailforandroid.mail.Part;
+import com.chiaramail.chiaramailforandroid.mail.store.UnavailableStorageException;
 
 /**
  * An implementation of Message that stores all of it's metadata in RFC 822 and
@@ -120,7 +124,7 @@ public class MimeMessage extends Message {
      *
      * @see #mSentDate
      * @param sentDate
-     * @throws com.fsck.k9.mail.MessagingException
+     * @throws com.chiaramail.chiaramailforandroid.mail.MessagingException
      */
     public void addSentDate(Date sentDate) throws MessagingException {
         if (mDateFormat == null) {
@@ -427,7 +431,7 @@ public class MimeMessage extends Message {
             ((TextBody)mBody).setCharset(charset);
         }
     }
-
+    
     class MimeMessageBuilder implements ContentHandler {
         private final LinkedList<Object> stack = new LinkedList<Object>();
 

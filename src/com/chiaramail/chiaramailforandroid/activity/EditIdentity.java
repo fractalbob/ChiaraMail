@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,17 +6,18 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import com.fsck.k9.Account;
-import com.fsck.k9.Identity;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
+
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.Identity;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.R;
 import java.util.List;
 
 public class EditIdentity extends K9Activity {
 
-    public static final String EXTRA_IDENTITY = "com.fsck.k9.EditIdentity_identity";
-    public static final String EXTRA_IDENTITY_INDEX = "com.fsck.k9.EditIdentity_identity_index";
-    public static final String EXTRA_ACCOUNT = "com.fsck.k9.EditIdentity_account";
+    public static final String EXTRA_IDENTITY = "com.chiaramail.chiaramailforandroid.EditIdentity_identity";
+    public static final String EXTRA_IDENTITY_INDEX = "com.chiaramail.chiaramailforandroid.EditIdentity_identity_index";
+    public static final String EXTRA_ACCOUNT = "com.chiaramail.chiaramailforandroid.EditIdentity_account";
 
     private Account mAccount;
     private Identity mIdentity;

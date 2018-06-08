@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\k-9\\plugins\\ckChangeLog\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\changelog.xml",
+        "source": "C:\\k-9\\plugins\\ckChangeLog\\library\\build\\intermediates\\bundles\\debug\\res\\xml\\changelog.xml"
+    },
+    {
+        "merged": "C:\\k-9\\plugins\\ckChangeLog\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\ecschangelog.xml",
+        "source": "C:\\k-9\\plugins\\ckChangeLog\\library\\build\\intermediates\\bundles\\debug\\res\\xml\\ecschangelog.xml"
+    }
+]

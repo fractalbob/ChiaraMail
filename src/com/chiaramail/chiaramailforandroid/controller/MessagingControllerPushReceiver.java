@@ -1,19 +1,19 @@
-package com.fsck.k9.controller;
+package com.chiaramail.chiaramailforandroid.controller;
 
 import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Folder.OpenMode;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.PushReceiver;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.LocalStore.LocalFolder;
-import com.fsck.k9.service.SleepService;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.PushReceiver;
+import com.chiaramail.chiaramailforandroid.mail.Folder.OpenMode;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.service.SleepService;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;

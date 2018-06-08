@@ -1,0 +1,4 @@
+include ':HoloColorPicker'
+include ':Android-PullToRefresh:library'
+include ':ActionBarSherlock:library'
+include ':ckChangeLog:library'

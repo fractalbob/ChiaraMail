@@ -1,5 +1,5 @@
 
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,6 +14,14 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.Window;
 import com.actionbarsherlock.widget.SearchView;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.Account.FolderMode;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.controller.MessagingListener;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
 
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,26 +29,19 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.Account.FolderMode;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.controller.MessagingListener;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class ChooseFolder extends K9ListActivity {
-    public static final String EXTRA_ACCOUNT = "com.fsck.k9.ChooseFolder_account";
-    public static final String EXTRA_CUR_FOLDER = "com.fsck.k9.ChooseFolder_curfolder";
-    public static final String EXTRA_SEL_FOLDER = "com.fsck.k9.ChooseFolder_selfolder";
-    public static final String EXTRA_NEW_FOLDER = "com.fsck.k9.ChooseFolder_newfolder";
-    public static final String EXTRA_MESSAGE = "com.fsck.k9.ChooseFolder_message";
-    public static final String EXTRA_SHOW_CURRENT = "com.fsck.k9.ChooseFolder_showcurrent";
-    public static final String EXTRA_SHOW_FOLDER_NONE = "com.fsck.k9.ChooseFolder_showOptionNone";
-    public static final String EXTRA_SHOW_DISPLAYABLE_ONLY = "com.fsck.k9.ChooseFolder_showDisplayableOnly";
+    public static final String EXTRA_ACCOUNT = "com.chiaramail.chiaramailforandroid.ChooseFolder_account";
+    public static final String EXTRA_CUR_FOLDER = "com.chiaramail.chiaramailforandroid.ChooseFolder_curfolder";
+    public static final String EXTRA_SEL_FOLDER = "com.chiaramail.chiaramailforandroid.ChooseFolder_selfolder";
+    public static final String EXTRA_NEW_FOLDER = "com.chiaramail.chiaramailforandroid.ChooseFolder_newfolder";
+    public static final String EXTRA_MESSAGE = "com.chiaramail.chiaramailforandroid.ChooseFolder_message";
+    public static final String EXTRA_SHOW_CURRENT = "com.chiaramail.chiaramailforandroid.ChooseFolder_showcurrent";
+    public static final String EXTRA_SHOW_FOLDER_NONE = "com.chiaramail.chiaramailforandroid.ChooseFolder_showOptionNone";
+    public static final String EXTRA_SHOW_DISPLAYABLE_ONLY = "com.chiaramail.chiaramailforandroid.ChooseFolder_showDisplayableOnly";
 
 
     String mFolder;
@@ -83,6 +84,11 @@ public class ChooseFolder extends K9ListActivity {
         Intent intent = getIntent();
         String accountUuid = intent.getStringExtra(EXTRA_ACCOUNT);
         mAccount = Preferences.getPreferences(this).getAccount(accountUuid);
+        if (mAccount == null) {
+            Toast.makeText(this, R.string.unexpected_error_null_account,
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
         mMessageReference = intent.getParcelableExtra(EXTRA_MESSAGE);
         mFolder = intent.getStringExtra(EXTRA_CUR_FOLDER);
         mSelectFolder = intent.getStringExtra(EXTRA_SEL_FOLDER);
@@ -121,7 +127,7 @@ public class ChooseFolder extends K9ListActivity {
                 Intent result = new Intent();
                 result.putExtra(EXTRA_ACCOUNT, mAccount.getUuid());
                 result.putExtra(EXTRA_CUR_FOLDER, mFolder);
-                String destFolderName = (String)((TextView)view).getText();
+                String destFolderName = ((TextView)view).getText().toString();
                 if (mHeldInbox != null && getString(R.string.special_mailbox_name_inbox).equals(destFolderName)) {
                     destFolderName = mHeldInbox;
                 }

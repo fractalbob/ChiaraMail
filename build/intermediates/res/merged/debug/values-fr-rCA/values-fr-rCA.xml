@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="dialog_confirm_spam_message">
+        <item quantity="one">Voulez-vous déplacer ce message vers le dossiers à pourriels\u00A0?</item>
+        <item quantity="other">Voulez-vous déplacer <ns1:g id="message_count">%1$d</ns1:g> messages vers le dossiers à pourriels\u00A0?</item>
+    </plurals>
+    <string name="account_settings_crypto_auto_signature_summary">Utiliser l\'adresse courriel du compte pour déduire la clé de signature</string>
+    <string name="account_settings_email_label">Votre adresse courriel</string>
+    <string name="account_settings_notify_label">Nouveaux courriels</string>
+    <string name="account_settings_notify_summary">Afficher une notification dans la barre d\'état à la réception d\'un courriel</string>
+    <string name="account_settings_vibrate_summary">Vibrer à la réception d\'un courriel</string>
+    <string name="account_setup_basics_email_hint">Adresse courriel</string>
+    <string name="account_setup_push_limit_label">Maximum de dossiers poussés à vérifier</string>
+    <string name="accounts_welcome">
+&lt;p>
+K-9 Mail est un client de messagerie open source pour Android basé sur le client standard Android Mail.
+&lt;/p>&lt;p>
+Voici ce que K-9 Mail apporte de plus\u00A0:
+&lt;/p>
+&lt;ul>
+  &lt;li>La technologie PUSH en passant par le protocole IMAP&lt;/li>
+  &lt;li>De meilleures performances&lt;/li>
+  &lt;li>Signer ses messages&lt;/li>
+  &lt;li>S\'envoyer une copie des messages automatiquement&lt;/li>
+  &lt;li>Choisir les dossiers à synchroniser&lt;/li>
+  &lt;li>Choisir l\'adresse courriel de réponse&lt;/li>
+  &lt;li>Des raccourcis clavier&lt;/li>
+  &lt;li>Un meilleur support de l\'IMAP&lt;/li>
+  &lt;li>Sauver les pièces jointes sur la carte SD&lt;/li>
+  &lt;li>Vider la corbeille&lt;/li>
+  &lt;li>Trier les messages&lt;/li>
+  &lt;li>…et bien plus encore&lt;/li>
+&lt;/ul>
+&lt;p>
+Veuillez noter que K-9 Mail ne prend pas en charge les comptes Hotmail et, comme d\'autres clients, a quelques ennuis avec les serveurs Microsoft Exchange.
+&lt;/p>&lt;p>
+Si vous avez des suggestions, découvert des bugs ou simplement une idée de fonctionnalité, n\'hésitez pas à vous rendre ici\u00A0:
+&lt;a href="http://k9mail.googlecode.com/">http://k9mail.googlecode.com/&lt;/a> (en anglais).
+&lt;/p>
+    </string>
+    <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nécessite un ou plusieurs services Google Play qui ne sont pas disponibles actuellement. Veuillez communiquer avec le développeur pour obtenir de l\'aide."</string>
+    <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Activer les services Google Play"</string>
+    <string msgid="2016066508617425489" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas tant que vous n\'aurez pas activé les services Google Play."</string>
+    <string msgid="4763733806837472840" name="common_google_play_services_enable_title">"Activer les services Google Play"</string>
+    <string msgid="5765996826213593005" name="common_google_play_services_install_button">"Installer les services Google Play"</string>
+    <string msgid="1545874412485515659" name="common_google_play_services_install_text_phone">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas sans les services Google Play, qui ne sont pas installés sur votre téléphone."</string>
+    <string msgid="2742131317258851812" name="common_google_play_services_install_text_tablet">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas sans les services Google Play, qui ne sont pas installés sur votre tablette."</string>
+    <string msgid="2110712637922504348" name="common_google_play_services_install_title">"Installer les services Google Play"</string>
+    <string msgid="8004809446015217370" name="common_google_play_services_invalid_account_text">"Le compte indiqué n\'existe pas sur cet appareil. Veuillez sélectionner un autre compte."</string>
+    <string msgid="9894539456463288" name="common_google_play_services_invalid_account_title">"Compte non valide"</string>
+    <string msgid="2602915190038884860" name="common_google_play_services_network_error_text">"Vous devez disposer d\'une connexion de données pour utiliser les services Google Play."</string>
+    <string msgid="5183831421651758225" name="common_google_play_services_network_error_title">"Erreur réseau"</string>
+    <string msgid="3936796119014022295" name="common_google_play_services_notification_ticker">"Erreur liée aux services Google Play"</string>
+    <string msgid="6951442375899151085" name="common_google_play_services_restricted_profile_text">"L\'accès aux comptes à partir d\'un profil limité n\'est pas possible."</string>
+    <string msgid="4958149393843193760" name="common_google_play_services_restricted_profile_title">"Profil limité"</string>
+    <string msgid="59739986196915578" name="common_google_play_services_sign_in_failed_text">"Erreur lors de la connexion au compte indiqué. Veuillez en sélectionner un autre."</string>
+    <string msgid="8431204498860131150" name="common_google_play_services_sign_in_failed_title">"Échec de connexion"</string>
+    <string msgid="7170719956698345984" name="common_google_play_services_unknown_issue">"L\'application <ns1:g id="APP_NAME">%1$s</ns1:g> éprouve un problème avec les services Google Play. Si le problème persiste, veuillez communiquer avec le développeur pour obtenir de l\'aide."</string>
+    <string msgid="4291190028362992831" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> dépend des services Google Play, qui ne sont pas compatibles avec votre appareil. Veuillez communiquer avec le fabricant pour obtenir de l\'aide."</string>
+    <string msgid="909734065366822541" name="common_google_play_services_unsupported_title">"Services Google Play"</string>
+    <string msgid="2221302284291941971" name="common_google_play_services_update_button">"Mettre à jour"</string>
+    <string msgid="6230553430311881723" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas tant que vous n\'aurez pas mis à jour les services Google Play."</string>
+    <string msgid="2926201203597631481" name="common_google_play_services_update_title">"Mettre à jour les services Google Play"</string>
+    <string msgid="1576144479907495032" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas sans les services Google Play, qui sont actuellement mis à jour."</string>
+    <string msgid="1604540693139938838" name="common_google_play_services_updating_title">"Mise à jour des services Google Play"</string>
+    <string msgid="8334920661858223093" name="common_google_play_services_wear_update_text">"La nouvelle version des services Google Play est nécessaire. Elle sera bientôt installée automatiquement."</string>
+    <string msgid="311697239335516384" name="common_open_on_phone">"Ouvrir sur le téléphone"</string>
+    <string msgid="3156914698180786012" name="common_signin_button_text">"Connexion"</string>
+    <string msgid="1483290677806110088" name="common_signin_button_text_long">"Se connecter avec Google"</string>
+    <string name="edit_identity_email_label">Adresse courriel</string>
+    <string name="error_contact_address_not_found">Aucune adresse courriel trouvée</string>
+    <string name="global_settings_show_correspondent_names_summary">Afficher le nom des correspondants plutôt que leurs adresses courriel</string>
+    <string name="identity_has_no_email">Vous ne pouvez pas utiliser une identité sans adresse courriel</string>
+    <string name="notification_new_title">Nouveau courriel</string>
+    <string name="spam_action">Pourriel</string>
+    <string name="spam_folder_label">Nom du dossier des pourriels</string>
+    <string name="special_mailbox_name_spam">Pourriels</string>
+    <string name="special_mailbox_name_spam_fmt"><ns1:g id="folder">%s</ns1:g> (Pourriels)</string>
+</resources>

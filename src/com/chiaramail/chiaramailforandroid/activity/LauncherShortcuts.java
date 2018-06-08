@@ -1,13 +1,13 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.BaseAccount;
-import com.fsck.k9.R;
-import com.fsck.k9.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.BaseAccount;
+import com.chiaramail.chiaramailforandroid.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.R;
 
 public class LauncherShortcuts extends AccountList {
     @Override
@@ -34,8 +34,7 @@ public class LauncherShortcuts extends AccountList {
             SearchAccount searchAccount = (SearchAccount) account;
             shortcutIntent = MessageList.shortcutIntent(this, searchAccount.getId());
         } else {
-            shortcutIntent = FolderList.actionHandleAccountIntent(this, (Account) account, null,
-                    true);
+            shortcutIntent = FolderList.actionHandleAccountIntent(this, (Account) account, true);
         }
 
         Intent intent = new Intent();
@@ -52,3 +51,4 @@ public class LauncherShortcuts extends AccountList {
         finish();
     }
 }
+

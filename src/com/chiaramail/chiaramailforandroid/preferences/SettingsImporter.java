@@ -1,4 +1,4 @@
-package com.fsck.k9.preferences;
+package com.chiaramail.chiaramailforandroid.preferences;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,17 +18,17 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.Identity;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.ConnectionSecurity;
-import com.fsck.k9.mail.ServerSettings;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.Transport;
-import com.fsck.k9.mail.store.WebDavStore;
-import com.fsck.k9.preferences.Settings.InvalidSettingValueException;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.Identity;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.ConnectionSecurity;
+import com.chiaramail.chiaramailforandroid.mail.ServerSettings;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.Transport;
+import com.chiaramail.chiaramailforandroid.mail.store.WebDavStore;
+import com.chiaramail.chiaramailforandroid.preferences.Settings.InvalidSettingValueException;
 
 public class SettingsImporter {
 

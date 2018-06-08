@@ -1,4 +1,4 @@
-package com.fsck.k9.provider;
+package com.chiaramail.chiaramailforandroid.provider;
 
 import android.content.ContentProvider;
 import android.content.ContentResolver;
@@ -18,21 +18,21 @@ import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.AccountStats;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.activity.FolderInfoHolder;
-import com.fsck.k9.activity.MessageInfoHolder;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.controller.MessagingListener;
-import com.fsck.k9.helper.MessageHelper;
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.AccountStats;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.activity.FolderInfoHolder;
+import com.chiaramail.chiaramailforandroid.activity.MessageInfoHolder;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.controller.MessagingListener;
+import com.chiaramail.chiaramailforandroid.helper.MessageHelper;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.search.SearchAccount;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -556,7 +556,10 @@ public class MessageProvider extends ContentProvider {
                 mSemaphore.release();
             }
         }
-
+        @Override
+        public Uri getNotificationUri() {
+        	return null;
+        }
         @Override
         public boolean isClosed() {
             return mClosed.get() || mCursor.isClosed();
@@ -932,7 +935,7 @@ public class MessageProvider extends ContentProvider {
         }
     }
 
-    public static final String AUTHORITY = "com.fsck.k9.messageprovider";
+    public static final String AUTHORITY = "com.chiaramail.chiaramailforandroid.messageprovider";
 
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY);
 

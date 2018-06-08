@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ckchangelog">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/library/bin/ckchangelog.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

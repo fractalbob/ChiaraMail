@@ -1,17 +1,17 @@
 
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.remotecontrol.K9RemoteControl;
-import com.fsck.k9.Preferences;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.remotecontrol.K9RemoteControl;
 
-import static com.fsck.k9.remotecontrol.K9RemoteControl.*;
+import static com.chiaramail.chiaramailforandroid.remotecontrol.K9RemoteControl.*;
 
 public class RemoteControlReceiver extends CoreReceiver {
     @Override

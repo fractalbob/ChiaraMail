@@ -1,11 +1,11 @@
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.fsck.k9.mail.ConnectionSecurity;
-import com.fsck.k9.mail.ServerSettings;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.store.ImapStore;
+import com.chiaramail.chiaramailforandroid.mail.ConnectionSecurity;
+import com.chiaramail.chiaramailforandroid.mail.ServerSettings;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.store.ImapStore;
 import junit.framework.TestCase;
 
 public class ImapStoreUriTest extends TestCase {

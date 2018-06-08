@@ -1,22 +1,22 @@
-package com.fsck.k9.provider;
+package com.chiaramail.chiaramailforandroid.provider;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.cache.EmailProviderCacheCursor;
-import com.fsck.k9.helper.StringUtils;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.LockableDatabase;
-import com.fsck.k9.mail.store.LockableDatabase.DbCallback;
-import com.fsck.k9.mail.store.LockableDatabase.WrappedException;
-import com.fsck.k9.mail.store.UnavailableStorageException;
-import com.fsck.k9.search.SqlQueryBuilder;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.cache.EmailProviderCacheCursor;
+import com.chiaramail.chiaramailforandroid.helper.StringUtils;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.LockableDatabase;
+import com.chiaramail.chiaramailforandroid.mail.store.UnavailableStorageException;
+import com.chiaramail.chiaramailforandroid.mail.store.LockableDatabase.DbCallback;
+import com.chiaramail.chiaramailforandroid.mail.store.LockableDatabase.WrappedException;
+import com.chiaramail.chiaramailforandroid.search.SqlQueryBuilder;
 
 import android.annotation.TargetApi;
 import android.content.ContentProvider;
@@ -44,7 +44,7 @@ import android.net.Uri;
 public class EmailProvider extends ContentProvider {
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
-    public static final String AUTHORITY = "com.fsck.k9.provider.email";
+    public static final String AUTHORITY = "com.chiaramail.chiaramailforandroid.provider.email";
 
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY);
 
@@ -754,6 +754,8 @@ public class EmailProvider extends ContentProvider {
                 throw new RuntimeException("Special column can only be retrieved as string.");
             }
 
+            if (realColumnIndex >= mColumnMapping.length) throw new RuntimeException("CursorIndexOutOfBoundsException: index = " + realColumnIndex);
+
             return super.getDouble(realColumnIndex);
         }
 
@@ -764,6 +766,8 @@ public class EmailProvider extends ContentProvider {
                 throw new RuntimeException("Special column can only be retrieved as string.");
             }
 
+            if (realColumnIndex >= mColumnMapping.length) throw new RuntimeException("CursorIndexOutOfBoundsException: index = " + realColumnIndex);
+
             return super.getFloat(realColumnIndex);
         }
 
@@ -773,6 +777,8 @@ public class EmailProvider extends ContentProvider {
             if (realColumnIndex < 0) {
                 throw new RuntimeException("Special column can only be retrieved as string.");
             }
+            
+            if (realColumnIndex >= mColumnMapping.length) throw new RuntimeException("CursorIndexOutOfBoundsException: index = " + realColumnIndex);
 
             return super.getInt(realColumnIndex);
         }
@@ -783,6 +789,8 @@ public class EmailProvider extends ContentProvider {
             if (realColumnIndex < 0) {
                 throw new RuntimeException("Special column can only be retrieved as string.");
             }
+            
+            if (realColumnIndex >= mColumnMapping.length) throw new RuntimeException("CursorIndexOutOfBoundsException: index = " + realColumnIndex);
 
             return super.getLong(realColumnIndex);
         }
@@ -794,6 +802,8 @@ public class EmailProvider extends ContentProvider {
                 throw new RuntimeException("Special column can only be retrieved as string.");
             }
 
+            if (realColumnIndex >= mColumnMapping.length) throw new RuntimeException("CursorIndexOutOfBoundsException: index = " + realColumnIndex);
+
             return super.getShort(realColumnIndex);
         }
 
@@ -803,6 +813,8 @@ public class EmailProvider extends ContentProvider {
             if (realColumnIndex < 0) {
                 return mSpecialColumnValues[-realColumnIndex - 1];
             }
+
+            if (realColumnIndex >= mColumnMapping.length) throw new RuntimeException("CursorIndexOutOfBoundsException: index = " + realColumnIndex);
 
             return super.getString(realColumnIndex);
         }
@@ -814,6 +826,8 @@ public class EmailProvider extends ContentProvider {
             if (realColumnIndex < 0) {
                 return FIELD_TYPE_STRING;
             }
+            
+            if (realColumnIndex >= mColumnMapping.length) throw new RuntimeException("CursorIndexOutOfBoundsException: index = " + realColumnIndex);
 
             return super.getType(realColumnIndex);
         }
@@ -824,6 +838,8 @@ public class EmailProvider extends ContentProvider {
             if (realColumnIndex < 0) {
                 return (mSpecialColumnValues[-realColumnIndex - 1] == null);
             }
+
+            if (realColumnIndex >= mColumnMapping.length) throw new RuntimeException("CursorIndexOutOfBoundsException: index = " + realColumnIndex);
 
             return super.isNull(realColumnIndex);
         }

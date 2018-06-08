@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="4.55" versioncode="455" >
+        <change>Show link to Web page detailing workaround to problem configuring a recalcitrant Gmail account.</change>
+    </release>
+    <release version="4.54" versioncode="454" >
+        <change>Fixed bug: Line formatting is lost when replying to or forwarding non-ECS messages.</change>
+    </release>
+    <release version="4.53" versioncode="453" >
+        <change>Fixed bug: Removed package name from references to MessageCompose.class in source code, in an effort to fix ActivityNotFoundException bug.</change>
+    </release>
+    <release version="4.52" versioncode="452" >
+        <change>Fixed bug: App crashes when replying to an ECS message with no trailing blank in the content pointer.</change>
+    </release>
+    <release version="4.51" versioncode="451" >
+        <change>Fixed bug: Replies and forwards of ECS messages munged the original message.</change>
+    </release>
+    <release version="4.50" versioncode="450" >
+        <change>Fixed bug: Occasional NPE in TracingPowerManager.TracingWakeLock().</change>
+        <change>Fixed bug: NPE on first account creation in new app installations.</change>
+        <change>Clean up code inefficiencies in certain strings.</change>
+        <change>Eliminate unnecessary method in AttachmentView.java.</change>
+        <change>Fixed bug: Unable to edit POP3 settings.</change>
+    </release>
+    <release version="4.49" versioncode="449" >
+        <change>Fixed bug: Read-only file system error when reading ECS messages for first account created.</change>
+    </release>
+    <release version="4.48" versioncode="448" >
+        <change>Fixed bug: NullPointerExceptions in ChooseIdentity.java.</change>
+        <change>Fixed bug: Link to Privacy Policy broken.</change>
+        <change>Add EULA to About page.</change>
+        <change>Fixed bug: App attempts to send an ECS message before ensuring the content server password has been set.</change>
+        <change>Fixed bug: Minimum SDK version set to 14 as a workaround to an Android bug.</change>
+        <change>Fixed bug: NPE during remote search due to current folder name not set.</change>
+        <change>Replaced ECB block cipher mode with the stronger CBC when encrypting ECS messages.</change>
+        <change>Fixed bug: tmp file not deleted after updating content.</change>
+        <change>Generate encryption key using SecretKey, rather than Random.</change>
+        <change>Fixed bug: Progress dialog does not get dismissed on error.</change>
+        <change>Fixed bug: User message text hardcoded in app.</change>
+        <change>Fixed bug: ProgressDialog does not display when certain attachments are downloaded.</change>
+    </release>
+    <release version="4.47" versioncode="447" >
+        <change>Fixed bug: NoSuchElementException thrown when a private content server is selected for editing.</change>
+        <change>Fixed bug: Private content server settings not used when server is set as default.</change>
+        <change>Fixed bug: ClassCastException in ContactPicker.java.</change>
+        <change>Fixed bug: NullPointerExceptions in ChooseFolder.java, SingleMessageView.java and ChooseIdentity.java.</change>
+        <change>Fixed bug: Non-existent activities referenced in manifest throw errors.</change>
+        <change>Fixed bug: HTML links are not live.</change>
+        <change>Fixed bug: When updating messages that include inline images, the thumbnails do not get updated.</change>
+        <change>Move Send Feedback link from About page to Accounts menu and add link to Help page.</change>
+    </release>
+    <release version="4.46" versioncode="446" >
+        <change>Fixed bug: Allow forwarding check box not enabled in Account Setup.</change>
+        <change>Fixed bug: NullPointerException in MessageListFragment.java on Nexus 5 running Android 5.1.1.</change>
+        <change>Add link to privacy policy to splash screen.</change>
+    </release>
+    <release version="4.45" versioncode="445" >
+        <change>Fixed bug: Allow forwarding check box not enabled in Account Setup.</change>
+    </release>
+    <release version="4.44" versioncode="444" >
+        <change>Deleted tmp file containing ECS message body after message has been displayed.</change>
+        <change>Give sender control of whether an ECS message may be forwarded or not.</change>
+    </release>
+    <release version="4.43" versioncode="443" >
+        <change>Fixed bug: App throws a NullPointerException in MessageListFragment and MessageCompose.</change>
+        <change>Fixed bug: App throws NumberFormatException if content server port number is blank when adding a private content server configuration.</change>
+        <change>Remove superfluous parameters when calling registration servlet.</change>
+    </release>
+    <release version="4.42" versioncode="442" >
+        <change>Fixed bug: App throws a SecurityException when sending attachments on a KitKat device.</change>
+        <change>When configuring the first account, set the default for Global Settings->Miscellaneous->Save attachments to... to ChiaraMail.</change>
+    </release>
+    <release version="4.41" versioncode="441" >
+        <change>Fixed bug: Non-existent activity ResetPassword included in manifest.</change>
+    </release>
+    <release version="4.40" versioncode="440" >
+        <change>Fixed bug: An error is thrown when a mailto: URL is selected.</change>
+        <change>Fixed bug: Links open pages within the app window, rather than in a browser.</change>
+        <change>Download content to ChiaraMail subfolder in storage, rather than root.</change>
+    </release>
+    <release version="4.39" versioncode="439" >
+        <change>Fixed bug: Occasional NPE when setting up outgoing mail server.</change>
+        <change>Fixed bug: IllegalArgumentException due to In-app billing.</change>
+    </release>
+    <release version="4.38" versioncode="438" >
+        <change>Fixed bug: NPE in MessageViewFragment delete() method if message is null.</change>
+        <change>Fixed bug: NPE if mLoadingFolderName is null in ActivityListener.</change>
+        <change>Fixed bug: Account is created in Auto mode even if authentication failed.</change>
+        <change>Fixed bug: Updating Forwards or Replies replaces message with HTML tags.</change>
+    </release>
+    <release version="4.37" versioncode="437" >
+        <change>Fixed bug: ECS defaults not set during account configuration for well-known domains.</change>
+    </release>
+    <release version="4.36" versioncode="436" >
+        <change>Fixed bug: NPE when Manage content servers is selected immediately after configuring the first e-mail account.</change>
+        <change>Fixed bug: MessagingException in MimeMultipart due to missing subtype.</change>
+        <change>Fixed bug: ActivityNotFoundException in in MessageCompose with non-English locales.</change>
+        <change>Fixed bug: Attachment open progress not displayed accurately.</change>
+        <change>Fixed bug: Network setting gets reset to None when app is restarted.</change>
+        <change>Fixed bug: Attachment save progress not displayed.</change>
+    </release>
+    <release version="4.35" versioncode="435" >
+        <change>Fixed bug: App throws StringIndexOutOfBoundsException when a sender nickname is blank.</change>
+        <change>Display the amount of remaining ECS storage when the Compose window is opened.</change>
+        <change>Fixed bug: NPE when a message is selected that contains a malformatted inline image.</change>
+    </release>
+    <release version="4.34" versioncode="434" >
+        <change>Fixed bug: App throws IllegalArgumentException due to incorrect dialog dismissal in onPostExecute().</change>
+        <change>Fixed bug: Selecting a message hosted by a private content server on a newly-created account can cause the app to crash.</change>
+        <change>When creating an account, set Encrypt content to be the default.</change>
+        <change>Fixed bug: Manage content server page displays an error when creating a configuration whose name contains blanks.</change>
+    </release>
+    <release version="4.33" versioncode="433" >
+        <change>Fixed bug: App throws NullPointerException when Back button is pressed in some cases.</change>
+        <change>Fixed bug: MessageViewFragment throws IllegalStateException when message view load fails.</change>
+        <change>Fixed bug: App crashes when Flipboard article is shared to it.</change>
+        <change>Fixed bug: MessageList throws IllegalStateException after onSaveInstanceState.</change>
+        <change>Fixed bug: Disable screen rotation when sending an ECS message.</change>
+        <change>Fixed bug: Sending mail: displays null if the account description has not been set.</change>
+        <change>Fixed bug: Missing address separator when adding an e-mail address from Contacts list.</change>
+        <change>Added localized strings for French, German, Italian, Russian and Spanish.</change>
+        <change>Fixed bug: Remove account during account creation if user does not provide correct mail credentials.</change>
+        <change>Fixed bug: Hide special accounts by default when first account is created.</change>
+        <change>Fixed bug: App throws NullPointerException when displaying a toast in Russian locale.</change>
+    </release>
+    <release version="4.32" versioncode="432" >
+        <change>Fixed bug: 'Take photo' and 'Take video' menu options are not activated when the user selects 'Send as ECS' in the Compose window.</change>
+        <change>Fixed bug: Save attachments causes app to crash for all attachments except videos.</change>
+        <change>Fixed bug: Inline images not getting deleted from local storage after self-destruct timeout expires.</change>
+        <change>Fixed bug: Update Content loses inline images.</change>
+        <change>Fixed bug: NullPointerException when trying to display folders if only one account configured.</change>
+        <change>Fixed bug: Inline images not displaying in Update message content window.</change>
+        <change>Fixed bug: Attachments used by inline images do not get removed when the image is deleted from the Compose window.</change>
+        <change>Fixed bug: Inline media not getting removed from local disk when message is deleted.</change>
+        <change>Fixed bug: App crashes in splash screen if a PDF reader is not installed on device.</change>
+        <change>Fixed bug: ChiaraMail logo not centered in splash screen.</change>
+        <change>Fixed bug: View image required a proprietary app following long press of an inline ECS image.</change>
+        <change>Fixed bug: App crashes when deleting an ECS message that does not contain an attachment.</change>
+        <change>Fixed bug: App throws ActivityNotFoundException in certain locales.</change>
+    </release>
+    <release version="4.31" versioncode="431" >
+        <change>Fixed bug: ECS attachments not getting forwarded correctly in some cases.</change>
+        <change>Fixed bug: Large (2 MB or more) PDF gets corrupted on Update Content.</change>
+        <change>Fixed bug: Long press on an inline image, ECS or not, followed by selecting "View image" or "Save image" causes app to crash.</change>
+        <change>Fixed bug: Convert HTML in Update- and Share windows to text.</change>
+        <change>Fixed bug: When replying to a message, app should use the settings of the original message.</change>
+    </release>
+    <release version="4.30" versioncode="430" >
+        <change>Restrict app to API 13 or later devices, to support newest features.</change>
+        <change>Fixed bug: App hangs when encountering an ECS message containing an inline image generated by Outlook or Thunderbird.</change>
+        <change>Fixed bug: If a link is selected within a message that does not contain an image, a "Webpage not available" popup is displayed.</change>
+        <change>Remove account description from message title and replace current operation in subtitle with the account e-mail address.</change>
+        <change>Fixed bug: ClassCastException when moving messages to a folder.</change>
+        <change>Fixed bug: App crashes if a private content server configuration is selected with a missing configuration name.</change>
+        <change>Fixed bug: NullPointerException when Back button is pressed under certain circumstances.</change>
+    </release>
+    <release version="4.29" versioncode="429" >
+        <change>Fixed bug: Updated the EULA.</change>
+        <change>Fixed bug: Changed EULA button label on ChiaraMail Welcome screen.</change>
+        <change>Fixed bug: Removed text at bottom of ECS settings page in account setup.</change>
+        <change>Fixed bug: Changed manifest for MessageCompose activity name to resolve ActivityNotFoundException with some devices.</change>
+        <change>Fixed bug: Default POP server name, connection security and port incorrect in account setup for well-known servers.</change>
+        <change>Fixed bug: Account setup in auto mode for e-mail addresses with well-known servers fails to bypass settings screens.</change>
+        <change>Fixed bug: Inline videos sometimes fail to play.</change>
+        <change>Fixed bug: IllegalStateException: Fragment MessageViewFragment not attached to Activity.</change>
+        <change>Fixed bug: OutOfMemoryException when sending several large inline images.</change>
+        <change>Fixed bug: Inline attachments should not be directly accessible.</change>
+        <change>Remove WebDAV support.</change>
+        <change>Fixed bug: Inline videos should stop when exiting the message.</change>
+        <change>Remove Integrated Inbox support.</change>
+        <change>Fixed bug: Changed canned message to point to new Downloads page.</change>
+        <change>Fixed bug: Links to ChiaraMail Web pages updated.</change>
+        <change>Automatically start the first inline video, if present, as soon as the message is selected.</change>
+        <change>Fixed bug: Enable inline images only for devices running Android SDK 10 or greater and inline videos if running Android SDK 13 or greater.</change>
+        <change>Fixed bug: Change link to Help page at end of account setup.</change>
+    </release>
+    <release version="4.28" versioncode="428" >
+        <change>Fixed bug: Check for null account when Manage content servers is selected.</change>
+        <change>Fixed bug: Improve error recovery in AccessibleEmailContent.java.</change>
+        <change>Fixed bug: Workaround to Android bug #19917 occurring in MessageViewFragment.</change>
+        <change>Fixed bug: Rebuilt app with updated Android libraries to fix ActivityNotFoundException in MessageCompose.java.</change>
+        <change>Fixed bug: NullPointerException in MessageList.java when setting message colors if Message-ID header field is missing.</change>
+        <change>Updated ChiaraMail Welcome screen.</change>
+        <change>Fixed bug: Message body is garbled when replying to an ECS message containing an attachment.</change>
+        <change>Fixed bug: App crashes when Invite contacts or Manage content servers is selected in Unified inbox or All messages accounts.</change>
+        <change>Fixed bug: App crashes when a self-destruct message is selected in Unified inbox or All messages accounts.</change>
+        <change>Fixed bug: ECS message attachments display the canned message when forwarded.</change>
+        <change>Fixed bug: Catch CursorIndexOutOfBoundsException in EmailProvider.</change>
+        <change>Fixed bug: Catch ArrayIndexOutOfBoundsException in ContactPictureLoader.</change>
+        <change>Redesigned and cleaned up the About page.</change>
+        <change>Various miscellaneous bug fixes reported via Google Play.</change>
+    </release>
+    <release version="4.27" versioncode="427" >
+        <change>Update Downloads link in canned message.</change>
+        <change>Fixed bug: App blocks all messages if the content server password is incorrect.</change>
+    </release>
+    <release version="4.26" versioncode="426" >
+        <change>Include the app version code in the "About" page.</change>
+        <change>Fixed bug: Editing a private content server configuration crashes the app if the content server password is missing.</change>
+        <change>Fixed bug: ChiaraMail crashes when selected from within Contacts app.</change>
+        <change>Fixed bug: Cursor gets repositioned to start of field when Show password box is selected.</change>
+        <change>Fixed bug: Reply to notification causes app to crash.</change>
+        <change>Fixed bug: Reply/ReplyAll do not inherit ECS settings of original message.</change>
+        <change>Check for available storage on the content server before sending new content or updating the old.</change>
+        <change>Fixed bug: Ignore case when registering an e-mail address or testing sender name and e-mail address.</change>
+        <change>Fixed bug: App throws an OutOfMemoryException when sending large (15MB+) ECS attachments.</change>
+        <change>Fixed bug: Attachments uploaded during Update Content even if they had not been modified.</change>
+        <change>Fixed bug: Trademark symbol in canned message displayed incorrectly.</change>
+        <change>Detect spoofed messages from personal name in message header.</change>
+    </release>
+    <release version="4.25" versioncode="425" >
+        <change>Fixed bug: Devices running pre-Honeycomb Android releases crash with NoSuchMethodError when a ProgressDialog is displayed with setProgressPercentFormat().</change>
+        <change>Fixed bug: Manual setup for an e-mail address with a well-known domain will display incorrect mail server settings.</change>
+        <change>Fixed bug: Inboxes for accounts without an account name show ": Inbox" in the header.</change>
+        <change>Fixed bug: App crashes in Compose window when Send is pressed without specifying a recipient.</change>
+        <change>Fixed bug: Top of message is truncated on Kit-Kat (Android version 4.4+) devices.</change>
+        <change>Fixed bug: App crashes when trying to forward ECS messages whose content had been deleted.</change>
+        <change>Fixed bug: App crashes if Back button is pressed while sending an ECS attachment.</change>
+        <change>Prompt for the user name at the start of Add account, not at the end.</change>
+        <change>Automatically register the user and configure the content server password in ECS settings.</change>
+    </release>
+    <release version="4.24" versioncode="424" >
+        <change>Fixed bug: App crashes when displaying message list if sender e-mail address is missing.</change>
+        <change>Fixed bug: Attachments do not get encrypted when the Encrypt content box is checked.</change>
+        <change>Fixed bug: When replying to an HTML message, if the device is rotated, the reply becomes plain text.</change>
+        <change>Fixed bug: Wrong URL sent when checking for server license.</change>
+        <change>Fixed bug: Registered senders were highlighted in magenta only for ECS messages.</change>
+        <change>Fixed bug: App crashes if add attachment is cancelled before selecting an attachment.</change>
+        <change>Dropped the last sentence in the default signature.</change>
+        <change>Fixed bug: If the sender display name contains an e-mail address that does not match the sender e-mail address, the message should not be displayed.</change>
+        <change>Fixed bug: App crashes if a displayed folder contains a message with no sender or recipients.</change>
+    </release>
+    <release version="4.23" versioncode="423" >
+        <change>Fixed bug: ECS replies not including the original message, throwing a password error instead.</change>
+        <change>Fixed bug: Wrong icon displayed and ChiaraMail copyright statement not updated in About page.</change>
+    </release>
+    <release version="4.22" versioncode="422" >
+        <change>Fixed bug: Link to ChiaraMail downloads page is incorrect in canned message.</change>
+        <change>Incorporate new logo into ChiaraMail for Android.</change>
+        <change>Add show password checkboxes during account creation and in Manage content servers and settings screens.</change>
+        <change>Eliminate two settings (Correspondent above subject and Colorize contacts) that interfere with ECS operation.</change>
+        <change>Personalize contacts placeholders with colors and sender hints.</change>
+        <change>Include account name in folder header.</change>
+        <change>Fixed bug: ECS message subjects colored incorrectly when previous errors are resolved.</change>
+        <change>Re-enable user name in SMTP server settings.</change>
+        <change>Fixed bug: Remove account name from content server password summary in account settings.</change>
+        <change>Fixed bug: Self-destruct messages remained displayed after merge of K-9 Mail 4.4 enhancements.</change>
+        <change>Fixed bug: App crashes when attempting to scroll header fields following Show headers for messages sent by app.</change>
+        <change>Fixed bug: RuntimeException when attempting to display an error popup during a Compose operation.</change>
+    </release>
+    <release version="4.21" versioncode="421" >
+        <change>Rebranded ECSMail as ChiaraMail for Android.</change>
+        <change>Fixed bug: NetworkOnMainThreadException when selecting an ECS message if the client has been idle for awhile or when registering a user.</change>
+    </release>
+    <release version="4.20" versioncode="420" >
+        <change>Fixed bug: Content server registration fails to complete for Android API level 10+.</change>
+    </release>
+    <release version="4.19" versioncode="419" >
+        <change>Fixed bug: Update and Delete buttons not displayed if configured e-mail address is not in lower case.</change>
+        <change>Fixed bug: Getting StringIndexOutOfBoundsException when reading certain ECS messages.</change>
+        <change>Display actual download- and save progress, rather than a spinner.</change>
+        <change>Add support for inline video.</change>
+    </release>
+    <release version="4.18" versioncode="418" >
+        <change>Fixed bug: OutOfMemoryError on large attachments.</change>
+        <change>Fixed bug: External storage was incorrectly identified.</change>
+        <change>Added progress dialogs to attachment loading and saving.</change>
+    </release>
+    <release version="4.17" versioncode="417" >
+        <change>Fixed bug: NetworkOnMainThreadException when sending ECS messages.</change>
+        <change>Further performance improvements for ECS.</change>
+    </release>
+    <release version="4.16" versioncode="416" >
+        <change>Fixed bug: NullPointerException on SmartPadMobile and DS975.</change>
+    </release>
+    <release version="4.15" versioncode="415" >
+        <change>Fixed bug: ECSMail crashing when rendering large inline images.</change>
+        <change>Fixed bug: Newline characters not getting converted to HTML breaks on Replies and Forwards.</change>
+        <change>Performance improvements when rendering images.</change>
+    </release>
+    <release version="4.14" versioncode="414" >
+        <change>Add hint to ECSMail tutorial page (http://www.chiaramail.com/ecsmail_help.html) at end of new account configuration.</change>
+    </release>
+    <release version="4.13" versioncode="413" >
+        <change>Added countdown display for self-destruct messages.</change>
+    </release>
+    <release version="4.12" versioncode="412" >
+        <change>Replaced references to Wikipedia article on Envelope-Content Splitting with the ChiaraMail technology Web page (http://www.chiaramail.com/technology.html).</change>
+        <change>Fixed bug: ECSMail pointing to wrong content server, gave Database error when attempting to send or read ECS messages.</change>
+    </release>
+    <release version="4.11" versioncode="411" >
+        <change>Fixed bug: Attachments are sometimes truncated.</change>
+    </release>
+    <release version="4.10" versioncode="410" >
+        <change>Add check box to enable display of content server password during account setup and in preferences.</change>
+        <change>Disable user name field in SMTP server settings to ensure it is the same as the user name in the IMAP/POP settings field.</change>
+    </release>
+    <release version="4.09" versioncode="409" >
+        <change>Incorporate bug fixes and performance enhancements from K-9 Mail Release 4.409.</change>
+    </release>
+    <release version="4.08" versioncode="408" >
+        <change>Fixed bug: NPE thrown when sending the first ECS message immediately after the app has been installed.</change>
+        <change>Incorporate bug fixes and performance enhancements from K-9 Mail Release 4.405.</change>
+    </release>
+    <release version="4.07" versioncode="407" >
+        <change>Fixed bug: Remove superfluous window from Reply/Forward.</change>
+        <change>Fixed bug: Sending mail: displays null.</change>
+        <change>Fixed bug: ECSMail crashes when trying to add missing inline images.</change>
+        <change>Fixed bug: Null character appended to messages sent via sharing from a Web site.</change>
+    </release>
+    <release version="4.06" versioncode="406" >
+        <change>Fixed bug: App crashes when called from Share on web sites.</change>
+    </release>
+    <release version="4.05" versioncode="405" >
+        <change>Fixed bug: ECS settings page in Account creation incorrectly directs user to Global settings page, rather than Account settings.</change>
+        <change>Fixed bug: Invite Contacts e-mail ECS options should be unselected.</change>
+        <change>Update Invite Contacts e-mail subject and message.</change>
+        <change>Fixed bug: App crashes when device is rotated while in Compose if no inline image is present.</change>
+    </release>
+    <release version="4.04" versioncode="404" >
+        <change>Fixed bug: Disable self-destruct mode when include content is enabled.</change>
+        <change>Fixed bug: Encrypted ephemeral messages weren't disappearing after the time-out period.</change>
+        <change>For ephemeral messages, disable Reply/Forward/Share button for all users except the message originator.</change>
+        <change>Fixed bug: Inline images coming from storage were getting permanently degraded each time they were read.</change>
+        <change>Fixed bug: Images inserted into replies which contain inline images causes the latter to be lost.</change>
+        <change>Fixed bug: Inline images weren't getting saved to drafts.</change>
+    </release>
+    <release version="4.03" versioncode="403" >
+        <change>Fixed bug: Disable push notifications during account creation, to prevent crashes when creating a new account that had been previously deleted.</change>
+    </release>
+    <release version="4.02" versioncode="402" >
+        <change>Set ECS mode to default to selected during account creation.</change>
+        <change>Fixed bug: Send as ECS setting not getting propagated to Compose window.</change>
+    </release>
+    <release version="4.01" versioncode="401" >
+        <change>Fixed bug: Manage Content Servers screen had only 6 self-destruct duration options; should be 10.</change>
+        <change>Fixed bug: When deleting images from preview window, line breaks were not being removed.</change>
+        <change>Fixed bug: Bitmap size wasn't being calculated correctly, so inline images were too small.</change>
+    </release>
+    <release version="4.00" versioncode="400" >
+        <change>Implemented self-destruct mode, a Snapchat-like feature (see http://www.chiaramail.com/self_destruct_mode.html for details).</change>
+        <change>Fixed bug: ECS checkboxes not getting enabled or set properly in Compose window.</change>
+        <change>Fixed bug: Attachments not getting deleted on Delete Content.</change>
+        <change>Fixed bug: Miscellaneous bugs related to content file deletion.</change>
+        <change>Fixed bug: Miscellaneous bugs related to private content server configurations.</change>
+        <change>Fixed bug: MIME Content-Type was being set to text/plain for all attachments.</change>
+        <change>Added support for inclusion of inline images.</change>
+        <change>Added support for a camera app for inclusion of photos in messages.</change>
+    </release>
+    <release version="3.11" versioncode="311" >
+        <change>Fixed bug: Stop occasional crashes when displaying folder contents.</change>
+        <change>Fixed bug: Added launcher icons for additional screen densities.</change>
+        <change>Fixed bug: Rewrote manage content server Help page.</change>
+        <change>Moved content server name and port to top of ECS settings page.</change>
+        <change>Implemented delete content function.</change>        
+    </release>
+    <release version="3.10" versioncode="310" >
+        <change>Fixed bug: Improve performance when displaying the inbox.</change>
+    </release>
+    <release version="3.09" versioncode="309" >
+        <change>Fixed bug: Manage content servers screen displayed incorrectly on small display devices.</change>
+        <change>Add warning dialog before deleting content server configurations.</change>
+        <change>Fixed bug: Catch duplicate content server config names.</change>
+    </release>
+    <release version="3.08" versioncode="308" >
+        <change>Fixed bug: Changelog was not updated in last release.</change>
+    </release>
+    <release version="3.07" versioncode="307" >
+        <change>Fixed bug: Gmail users weren't bypassing ECS login screen.</change>
+    </release>   
+    <release version="3.06" versioncode="306" >
+        <change>Enable user to configure e-mail accounts without an ECS password</change>
+        <change>Check for private content server license status only once per day</change>
+        <change>Added changelog to release</change>
+    </release>
+    <release version="3.05" versioncode="305" >
+        <change>Added support for private content servers</change>
+        <change>Replaced previous icon with the original</change>
+    </release>
+</changelog>

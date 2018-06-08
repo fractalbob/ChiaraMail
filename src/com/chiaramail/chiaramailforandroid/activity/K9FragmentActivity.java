@@ -1,12 +1,11 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.os.Bundle;
 import android.view.MotionEvent;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.fsck.k9.activity.K9ActivityCommon.K9ActivityMagic;
-import com.fsck.k9.activity.misc.SwipeGestureDetector.OnSwipeGestureListener;
-
+import com.chiaramail.chiaramailforandroid.activity.K9ActivityCommon.K9ActivityMagic;
+import com.chiaramail.chiaramailforandroid.activity.misc.SwipeGestureDetector.OnSwipeGestureListener;
 
 public class K9FragmentActivity extends SherlockFragmentActivity implements K9ActivityMagic {
 
@@ -17,6 +16,8 @@ public class K9FragmentActivity extends SherlockFragmentActivity implements K9Ac
     public void onCreate(Bundle savedInstanceState) {
         mBase = K9ActivityCommon.newInstance(this);
         super.onCreate(savedInstanceState);
+    	//Prevent screen capture
+    	this.getWindow().setFlags(android.view.WindowManager.LayoutParams.FLAG_SECURE, android.view.WindowManager.LayoutParams.FLAG_SECURE);
     }
 
     @Override

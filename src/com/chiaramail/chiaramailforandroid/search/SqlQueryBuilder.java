@@ -1,15 +1,15 @@
-package com.fsck.k9.search;
+package com.chiaramail.chiaramailforandroid.search;
 
 import java.util.List;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Folder.OpenMode;
-import com.fsck.k9.mail.store.LocalStore;
-import com.fsck.k9.mail.store.LocalStore.LocalFolder;
-import com.fsck.k9.search.SearchSpecification.Attribute;
-import com.fsck.k9.search.SearchSpecification.SearchCondition;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Folder.OpenMode;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Attribute;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.SearchCondition;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
 
 
 public class SqlQueryBuilder {

@@ -1,4 +1,4 @@
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 /**
  * The currently available connection security types.

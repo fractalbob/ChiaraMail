@@ -1,7 +1,7 @@
 
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
-import com.fsck.k9.helper.Utility;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

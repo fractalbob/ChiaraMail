@@ -1,4 +1,4 @@
-package com.fsck.k9.preferences;
+package com.chiaramail.chiaramailforandroid.preferences;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,8 +11,8 @@ import java.util.Map.Entry;
 
 import android.util.Log;
 
-import com.fsck.k9.FontSizes;
-import com.fsck.k9.K9;
+import com.chiaramail.chiaramailforandroid.FontSizes;
+import com.chiaramail.chiaramailforandroid.K9;
 
 /*
  * TODO:

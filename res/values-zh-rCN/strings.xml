@@ -5,19 +5,19 @@
     <!-- This should make it easier for forks to change the branding -->
 
     <!-- Used in AndroidManifest.xml -->
-    <string name="app_name">K-9 Mail</string>
-    <string name="beta_app_name">K-9 Mail测试版</string>
+    <string name="app_name">ChiaraMail for Android</string>
+    <string name="beta_app_name">ChiaraMail测试版</string>
 
-    <string name="shortcuts_title">K-9账户</string>
-    <string name="unread_widget_label">K-9 Mail 未读</string>
+    <string name="shortcuts_title">ChiaraMail账户</string>
+    <string name="unread_widget_label">ChiaraMail 未读</string>
 
-    <string name="remote_control_label">远程控制K-9 Mail</string>
-    <string name="remote_control_desc">运行这个程序控制K-9 Mail的行为和设置。</string>
+    <string name="remote_control_label">远程控制ChiaraMail</string>
+    <string name="remote_control_desc">运行这个程序控制ChiaraMail的行为和设置。</string>
 
 
     <!-- Used in the about dialog -->
-    <string name="app_authors">谷歌以及帮着遛K-9的小朋友们。</string>
-    <string name="app_copyright_fmt">Copyright 2008-<xliff:g>%s</xliff:g> The K-9 Dog Walkers. Portions Copyright 2006-<xliff:g>%s</xliff:g> the Android Open Source Project.</string>
+    <string name="app_authors">谷歌以及帮着遛K-9的小朋友们。 and ChiaraMail Corp.</string>
+    <string name="app_copyright_fmt">Copyright 2008-<xliff:g>%s</xliff:g> The K-9 Dog Walkers and ChiaraMail Corp. Portions Copyright 2006-<xliff:g>%s</xliff:g> the Android Open Source Project.</string>
     <!-- NEW: <string name="app_license">Licensed under the Apache License, Version 2.0.</string>-->
 
 
@@ -54,14 +54,14 @@ K-9改进的功能包括：
 
 
     <!-- Default signature -->
-    <string name="default_signature">-- \n抱歉暂时无法详细说明。这份邮件是使用安装有K-9 Mail的Android移动设备发送的。</string>
+    <string name="default_signature">-- \n抱歉暂时无法详细说明。这份邮件是使用安装有ChiaraMail的Android移动设备发送的。</string>
 
 
     <!-- General strings that include the app name -->
-    <string name="account_delete_dlg_instructions_fmt">账户“<xliff:g id="account">%s</xliff:g>”将从K-9 Mail中删除。</string>
-    <string name="account_recreate_dlg_instructions_fmt">账户“<xliff:g id="account">%s</xliff:g>”的全部数据将从K-9 Mail中删除，但是账户设置将保留。</string>
-    <string name="account_clear_dlg_instructions_fmt">账户“<xliff:g id="account">%s</xliff:g>”中的全部邮件将从K-9 Mail中删除，但是账户设置将保留。</string>
-    <string name="insufficient_apg_permissions">K-9没有被允许完全访问APG，请重新安装K-9以便修复这一问题。</string>
+    <string name="account_delete_dlg_instructions_fmt">账户“<xliff:g id="account">%s</xliff:g>”将从ChiaraMail中删除。</string>
+    <string name="account_recreate_dlg_instructions_fmt">账户“<xliff:g id="account">%s</xliff:g>”的全部数据将从ChiaraMail中删除，但是账户设置将保留。</string>
+    <string name="account_clear_dlg_instructions_fmt">账户“<xliff:g id="account">%s</xliff:g>”中的全部邮件将从ChiaraMail中删除，但是账户设置将保留。</string>
+    <string name="insufficient_apg_permissions">ChiaraMail没有被允许完全访问APG，请重新安装ChiaraMail以便修复这一问题。</string>
 
 
 
@@ -70,13 +70,95 @@ K-9改进的功能包括：
     <string name="import_dialog_error_message">没有找到合适的应用来处理导入操作。请从安卓市场安装一款文件管理器</string>
     <string name="open_market">打开市场</string>
 
+    <!-- === ECS-related strings ================================================================== -->
 
+    <string name="choose_contacts_to_invite">Choose Contacts to Invite</string>    
+    <string name="invite_contacts_title">Invite contacts</string>
+    <string name="invite_contacts">Invite contacts</string>
+    <string name="invite_contacts_preamble">Would you like to invite some of your contacts to download ChiaraMail for Android or another of ChiaraMail\'s Envelope-Content Splitting (ECS)-enabling products? Remember, in order for your recipients to be able to read messages you send using ECS, their mail programs must be enabled for ECS.\n\nYou may also send your contacts an invitation later from within a mail account by pressing the menu button, followed by More and \"Invite contacts\"</string>
+    <string name="doInvite">Yes!</string>
+    <string name="skipInvite">No, thanks!</string>
+
+    <string name="message_compose_error_missing_content_server_name">Content server name missing from settings.</string>
+    <string name="message_compose_error_missing_content_server_port">Content server port missing from settings.</string>
+    <string name="message_compose_error_bogus_content_server_port">Bad value for content server port: </string>
+    <string name="message_compose_error_rangerr_content_server_port">Content server port out of range: </string>
+    <string name="message_compose_error_missing_content_pointers">Content pointer(s) missing from settings.</string>
+    <string name="message_compose_error_bogus_content_pointer">Bad value for content pointer: </string>
+    <string name="message_compose_error_missing_content_server_password">Content server password missing from settings.</string>
+    <string name="message_compose_dynamic_content_send_error">Error sending content to content server: </string>
+    <string name="message_compose_dynamic_content_delete_error">Error deleting ECS-enabled content: </string>
+
+    <string name="message_compose_attachment_too_big_1">Attachment </string>
+    <string name="message_compose_attachment_too_big_2"> not included; must be less than 4 MB</string>
+    <string name="message_compose_add_header_error">Error adding header field: </string>
+    <string name="message_compose_encryption_error">Error encrypting content: </string>
+    <!--<string name="message_compose_canned_message">This mail client is not enabled/configured for Envelope-Content Splitting (ECS) technology. In order to send or view ECS messages, your mail client must be enabled and configured for ECS. Mozilla Thunderbird and Microsoft Outlook users must install the free ECS extension (http://www.chiaramail.com/download_extension.html) and Thunderbird users must register for content service, also free (http://www.chiaramail.com/index.jsp). ChiaraMail for Android users need only install the app and configure their mail accounts; content server registration is done automatically in ECSMail and Outlook.</string>-->
+    <string name="message_compose_canned_message">This message was sent using ECS technology (http://www.chiaramail.com/technology.html), but your mail client does not support ECS. Please download and install the appropriate ECS-enabling software for your mail client (http://www.chiaramail.com/download_extension.html) to read this message.</string>
+
+    <string name="user_registered_error">Unable to tell if user is registered with content server; continuing anyway</string>
+    <string name="users_already_registered">Selected contacts are already registered with the content server</string>
+    <string name="contacts_missing_addresses">Selected contacts have no e-mail addresses</string>
+    <string name="message_invite_canned_subject">Write to me using ECS, the next-generation e-mail technology!</string>
+    <string name="message_invite_canned_message">Hi,\n\nI don\'t want Google to read my e-mail anymore, so I installed ECS support on my computer and I invite you to do the same. Besides protecting our privacy, the ECS products from ChiaraMail help prevent mail spoofing, in which others send e-mail masquerading as us, and also enable us to change our e-mail after we\'ve sent it (Yes! Really!). As if that weren\'t enough, ECS technology also speeds up mail delivery while greatly reducing mail storage requirements for our mail recipients.\n\nI think ECS is a big deal and wanted to share the news about it with you. If you have an Android phone or tablet, download ChiaraMail for Android from https://play.google.com/store/apps/details?id=com.chiaramail.chiaramailforandroid\. For Mozilla Thunderbird or Microsoft Outlook users, download free extensions from https://www.chiaramail.com/download_extension.html and take control of your e-mail today like I did!</string>  
+
+    <string name="message_view_status_DC_attachment_saved">Attachment saved to SD card as /mnt/sdcard/</string>
+    <string name="message_view_dynamic_content_fetch_error">Error fetching attachment content: </string>
+
+    <string name="message_view_update_content_action">Edit message/attachment content</string>
+    <string name="message_view_update_content_dialog_title">Update message content</string>
+    <string name="message_view_edit_msg_content">Edit message body: </string>
+    <string name="message_view_update_content">Update content</string>
+    <string name="message_view_update_msg_body">Update message body</string>
+    <string name="message_view_update_all">Update message body and attachment(s)</string>
+    <string name="message_view_update_cancel">Cancel update</string>
+    
+    <string name="msg_body_update">for message body</string>
+    <string name="msg_attachment_update">for message attachment</string>
+    
+    <string name="account_setup_ecs_login_title">Sign into your ChiaraMail account</string>
+    <string name="account_setup_bypass_ecs">Bypass ECS</string>
+    <string name="account_setup_ecs_not_registered">User not registered or invalid account ID/password</string>
+    <string name="account_setup_ecs_password_hint">Content server password</string>
+    <string name="account_setup_register_me">Create my account!</string>
+    <string name="account_setup_content_server_registration_complete">Account registration confirmation has been e-mailed to you. To activate your ChiaraMail account, select the link in the message and then enter your content server password into the field above.</string>
+    <string name="account_setup_no_account_text"><![CDATA[<a href="https://www.chiaramail.com/index.jsp">Don\'t have a ChiaraMail account for this address?</a>]]></string>
+    <string name="account_setup_check_settings_check_content_server_msg">Checking content server settings\u2026</string>
+
+    <string name="account_setup_dynamic_content_settings_title">ECS Content Server Settings</string>
+    <string name="account_setup_content_server_password_label">Content server password</string>
+    <string name="account_setup_content_server_password_summary">Check your e-mail for a registration confirmation message from ChiaraMail and select the link to activate registration and display your content server password. Then, enter the password in the above field.\n</string>
+    <string name="account_setup_content_server_registration_error">An error occured during content server auto-registration: </string>
+    <string name="account_setup_dynamic_content_default_label">Send as ECS</string>
+    <string name="account_setup_dynamic_content_menu_label">Default Send mode</string>
+    <string name="account_setup_dynamic_content_default_summary">When this box is checked, mail will be sent using ECS technology.</string>
+    <string name="account_setup_dynamic_content_encryption_default_label">Encrypt content</string>
+    <string name="account_setup_dynamic_content_encryption_default_summary">When this box is checked, the message content will be encrypted before sending it to the content server.</string>
+    <string name="account_setup_dynamic_content_include_content_default_label">Include content</string>
+    <string name="account_setup_dynamic_content_include_content_default_summary">When this box and the \'Send as ECS\' box are checked, messages will include the actual content, rather than placeholders.</string>
+    <string name="account_setup_dynamic_content_override_label">These settings may be overriden prior to sending the mail.</string>
+    <string name="account_setup_dynamic_content_warning_label">Important: Mail sent using ECS technology can only be read by ECS-enabled mail clients.</string>
+    <string name="account_setup_content_server_title">ECS Content Server Settings</string>
+    <string name="account_setup_content_server_name_label">Content server name</string>
+    <string name="content_server_name_default">www.chiaramail.com</string>
+    <integer name="content_server_port_default">443</integer>   
+    <string name="content_server_password_default"></string>   
+    <string name="account_setup_content_server_name_summary">Specify the fully-qualified name or the IP address of the content server.</string>
+    <string name="account_setup_content_server_port_label">Content server port</string>
+    <string name="account_setup_content_server_port_summary">Specify the port number of the content server (default = 443).</string>
+    <string-array name="send_mode_choices">
+        <item>Send as ECS</item>
+        <item>Send as regular mail</item>
+        <item>Mixed-mode</item>
+    </string-array>
+
+    <string name="account_settings_dynamic_content">Envelope-Content Splitting (ECS)</string>
 
     <!-- === General strings ================================================================== -->
 
     <string name="app_authors_fmt">作者: <xliff:g id="app_authors">%s</xliff:g></string>
     <string name="app_revision_fmt">更新日志: <xliff:g id="app_revision_url">%s</xliff:g></string>
-    <string name="app_libraries">K-9 Mail包含如下来源的源代码： <xliff:g id="app_libraries_list">%s</xliff:g></string>
+    <string name="app_libraries">ChiaraMail包含如下来源的源代码： <xliff:g id="app_libraries_list">%s</xliff:g></string>
     <string name="app_emoji_icons">Emoji图标： <xliff:g id="app_emoji_icons_link">%s</xliff:g></string>
 
     <string name="read_attachment_label">显示附件</string>

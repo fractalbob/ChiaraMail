@@ -1,4 +1,4 @@
-package com.fsck.k9.service;
+package com.chiaramail.chiaramailforandroid.service;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
@@ -12,10 +12,11 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.util.Log;
-import com.fsck.k9.K9;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.helper.power.TracingPowerManager;
-import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
+
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager;
+import com.chiaramail.chiaramailforandroid.helper.power.TracingPowerManager.TracingWakeLock;
 
 /**
  * {@code CoreService} is the base class for all K-9 Services.
@@ -57,7 +58,7 @@ import com.fsck.k9.helper.power.TracingPowerManager.TracingWakeLock;
  */
 public abstract class CoreService extends Service {
 
-    public static String WAKE_LOCK_ID = "com.fsck.k9.service.CoreService.wakeLockId";
+    public static String WAKE_LOCK_ID = "com.chiaramail.chiaramailforandroid.service.CoreService.wakeLockId";
 
     private static ConcurrentHashMap<Integer, TracingWakeLock> sWakeLocks =
         new ConcurrentHashMap<Integer, TracingWakeLock>();

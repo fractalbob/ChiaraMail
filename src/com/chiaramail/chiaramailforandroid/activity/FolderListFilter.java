@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 
-import com.fsck.k9.K9;
+import com.chiaramail.chiaramailforandroid.K9;
 
 /**
  * Filter to search for occurences of the search-expression in any place of the

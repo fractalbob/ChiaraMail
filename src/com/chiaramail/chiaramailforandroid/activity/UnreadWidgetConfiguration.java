@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
@@ -7,9 +7,9 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 
-import com.fsck.k9.BaseAccount;
-import com.fsck.k9.R;
-import com.fsck.k9.provider.UnreadWidgetProvider;
+import com.chiaramail.chiaramailforandroid.BaseAccount;
+import com.chiaramail.chiaramailforandroid.provider.UnreadWidgetProvider;
+import com.chiaramail.chiaramailforandroid.R;
 
 
 /**

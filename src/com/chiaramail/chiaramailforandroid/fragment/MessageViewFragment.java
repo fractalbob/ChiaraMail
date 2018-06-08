@@ -1,13 +1,20 @@
-package com.fsck.k9.fragment;
+package com.chiaramail.chiaramailforandroid.fragment;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Collections;
+import java.util.StringTokenizer;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
@@ -21,32 +28,35 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.activity.ChooseFolder;
-import com.fsck.k9.activity.MessageReference;
-import com.fsck.k9.controller.MessagingController;
-import com.fsck.k9.controller.MessagingListener;
-import com.fsck.k9.crypto.CryptoProvider.CryptoDecryptCallback;
-import com.fsck.k9.crypto.PgpData;
-import com.fsck.k9.fragment.ConfirmationDialogFragment.ConfirmationDialogFragmentListener;
-import com.fsck.k9.helper.FileBrowserHelper;
-import com.fsck.k9.helper.FileBrowserHelper.FileBrowserFailOverCallback;
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Part;
-import com.fsck.k9.mail.store.LocalStore.LocalMessage;
-import com.fsck.k9.view.AttachmentView;
-import com.fsck.k9.view.AttachmentView.AttachmentFileDownloadCallback;
-import com.fsck.k9.view.MessageHeader;
-import com.fsck.k9.view.SingleMessageView;
-
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.activity.ChooseFolder;
+import com.chiaramail.chiaramailforandroid.activity.MessageReference;
+import com.chiaramail.chiaramailforandroid.controller.MessagingController;
+import com.chiaramail.chiaramailforandroid.controller.MessagingListener;
+import com.chiaramail.chiaramailforandroid.crypto.PgpData;
+import com.chiaramail.chiaramailforandroid.crypto.CryptoProvider.CryptoDecryptCallback;
+import com.chiaramail.chiaramailforandroid.fragment.ConfirmationDialogFragment.ConfirmationDialogFragmentListener;
+import com.chiaramail.chiaramailforandroid.helper.FileBrowserHelper;
+import com.chiaramail.chiaramailforandroid.helper.FileBrowserHelper.FileBrowserFailOverCallback;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Part;
+import com.chiaramail.chiaramailforandroid.mail.Folder.OpenMode;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalFolder;
+import com.chiaramail.chiaramailforandroid.mail.store.LocalStore.LocalMessage;
+import com.chiaramail.chiaramailforandroid.view.AttachmentView;
+import com.chiaramail.chiaramailforandroid.view.MessageHeader;
+import com.chiaramail.chiaramailforandroid.view.SingleMessageView;
+import com.chiaramail.chiaramailforandroid.view.AttachmentView.AttachmentFileDownloadCallback;
+import com.chiaramail.chiaramailforandroid.R;
+import com.chiaramail.chiaramailforandroid.helper.ECSInterfaces;
 
 public class MessageViewFragment extends SherlockFragment implements OnClickListener,
-        CryptoDecryptCallback, ConfirmationDialogFragmentListener {
+	CryptoDecryptCallback, ConfirmationDialogFragmentListener {
 
     private static final String ARG_REFERENCE = "reference";
 
@@ -78,6 +88,17 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
     private Listener mListener = new Listener();
     private MessageViewHandler mHandler = new MessageViewHandler();
     private LayoutInflater mLayoutInflater;
+	private Activity selectedActivity;
+	
+    private AlertDialog.Builder	delete_builder;
+    
+    private AlertDialog	deleteContentDialog;
+    
+	private String contentPointer;
+	
+    private Message selectedMessage;
+    
+    private LocalMessage message;
 
     /** this variable is used to save the calling AttachmentView
      *  until the onActivityResult is called.
@@ -99,7 +120,12 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
      * it is used.
      */
     private boolean mInitialized = false;
+    
+    private Context mContext;
 
+//    private String statusNetworkError;
+//    private String statusInvalidIDError;
+    private String fetchingAttachment;
 
     class MessageViewHandler extends Handler {
 
@@ -132,22 +158,41 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
         }
 
         public void networkError() {
-            showToast(getString(R.string.status_network_error), Toast.LENGTH_LONG);
+            // FIXME: This is a hack. Fix the Handler madness!
+            Context context = getActivity();
+            if (context == null) {
+                return;
+            }
+            showToast(context.getString(R.string.status_network_error), Toast.LENGTH_LONG);
+//            showToast(statusNetworkError, Toast.LENGTH_LONG);
         }
 
         public void invalidIdError() {
-            showToast(getString(R.string.status_invalid_id_error), Toast.LENGTH_LONG);
+            Context context = getActivity();
+            if (context == null) {
+                return;
+            }
+
+            showToast(context.getString(R.string.status_invalid_id_error), Toast.LENGTH_LONG);
+//          showToast(statusInvalidIDError, Toast.LENGTH_LONG);
         }
 
-
         public void fetchingAttachment() {
-            showToast(getString(R.string.message_view_fetching_attachment_toast), Toast.LENGTH_SHORT);
+            Context context = getActivity();
+            if (context == null) {
+                return;
+            }
+
+            showToast(context.getString(R.string.message_view_fetching_attachment_toast), Toast.LENGTH_SHORT);
+//            showToast(fetchingAttachment, Toast.LENGTH_SHORT);
         }
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+
+        mContext = activity.getApplicationContext();
 
         try {
             mFragmentListener = (MessageViewFragmentListener) activity;
@@ -160,11 +205,38 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // This fragments adds options to the action bar
         setHasOptionsMenu(true);
-
         mController = MessagingController.getInstance(getActivity().getApplication());
+        
+        selectedActivity = getActivity();
+    	delete_builder = new AlertDialog.Builder(getActivity());
+    	delete_builder.setTitle(R.string.delete_content_delete_content_title);
+    	delete_builder.setMessage(R.string.delete_content_msg_delete);
+    	delete_builder.setPositiveButton(R.string.dialog_confirm_delete_config_button, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            	try {
+    	        	contentPointer = selectedMessage.getHeader(ECSInterfaces.CONTENT_POINTER)[0];
+            	} catch (MessagingException e) {
+            		return;
+            	}
+	        	StringTokenizer st = new StringTokenizer(contentPointer);
+	        	String[] contentPointers = new String[st.countTokens()];
+	        	int i = 0;
+	        	while (st.hasMoreTokens()) {
+	        		contentPointers[i++] = st.nextToken();
+	        	}
+            	ECSInterfaces.deleteData(contentPointers, mAccount.getContentServerName(), mAccount.getContentServerPort(), mAccount.getContentServerPassword(), mAccount.getEmail(), selectedActivity);
+//	        	deleteContentDialog.show();
+            }
+        });
+    	delete_builder.setNegativeButton(R.string.dialog_confirm_delete_cancel_button, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            	deleteContentDialog.dismiss();
+            }
+        });
+    	deleteContentDialog = delete_builder.create();
         mInitialized = true;
     }
 
@@ -186,7 +258,8 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
             @Override
             public void showFileBrowser(final AttachmentView caller) {
                 FileBrowserHelper.getInstance()
-                .showFileBrowserActivity(MessageViewFragment.this,
+                .showFileBrowserActivity(MessageViewFragment.this.getActivity(),
+//                        .showFileBrowserActivity(MessageViewFragment.this,
                                          null,
                                          ACTIVITY_CHOOSE_DIRECTORY,
                                          callback);
@@ -233,7 +306,13 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
+    	// Try to work around bug reported by BugSense on 5/8/14:
+    	// Error Message
+
+    	// java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState
+    	// Known bug, fixed in Android 4.2 (see bug #19917), but we'll try the following workaround
         super.onSaveInstanceState(outState);
+//    	if (outState.isEmpty()) outState.putBoolean("bug:fix", true);
         outState.putParcelable(STATE_MESSAGE_REFERENCE, mMessageReference);
         outState.putSerializable(STATE_PGP_DATA, mPgpData);
     }
@@ -260,9 +339,40 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
         mMessageView.resetView();
         mMessageView.resetHeaderView();
 
+        try {
+	        LocalStore localStore = mAccount.getLocalStore();
+	        LocalFolder localFolder = localStore.getFolder(mMessageReference.folderName);
+	        if (localFolder == null) {
+	            Log.v(K9.LOG_TAG, "localFolder is null");
+	            mController.loadMessageForView(mAccount, mMessageReference.folderName, mMessageReference.uid, mListener);
+	            mFragmentListener.updateMenu();
+	        	return;
+	        }
+	        localFolder.open(OpenMode.READ_WRITE);
+	        message = (LocalMessage)localFolder.getMessage(mMessageReference.uid);
+	        if (message != null && message.getHeader(ECSInterfaces.CONTENT_SERVER_NAME) != null && message.getHeader(ECSInterfaces.CONTENT_SERVER_PORT) != null && message.getHeader(ECSInterfaces.CONTENT_POINTER) != null) {
+	        	mMessageView.setIsDynamicContent(true);
+	        	mMessageView.setContentServerName(message.getHeader(ECSInterfaces.CONTENT_SERVER_NAME)[0]);
+	        	mMessageView.setContentServerPort(message.getHeader(ECSInterfaces.CONTENT_SERVER_PORT)[0]);
+	        	StringTokenizer st = new StringTokenizer(message.getHeader(ECSInterfaces.CONTENT_POINTER)[0]);
+	        	String[] contentPointers = new String[st.countTokens()];
+	        	for (int i = 0; i < contentPointers.length; i++) {
+	        		contentPointers[i] = st.nextToken();
+	        	}
+	        	mMessageView.setContentPointers(contentPointers);
+	        }
+        } catch (MessagingException e)
+        {
+            Log.e(K9.LOG_TAG, "Error fetching ECS header info", e);
+        }
+
         mController.loadMessageForView(mAccount, mMessageReference.folderName, mMessageReference.uid, mListener);
 
         mFragmentListener.updateMenu();
+    }
+    
+    public LocalMessage getMessage() {
+    	return message;
     }
 
     /**
@@ -285,16 +395,192 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
     }
 
     private void delete() {
+    	byte[] buffer;
+    	int count;
+    	
         if (mMessage != null) {
             // Disable the delete button after it's tapped (to try to prevent
             // accidental clicks)
             mFragmentListener.disableDeleteAction();
             Message messageToDelete = mMessage;
-            mFragmentListener.showNextMessageOrReturn();
+        	try {
+    	        if (mMessage.getHeader(ECSInterfaces.CONTENT_SERVER_NAME) != null && mMessage.getHeader(ECSInterfaces.CONTENT_SERVER_PORT) != null && mMessage.getHeader(ECSInterfaces.CONTENT_POINTER) != null) {
+    	        	contentPointer = mMessage.getHeader(ECSInterfaces.CONTENT_POINTER)[0];
+    	        	if (contentPointer.indexOf(ECSInterfaces.BLANK) != -1) contentPointer = contentPointer.substring(0, contentPointer.indexOf(ECSInterfaces.BLANK));
+                	if ((fetchBodyContent(mMessage, mAccount.getEmail(), mAccount.getContentServerPassword(), contentPointer, mMessage.getHeader(ECSInterfaces.CONTENT_SERVER_NAME)[0], mMessage.getHeader(ECSInterfaces.CONTENT_SERVER_PORT)[0], mAccount.getContentServerPassword())) == null) {
+                    	mFragmentListener.showNextMessageOrReturn();
+                        mController.deleteMessages(Collections.singletonList(messageToDelete), null);
+                		return; 
+                	}
+
+        			File file = new File(K9.getAttachmentDefaultPath() + "/tmpFile");
+//    	        	File file = new File(Environment.getExternalStorageDirectory() + "/tmpFile");
+    	            try {
+    	                FileInputStream in = new FileInputStream(file);
+    	                buffer = new byte[in.available()];
+    	                count = in.read(buffer);
+    	                in.close();
+    	                ECSInterfaces.fileNames.put("tmpFile", file.lastModified());
+    	            } catch (Exception e) {
+    	                Toast.makeText(getActivity(),
+    	                		mContext.getString(R.string.message_view_dynamic_content_fetch_error) + e,
+    	                        android.widget.Toast.LENGTH_LONG).show();
+    	            	return;
+    	            }
+    	
+                    // Delete the tmp file, since it's no longer needed.
+                    file.delete();
+
+    	            String text = new String(buffer, 0, count);
+    	            String buf = "";
+    	            
+    	            deleteInlineMediaFiles("<img ", buf, text);
+    	            deleteInlineMediaFiles("<video ", buf, text);
+    	            // If the user is the sender of the message, prompt him to delete the content as well as the message
+    	            if (mMessage.getFrom()[0].getAddress().equals(mAccount.getEmail())) {
+	                	try {
+    	    	        	contentPointer = mMessage.getHeader(ECSInterfaces.CONTENT_POINTER)[0];
+	                	} catch (MessagingException e) {
+	                		return;
+	                	}
+	    	      //  	contentPointer = contentPointer.substring(0, contentPointer.indexOf(ECSInterfaces.BLANK));
+	    	        	StringTokenizer st = new StringTokenizer(contentPointer);
+	    	        	String[] contentPointers = new String[st.countTokens()];
+	    	        	int i = 0;
+	    	        	while (st.hasMoreTokens()) {
+	    	        		contentPointers[i++] = st.nextToken();
+	    	        	}
+	    	        	selectedMessage = mMessage;
+        	        	deleteContentDialog.show();
+        	        }
+    	        }
+    	    } catch (MessagingException e) {
+                Toast.makeText(getActivity(),
+                		mContext.getString(R.string.message_view_dynamic_content_delete_error),
+                        android.widget.Toast.LENGTH_LONG).show();
+        	}
+        	mFragmentListener.showNextMessageOrReturn();
             mController.deleteMessages(Collections.singletonList(messageToDelete), null);
         }
     }
+    
+    /**
+     * The fetchBodyContent() method sends a request to the content server to fetch content.	      	    
+     *
+     * @param message
+     * @param email_addr
+     * @param accountContentServerPassword
+     * @param contentPointers
+     * @param contentServerName
+     * @param contentServerPort
+     * @param contentServerPassword
+     * @return  FileOutputStream
+     */
+    private FileOutputStream fetchBodyContent(Message message, String email_addr, String accountContentServerPassword, String contentPointers, String contentServerName, String contentServerPort, String contentServerPassword) {    	
+    	String[] reply;
+		FileOutputStream out = null;
 
+    	try {
+			String[] encryptionHeader = message.getHeader(ECSInterfaces.ENCRYPTION_KEY);
+			
+			// Create a new file to send the content to as it's being retrieved.
+			File file = new File(K9.getAttachmentDefaultPath() + "/tmpFile");
+//			File file = new File(Environment.getExternalStorageDirectory() + "/tmpFile");
+            if (file.exists() && !file.delete()) {
+                Toast.makeText(getActivity(), mContext.getString(R.string.message_view_dynamic_content_delete_error),
+                        Toast.LENGTH_LONG).show();
+        		return null;
+            }
+            out = new FileOutputStream(file);
+
+			// Get the first segment of the content. Include the encryption key to decrypt the content, if necessary.
+			reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + "0", "https://" + contentServerName + ":" + contentServerPort, email_addr, contentServerPassword, accountContentServerPassword, out, message.getFrom()[0].getPersonal());
+/**    		if (encryptionHeader == null) {
+    			reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + "0", "https://" + contentServerName + ":" + contentServerPort, email_addr, contentServerPassword, accountContentServerPassword, false, out, null, message.getFrom()[0].getPersonal());
+    		} else {
+    			reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + "0", "https://" + contentServerName + ":" + contentServerPort, email_addr, contentServerPassword, accountContentServerPassword, false, out, encryptionHeader[0], message.getFrom()[0].getPersonal());
+    		}**/
+			if (reply[0].equals("14") && reply[1].endsWith("true")) {	// The display name of this message uses reserved words of some private server, so this is a possible spoof attempt
+                Toast.makeText(getActivity(), mContext.getString(R.string.message_view_reserved_name_error),
+                        Toast.LENGTH_LONG).show();
+                if (out != null) out.close();
+        		return null;
+			}
+			// Fetch remaining segments, if any, adjusting the file pointer after each segment has been received.
+			if (reply[0].equals("13")) {
+	        	String fPtr = reply[1].substring(reply[1].indexOf("pointer=") + "pointer=".length(), reply[1].indexOf(", t"));
+	        	String contentLen = reply[1].substring(reply[1].indexOf("size=") + "size=".length(), reply[1].lastIndexOf(","));
+	        	while (Integer.parseInt(fPtr) < Integer.parseInt(contentLen) && reply[0].equals("13")) {
+	        		reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + fPtr, "https://" + contentServerName + ":" + contentServerPort, mAccount.getEmail(), contentServerPassword, accountContentServerPassword, out, message.getFrom()[0].getPersonal());
+/**	    			if (encryptionHeader == null) {
+		        		reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + fPtr, "https://" + contentServerName + ":" + contentServerPort, mAccount.getEmail(), contentServerPassword, accountContentServerPassword, true, out, null, message.getFrom()[0].getPersonal());
+		        	} else {
+		        		reply = ECSInterfaces.doFetchSegment(message, message.getFrom()[0].getAddress() + ECSInterfaces.BLANK + contentPointers + ECSInterfaces.BLANK + fPtr, "https://" + contentServerName + ":" + contentServerPort, mAccount.getEmail(), contentServerPassword, accountContentServerPassword, true, out, encryptionHeader[0], message.getFrom()[0].getPersonal());
+	    			}**/
+	    			if (reply[0].equals("13")) {
+		            	fPtr = reply[1].substring(reply[1].indexOf("pointer=") + "pointer=".length(), reply[1].indexOf(", t"));
+	    			}
+	        	} 
+	        	// After the entire content has been received and written to the tmp file, mark this as a valid, non-spoofed message.
+	        	if (reply[0].equals("13")) {
+	        		if (ECSInterfaces.BogusECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.BogusECSMessages.remove(message.getHeader("Message-ID")[0]);
+	        		if (!ECSInterfaces.ValidECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.ValidECSMessages.addElement(message.getHeader("Message-ID")[0]);
+	        	} else {
+	        		if (ECSInterfaces.ValidECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.ValidECSMessages.remove(message.getHeader("Message-ID")[0]);
+	    			if (!ECSInterfaces.BogusECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.BogusECSMessages.addElement(message.getHeader("Message-ID")[0]);
+	        	}
+			} else {        		
+    			// Indicate to MessageList to set message Subject field color to red in the message list; the fetch had problems, so this message may be bogus. Better safe than sorry.
+//        		if (ECSInterfaces.ValidECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.ValidECSMessages.remove(message.getHeader("Message-ID")[0]);
+//    			if (!ECSInterfaces.BogusECSMessages.contains(message.getHeader("Message-ID")[0])) ECSInterfaces.BogusECSMessages.addElement(message.getHeader("Message-ID")[0]);
+//                Toast.makeText(getActivity(), mContext.getString(R.string.message_read_error_fetching_content) + reply[1],
+//                        Toast.LENGTH_LONG).show();
+                if (out != null) out.close();
+    			return null;
+	    	}
+            out.close();            
+            return out;
+        } catch (Exception e) {        	        	 
+            Toast.makeText(getActivity(), mContext.getString(R.string.message_view_dynamic_content_fetch_error) + e,
+                    Toast.LENGTH_LONG).show();
+            if (out != null) try {
+            	out.close();
+            } catch (IOException e2) {
+                Toast.makeText(getActivity(), mContext.getString(R.string.message_view_dynamic_content_fetch_error) + e2,
+                        Toast.LENGTH_LONG).show();
+            }
+			return null;
+        }
+    }
+
+    private void deleteInlineMediaFiles(String tag, String buf, String tmpText) {
+    	int imgPtr = -1;
+    	
+    	while ((imgPtr = tmpText.indexOf(tag)) != -1) {
+    		buf += tmpText.substring(0, imgPtr);
+    		tmpText = tmpText.substring(imgPtr);
+    		if ((imgPtr = tmpText.indexOf("src=file://")) == -1) break;	// If one inline video/image is formatted the old way (pre-v. 4.29), assume they all are and leave the loop
+    		imgPtr += "src=file://".length();
+    		buf += tmpText.substring(0, imgPtr);
+    		tmpText = tmpText.substring(imgPtr);
+    		String imgName = tmpText;
+    		if ((imgPtr = imgName.indexOf(ECSInterfaces.BLANK)) == -1) break;	// If incorrectly formatted image/video, exit the loop
+    		imgName = imgName.substring(0, imgPtr);
+    		imgName = imgName.substring(imgName.lastIndexOf("/"));
+   		
+            File imgFile = new File(K9.getAttachmentDefaultPath() + "/" + imgName);
+//        	File imgFile = new File(Environment.getExternalStorageDirectory() + imgName);
+        	if (imgFile.exists() && !imgFile.delete()) {
+                Toast.makeText(getActivity(),
+                		mContext.getString(R.string.message_view_dynamic_content_delete_error),
+                        android.widget.Toast.LENGTH_LONG).show();
+        	}                       		
+    		buf += K9.getAttachmentDefaultPath() + "/" + imgName;
+//    		buf += Environment.getExternalStorageDirectory() + "/" + imgName;
+    		tmpText = tmpText.substring(tmpText.indexOf(ECSInterfaces.BLANK));
+    	}
+    }
+    
     public void onRefile(String dstFolder) {
         if (!mController.isMoveCapable(mAccount)) {
             return;
@@ -482,7 +768,7 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.download: {
-                ((AttachmentView)view).saveFile();
+                ((AttachmentView)view).saveFile(null, mContext.getString(R.string.message_view_dynamic_content_saving_attachment), false);
                 break;
             }
             case R.id.download_remainder: {
@@ -542,13 +828,13 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
                 public void run() {
                     if (!clonedMessage.isSet(Flag.X_DOWNLOADED_FULL) &&
                             !clonedMessage.isSet(Flag.X_DOWNLOADED_PARTIAL)) {
-                        String text = getString(R.string.message_view_downloading);
+                        String text = mContext.getString(R.string.message_view_downloading);
                         mMessageView.showStatusMessage(text);
                     }
                     mMessageView.setHeaders(clonedMessage, account);
                     final String subject = clonedMessage.getSubject();
                     if (subject == null || subject.equals("")) {
-                        displayMessageSubject(getString(R.string.general_no_subject));
+                    	if (isAdded()) displayMessageSubject(mContext.getString(R.string.general_no_subject));
                     } else {
                         displayMessageSubject(clonedMessage.getSubject());
                     }
@@ -593,6 +879,8 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
                     || !mMessageReference.accountUuid.equals(account.getUuid())) {
                 return;
             }
+//            statusNetworkError = getActivity().getApplicationContext().getString(R.string.status_network_error);
+//            statusInvalidIDError = getActivity().getApplicationContext().getString(R.string.status_invalid_id_error);
             mHandler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -603,7 +891,7 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
                         mHandler.networkError();
                     }
                     if (mMessage == null || mMessage.isSet(Flag.X_DOWNLOADED_PARTIAL)) {
-                        mMessageView.showStatusMessage(getString(R.string.webview_empty_message));
+                        mMessageView.showStatusMessage(mContext.getString(R.string.webview_empty_message));
                     }
                 }
             });
@@ -643,6 +931,7 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
             if (mMessage != message) {
                 return;
             }
+            fetchingAttachment = getActivity().getApplicationContext().getString(R.string.message_view_fetching_attachment_toast);
             mHandler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -747,6 +1036,7 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
     private void removeDialog(int dialogId) {
         FragmentManager fm = getFragmentManager();
 
+        if (fm == null) return;
         // Make sure the "show dialog" transaction has been processed when we call
         // findFragmentByTag() below. Otherwise the fragment won't be found and the dialog will
         // never be dismissed.
@@ -830,6 +1120,7 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
     public interface MessageViewFragmentListener {
         public void onForward(Message mMessage, PgpData mPgpData);
         public void disableDeleteAction();
+ //       public void disableReplyAction();
         public void onReplyAll(Message mMessage, PgpData mPgpData);
         public void onReply(Message mMessage, PgpData mPgpData);
         public void displayMessageSubject(String title);
@@ -845,5 +1136,9 @@ public class MessageViewFragment extends SherlockFragment implements OnClickList
 
     public LayoutInflater getFragmentLayoutInflater() {
         return mLayoutInflater;
+    }
+    
+    public SingleMessageView getMessageView() {
+    	return mMessageView;
     }
 }

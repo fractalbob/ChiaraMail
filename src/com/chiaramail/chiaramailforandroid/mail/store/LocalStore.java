@@ -1,5 +1,5 @@
 
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -37,46 +37,46 @@ import android.database.sqlite.SQLiteException;
 import android.net.Uri;
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.Account.MessageFormat;
-import com.fsck.k9.activity.Search;
-import com.fsck.k9.controller.MessageRemovalListener;
-import com.fsck.k9.controller.MessageRetrievalListener;
-import com.fsck.k9.helper.HtmlConverter;
-import com.fsck.k9.helper.StringUtils;
-import com.fsck.k9.helper.Utility;
-import com.fsck.k9.mail.Address;
-import com.fsck.k9.mail.Body;
-import com.fsck.k9.mail.BodyPart;
-import com.fsck.k9.mail.FetchProfile;
-import com.fsck.k9.mail.Flag;
-import com.fsck.k9.mail.Folder;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.Message.RecipientType;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.Part;
-import com.fsck.k9.mail.Store;
-import com.fsck.k9.mail.filter.Base64OutputStream;
-import com.fsck.k9.mail.internet.MimeBodyPart;
-import com.fsck.k9.mail.internet.MimeHeader;
-import com.fsck.k9.mail.internet.MimeMessage;
-import com.fsck.k9.mail.internet.MimeMultipart;
-import com.fsck.k9.mail.internet.MimeUtility;
-import com.fsck.k9.mail.internet.MimeUtility.ViewableContainer;
-import com.fsck.k9.mail.internet.TextBody;
-import com.fsck.k9.mail.store.LockableDatabase.DbCallback;
-import com.fsck.k9.mail.store.LockableDatabase.WrappedException;
-import com.fsck.k9.mail.store.StorageManager.StorageProvider;
-import com.fsck.k9.provider.AttachmentProvider;
-import com.fsck.k9.provider.EmailProvider;
-import com.fsck.k9.provider.EmailProvider.MessageColumns;
-import com.fsck.k9.search.LocalSearch;
-import com.fsck.k9.search.SearchSpecification.Attribute;
-import com.fsck.k9.search.SearchSpecification.Searchfield;
-import com.fsck.k9.search.SqlQueryBuilder;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.Account.MessageFormat;
+import com.chiaramail.chiaramailforandroid.activity.Search;
+import com.chiaramail.chiaramailforandroid.controller.MessageRemovalListener;
+import com.chiaramail.chiaramailforandroid.controller.MessageRetrievalListener;
+import com.chiaramail.chiaramailforandroid.helper.HtmlConverter;
+import com.chiaramail.chiaramailforandroid.helper.StringUtils;
+import com.chiaramail.chiaramailforandroid.helper.Utility;
+import com.chiaramail.chiaramailforandroid.mail.Address;
+import com.chiaramail.chiaramailforandroid.mail.Body;
+import com.chiaramail.chiaramailforandroid.mail.BodyPart;
+import com.chiaramail.chiaramailforandroid.mail.FetchProfile;
+import com.chiaramail.chiaramailforandroid.mail.Flag;
+import com.chiaramail.chiaramailforandroid.mail.Folder;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Part;
+import com.chiaramail.chiaramailforandroid.mail.Store;
+import com.chiaramail.chiaramailforandroid.mail.Message.RecipientType;
+import com.chiaramail.chiaramailforandroid.mail.filter.Base64OutputStream;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeBodyPart;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeHeader;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeMessage;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeMultipart;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility;
+import com.chiaramail.chiaramailforandroid.mail.internet.TextBody;
+import com.chiaramail.chiaramailforandroid.mail.internet.MimeUtility.ViewableContainer;
+import com.chiaramail.chiaramailforandroid.mail.store.LockableDatabase.DbCallback;
+import com.chiaramail.chiaramailforandroid.mail.store.LockableDatabase.WrappedException;
+import com.chiaramail.chiaramailforandroid.mail.store.StorageManager.StorageProvider;
+import com.chiaramail.chiaramailforandroid.provider.AttachmentProvider;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider;
+import com.chiaramail.chiaramailforandroid.provider.EmailProvider.MessageColumns;
+import com.chiaramail.chiaramailforandroid.search.LocalSearch;
+import com.chiaramail.chiaramailforandroid.search.SqlQueryBuilder;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Attribute;
+import com.chiaramail.chiaramailforandroid.search.SearchSpecification.Searchfield;
+import com.chiaramail.chiaramailforandroid.R;
 
 /**
  * <pre>
@@ -908,7 +908,7 @@ public class LocalStore extends Store implements Serializable {
     /**
      * Deletes all cached attachments for the entire store.
      * @param force
-     * @throws com.fsck.k9.mail.MessagingException
+     * @throws com.chiaramail.chiaramailforandroid.mail.MessagingException
      */
     private void pruneCachedAttachments(final boolean force) throws MessagingException {
         database.execute(false, new DbCallback<Void>() {
@@ -2633,7 +2633,7 @@ public class LocalStore extends Store implements Serializable {
          * necessarily a {@link LocalMessage} instance.
          * @param id
          * @param message
-         * @throws com.fsck.k9.mail.MessagingException
+         * @throws com.chiaramail.chiaramailforandroid.mail.MessagingException
          */
         private void saveHeaders(final long id, final MimeMessage message) throws MessagingException {
             database.execute(true, new DbCallback<Void>() {
@@ -2861,7 +2861,7 @@ public class LocalStore extends Store implements Serializable {
          * Changes the stored uid of the given message (using it's internal id as a key) to
          * the uid in the message.
          * @param message
-         * @throws com.fsck.k9.mail.MessagingException
+         * @throws com.chiaramail.chiaramailforandroid.mail.MessagingException
          */
         public void changeUid(final LocalMessage message) throws MessagingException {
             open(OpenMode.READ_WRITE);
@@ -3118,7 +3118,7 @@ public class LocalStore extends Store implements Serializable {
 
         /**
          * <p>Fetches the most recent <b>numeric</b> UID value in this folder.  This is used by
-         * {@link com.fsck.k9.controller.MessagingController#shouldNotifyForMessage} to see if messages being
+         * {@link com.chiaramail.chiaramailforandroid.controller.MessagingController#shouldNotifyForMessage} to see if messages being
          * fetched are new and unread.  Messages are "new" if they have a UID higher than the most recent UID prior
          * to synchronization.</p>
          *

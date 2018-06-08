@@ -1,4 +1,4 @@
-package com.fsck.k9;
+package com.chiaramail.chiaramailforandroid;
 
 import android.content.SharedPreferences;
 import android.util.TypedValue;

@@ -1,4 +1,4 @@
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,14 +14,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.BaseAccount;
-import com.fsck.k9.FontSizes;
-import com.fsck.k9.K9;
-import com.fsck.k9.Preferences;
-import com.fsck.k9.R;
-import com.fsck.k9.search.SearchAccount;
-
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.BaseAccount;
+import com.chiaramail.chiaramailforandroid.FontSizes;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.Preferences;
+import com.chiaramail.chiaramailforandroid.search.SearchAccount;
+import com.chiaramail.chiaramailforandroid.R;
 
 /**
  * Activity displaying the list of accounts.
@@ -46,7 +45,6 @@ public abstract class AccountList extends K9ListActivity implements OnItemClickL
         listView.setOnItemClickListener(this);
         listView.setItemsCanFocus(false);
     }
-
     /**
      * Reload list of accounts when this activity is resumed.
      */
@@ -154,7 +152,6 @@ public abstract class AccountList extends K9ListActivity implements OnItemClickL
 
             mFontSizes.setViewTextSize(holder.description, mFontSizes.getAccountName());
             mFontSizes.setViewTextSize(holder.email, mFontSizes.getAccountDescription());
-
 
             return view;
         }

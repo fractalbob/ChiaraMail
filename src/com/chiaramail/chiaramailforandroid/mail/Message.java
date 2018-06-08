@@ -1,5 +1,5 @@
 
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 import java.io.IOException;
 import java.util.Date;
@@ -8,11 +8,11 @@ import java.util.Set;
 
 import android.util.Log;
 
-import com.fsck.k9.K9;
-import com.fsck.k9.activity.MessageReference;
-import com.fsck.k9.mail.filter.CountingOutputStream;
-import com.fsck.k9.mail.filter.EOLConvertingOutputStream;
-import com.fsck.k9.mail.store.UnavailableStorageException;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.activity.MessageReference;
+import com.chiaramail.chiaramailforandroid.mail.filter.CountingOutputStream;
+import com.chiaramail.chiaramailforandroid.mail.filter.EOLConvertingOutputStream;
+import com.chiaramail.chiaramailforandroid.mail.store.UnavailableStorageException;
 
 
 public abstract class Message implements Part, Body {
@@ -293,7 +293,7 @@ public abstract class Message implements Part, Body {
      * <strong>Note:</strong>
      * This method was introduced as a hack to prevent {@code ConcurrentModificationException}s. It
      * shouldn't be used unless absolutely necessary. See the comment in
-     * {@link com.fsck.k9.activity.MessageView.Listener#loadMessageForViewHeadersAvailable(com.fsck.k9.Account, String, String, Message)}
+     * {@link com.chiaramail.chiaramailforandroid.activity.MessageView.Listener#loadMessageForViewHeadersAvailable(com.chiaramail.chiaramailforandroid.Account, String, String, Message)}
      * for more information.
      * </p>
      */

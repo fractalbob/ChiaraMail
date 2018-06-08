@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fsck.k9.activity;
+package com.chiaramail.chiaramailforandroid.activity;
 
 import java.util.ArrayList;
 import android.app.ListActivity;
@@ -35,9 +35,11 @@ public class AccessibleEmailContentActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Just in case htmlSource is null
+        Spanned parsedHtml = Html.fromHtml("", null, null);;
 
         String htmlSource = getIntent().getStringExtra("content");
-        Spanned parsedHtml = Html.fromHtml(htmlSource, null, null);
+        if (htmlSource != null) parsedHtml = Html.fromHtml(htmlSource, null, null);
         String[] rawListItems = parsedHtml.toString().split("\n");
 
         ArrayList<String> cleanedList = new ArrayList<String>();
@@ -49,7 +51,7 @@ public class AccessibleEmailContentActivity extends ListActivity {
 
         String[] listItems = cleanedList.toArray(EMPTY_STRING_ARRAY);
 
-        setContentView(com.fsck.k9.R.layout.accessible_email_content);
+        setContentView(com.chiaramail.chiaramailforandroid.R.layout.accessible_email_content);
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems));
     }
 

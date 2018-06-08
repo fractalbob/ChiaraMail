@@ -1,5 +1,5 @@
 
-package com.fsck.k9.mail;
+package com.chiaramail.chiaramailforandroid.mail;
 
 public abstract class BodyPart implements Part {
     private Multipart mParent;

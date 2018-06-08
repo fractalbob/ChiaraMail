@@ -1,4 +1,4 @@
-package com.fsck.k9.remotecontrol;
+package com.chiaramail.chiaramailforandroid.remotecontrol;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

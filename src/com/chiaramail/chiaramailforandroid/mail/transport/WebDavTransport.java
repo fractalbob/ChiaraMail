@@ -1,15 +1,15 @@
 
-package com.fsck.k9.mail.transport;
+package com.chiaramail.chiaramailforandroid.mail.transport;
 
 import android.util.Log;
 
-import com.fsck.k9.Account;
-import com.fsck.k9.K9;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.MessagingException;
-import com.fsck.k9.mail.ServerSettings;
-import com.fsck.k9.mail.Transport;
-import com.fsck.k9.mail.store.WebDavStore;
+import com.chiaramail.chiaramailforandroid.Account;
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.ServerSettings;
+import com.chiaramail.chiaramailforandroid.mail.Transport;
+import com.chiaramail.chiaramailforandroid.mail.store.WebDavStore;
 
 public class WebDavTransport extends Transport {
     public static final String TRANSPORT_TYPE = WebDavStore.STORE_TYPE;

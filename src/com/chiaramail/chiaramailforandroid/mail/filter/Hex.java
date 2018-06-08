@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fsck.k9.mail.filter;
+package com.chiaramail.chiaramailforandroid.mail.filter;
 
 /**
  * This code was copied from the Apache Commons project.

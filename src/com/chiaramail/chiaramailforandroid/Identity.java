@@ -1,4 +1,4 @@
-package com.fsck.k9;
+package com.chiaramail.chiaramailforandroid;
 
 import java.io.Serializable;
 

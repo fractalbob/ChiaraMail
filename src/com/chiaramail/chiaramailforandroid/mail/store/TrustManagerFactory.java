@@ -1,11 +1,13 @@
 
-package com.fsck.k9.mail.store;
+package com.chiaramail.chiaramailforandroid.mail.store;
 
 import android.app.Application;
 import android.content.Context;
 import android.util.Log;
-import com.fsck.k9.K9;
-import com.fsck.k9.helper.DomainNameChecker;
+
+import com.chiaramail.chiaramailforandroid.K9;
+import com.chiaramail.chiaramailforandroid.helper.DomainNameChecker;
+
 import org.apache.commons.io.IOUtils;
 
 import javax.net.ssl.TrustManager;

@@ -1,9 +1,9 @@
 
-package com.fsck.k9.mail.internet;
+package com.chiaramail.chiaramailforandroid.mail.internet;
 
-import com.fsck.k9.mail.Body;
-import com.fsck.k9.mail.BodyPart;
-import com.fsck.k9.mail.MessagingException;
+import com.chiaramail.chiaramailforandroid.mail.Body;
+import com.chiaramail.chiaramailforandroid.mail.BodyPart;
+import com.chiaramail.chiaramailforandroid.mail.MessagingException;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -60,8 +60,8 @@ public class MimeBodyPart extends BodyPart {
 
     public void setBody(Body body) throws MessagingException {
         this.mBody = body;
-        if (body instanceof com.fsck.k9.mail.Multipart) {
-            com.fsck.k9.mail.Multipart multipart = ((com.fsck.k9.mail.Multipart)body);
+        if (body instanceof com.chiaramail.chiaramailforandroid.mail.Multipart) {
+            com.chiaramail.chiaramailforandroid.mail.Multipart multipart = ((com.chiaramail.chiaramailforandroid.mail.Multipart)body);
             multipart.setParent(this);
             setHeader(MimeHeader.HEADER_CONTENT_TYPE, multipart.getContentType());
         } else if (body instanceof TextBody) {

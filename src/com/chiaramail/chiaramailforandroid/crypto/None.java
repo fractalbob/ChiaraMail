@@ -1,11 +1,11 @@
-package com.fsck.k9.crypto;
+package com.chiaramail.chiaramailforandroid.crypto;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
-import com.fsck.k9.mail.Message;
+import com.chiaramail.chiaramailforandroid.mail.Message;
 
 /**
  * Dummy CryptoProvider for when cryptography is disabled. It is never "available" and doesn't

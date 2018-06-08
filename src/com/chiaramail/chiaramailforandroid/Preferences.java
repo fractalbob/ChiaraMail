@@ -1,5 +1,5 @@
 
-package com.fsck.k9;
+package com.chiaramail.chiaramailforandroid;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,8 +11,9 @@ import java.util.Map;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import com.fsck.k9.preferences.Editor;
-import com.fsck.k9.preferences.Storage;
+
+import com.chiaramail.chiaramailforandroid.preferences.Editor;
+import com.chiaramail.chiaramailforandroid.preferences.Storage;
 
 public class Preferences {
 
